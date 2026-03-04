@@ -1,10 +1,10 @@
-# 数据说明
+# Data Directory
 
-该目录用于存放本地数据与预构建数据集。
+This directory stores local datasets and prebuilt benchmark data.
 
-建议结构：
+Recommended structure:
 
-```
+```text
 data/
 ├── level_1/
 ├── level_2/
@@ -12,4 +12,5 @@ data/
 └── README.md
 ```
 
-出于开源体积与许可考虑，数据文件默认不入库，请自行准备。
+To keep repository size manageable and respect data licensing constraints,
+dataset files are not tracked by default and should be prepared locally.
