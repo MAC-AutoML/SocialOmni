@@ -51,7 +51,7 @@ SocialOmni 不只是给出总分，而是显式刻画：
 - 感知、时机、生成三轴之间的解耦现象
 
 <p align="center">
-  <img src="assets/socialomni_teaser.jpeg" alt="SocialOmni Teaser" width="88%" />
+  <img src="assets/socialomni_result_radar.png" alt="SocialOmni Cross-Axis Capability Profiles" width="88%" />
 </p>
 
 ## 🔍 基准概览

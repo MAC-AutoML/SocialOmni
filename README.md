@@ -57,7 +57,7 @@ The benchmark explicitly measures:
 - cross-axis decoupling between perception, timing, and response quality
 
 <p align="center">
-  <img src="docs/assets/socialomni_teaser.jpeg" alt="SocialOmni Teaser" width="88%" />
+  <img src="docs/assets/socialomni_result_radar.png" alt="SocialOmni Cross-Axis Capability Profiles" width="88%" />
 </p>
 
 ## 🔍 Benchmark Overview
