@@ -1,124 +1,165 @@
 # SocialOmni: Benchmarking Audio-Visual Social Interactivity in Omni Models
 
 <p align="center">
-  <img src="docs/assets/hero.svg" alt="SocialOmni Hero" width="100%" />
+  <img src="docs/assets/hero.svg" alt="SocialOmni Hero" width="320" />
+</p>
+
+<h2 align="center">SocialOmni: Benchmarking Audio-Visual Social Interactivity in Omni Models</h2>
+<h5 align="center">A benchmark for evaluating <i>who</i>, <i>when</i>, and <i>how</i> in omni-modal dialogue interaction.</h5>
+
+<p align="center">
+  <a href="https://github.com/Alexisxty/SocialOmni"><img src="https://img.shields.io/badge/GitHub-SocialOmni-black?logo=github" alt="GitHub"></a>
+  <a href="https://huggingface.co/datasets/alexisty/SocialOmni"><img src="https://img.shields.io/badge/🤗%20Dataset-SocialOmni-orange" alt="Dataset"></a>
+  <img src="https://img.shields.io/badge/Python-3.10-blue" alt="Python 3.10">
+  <img src="https://img.shields.io/badge/Tasks-Who%20%7C%20When%20%7C%20How-6f42c1" alt="Tasks">
+  <img src="https://img.shields.io/badge/Samples-2%2C209-0a7ea4" alt="Samples">
 </p>
 
 <p align="center">
-  <a href="https://github.com/Alexisxty/SocialOmni">GitHub</a>
-  ·
-  <a href="#quick-start">Quick Start</a>
-  ·
-  <a href="#benchmark-overview">Benchmark Overview</a>
-  ·
-  <a href="#evaluation-protocol">Evaluation Protocol</a>
+  <a href="#-news">News</a> ·
+  <a href="#-highlights">Highlights</a> ·
+  <a href="#-benchmark-overview">Benchmark Overview</a> ·
+  <a href="#-quick-start">Quick Start</a> ·
+  <a href="#-main-results">Main Results</a> ·
+  <a href="#-citation">Citation</a>
 </p>
 
-SocialOmni is a benchmark for **audio-visual social interactivity** in omni models.
-Instead of only measuring answer correctness, SocialOmni explicitly evaluates the interaction triad:
+SocialOmni is a benchmark for **audio-visual social interactivity** in omni-modal large language models (OLMs). Instead of reducing evaluation to static answer correctness, SocialOmni measures whether a model can behave appropriately in real dialogue by jointly evaluating three tightly coupled dimensions:
 
-- **Who** is speaking (speaker identification)
-- **When** interruption is appropriate (timing decision)
-- **How** to respond naturally (interruption generation)
+- **Who** is speaking: speaker separation and identification
+- **When** to enter: interruption timing control
+- **How** to respond: natural interruption generation
 
-This repository contains the benchmark pipeline, model clients/servers, and reproducible evaluation scripts.
+The repository contains the benchmark pipeline, model clients and servers, runtime configurations, and reproducible evaluation entrypoints for both perception and interaction-generation settings.
 
-## Why SocialOmni
+## 📣 News
 
-Most multimodal benchmarks are understanding-centric (static QA, final-answer accuracy).
-SocialOmni targets a different bottleneck: whether a model can behave correctly in dynamic dialogue turn-taking.
+- **[2026.03]** README is refreshed with a paper-style project landing page and benchmark overview.
+- **[2026.03]** SocialOmni benchmark codebase, configs, and evaluation scripts are available in this repository.
+- **[2026.03]** Dataset release is available on Hugging Face: [alexisty/SocialOmni](https://huggingface.co/datasets/alexisty/SocialOmni).
 
-In real-time interaction, user experience depends on both semantic correctness and social timing.
-A correct content answer can still fail if the model interrupts too early/too late or responds unnaturally.
+## 😮 Highlights
 
-## Benchmark Overview
+### 1. A benchmark for social interaction, not just static understanding
+
+Existing omni-model benchmarks are still dominated by static QA and answer-centric metrics. SocialOmni instead evaluates whether a model can maintain socially appropriate behavior in multi-party dialogue, where a correct answer can still fail because of poor timing or unnatural continuation.
+
+### 2. A unified who-when-how evaluation protocol
+
+SocialOmni operationalizes conversational interactivity as a joint profile:
+
+- **Who**: can the model identify the active speaker at the target timestamp?
+- **When**: can the model decide whether interruption is socially appropriate?
+- **How**: can the model produce a natural, contextually coherent interruption?
+
+This design exposes cases where strong perception does not translate into strong interaction quality.
+
+### 3. Interaction failures are diagnostic, not anecdotal
+
+The benchmark explicitly measures:
+
+- performance under audio-visual consistency and inconsistency
+- timing precision / recall / F1 under tolerance windows
+- judge-based quality for generated interruptions
+- cross-axis decoupling between perception, timing, and response quality
+
+<p align="center">
+  <img src="docs/assets/socialomni_teaser.jpeg" alt="SocialOmni Teaser" width="88%" />
+</p>
+
+## 🔍 Benchmark Overview
 
 <p align="center">
   <img src="docs/assets/socialomni_overview.png" alt="SocialOmni Overview" width="100%" />
 </p>
 
-### Dataset composition
+### Dataset at a glance
 
-- **2,209** total samples from **2,000** short dialogue videos
-- **Perception task**: 2,000 timestamp-level QA items
-- **Generation task**: 209 interruption-centric interaction items
-- **15** dialogue domains
-- Controlled A-V consistency split in perception task:
-  - **Consistent**: 86.25%
-  - **Inconsistent**: 13.75%
+- **2,209** total benchmark items
+- **2,000** perception samples for speaker identification
+- **209** interaction-generation samples for interruption timing and response generation
+- **15** dialogue subdomains spanning entertainment, professional, daily life, and narrative scenes
+- Controlled **audio-visual consistent / inconsistent** splits for robustness analysis
 
 ### Annotation quality
 
 - Two-round expert verification
-- Reported inter-annotator agreement (IAA):
+- Inter-annotator agreement:
   - Perception: **94.2%**
   - Generation: **91.8%**
 
-## Tasks
+## 🧩 Tasks
 
-### Task I: Perception (Who)
+### Task I: Perception (`who`)
 
-Given a video and timestamp `t`, answer:
+Given a video clip and a timestamp `t`, the model answers:
 
-> "At timestamp `t`, who is speaking?"
+> At timestamp `t`, who is speaking?
 
-The model selects one option from `{A, B, C, D}`.
+The model chooses from `{A, B, C, D}`.
 
-### Task II: Generation (When + How)
+### Task II: Interaction Generation (`when` + `how`)
 
-Given video prefix `V[0:t]` and candidate speaker `X`, the model performs:
+Given a video prefix `V[0:t]` and a candidate speaker `X`, the model performs two sub-questions:
 
-- **Q1 (When)**: binary decision on whether `X` should interrupt immediately after `t`
-- **Q2 (How)**: if Q1 predicts interruption, generate natural interruption content
+- **Q1 (`when`)**: should `X` interrupt immediately after `t`?
+- **Q2 (`how`)**: if yes, what is the natural interruption content?
 
-## Evaluation Protocol
+## 📏 Evaluation Protocol
 
 ### Perception metrics
 
-- Top-1 Accuracy (overall)
-- Split-wise Accuracy on consistent/inconsistent subsets
-- Gap: `Δ = Acc_consistent - Acc_inconsistent`
+- Top-1 Accuracy
+- Consistent / inconsistent split accuracy
+- Gap:
+
+```text
+Δ = Acc_consistent - Acc_inconsistent
+```
 
 ### Generation metrics
 
-- **Q1**: Accuracy / Precision / Recall / F1 under tolerance windows (e.g., δ=0.2s)
+- **Q1**: Accuracy / Precision / Recall / F1 under tolerance windows such as `δ = 0.2s`
 - **Q2**: LLM-judge score on `{0, 25, 50, 75, 100}`
 
-Q2 uses three independent judges in the paper protocol:
+The paper protocol uses three judges for Q2:
 
 - GPT-4o
 - Gemini 3 Pro
 - Qwen3-Omni
 
-## Main Results (from paper table)
+## 🐳 Main Results
 
-| Model | Perception Overall (%) | Q1 Acc. (%) | Q2 Score (/100) |
+### SocialOmni reveals cross-axis decoupling
+
+Perception strength does not guarantee interaction quality. Some models identify speakers well but perform poorly on natural interruption generation, while others generate plausible responses despite weak speaker grounding.
+
+| Model | Who (%) | When Acc. (%) | How (/100) |
 |---|---:|---:|---:|
-| Gemini 3 Pro Preview | 64.99 | **66.99** | 81.77 |
-| Qwen3-Omni | **69.25** | 63.64 | 45.57 |
-| Gemini 2.5 Flash | 47.03 | 58.85 | **85.08** |
 | GPT-4o | 36.75 | 46.89 | 69.64 |
+| Gemini 2.5 Pro | 44.69 | 55.67 | 72.32 |
+| Gemini 2.5 Flash | 47.03 | 61.50 | **85.08** |
+| Gemini 3 Flash Preview | 53.23 | 61.06 | 79.08 |
+| Gemini 3 Pro Preview | 64.99 | **67.31** | 81.77 |
+| Qwen3-Omni | **69.25** | 63.64 | 45.57 |
 
-Observation: perception ranking and generation quality are not strictly aligned, supporting the need for joint who/when/how evaluation.
+Key observation:
 
-## Repository Structure
+- **Who leader**: Qwen3-Omni
+- **When leader**: Gemini 3 Pro Preview
+- **How leader**: Gemini 2.5 Flash
 
-```text
-SocialOmni/
-├── models/                  # model servers, clients, and shared pipeline logic
-├── config/                  # runtime/model/benchmark configurations
-├── data/                    # local datasets (not tracked)
-├── results/                 # local outputs (not tracked)
-├── scripts/                 # utility scripts
-├── docs/                    # documentation and visual assets
-├── run_benchmark.py         # Task I (Level1) entrypoint
-├── run_benchmark_level2.py  # Task II (Level2) entrypoint
-└── README.md
-```
+This rank inversion is exactly why SocialOmni evaluates the full interaction profile instead of a single aggregate score.
 
-## Quick Start
+## ⚙️ Requirements and Installation
 
-### 1) Clone and install
+We recommend the following environment:
+
+- Python `>=3.10,<3.11`
+- CUDA-compatible PyTorch runtime for local omni models
+- `uv` for dependency and environment management
+
+Install with:
 
 ```bash
 git clone https://github.com/Alexisxty/SocialOmni.git
@@ -126,56 +167,99 @@ cd SocialOmni
 uv sync
 ```
 
-### 2) Configure runtime
+## 🚀 Quick Start
 
-Edit `config/config.yaml` and set at least:
+### 1. Configure runtime and paths
 
-- API endpoints / keys (or env vars)
-- model paths / server URLs for local models
-- benchmark dataset paths and output paths
+Edit `config/config.yaml` and set:
 
-Environment variable overrides are supported, e.g.:
+- API keys / API endpoints
+- local model path or `server_url`
+- dataset path
+- output and result directories
 
-- `OPENAI_API_KEY` / `OPENAI_API_BASE`
-- `GEMINI_API_KEY` / `GEMINI_API_BASE`
+Common environment variables:
 
-### 3) Start local model server (example)
+- `OPENAI_API_KEY`
+- `OPENAI_API_BASE`
+- `GEMINI_API_KEY`
+- `GEMINI_API_BASE`
+
+### 2. Start a local model server
+
+Example:
 
 ```bash
 uv run models/model_server/qwen3_omni/qwen3_omni_server.py
 ```
 
-Other server entrypoints are available under `models/model_server/*/*_server.py`.
+Other model server entrypoints are located under:
 
-### 4) Run benchmark
+```text
+models/model_server/*/*_server.py
+```
 
-Task I (Perception):
+### 3. Run Task I benchmark
 
 ```bash
 uv run run_benchmark.py --model qwen3_omni
 ```
 
-Task II (Generation):
+### 4. Run Task II benchmark
 
 ```bash
 uv run run_benchmark_level2.py --model qwen3_omni --resume
 ```
 
-## Supported Model Keys
+## 🧱 Repository Structure
 
-Use these model keys with `--model`:
+```text
+SocialOmni/
+├── config/                  # runtime, model, and evaluation configs
+├── data/                    # local datasets (not tracked)
+├── docs/                    # docs and visual assets
+├── models/                  # model servers, clients, and shared benchmark logic
+├── scripts/                 # utility scripts
+├── run_benchmark.py         # Task I entrypoint
+├── run_benchmark_level2.py  # Task II entrypoint
+├── pyproject.toml           # dependency definition
+└── README.md
+```
 
-`gpt4o`, `gemini_2_5_flash`, `gemini_2_5_pro`, `gemini_3_flash_preview`, `gemini_3_pro_preview`, `qwen3_omni`, `qwen3_omni_thinking`, `qwen2_5_omni`, `miniomni_2`, `omnivinci`, `vita_1_5`, `baichuan_omni_1_5`, `ming`
+## 🔑 Supported Model Keys
 
-## Reproducibility Notes
+Use the following keys with `--model`:
 
-- Keep data and output directories local and out of version control.
-- Use fixed prompts and model configs for cross-model comparison.
-- Report confidence intervals and split-wise metrics when claiming improvements.
+```text
+gpt4o
+gemini_2_5_flash
+gemini_2_5_pro
+gemini_3_flash_preview
+gemini_3_pro_preview
+qwen3_omni
+qwen3_omni_thinking
+qwen2_5_omni
+miniomni_2
+omnivinci
+vita_1_5
+baichuan_omni_1_5
+ming
+```
 
-## Citation
+## 🧪 Reproducibility Notes
 
-If you use SocialOmni in research, please cite the paper:
+- Keep dataset and result directories local and out of version control.
+- Use fixed prompt templates and stable runtime configs for cross-model comparison.
+- Report split-wise metrics and confidence intervals when claiming improvements.
+- For generation evaluation, keep the judge set fixed across runs.
+
+## 🤝 Acknowledgment
+
+SocialOmni is motivated by the gap between understanding-centric evaluation and real conversational interaction in omni models. The repository is designed as a practical benchmark toolkit for studying social perception, turn-taking, and response generation together.
+
+## ✏️ Citation
+
+If you find SocialOmni useful in your research, please cite:
 
 ```bibtex
 @article{socialomni2026,
@@ -186,13 +270,4 @@ If you use SocialOmni in research, please cite the paper:
 }
 ```
 
-(Please update this entry with the final camera-ready metadata.)
-
-## License and Data Usage
-
-- Code and benchmark protocol: see repository license (to be finalized)
-- Video assets and metadata follow source licensing constraints; use responsibly and comply with original licenses
-
-## Acknowledgment
-
-SocialOmni is motivated by the gap between understanding-centric evaluation and real conversational interaction requirements in omni models.
+Please replace the placeholder citation with the final public paper metadata after release.

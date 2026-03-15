@@ -1,123 +1,160 @@
 # SocialOmni：面向 Omni 模型的音视频社会交互基准
 
 <p align="center">
-  <img src="assets/hero.svg" alt="SocialOmni Hero" width="100%" />
+  <img src="assets/hero.svg" alt="SocialOmni Hero" width="320" />
 </p>
+
+<h2 align="center">SocialOmni：面向 Omni 模型的音视频社会交互基准</h2>
+<h5 align="center">一个联合评测 <i>who</i>、<i>when</i>、<i>how</i> 三个维度的 Omni 对话交互基准。</h5>
 
 <p align="center">
   <a href="../README.md">English</a>
   ·
-  <a href="#快速开始">快速开始</a>
+  <a href="#-最新动态">最新动态</a>
   ·
-  <a href="#基准概览">基准概览</a>
+  <a href="#-基准概览">基准概览</a>
   ·
-  <a href="#评测协议">评测协议</a>
+  <a href="#-快速开始">快速开始</a>
+  ·
+  <a href="#-主要结果">主要结果</a>
 </p>
 
-SocialOmni 是一个评测 Omni 模型**音视频社会交互能力**的基准。
-与只关注最终答案正确性的评测不同，SocialOmni 显式评估交互三要素：
+SocialOmni 是一个面向 omni-modal large language models（OLMs）的**音视频社会交互能力**评测基准。与只关心最终答案是否正确的静态评测不同，SocialOmni 聚焦模型在真实对话中的交互行为，联合评估三个紧密耦合的维度：
 
-- **Who**：谁在说话（说话人识别）
-- **When**：什么时候该打断（时机判断）
-- **How**：如何自然回应（打断生成）
+- **Who**：谁在说话，是否能正确识别当前说话人
+- **When**：什么时候该介入，是否能把握合适的打断时机
+- **How**：如何回应，是否能生成自然且符合语境的插话内容
 
-本仓库提供统一评测流水线、模型客户端/服务端以及可复现实验入口。
+本仓库提供完整的 benchmark 流水线、模型客户端与服务端、运行配置，以及可复现的感知任务与交互生成任务评测入口。
 
-## 为什么是 SocialOmni
+## 📣 最新动态
 
-现有多模态基准大多偏向“理解型评测”（静态问答、最终答案准确率）。
-SocialOmni 关注动态对话中的关键瓶颈：模型是否能在正确时机做出社会化交互行为。
+- **[2026.03]** README 已重构为论文项目主页风格，补充了更完整的 benchmark 展示与快速入口。
+- **[2026.03]** SocialOmni 的 benchmark 代码、配置和评测脚本已在本仓库公开。
+- **[2026.03]** 数据集已发布到 Hugging Face：[alexisty/SocialOmni](https://huggingface.co/datasets/alexisty/SocialOmni)。
 
-在真实对话中，语义正确并不等于交互成功。过早/过晚打断，或不自然的续说，都会显著影响体验。
+## 😮 亮点
 
-## 基准概览
+### 1. 面向“社会交互”而不是静态理解
+
+现有 omni 模型评测大多仍然围绕静态问答和答案正确率展开。SocialOmni 关注的是多方对话中的真实交互能力，因为在现实场景里，一个答案即使语义正确，也可能因为打断时机错误或续说不自然而导致整体交互失败。
+
+### 2. 统一的 who-when-how 联合评测协议
+
+SocialOmni 将对话交互能力具体化为一个联合画像：
+
+- **Who**：模型能否在目标时刻定位真实说话人
+- **When**：模型能否判断此刻是否适合介入
+- **How**：模型能否给出上下文一致、语气自然的打断内容
+
+这套设计可以直接暴露“感知强但交互差”或“能续说但不会择机”的模型失配问题。
+
+### 3. 交互失败是可诊断、可量化的
+
+SocialOmni 不只是给出总分，而是显式刻画：
+
+- 音视频一致 / 不一致条件下的鲁棒性
+- 打断时机判断的 Precision / Recall / F1
+- 插话内容的 LLM Judge 质量评分
+- 感知、时机、生成三轴之间的解耦现象
+
+<p align="center">
+  <img src="assets/socialomni_teaser.jpeg" alt="SocialOmni Teaser" width="88%" />
+</p>
+
+## 🔍 基准概览
 
 <p align="center">
   <img src="assets/socialomni_overview.png" alt="SocialOmni Overview" width="100%" />
 </p>
 
-### 数据组成
+### 数据概况
 
-- 总样本：**2,209**（来自 **2,000** 个短视频）
-- 感知任务：2,000 条时间戳级别问答
-- 生成任务：209 条打断式交互样本
-- 覆盖 **15** 个对话领域
-- 感知任务中 A-V 一致性划分：
-  - 一致：86.25%
-  - 不一致：13.75%
+- **2,209** 条 benchmark 样本
+- **2,000** 条说话人感知样本
+- **209** 条交互生成样本
+- 覆盖 **15** 个对话子领域
+- 显式划分音视频**一致 / 不一致**子集，用于鲁棒性分析
 
 ### 标注质量
 
-- 双轮专家复核
-- 标注一致性（IAA）：
+- 两轮专家复核
+- 标注一致性：
   - 感知任务：**94.2%**
   - 生成任务：**91.8%**
 
-## 任务定义
+## 🧩 任务定义
 
-### 任务一：感知（Who）
+### 任务一：感知（`who`）
 
-给定视频与时间点 `t`，回答：
+给定一个视频片段和时间点 `t`，模型需要回答：
 
-> “在时间点 `t`，谁在说话？”
+> 在时间点 `t`，谁在说话？
 
 模型从 `{A, B, C, D}` 中选择一个选项。
 
-### 任务二：生成（When + How）
+### 任务二：交互生成（`when` + `how`）
 
-给定视频前缀 `V[0:t]` 与候选说话者 `X`，模型完成：
+给定视频前缀 `V[0:t]` 和候选说话者 `X`，模型需要完成两个子问题：
 
-- **Q1（When）**：判断 `X` 是否应在 `t` 后立即打断
-- **Q2（How）**：若 Q1 预测应打断，生成自然的打断内容
+- **Q1（`when`）**：`X` 是否应该在 `t` 之后立刻打断
+- **Q2（`how`）**：如果应该打断，合适的插话内容是什么
 
-## 评测协议
+## 📏 评测协议
 
 ### 感知任务指标
 
-- Top-1 Accuracy（总体）
-- 一致/不一致子集准确率
-- Gap：`Δ = Acc_consistent - Acc_inconsistent`
+- Top-1 Accuracy
+- 一致 / 不一致子集准确率
+- 差值指标：
+
+```text
+Δ = Acc_consistent - Acc_inconsistent
+```
 
 ### 生成任务指标
 
-- **Q1**：在容忍窗口（如 δ=0.2s）下计算 Accuracy / Precision / Recall / F1
-- **Q2**：在 `{0, 25, 50, 75, 100}` 打分集上的评委评分
+- **Q1**：在容忍窗口（例如 `δ = 0.2s`）下计算 Accuracy / Precision / Recall / F1
+- **Q2**：在 `{0, 25, 50, 75, 100}` 上进行 LLM Judge 打分
 
-论文协议中的 Q2 默认三评委：
+论文协议中，Q2 默认使用三位评审模型：
 
 - GPT-4o
 - Gemini 3 Pro
 - Qwen3-Omni
 
-## 主要结果（论文表）
+## 🐳 主要结果
 
-| 模型 | 感知总体(%) | Q1 准确率(%) | Q2 分数(/100) |
+### SocialOmni 揭示了明显的跨轴解耦
+
+感知能力强，并不意味着交互能力强；会自然续说，也不等于真的知道该在什么时候介入。SocialOmni 的核心价值就在于把这种解耦显式量化出来。
+
+| 模型 | Who (%) | When Acc. (%) | How (/100) |
 |---|---:|---:|---:|
-| Gemini 3 Pro Preview | 64.99 | **66.99** | 81.77 |
-| Qwen3-Omni | **69.25** | 63.64 | 45.57 |
-| Gemini 2.5 Flash | 47.03 | 58.85 | **85.08** |
 | GPT-4o | 36.75 | 46.89 | 69.64 |
+| Gemini 2.5 Pro | 44.69 | 55.67 | 72.32 |
+| Gemini 2.5 Flash | 47.03 | 61.50 | **85.08** |
+| Gemini 3 Flash Preview | 53.23 | 61.06 | 79.08 |
+| Gemini 3 Pro Preview | 64.99 | **67.31** | 81.77 |
+| Qwen3-Omni | **69.25** | 63.64 | 45.57 |
 
-结论：感知能力排名与生成质量并非严格一致，说明 who/when/how 联合评测是必要的。
+关键观察：
 
-## 仓库结构
+- **Who 最强**：Qwen3-Omni
+- **When 最强**：Gemini 3 Pro Preview
+- **How 最强**：Gemini 2.5 Flash
 
-```text
-SocialOmni/
-├── models/                  # 模型服务、客户端与共享流水线
-├── config/                  # 运行时/模型/评测配置
-├── data/                    # 本地数据（默认不入库）
-├── results/                 # 本地输出（默认不入库）
-├── scripts/                 # 工具脚本
-├── docs/                    # 文档与可视化资源
-├── run_benchmark.py         # 任务一（Level1）入口
-├── run_benchmark_level2.py  # 任务二（Level2）入口
-└── README.md
-```
+这说明单一总分不足以描述 omni 模型的真实对话能力，必须联合评测整个交互画像。
 
-## 快速开始
+## ⚙️ 环境与安装
 
-### 1) 克隆并安装
+推荐环境如下：
+
+- Python `>=3.10,<3.11`
+- 支持 CUDA 的 PyTorch 运行环境
+- 使用 `uv` 进行依赖和环境管理
+
+安装方式：
 
 ```bash
 git clone https://github.com/Alexisxty/SocialOmni.git
@@ -125,56 +162,99 @@ cd SocialOmni
 uv sync
 ```
 
-### 2) 配置运行参数
+## 🚀 快速开始
 
-编辑 `config/config.yaml`，至少配置：
+### 1. 配置路径与运行参数
 
-- API 地址与密钥（或环境变量）
-- 本地模型路径与 `server_url`
-- 数据集路径与输出路径
+编辑 `config/config.yaml`，至少配置以下内容：
 
-支持环境变量覆盖，例如：
+- API key / API endpoint
+- 本地模型路径或 `server_url`
+- 数据集路径
+- 输出目录和结果目录
 
-- `OPENAI_API_KEY` / `OPENAI_API_BASE`
-- `GEMINI_API_KEY` / `GEMINI_API_BASE`
+常见环境变量包括：
 
-### 3) 启动本地模型服务（示例）
+- `OPENAI_API_KEY`
+- `OPENAI_API_BASE`
+- `GEMINI_API_KEY`
+- `GEMINI_API_BASE`
+
+### 2. 启动本地模型服务
+
+例如：
 
 ```bash
 uv run models/model_server/qwen3_omni/qwen3_omni_server.py
 ```
 
-其他服务入口位于 `models/model_server/*/*_server.py`。
+其他模型服务入口位于：
 
-### 4) 运行评测
+```text
+models/model_server/*/*_server.py
+```
 
-任务一（感知）：
+### 3. 运行任务一评测
 
 ```bash
 uv run run_benchmark.py --model qwen3_omni
 ```
 
-任务二（生成）：
+### 4. 运行任务二评测
 
 ```bash
 uv run run_benchmark_level2.py --model qwen3_omni --resume
 ```
 
-## 支持的模型键
+## 🧱 仓库结构
 
-命令行 `--model` 可选值：
+```text
+SocialOmni/
+├── config/                  # 运行时、模型和评测配置
+├── data/                    # 本地数据集（默认不纳入版本管理）
+├── docs/                    # 文档和可视化素材
+├── models/                  # 模型服务、客户端与共享 benchmark 逻辑
+├── scripts/                 # 工具脚本
+├── run_benchmark.py         # 任务一入口
+├── run_benchmark_level2.py  # 任务二入口
+├── pyproject.toml           # 依赖定义
+└── README.md
+```
 
-`gpt4o`, `gemini_2_5_flash`, `gemini_2_5_pro`, `gemini_3_flash_preview`, `gemini_3_pro_preview`, `qwen3_omni`, `qwen3_omni_thinking`, `qwen2_5_omni`, `miniomni_2`, `omnivinci`, `vita_1_5`, `baichuan_omni_1_5`, `ming`
+## 🔑 支持的模型键
 
-## 可复现建议
+`--model` 可选值如下：
 
-- 数据与输出目录建议保持本地，不纳入版本库
-- 跨模型比较时使用固定提示词与固定配置
-- 报告改进时建议同时给出置信区间与子集指标
+```text
+gpt4o
+gemini_2_5_flash
+gemini_2_5_pro
+gemini_3_flash_preview
+gemini_3_pro_preview
+qwen3_omni
+qwen3_omni_thinking
+qwen2_5_omni
+miniomni_2
+omnivinci
+vita_1_5
+baichuan_omni_1_5
+ming
+```
 
-## 引用
+## 🧪 可复现建议
 
-如果你在研究中使用 SocialOmni，请引用论文：
+- 数据目录和结果目录建议本地保存，不纳入版本管理。
+- 跨模型比较时固定 prompt 模板和运行配置。
+- 报告改进时建议同时给出子集指标和置信区间。
+- 生成任务评测时保持 judge 组合一致。
+
+## 🤝 致谢
+
+SocialOmni 源于一个很具体的问题：理解型指标无法充分刻画 omni 模型在真实对话中的社会交互能力。本仓库希望把说话人感知、时机判断和自然续说放进同一个可复现实验框架里，方便后续研究直接复用。
+
+## ✏️ 引用
+
+如果 SocialOmni 对你的研究有帮助，请引用：
 
 ```bibtex
 @article{socialomni2026,
@@ -185,9 +265,5 @@ uv run run_benchmark_level2.py --model qwen3_omni --resume
 }
 ```
 
-（请在最终公开版本中替换为 camera-ready 的正式元数据。）
+公开正式版本发布后，请将占位 citation 替换为最终论文元数据。
 
-## 许可与数据使用
-
-- 代码与评测协议：以仓库 License 为准（待最终发布）
-- 视频资产与元数据：遵循原始来源许可，使用时请合规
