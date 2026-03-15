@@ -1,7 +1,7 @@
 # SocialOmni: Benchmarking Audio-Visual Social Interactivity in Omni Models
 
 <p align="center">
-  <img src="docs/assets/hero.svg" alt="SocialOmni Hero" width="320" />
+  <img src="docs/assets/socialomni_logo.png" alt="SocialOmni Logo" width="320" />
 </p>
 
 <h2 align="center">SocialOmni: Benchmarking Audio-Visual Social Interactivity in Omni Models</h2>
@@ -16,7 +16,6 @@
 </p>
 
 <p align="center">
-  <a href="#-news">News</a> ·
   <a href="#-highlights">Highlights</a> ·
   <a href="#-benchmark-overview">Benchmark Overview</a> ·
   <a href="#-quick-start">Quick Start</a> ·
@@ -31,12 +30,6 @@ SocialOmni is a benchmark for **audio-visual social interactivity** in omni-moda
 - **How** to respond: natural interruption generation
 
 The repository contains the benchmark pipeline, model clients and servers, runtime configurations, and reproducible evaluation entrypoints for both perception and interaction-generation settings.
-
-## 📣 News
-
-- **[2026.03]** README is refreshed with a paper-style project landing page and benchmark overview.
-- **[2026.03]** SocialOmni benchmark codebase, configs, and evaluation scripts are available in this repository.
-- **[2026.03]** Dataset release is available on Hugging Face: [alexisty/SocialOmni](https://huggingface.co/datasets/alexisty/SocialOmni).
 
 ## 😮 Highlights
 
@@ -54,11 +47,11 @@ SocialOmni operationalizes conversational interactivity as a joint profile:
 
 This design exposes cases where strong perception does not translate into strong interaction quality.
 
-### 3. Interaction failures are diagnostic, not anecdotal
+### 3. Interaction failures are measured jointly across perception and generation
 
 The benchmark explicitly measures:
 
-- performance under audio-visual consistency and inconsistency
+- perception robustness under audio-visual consistency and inconsistency
 - timing precision / recall / F1 under tolerance windows
 - judge-based quality for generated interruptions
 - cross-axis decoupling between perception, timing, and response quality
@@ -80,13 +73,6 @@ The benchmark explicitly measures:
 - **209** interaction-generation samples for interruption timing and response generation
 - **15** dialogue subdomains spanning entertainment, professional, daily life, and narrative scenes
 - Controlled **audio-visual consistent / inconsistent** splits for robustness analysis
-
-### Annotation quality
-
-- Two-round expert verification
-- Inter-annotator agreement:
-  - Perception: **94.2%**
-  - Generation: **91.8%**
 
 ## 🧩 Tasks
 
@@ -149,7 +135,7 @@ Key observation:
 - **When leader**: Gemini 3 Pro Preview
 - **How leader**: Gemini 2.5 Flash
 
-This rank inversion is exactly why SocialOmni evaluates the full interaction profile instead of a single aggregate score.
+This rank inversion is why SocialOmni evaluates the full interaction profile instead of a single aggregate score.
 
 ## ⚙️ Requirements and Installation
 
@@ -253,21 +239,13 @@ ming
 - Report split-wise metrics and confidence intervals when claiming improvements.
 - For generation evaluation, keep the judge set fixed across runs.
 
-## 🤝 Acknowledgment
-
-SocialOmni is motivated by the gap between understanding-centric evaluation and real conversational interaction in omni models. The repository is designed as a practical benchmark toolkit for studying social perception, turn-taking, and response generation together.
-
 ## ✏️ Citation
 
 If you find SocialOmni useful in your research, please cite:
 
 ```bibtex
-@article{socialomni2026,
+@misc{socialomni,
   title={SocialOmni: Benchmarking Audio-Visual Social Interactivity in Omni Models},
-  author={Anonymous},
-  journal={ECCV},
-  year={2026}
+  author={Tianyu Xie and Jinfa Huang and Yuexiao Ma and Rongfang Luo and Yan Yang and Wang Chen and Yuhui Zeng and Ruize Fang and Yixuan Zou and Xiawu Zheng and Jiebo Luo and Rongrong Ji}
 }
 ```
-
-Please replace the placeholder citation with the final public paper metadata after release.

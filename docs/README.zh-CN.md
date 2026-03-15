@@ -1,7 +1,7 @@
 # SocialOmni：面向 Omni 模型的音视频社会交互基准
 
 <p align="center">
-  <img src="assets/hero.svg" alt="SocialOmni Hero" width="320" />
+  <img src="assets/socialomni_logo.png" alt="SocialOmni Logo" width="320" />
 </p>
 
 <h2 align="center">SocialOmni：面向 Omni 模型的音视频社会交互基准</h2>
@@ -9,8 +9,6 @@
 
 <p align="center">
   <a href="../README.md">English</a>
-  ·
-  <a href="#-最新动态">最新动态</a>
   ·
   <a href="#-基准概览">基准概览</a>
   ·
@@ -26,12 +24,6 @@ SocialOmni 是一个面向 omni-modal large language models（OLMs）的**音视
 - **How**：如何回应，是否能生成自然且符合语境的插话内容
 
 本仓库提供完整的 benchmark 流水线、模型客户端与服务端、运行配置，以及可复现的感知任务与交互生成任务评测入口。
-
-## 📣 最新动态
-
-- **[2026.03]** README 已重构为论文项目主页风格，补充了更完整的 benchmark 展示与快速入口。
-- **[2026.03]** SocialOmni 的 benchmark 代码、配置和评测脚本已在本仓库公开。
-- **[2026.03]** 数据集已发布到 Hugging Face：[alexisty/SocialOmni](https://huggingface.co/datasets/alexisty/SocialOmni)。
 
 ## 😮 亮点
 
@@ -49,7 +41,7 @@ SocialOmni 将对话交互能力具体化为一个联合画像：
 
 这套设计可以直接暴露“感知强但交互差”或“能续说但不会择机”的模型失配问题。
 
-### 3. 交互失败是可诊断、可量化的
+### 3. 交互失败通过感知与生成联合刻画
 
 SocialOmni 不只是给出总分，而是显式刻画：
 
@@ -75,13 +67,6 @@ SocialOmni 不只是给出总分，而是显式刻画：
 - **209** 条交互生成样本
 - 覆盖 **15** 个对话子领域
 - 显式划分音视频**一致 / 不一致**子集，用于鲁棒性分析
-
-### 标注质量
-
-- 两轮专家复核
-- 标注一致性：
-  - 感知任务：**94.2%**
-  - 生成任务：**91.8%**
 
 ## 🧩 任务定义
 
@@ -248,22 +233,13 @@ ming
 - 报告改进时建议同时给出子集指标和置信区间。
 - 生成任务评测时保持 judge 组合一致。
 
-## 🤝 致谢
-
-SocialOmni 源于一个很具体的问题：理解型指标无法充分刻画 omni 模型在真实对话中的社会交互能力。本仓库希望把说话人感知、时机判断和自然续说放进同一个可复现实验框架里，方便后续研究直接复用。
-
 ## ✏️ 引用
 
 如果 SocialOmni 对你的研究有帮助，请引用：
 
 ```bibtex
-@article{socialomni2026,
+@misc{socialomni,
   title={SocialOmni: Benchmarking Audio-Visual Social Interactivity in Omni Models},
-  author={Anonymous},
-  journal={ECCV},
-  year={2026}
+  author={Tianyu Xie and Jinfa Huang and Yuexiao Ma and Rongfang Luo and Yan Yang and Wang Chen and Yuhui Zeng and Ruize Fang and Yixuan Zou and Xiawu Zheng and Jiebo Luo and Rongrong Ji}
 }
 ```
-
-公开正式版本发布后，请将占位 citation 替换为最终论文元数据。
-
