@@ -6,7 +6,7 @@
 <h5 align="center">A benchmark for evaluating <i>who</i>, <i>when</i>, and <i>how</i> in omni-modal dialogue interaction.</h5>
 
 <p align="center">
-  <a href="https://arxiv.org/abs/2603.04379"><img src="https://img.shields.io/badge/arXiv-2603.04379-b31b1b.svg?logo=arxiv" alt="arXiv"></a>
+  <a href="https://arxiv.org/abs/2603.16859"><img src="https://img.shields.io/badge/arXiv-2603.16859-b31b1b.svg?logo=arxiv" alt="arXiv"></a>
   <a href="https://huggingface.co/papers/2603.16859"><img src="https://img.shields.io/badge/🤗-Paper%20In%20HF-red.svg" alt="HF Paper"></a>
   <a href="https://github.com/Alexisxty/SocialOmni"><img src="https://img.shields.io/badge/GitHub-SocialOmni-black?logo=github" alt="GitHub"></a>
   <a href="https://huggingface.co/datasets/alexisty/SocialOmni"><img src="https://img.shields.io/badge/🤗%20Dataset-SocialOmni-orange" alt="Dataset"></a>
