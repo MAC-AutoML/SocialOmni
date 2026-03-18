@@ -54,7 +54,7 @@ SocialOmni provides a high-fidelity map of failure by deconstructing the frictio
 
 - Generative Quality: AI-judged naturalness and coherence of interruptions.
 
-The Core Insight: By decoupling these dimensions, we pinpoint exactly where strong perception fails to translate into fluid social interaction.
+> The Core Insight: By decoupling these dimensions, we pinpoint exactly where strong perception fails to translate into fluid social interaction.
 
 
 ## 🧩 Tasks
