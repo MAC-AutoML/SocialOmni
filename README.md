@@ -6,6 +6,8 @@
 <h5 align="center">A benchmark for evaluating <i>who</i>, <i>when</i>, and <i>how</i> in omni-modal dialogue interaction.</h5>
 
 <p align="center">
+  <a href="https://arxiv.org/abs/2603.04379"><img src="https://img.shields.io/badge/arXiv-2603.04379-b31b1b.svg?logo=arxiv" alt="arXiv"></a>
+  <a href="https://huggingface.co/papers/2603.16859"><img src="https://img.shields.io/badge/🤗-Paper%20In%20HF-red.svg" alt="HF Paper"></a>
   <a href="https://github.com/Alexisxty/SocialOmni"><img src="https://img.shields.io/badge/GitHub-SocialOmni-black?logo=github" alt="GitHub"></a>
   <a href="https://huggingface.co/datasets/alexisty/SocialOmni"><img src="https://img.shields.io/badge/🤗%20Dataset-SocialOmni-orange" alt="Dataset"></a>
   <img src="https://img.shields.io/badge/Python-3.10-blue" alt="Python 3.10">
@@ -31,46 +33,35 @@ The repository contains the benchmark pipeline, model clients and servers, runti
 
 ## 😮 Highlights
 
-### 1. A benchmark for social interaction, not just static understanding
+### 1. Beyond Static QA: A Benchmark for Social Interaction
+Existing benchmarks are trapped in "answer-centric" metrics. SocialOmni shifts the focus to socially appropriate behavior in multi-party dialogues, where a "correct" answer is still a failure if the timing is unnatural.
 
-Existing omni-model benchmarks are still dominated by static QA and answer-centric metrics. SocialOmni instead evaluates whether a model can maintain socially appropriate behavior in multi-party dialogue, where a correct answer can still fail because of poor timing or unnatural continuation.
+### 2. The "Who-When-How" Protocol
+We operationalize conversational interactivity into a unified joint profile:
 
-### 2. A unified who-when-how evaluation protocol
+Who: Active speaker identification.
 
-SocialOmni operationalizes conversational interactivity as a joint profile:
+When: Socially appropriate interruption timing.
 
-- **Who**: can the model identify the active speaker at the target timestamp?
-- **When**: can the model decide whether interruption is socially appropriate?
-- **How**: can the model produce a natural, contextually coherent interruption?
+How: Contextually coherent response generation.
 
-This design exposes cases where strong perception does not translate into strong interaction quality.
+### 3. Joint Diagnostics: Decoding the Interaction Gap
+SocialOmni provides a high-fidelity map of failure by deconstructing the friction between three critical axes:
 
-### 3. Interaction failures are measured jointly across perception and generation
+- Perceptual Resilience: Robustness across audio-visual (in)consistency.
 
-The benchmark explicitly measures:
+- Timing Precision: Millisecond-level accuracy within "social windows."
 
-- perception robustness under audio-visual consistency and inconsistency
-- timing precision / recall / F1 under tolerance windows
-- judge-based quality for generated interruptions
-- cross-axis decoupling between perception, timing, and response quality
+- Generative Quality: AI-judged naturalness and coherence of interruptions.
 
-<p align="center">
-  <img src="docs/assets/socialomni_result_radar.png" alt="SocialOmni Cross-Axis Capability Profiles" width="88%" />
-</p>
+The Core Insight: By decoupling these dimensions, we pinpoint exactly where strong perception fails to translate into fluid social interaction.
+
 
 ## 🔍 Benchmark Overview
 
 <p align="center">
   <img src="docs/assets/socialomni_overview.png" alt="SocialOmni Overview" width="100%" />
 </p>
-
-### Dataset at a glance
-
-- **2,209** total benchmark items
-- **2,000** perception samples for speaker identification
-- **209** interaction-generation samples for interruption timing and response generation
-- **15** dialogue subdomains spanning entertainment, professional, daily life, and narrative scenes
-- Controlled **audio-visual consistent / inconsistent** splits for robustness analysis
 
 ## 🧩 Tasks
 
@@ -242,8 +233,10 @@ ming
 If you find SocialOmni useful in your research, please cite:
 
 ```bibtex
-@misc{socialomni,
+@article{xie2026socialomni,
   title={SocialOmni: Benchmarking Audio-Visual Social Interactivity in Omni Models},
-  author={Tianyu Xie and Jinfa Huang and Yuexiao Ma and Rongfang Luo and Yan Yang and Wang Chen and Yuhui Zeng and Ruize Fang and Yixuan Zou and Xiawu Zheng and Jiebo Luo and Rongrong Ji}
+  author={Tianyu Xie and Jinfa Huang and Yuexiao Ma and Rongfang Luo and Yan Yang and Wang Chen and Yuhui Zeng and Ruize Fang and Yixuan Zou and Xiawu Zheng and Jiebo Luo and Rongrong Ji},
+  journal={arXiv preprint arXiv:2603.16859},
+  year={2026}
 }
 ```
