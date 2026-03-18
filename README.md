@@ -1,5 +1,3 @@
-# SocialOmni: Benchmarking Audio-Visual Social Interactivity in Omni Models
-
 <p align="center">
   <img src="docs/assets/socialomni_logo.png" alt="SocialOmni Logo" width="320" />
 </p>
