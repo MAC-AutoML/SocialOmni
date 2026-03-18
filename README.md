@@ -57,12 +57,6 @@ SocialOmni provides a high-fidelity map of failure by deconstructing the frictio
 The Core Insight: By decoupling these dimensions, we pinpoint exactly where strong perception fails to translate into fluid social interaction.
 
 
-## 🔍 Benchmark Overview
-
-<p align="center">
-  <img src="docs/assets/socialomni_overview.png" alt="SocialOmni Overview" width="100%" />
-</p>
-
 ## 🧩 Tasks
 
 ### Task I: Perception (`who`)
