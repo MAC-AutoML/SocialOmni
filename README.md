@@ -140,12 +140,72 @@ uv sync
 
 ### 1. Configure runtime and paths
 
-Edit `config/config.yaml` and set:
+Recommended setup:
 
-- API keys / API endpoints
+- Put API credentials in `.env`
+- Put non-sensitive defaults such as local model paths, `server_url`, dataset paths,
+  output directories, and log directories in `config/config.yaml`
+
+Start from the provided template:
+
+```bash
+cp .env.example .env
+```
+
+Then edit `.env` and set the API credentials you need:
+
+```bash
+OPENAI_API_KEY=...
+OPENAI_API_BASE=...
+
+GEMINI_API_KEY=...
+GEMINI_API_BASE=...
+```
+
+Then edit `config/config.yaml` and set:
+
 - local model path or `server_url`
 - dataset path
 - output and result directories
+
+Notes:
+
+- API models do not require local weights.
+- Local omni models require a valid `model_path` and usually a local `server_url`.
+- If you leave `benchmark.level1.dataset_path`, `benchmark.level1.video_dir`,
+  `benchmark.level2.dataset_path`, and `benchmark.level2.video_dir` empty, the
+  benchmark uses the default `data/` layout shown below.
+
+Dataset source:
+
+- Hugging Face dataset: `alexisty/SocialOmni`
+- Default local target directory: `data/`
+
+If you keep the default benchmark paths, the runner will auto-download missing
+benchmark data into `data/level_1` or `data/level_2` on first use.
+To disable this behavior, set:
+
+```bash
+export V_SYNC_AUTO_DOWNLOAD_DATASET=0
+```
+
+You can also download the benchmark data manually:
+
+```bash
+uv run python scripts/download_dataset.py --level all
+```
+
+Default expected layout:
+
+```text
+data/
+├── level_1/
+│   ├── dataset.json
+│   └── videos/
+└── level_2/
+    ├── annotations.json
+    └── videos/
+```
 
 Common environment variables:
 
@@ -153,6 +213,7 @@ Common environment variables:
 - `OPENAI_API_BASE`
 - `GEMINI_API_KEY`
 - `GEMINI_API_BASE`
+- `V_SYNC_AUTO_DOWNLOAD_DATASET`
 
 ### 2. Start a local model server
 

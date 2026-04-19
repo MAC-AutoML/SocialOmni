@@ -15,6 +15,7 @@ from config.paths import PATHS
 from config.settings import CONFIG
 from models.pipeline.model_client import ModelClient
 from models.pipeline.types import InferenceRequest
+from models.utils.dataset_downloader import ensure_default_dataset_available
 from models.utils.openai_compat_tester import OpenAICompatTester
 
 
@@ -451,19 +452,22 @@ class Level2Pipeline:
 
 
 def default_level2_config(model_name: str) -> Level2Config:
-    dataset_path = CONFIG.benchmark("level2.dataset_path", "")
-    video_dir = CONFIG.benchmark("level2.video_dir", "")
+    dataset_path_raw = CONFIG.benchmark("level2.dataset_path", "")
+    video_dir_raw = CONFIG.benchmark("level2.video_dir", "")
     output_dir = CONFIG.benchmark("level2.output_dir", "")
     output_pattern = CONFIG.benchmark("level2.output_pattern", "results_{model}_level2.json")
     log_dir = CONFIG.benchmark("level2.log_dir", "")
     max_retries = int(CONFIG.benchmark("level2.max_retries", 5) or 5)
     retry_delay = float(CONFIG.benchmark("level2.retry_delay", 3) or 3)
 
-    dataset = Path(dataset_path) if dataset_path else PATHS.data_dir / "level_2" / "annotations.json"
-    videos = Path(video_dir) if video_dir else PATHS.data_dir / "level_2" / "videos"
+    dataset = Path(dataset_path_raw) if dataset_path_raw else PATHS.data_dir / "level_2" / "annotations.json"
+    videos = Path(video_dir_raw) if video_dir_raw else PATHS.data_dir / "level_2" / "videos"
     output_base = Path(output_dir) if output_dir else PATHS.results_dir
     output_path = output_base / output_pattern.format(model=model_name)
     logs = Path(log_dir) if log_dir else PATHS.results_logs
+
+    if not dataset_path_raw and not video_dir_raw:
+        ensure_default_dataset_available("level2", dataset, videos)
 
     return Level2Config(
         dataset_path=dataset,

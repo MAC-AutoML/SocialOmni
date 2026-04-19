@@ -16,6 +16,7 @@ from config.paths import PATHS
 from config.settings import CONFIG
 from models.pipeline.model_client import ModelClient
 from models.pipeline.types import InferenceRequest, InferenceResult
+from models.utils.dataset_downloader import ensure_default_dataset_available
 from models.utils.openai_compat_tester import GeminiSafetyBlockedError
 
 
@@ -483,17 +484,20 @@ class Level1Pipeline:
 
 
 def default_level1_config(model_name: str) -> Level1Config:
-    dataset_path = CONFIG.benchmark("level1.dataset_path", "")
-    video_dir = CONFIG.benchmark("level1.video_dir", "")
+    dataset_path_raw = CONFIG.benchmark("level1.dataset_path", "")
+    video_dir_raw = CONFIG.benchmark("level1.video_dir", "")
     output_dir = CONFIG.benchmark("level1.output_dir", "")
     output_pattern = CONFIG.benchmark("level1.output_pattern", "results_{model}_level1.json")
     log_dir = CONFIG.benchmark("level1.log_dir", "")
 
-    dataset_path = Path(dataset_path) if dataset_path else PATHS.data_level_1 / "dataset.json"
-    video_dir = Path(video_dir) if video_dir else PATHS.data_level_1 / "videos"
+    dataset_path = Path(dataset_path_raw) if dataset_path_raw else PATHS.data_level_1 / "dataset.json"
+    video_dir = Path(video_dir_raw) if video_dir_raw else PATHS.data_level_1 / "videos"
     output_base = Path(output_dir) if output_dir else PATHS.results_dir
     output_path = output_base / output_pattern.format(model=model_name)
     log_dir = Path(log_dir) if log_dir else PATHS.results_logs
+
+    if not dataset_path_raw and not video_dir_raw:
+        ensure_default_dataset_available("level1", dataset_path, video_dir)
 
     return Level1Config(
         dataset_path=dataset_path,

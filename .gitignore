@@ -16,6 +16,8 @@ dist/
 # Local env
 .env
 .env.*
+!.env.example
+!config/.env.example
 config/.env
 config/.env.*
 
