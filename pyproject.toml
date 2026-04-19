@@ -65,9 +65,13 @@ url = "https://pypi.tuna.tsinghua.edu.cn/simple"
 default = true
 
 [tool.uv.sources]
+decord = { path = "vendor/wheels/decord-0.6.0-py3-none-manylinux2010_x86_64.whl" }
 transformers = { git = "https://github.com/huggingface/transformers" }
 s2wrapper = { git = "https://github.com/bfshi/scaling_on_scales.git" }
-clip = { git = "https://github.com/openai/CLIP.git" }
+
+[tool.uv.extra-build-dependencies]
+flash-attn = ["torch==2.7.1"]
+deepspeed = ["torch==2.7.1"]
 
 [tool.ruff]
 line-length = 88

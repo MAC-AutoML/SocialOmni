@@ -6,7 +6,7 @@ __pycache__/
 *.so
 build/
 dist/
-wheels/
+/wheels/
 *.egg-info
 
 # Virtual environments
@@ -79,3 +79,11 @@ htmlcov/
 
 # Node
 node_modules/
+
+# Vendored artifacts tracked in-repo
+!/vendor/
+!/vendor/wheels/
+!/vendor/wheels/*.whl
+
+# Local OMX state
+.omx/

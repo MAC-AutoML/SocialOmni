@@ -1,5 +1,5 @@
 version = 1
-revision = 2
+revision = 3
 requires-python = "==3.10.*"
 resolution-markers = [
     "platform_machine != 'aarch64' and sys_platform == 'linux'",
@@ -410,16 +410,9 @@ wheels = [
 
 [[package]]
 name = "clip"
-version = "1.0"
-source = { git = "https://github.com/openai/CLIP.git#dcba3cb2e2827b402d2701e7e1c7d9fed8a20ef1" }
-dependencies = [
-    { name = "ftfy" },
-    { name = "packaging" },
-    { name = "regex" },
-    { name = "torch" },
-    { name = "torchvision" },
-    { name = "tqdm" },
-]
+version = "0.2.0"
+source = { registry = "https://pypi.tuna.tsinghua.edu.cn/simple" }
+sdist = { url = "https://pypi.tuna.tsinghua.edu.cn/packages/58/dc/12bf8888635ade4de57565dca75909a809d1da6ec341eacd546028a73ab9/clip-0.2.0.tar.gz", hash = "sha256:c0913fbb1a0eac8a20da4a5c890d454b081305f64429c0aa5b652164450253b8", size = 5453, upload-time = "2013-01-20T00:55:37.748Z" }
 
 [[package]]
 name = "cloudpickle"
@@ -594,14 +587,16 @@ wheels = [
 [[package]]
 name = "decord"
 version = "0.6.0"
-source = { registry = "https://pypi.tuna.tsinghua.edu.cn/simple" }
+source = { path = "vendor/wheels/decord-0.6.0-py3-none-manylinux2010_x86_64.whl" }
 dependencies = [
     { name = "numpy" },
 ]
 wheels = [
-    { url = "https://pypi.tuna.tsinghua.edu.cn/packages/11/79/936af42edf90a7bd4e41a6cac89c913d4b47fa48a26b042d5129a9242ee3/decord-0.6.0-py3-none-manylinux2010_x86_64.whl", hash = "sha256:51997f20be8958e23b7c4061ba45d0efcd86bffd5fe81c695d0befee0d442976", size = 13602299, upload-time = "2021-06-14T21:30:55.486Z" },
-    { url = "https://pypi.tuna.tsinghua.edu.cn/packages/6c/be/e15b5b866da452e62635a7b27513f31cb581fa2ea9cc9b768b535d62a955/decord-0.6.0-py3-none-win_amd64.whl", hash = "sha256:02665d7c4f1193a330205a791bc128f7e108eb6ae5b67144437a02f700943bad", size = 24733380, upload-time = "2021-06-14T21:30:57.766Z" },
+    { filename = "decord-0.6.0-py3-none-manylinux2010_x86_64.whl", hash = "sha256:045cf715476f3eb03fd800222d40339d45148f49297adf427cc0a2663ae86191" },
 ]
+
+[package.metadata]
+requires-dist = [{ name = "numpy", specifier = ">=1.14.0" }]
 
 [[package]]
 name = "deepspeed"
@@ -1002,18 +997,6 @@ wheels = [
 [package.optional-dependencies]
 http = [
     { name = "aiohttp" },
-]
-
-[[package]]
-name = "ftfy"
-version = "6.3.1"
-source = { registry = "https://pypi.tuna.tsinghua.edu.cn/simple" }
-dependencies = [
-    { name = "wcwidth" },
-]
-sdist = { url = "https://pypi.tuna.tsinghua.edu.cn/packages/a5/d3/8650919bc3c7c6e90ee3fa7fd618bf373cbbe55dff043bd67353dbb20cd8/ftfy-6.3.1.tar.gz", hash = "sha256:9b3c3d90f84fb267fe64d375a07b7f8912d817cf86009ae134aa03e1819506ec", size = 308927, upload-time = "2024-10-26T00:50:35.149Z" }
-wheels = [
-    { url = "https://pypi.tuna.tsinghua.edu.cn/packages/ab/6e/81d47999aebc1b155f81eca4477a616a70f238a2549848c38983f3c22a82/ftfy-6.3.1-py3-none-any.whl", hash = "sha256:7c70eb532015cd2f9adb53f101fb6c7945988d023a085d127d1573dc49dd0083", size = 44821, upload-time = "2024-10-26T00:50:33.425Z" },
 ]
 
 [[package]]
@@ -3152,8 +3135,8 @@ requires-dist = [
     { name = "av", specifier = ">=15.0.0" },
     { name = "beartype", specifier = ">=0.22.3" },
     { name = "cairosvg", specifier = ">=2.8.2" },
-    { name = "clip", git = "https://github.com/openai/CLIP.git" },
-    { name = "decord", specifier = ">=0.6.0" },
+    { name = "clip" },
+    { name = "decord", path = "vendor/wheels/decord-0.6.0-py3-none-manylinux2010_x86_64.whl" },
     { name = "deepspeed", specifier = ">=0.18.0" },
     { name = "diffusers", specifier = ">=0.35.2" },
     { name = "easydict", specifier = ">=1.13" },
