@@ -93,18 +93,18 @@ class OpenAICompatTester:
             except (TypeError, ValueError):
                 configured_max_frames = None
 
-        raw_api_retries = os.getenv("V_SYNC_API_MAX_RETRIES")
+        raw_api_retries = os.getenv("SOCIALOMNI_API_MAX_RETRIES")
         if raw_api_retries is None:
             default_retries = 2 if self._is_gemini_model() else CONFIG.runtime("max_retries", 5)
             raw_api_retries = CONFIG.runtime("api_max_retries", default_retries)
         api_max_retries = int(raw_api_retries or 1)
 
-        raw_api_retry_delay = os.getenv("V_SYNC_API_RETRY_DELAY")
+        raw_api_retry_delay = os.getenv("SOCIALOMNI_API_RETRY_DELAY")
         if raw_api_retry_delay is None:
             raw_api_retry_delay = CONFIG.runtime("api_retry_delay", CONFIG.runtime("request_delay", 1.0))
         api_retry_delay = float(raw_api_retry_delay or 1.0)
 
-        raw_request_timeout = os.getenv("V_SYNC_API_REQUEST_TIMEOUT")
+        raw_request_timeout = os.getenv("SOCIALOMNI_API_REQUEST_TIMEOUT")
         if raw_request_timeout is None:
             default_timeout = 45 if self._is_gemini_model() else 120
             raw_request_timeout = CONFIG.runtime("api_request_timeout", default_timeout)

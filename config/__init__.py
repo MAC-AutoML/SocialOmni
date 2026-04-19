@@ -1,4 +1,4 @@
-"""V-SYNC configuration and path entrypoint."""
+"""SocialOmni configuration and path entrypoint."""
 
 from .paths import PATHS
 from .settings import CONFIG

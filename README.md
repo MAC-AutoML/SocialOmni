@@ -142,7 +142,7 @@ uv sync
 
 Recommended setup:
 
-- Put API credentials in `.env`
+- Put the single OpenAI-compatible API credential pair in `.env`
 - Put non-sensitive defaults such as local model paths, `server_url`, dataset paths,
   output directories, and log directories in `config/config.yaml`
 
@@ -152,14 +152,11 @@ Start from the provided template:
 cp .env.example .env
 ```
 
-Then edit `.env` and set the API credentials you need:
+Then edit `.env` and set the API credential pair:
 
 ```bash
 OPENAI_API_KEY=...
 OPENAI_API_BASE=...
-
-GEMINI_API_KEY=...
-GEMINI_API_BASE=...
 ```
 
 Then edit `config/config.yaml` and set:
@@ -170,6 +167,9 @@ Then edit `config/config.yaml` and set:
 
 Notes:
 
+- All hosted API models in this repo, including Gemini model keys, use the same
+  OpenAI-compatible `OPENAI_API_KEY` and `OPENAI_API_BASE` configuration.
+- API credentials should live in `.env`, not in `config/config.yaml`.
 - API models do not require local weights.
 - Local omni models require a valid `model_path` and usually a local `server_url`.
 - If you leave `benchmark.level1.dataset_path`, `benchmark.level1.video_dir`,
@@ -186,7 +186,7 @@ benchmark data into `data/level_1` or `data/level_2` on first use.
 To disable this behavior, set:
 
 ```bash
-export V_SYNC_AUTO_DOWNLOAD_DATASET=0
+export SOCIALOMNI_AUTO_DOWNLOAD_DATASET=0
 ```
 
 You can also download the benchmark data manually:
@@ -211,9 +211,7 @@ Common environment variables:
 
 - `OPENAI_API_KEY`
 - `OPENAI_API_BASE`
-- `GEMINI_API_KEY`
-- `GEMINI_API_BASE`
-- `V_SYNC_AUTO_DOWNLOAD_DATASET`
+- `SOCIALOMNI_AUTO_DOWNLOAD_DATASET`
 
 ### 2. Start a local model server
 

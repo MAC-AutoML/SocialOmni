@@ -35,7 +35,7 @@ DATASET_SPECS: dict[str, DatasetSpec] = {
 
 
 def _auto_download_enabled() -> bool:
-    raw = os.getenv("V_SYNC_AUTO_DOWNLOAD_DATASET", "1").strip().lower()
+    raw = os.getenv("SOCIALOMNI_AUTO_DOWNLOAD_DATASET", "1").strip().lower()
     return raw not in {"0", "false", "no", "off"}
 
 

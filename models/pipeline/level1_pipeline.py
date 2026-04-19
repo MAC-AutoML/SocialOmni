@@ -150,7 +150,7 @@ class Level1Pipeline:
         return 1
 
     def _resolve_retry_failed_threshold(self) -> int:
-        raw = os.getenv("V_SYNC_RETRY_FAILED_THRESHOLD")
+        raw = os.getenv("SOCIALOMNI_RETRY_FAILED_THRESHOLD")
         if raw is None:
             raw = CONFIG.runtime("retry_failed_threshold", 1800)
         try:
@@ -159,7 +159,7 @@ class Level1Pipeline:
             return 1800
 
     def _force_retry_failed(self) -> bool:
-        raw = os.getenv("V_SYNC_FORCE_RETRY_FAILED")
+        raw = os.getenv("SOCIALOMNI_FORCE_RETRY_FAILED")
         if raw is None:
             raw = CONFIG.runtime("force_retry_failed_api", False)
         if isinstance(raw, bool):
@@ -167,7 +167,7 @@ class Level1Pipeline:
         return str(raw).strip().lower() in {"1", "true", "y", "yes", "on"}
 
     def _resolve_sample_max_attempts(self) -> int:
-        raw = os.getenv("V_SYNC_SAMPLE_MAX_ATTEMPTS")
+        raw = os.getenv("SOCIALOMNI_SAMPLE_MAX_ATTEMPTS")
         if raw is None:
             raw = CONFIG.runtime("sample_max_attempts", None)
         try:

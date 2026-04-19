@@ -23,7 +23,6 @@ def _default_config() -> Dict[str, Any]:
     return {
         "api": {
             "openai": {"base_url": ""},
-            "gemini": {"base_url": ""},
         },
         "runtime": {
             "max_retries": 5,
@@ -124,28 +123,21 @@ class Config:
 
 
 def _apply_env_overrides(config: Dict[str, Any]) -> None:
-    openai_key = os.getenv("V_SYNC_OPENAI_API_KEY") or os.getenv("OPENAI_API_KEY")
-    openai_base = os.getenv("V_SYNC_OPENAI_BASE_URL") or os.getenv("OPENAI_API_BASE")
+    openai_key = os.getenv("OPENAI_API_KEY")
+    openai_base = os.getenv("OPENAI_API_BASE")
     if openai_key:
         config.setdefault("api", {}).setdefault("openai", {})["api_key"] = openai_key
     if openai_base:
         config.setdefault("api", {}).setdefault("openai", {})["base_url"] = openai_base
 
-    gemini_key = os.getenv("V_SYNC_GEMINI_API_KEY") or os.getenv("GEMINI_API_KEY")
-    gemini_base = os.getenv("V_SYNC_GEMINI_BASE_URL") or os.getenv("GEMINI_API_BASE")
-    if gemini_key:
-        config.setdefault("api", {}).setdefault("gemini", {})["api_key"] = gemini_key
-    if gemini_base:
-        config.setdefault("api", {}).setdefault("gemini", {})["base_url"] = gemini_base
-
-    runtime_frame_interval = os.getenv("V_SYNC_RUNTIME_FRAME_INTERVAL_SEC")
+    runtime_frame_interval = os.getenv("SOCIALOMNI_RUNTIME_FRAME_INTERVAL_SEC")
     if runtime_frame_interval:
         try:
             config.setdefault("runtime", {})["frame_interval_sec"] = int(runtime_frame_interval)
         except ValueError:
             pass
 
-    runtime_max_frames = os.getenv("V_SYNC_RUNTIME_MAX_FRAMES")
+    runtime_max_frames = os.getenv("SOCIALOMNI_RUNTIME_MAX_FRAMES")
     if runtime_max_frames is not None and runtime_max_frames != "":
         lowered = runtime_max_frames.strip().lower()
         if lowered in {"none", "null", "-1"}:

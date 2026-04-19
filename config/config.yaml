@@ -1,10 +1,4 @@
-# V-SYNC global config (do not store sensitive values)
-
-api:
-  openai:
-    base_url: ""
-  gemini:
-    base_url: ""
+# SocialOmni global config (do not store sensitive values)
 
 runtime:
   max_retries: 5

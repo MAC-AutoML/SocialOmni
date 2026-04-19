@@ -153,7 +153,7 @@ def run_benchmark(
     if level == 2 and resume:
         cmd.append("--resume")
     env = os.environ.copy()
-    env["V_SYNC_ROOT"] = str(ROOT)
+    env["SOCIALOMNI_ROOT"] = str(ROOT)
 
     # Temporarily overriding output directory is not supported via environment variables.
     # Keep runner behavior unchanged and use standard files under results/.

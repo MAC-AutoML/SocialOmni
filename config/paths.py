@@ -6,7 +6,7 @@ from pathlib import Path
 
 
 def _resolve_root() -> Path:
-    env_root = os.getenv("V_SYNC_ROOT")
+    env_root = os.getenv("SOCIALOMNI_ROOT")
     if env_root:
         return Path(env_root).expanduser().resolve()
     return Path(__file__).resolve().parents[1]

@@ -162,8 +162,6 @@ uv sync
 
 - `OPENAI_API_KEY`
 - `OPENAI_API_BASE`
-- `GEMINI_API_KEY`
-- `GEMINI_API_BASE`
 
 ### 2. 启动本地模型服务
 
