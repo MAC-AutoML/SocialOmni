@@ -26,6 +26,7 @@ class Qwen3OmniClient:
         if request.metadata:
             use_video = bool(request.metadata.get("use_video", True))
             use_audio = bool(request.metadata.get("use_audio", True))
+        visual_mask = bool(request.metadata.get("visual_mask", False)) if request.metadata else False
 
         client = OmniHttpClient(server_url)
         raw_answer = client.call_api(
@@ -34,6 +35,7 @@ class Qwen3OmniClient:
             user_prompt=user_prompt,
             use_video=use_video,
             use_audio=use_audio,
+            visual_mask=visual_mask,
             max_retries=CONFIG.runtime("max_retries", 5),
             retry_delay=CONFIG.runtime("request_delay", 0.0),
         )

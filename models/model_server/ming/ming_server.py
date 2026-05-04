@@ -19,14 +19,15 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from config.settings import CONFIG
+from models.model_server.local_common.gpu_visibility import configure_cuda_visible_devices
 
 warnings.filterwarnings("ignore")
 
 app = Flask(__name__)
 
-PHYSICAL_GPUS = CONFIG.model("ming").get("gpu_ids", []) or CONFIG.runtime("gpu_ids", [])
-if PHYSICAL_GPUS:
-    os.environ["CUDA_VISIBLE_DEVICES"] = ",".join(map(str, PHYSICAL_GPUS))
+PHYSICAL_GPUS = configure_cuda_visible_devices(
+    CONFIG.model("ming").get("gpu_ids", []) or CONFIG.runtime("gpu_ids", [])
+)
 
 MODEL_PATH = os.path.expanduser(
     str(CONFIG.model("ming").get("model_path") or os.getenv("MING_MODEL_PATH") or "/publicssd/xty/models/Ming-flash-omni-2.0")

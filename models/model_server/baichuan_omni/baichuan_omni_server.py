@@ -18,15 +18,16 @@ if str(BAICHUAN_ROOT) not in sys.path:
     sys.path.insert(0, str(BAICHUAN_ROOT))
 
 from config.settings import CONFIG
+from models.model_server.local_common.gpu_visibility import configure_cuda_visible_devices
 
 warnings.filterwarnings("ignore")
 
 app = Flask(__name__)
 
 # Set GPU visibility before importing torch
-PHYSICAL_GPUS = CONFIG.model("baichuan_omni_1_5").get("gpu_ids", []) or CONFIG.runtime("gpu_ids", [])
-if PHYSICAL_GPUS:
-    os.environ["CUDA_VISIBLE_DEVICES"] = ",".join(map(str, PHYSICAL_GPUS))
+PHYSICAL_GPUS = configure_cuda_visible_devices(
+    CONFIG.model("baichuan_omni_1_5").get("gpu_ids", []) or CONFIG.runtime("gpu_ids", [])
+)
 
 os.environ.setdefault("BAICHUAN_OMNI_DISABLE_AUDIO", "1")
 

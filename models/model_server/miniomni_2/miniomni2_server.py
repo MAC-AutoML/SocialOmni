@@ -13,6 +13,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from config.settings import CONFIG
+from models.model_server.local_common.gpu_visibility import configure_cuda_visible_devices
 
 # Add local mini-omni2 library to sys.path
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -24,9 +25,9 @@ warnings.filterwarnings("ignore")
 app = Flask(__name__)
 
 # IMPORTANT: GPU visibility must be set before importing torch and other models
-PHYSICAL_GPUS = CONFIG.model("miniomni_2").get("gpu_ids", []) or CONFIG.runtime("gpu_ids", []) or [2]
-if PHYSICAL_GPUS:
-    os.environ["CUDA_VISIBLE_DEVICES"] = ",".join(map(str, PHYSICAL_GPUS))
+PHYSICAL_GPUS = configure_cuda_visible_devices(
+    CONFIG.model("miniomni_2").get("gpu_ids", []) or CONFIG.runtime("gpu_ids", [])
+)
 
 # Use logical GPU 0
 LOGICAL_GPU = 0

@@ -36,6 +36,7 @@ class OmniHttpClient:
         user_prompt: Optional[str] = None,
         use_video: bool = True,
         use_audio: bool = True,
+        visual_mask: bool = False,
         max_retries: int = 5,
         retry_delay: float = 3.0,
     ) -> Optional[str]:
@@ -54,6 +55,7 @@ class OmniHttpClient:
                             "question": full_question,
                             "use_video": str(use_video).lower(),
                             "use_audio": str(use_audio).lower(),
+                            "visual_mask": str(visual_mask).lower(),
                         },
                         timeout=300,
                     )

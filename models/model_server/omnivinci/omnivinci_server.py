@@ -12,6 +12,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from config.settings import CONFIG
+from models.model_server.local_common.gpu_visibility import configure_cuda_visible_devices
 from models.model_server.local_common.transformers_compat import (
     ensure_all_tied_weights_keys,
     ensure_transformers_no_init_weights,
@@ -23,9 +24,9 @@ app = Flask(__name__)
 
 
 # IMPORTANT: GPU visibility must be set before importing transformers
-SPECIFIED_GPUS = CONFIG.model("omnivinci").get("gpu_ids", []) or CONFIG.runtime("gpu_ids", []) or [4, 5]
-if SPECIFIED_GPUS:
-    os.environ["CUDA_VISIBLE_DEVICES"] = ",".join(map(str, SPECIFIED_GPUS))
+SPECIFIED_GPUS = configure_cuda_visible_devices(
+    CONFIG.model("omnivinci").get("gpu_ids", []) or CONFIG.runtime("gpu_ids", [])
+)
 
 # Global configuration
 MODEL_PATH = CONFIG.model("omnivinci").get("model_path") or "/publicssd/xty/models/omnivinci"

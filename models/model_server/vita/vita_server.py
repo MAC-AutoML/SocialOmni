@@ -18,15 +18,16 @@ if str(VITA_ROOT) not in sys.path:
     sys.path.insert(0, str(VITA_ROOT))
 
 from config.settings import CONFIG
+from models.model_server.local_common.gpu_visibility import configure_cuda_visible_devices
 
 warnings.filterwarnings("ignore")
 
 app = Flask(__name__)
 
 # Set GPU visibility before importing torch
-PHYSICAL_GPUS = CONFIG.model("vita_1_5").get("gpu_ids", []) or CONFIG.runtime("gpu_ids", [])
-if PHYSICAL_GPUS:
-    os.environ["CUDA_VISIBLE_DEVICES"] = ",".join(map(str, PHYSICAL_GPUS))
+PHYSICAL_GPUS = configure_cuda_visible_devices(
+    CONFIG.model("vita_1_5").get("gpu_ids", []) or CONFIG.runtime("gpu_ids", [])
+)
 
 os.environ.setdefault("VITA_DISABLE_AUDIO", "1")
 os.environ.setdefault("VITA_DELAY_VISION_TOWER", "1")

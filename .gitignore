@@ -46,6 +46,7 @@ command.md
 
 # Logs and caches
 *.log
+*.err
 *.tmp
 *.temp
 *.swp
@@ -57,6 +58,10 @@ command.md
 .coverage
 htmlcov/
 .ipynb_checkpoints/
+
+# Slurm runtime logs
+/slurm/logs/*
+!/slurm/logs/.gitkeep
 
 # LaTeX build artifacts
 *.aux

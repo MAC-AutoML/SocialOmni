@@ -5,8 +5,7 @@ import re
 import logging
 import time
 import os
-from concurrent.futures import ThreadPoolExecutor
-from concurrent.futures import FIRST_COMPLETED, wait
+from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor, wait
 from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
@@ -15,12 +14,10 @@ from typing import List, Optional
 from config.paths import PATHS
 from config.settings import CONFIG
 from models.pipeline.model_client import ModelClient
+from models.pipeline.modality import add_payload_modality, add_row_modality, modality_metadata, output_path_for
 from models.pipeline.types import InferenceRequest, InferenceResult
 from models.utils.dataset_downloader import ensure_default_dataset_available
 from models.utils.openai_compat_tester import GeminiSafetyBlockedError
-
-
-
 @dataclass(frozen=True)
 class Level1Config:
     dataset_path: Path
@@ -30,7 +27,6 @@ class Level1Config:
     max_samples: Optional[int] = None
     start_index: int = 0
     resume: bool = False
-
 
 class Level1Pipeline:
     """Unified Level1 evaluation flow: build question -> call model -> evaluate -> output results."""
@@ -44,7 +40,7 @@ class Level1Pipeline:
         model_log_dir = self.config.log_dir / self.omni_test.model_name
         model_log_dir.mkdir(parents=True, exist_ok=True)
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        log_file = model_log_dir / f"level1_{self.omni_test.model_name}_{timestamp}.log"
+        log_file = model_log_dir / f"level1_{self.omni_test.model_name}_{modality_metadata(1)['modality']}_{timestamp}.log"
 
         logger = logging.getLogger(f"level1_{self.omni_test.model_name}")
         logger.setLevel(logging.INFO)
@@ -59,15 +55,15 @@ class Level1Pipeline:
 
     def load_dataset(self) -> List[dict]:
         with open(self.config.dataset_path, "r", encoding="utf-8") as f:
-            data = json.load(f)
-        return data
+            return json.load(f)
 
     def _build_request(self, sample: dict) -> InferenceRequest:
         options = sample.get("options") or []
         system_prompt = CONFIG.benchmark("level1.system_prompt", "").strip()
         user_prompt_base = CONFIG.benchmark("level1.user_prompt", "").strip()
         answer_format = CONFIG.prompt("answer_format").strip()
-        use_video, use_audio = self._resolve_modality()
+        meta = modality_metadata(1)
+        use_video, use_audio = bool(meta["use_video"]), bool(meta["use_audio"])
         asr_content = sample.get("asr_content") or ""
         if not use_audio:
             asr_content = ""
@@ -94,18 +90,14 @@ class Level1Pipeline:
                 "sample_id": sample.get("id"),
                 "asr_content": asr_content,
                 "user_prompt": user_prompt,
-                "use_video": use_video,
-                "use_audio": use_audio,
+                "use_video": use_video, "use_audio": use_audio,
+                "visual_mask": bool(meta.get("visual_mask", False)),
             },
         )
 
     def _resolve_modality(self) -> tuple[bool, bool]:
-        raw = str(CONFIG.benchmark("level1.modality", "avt")).strip().lower()
-        if raw in {"vt", "v", "vision", "vision+text", "video+text"}:
-            return True, False
-        if raw in {"at", "a", "audio", "audio+text"}:
-            return False, True
-        return True, True
+        meta = modality_metadata(1)
+        return bool(meta["use_video"]), bool(meta["use_audio"])
 
     def _normalize_answer(self, answer: str) -> str:
         answer = (answer or "").strip()
@@ -124,7 +116,6 @@ class Level1Pipeline:
         return prediction == correct.strip().upper()
 
     def _is_scored_result(self, row: dict) -> bool:
-        # Backward compatibility: default to scored when no explicit marker is present.
         return bool(row.get("scored", True))
 
     def _save_payload(self, payload: dict) -> None:
@@ -135,14 +126,13 @@ class Level1Pipeline:
         temp_path.replace(self.config.output_path)
 
     def _is_api_model(self) -> bool:
-        api_models = {
+        return self.omni_test.model_name in {
             "gpt4o",
             "gemini_2_5_flash",
             "gemini_2_5_pro",
             "gemini_3_flash_preview",
             "gemini_3_pro_preview",
         }
-        return self.omni_test.model_name in api_models
 
     def _resolve_workers(self) -> int:
         # Keep serial execution under current policy to avoid frequent upstream 503
@@ -317,7 +307,7 @@ class Level1Pipeline:
         # Write initial progress once to avoid reading next_sample_id='-'
         # during early runtime.
         initial_accuracy = (correct / total * 100) if total > 0 else 0.0
-        initial_payload = {
+        initial_payload = add_payload_modality({
             "model": self.omni_test.model_name,
             "timestamp": run_timestamp,
             "accuracy": initial_accuracy,
@@ -328,7 +318,7 @@ class Level1Pipeline:
             "skipped_failed": skipped_failed,
             "next_pending_id": _next_pending_id(),
             "results": results,
-        }
+        }, 1)
         self._save_payload(initial_payload)
 
         def _consume_outcome(outcome: dict) -> None:
@@ -341,7 +331,7 @@ class Level1Pipeline:
                 else:
                     skipped_failed += 1
                 _upsert_result(
-                    {
+                    add_row_modality({
                         "id": sample_id,
                         "video_path": sample.get("video_path"),
                         "question": sample.get("question"),
@@ -353,7 +343,7 @@ class Level1Pipeline:
                         "scored": False,
                         "skip_reason": outcome.get("skip_reason"),
                         "skip_error": outcome.get("skip_error"),
-                    }
+                    }, 1)
                 )
                 self.logger.warning(
                     "[%s] skipped due to %s: %s",
@@ -374,7 +364,7 @@ class Level1Pipeline:
                 if is_correct:
                     correct += 1
                 _upsert_result(
-                    {
+                    add_row_modality({
                         "id": sample_id,
                         "video_path": sample.get("video_path"),
                         "question": sample.get("question"),
@@ -384,7 +374,7 @@ class Level1Pipeline:
                         "raw_response": raw_response,
                         "is_correct": is_correct,
                         "scored": True,
-                    }
+                    }, 1)
                 )
                 self.logger.info(
                     "[%s] prediction=%s correct=%s",
@@ -394,7 +384,7 @@ class Level1Pipeline:
                 )
 
             accuracy = (correct / total * 100) if total > 0 else 0.0
-            payload = {
+            payload = add_payload_modality({
                 "model": self.omni_test.model_name,
                 "timestamp": run_timestamp,
                 "accuracy": accuracy,
@@ -405,7 +395,7 @@ class Level1Pipeline:
                 "skipped_failed": skipped_failed,
                 "next_pending_id": _next_pending_id(),
                 "results": results,
-            }
+            }, 1)
             self._save_payload(payload)
         workers = self._resolve_workers()
         if workers > 1:
@@ -464,7 +454,7 @@ class Level1Pipeline:
                     remaining_ids.discard(sid)
 
         accuracy = (correct / total * 100) if total > 0 else 0.0
-        payload = {
+        payload = add_payload_modality({
             "model": self.omni_test.model_name,
             "timestamp": run_timestamp,
             "accuracy": accuracy,
@@ -475,7 +465,7 @@ class Level1Pipeline:
             "skipped_failed": skipped_failed,
             "next_pending_id": _next_pending_id(),
             "results": results,
-        }
+        }, 1)
         self._save_payload(payload)
         self.logger.info("Accuracy %.2f%% (%s/%s)", accuracy, correct, total)
         self.logger.info("Processed %s, skipped_banned %s", len(results), skipped_banned)
@@ -486,14 +476,11 @@ class Level1Pipeline:
 def default_level1_config(model_name: str) -> Level1Config:
     dataset_path_raw = CONFIG.benchmark("level1.dataset_path", "")
     video_dir_raw = CONFIG.benchmark("level1.video_dir", "")
-    output_dir = CONFIG.benchmark("level1.output_dir", "")
-    output_pattern = CONFIG.benchmark("level1.output_pattern", "results_{model}_level1.json")
     log_dir = CONFIG.benchmark("level1.log_dir", "")
 
     dataset_path = Path(dataset_path_raw) if dataset_path_raw else PATHS.data_level_1 / "dataset.json"
     video_dir = Path(video_dir_raw) if video_dir_raw else PATHS.data_level_1 / "videos"
-    output_base = Path(output_dir) if output_dir else PATHS.results_dir
-    output_path = output_base / output_pattern.format(model=model_name)
+    output_path = output_path_for(1, model_name)
     log_dir = Path(log_dir) if log_dir else PATHS.results_logs
 
     if not dataset_path_raw and not video_dir_raw:

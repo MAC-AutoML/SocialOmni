@@ -38,7 +38,7 @@ models:
     temperature: 0.3
     use_audio_in_video: true
     num_video_frames: 256
-    gpu_ids: [3]
+    gpu_ids: []
     host: "0.0.0.0"
     port: 5089
     server_url: "http://127.0.0.1:5089"
@@ -49,7 +49,7 @@ models:
     temperature: 0.3
     use_audio_in_video: true
     num_video_frames: 256
-    gpu_ids: [0, 1]
+    gpu_ids: []
     host: "0.0.0.0"
     port: 5090
     judge_model_path: ""
@@ -61,7 +61,7 @@ models:
     temperature: 0.3
     use_audio_in_video: true
     num_video_frames: 256
-    gpu_ids: [0,1,2,3]
+    gpu_ids: []
     host: "0.0.0.0"
     port: 5091
     server_url: "http://127.0.0.1:5091"
@@ -72,7 +72,7 @@ models:
     top_p: 1.0
     use_audio_in_video: true
     num_video_frames: 1  # only 1 frame (miniomni_2 currently uses single-frame + audio)
-    gpu_ids: [3]
+    gpu_ids: []
     host: "0.0.0.0"
     port: 5092
     server_url: "http://127.0.0.1:5092"
@@ -82,7 +82,7 @@ models:
     max_new_tokens: 4096
     use_audio_in_video: true
     num_video_frames: 256
-    gpu_ids: [1, 2]
+    gpu_ids: []
     host: "0.0.0.0"
     port: 5091
     server_url: "http://127.0.0.1:5091"
@@ -91,7 +91,7 @@ models:
     model_path: "/publicssd/xty/models/VITA-1.5"
     max_tokens: 256
     temperature: 0.3
-    gpu_ids: [3]
+    gpu_ids: []
     host: "0.0.0.0"
     port: 5093
     server_url: "http://127.0.0.1:5093"
@@ -103,7 +103,7 @@ models:
     use_audio_in_video: false
     # Baichuan-Omni native audio is limited to 30s (model-side limit);
     # use ASR text input consistently here.
-    gpu_ids: [0,1,2,3]
+    gpu_ids: []
     host: "0.0.0.0"
     port: 5094
     server_url: "http://127.0.0.1:5094"
@@ -113,7 +113,7 @@ models:
     max_tokens: 256
     temperature: 0.3
     use_audio_in_video: false
-    gpu_ids: [0,1,2,3]
+    gpu_ids: []
     host: "0.0.0.0"
     port: 5095
     server_url: "http://127.0.0.1:5095"
@@ -124,24 +124,24 @@ prompts:
 
 benchmark:
   level1:
-    model: ""
+    model: "qwen3_omni"
     dataset_path: ""
     video_dir: ""
     output_dir: ""
-    output_pattern: "results_{model}_level1.json"
+    output_pattern: "results_{model}_level1_{modality}.json"
     log_dir: ""
-    modality: "avt"  # avt (audio+video), vt (video-only), at (audio-only)
+    modality: "at"  # avt (audio+video), amv (audio + masked video), vt (video-only), at (audio-only)
     system_prompt: "You are a precise video-audio reasoning assistant. You must answer ONLY with the option letter (A, B, C, or D)."
     user_prompt: "Please carefully analyze the video, paying attention to the temporal relationship between the audio and visual content."
     max_retries: 5
     retry_delay: 3
     num_workers: 8
   level2:
-    model: ""
+    model: "qwen3_omni"
     dataset_path: ""
     video_dir: ""
     output_dir: ""
-    output_pattern: "results_{model}_level2.json"
+    output_pattern: "results_{model}_level2_{modality}.json"
     log_dir: ""
     modality: "avt"
     system_prompt: ""
@@ -155,7 +155,7 @@ benchmark:
     dataset_path: ""
     video_dir: ""
     output_dir: ""
-    output_pattern: "results_{model}_level3.json"
+    output_pattern: "results_{model}_level3_{modality}.json"
     log_dir: ""
     modality: "avt"
     system_prompt: ""

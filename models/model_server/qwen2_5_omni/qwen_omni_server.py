@@ -15,6 +15,7 @@ from transformers import Qwen2_5OmniForConditionalGeneration, Qwen2_5OmniProcess
 from qwen_omni_utils import process_mm_info
 
 from config.settings import CONFIG
+from models.model_server.local_common.gpu_visibility import configure_cuda_visible_devices
 
 app = Flask(__name__)
 logger = logging.getLogger("qwen2_5_omni_server")
@@ -39,21 +40,19 @@ TEMPERATURE = CONFIG.model("qwen2_5_omni").get("temperature", 0.1)
 
 # GPU configuration - supports environment variables and CLI arguments
 def get_gpu_id():
-    """Resolve GPU ID, priority: CLI argument > environment variable > default."""
-    # Check environment variable first.
+    """Resolve the first visible GPU for this process."""
     gpu_id = os.environ.get('CUDA_VISIBLE_DEVICES')
     if gpu_id is not None:
         try:
-            return int(gpu_id)
+            return int(gpu_id.split(",")[0].strip())
         except ValueError:
             pass
-    model_gpus = CONFIG.model("qwen2_5_omni").get("gpu_ids", [])
-    if model_gpus:
-        return int(model_gpus[0])
-    runtime_gpus = CONFIG.runtime("gpu_ids", [])
-    if runtime_gpus:
-        return int(runtime_gpus[0])
-    return 5
+    visible_gpus = configure_cuda_visible_devices(
+        CONFIG.model("qwen2_5_omni").get("gpu_ids", []) or CONFIG.runtime("gpu_ids", [])
+    )
+    if visible_gpus:
+        return int(visible_gpus[0])
+    return 0
 
 # Global variables
 gpu_id = get_gpu_id()
@@ -95,8 +94,14 @@ def load_model():
         raise
 
 
-def build_conversation(video_path, question):
+def build_conversation(video_path, question, use_video=True, use_audio=True):
     """Build conversation format"""
+    user_content = []
+    if use_video:
+        user_content.append({"type": "video", "video": video_path})
+    elif use_audio:
+        user_content.append({"type": "audio", "audio": video_path})
+    user_content.append({"type": "text", "text": question})
     return [
         {
             "role": "system",
@@ -106,10 +111,7 @@ def build_conversation(video_path, question):
         },
         {
             "role": "user",
-            "content": [
-                {"type": "video", "video": video_path},
-                {"type": "text", "text": question},
-            ],
+            "content": user_content,
         },
     ]
 
@@ -120,7 +122,7 @@ def process_video_analysis(video_path, question, use_video, use_audio):
     use_audio_in_video = USE_AUDIO_IN_VIDEO and use_audio
     
     # Build conversation
-    conversation = build_conversation(video_path, question)
+    conversation = build_conversation(video_path, question, use_video=use_video, use_audio=use_audio)
     
     # Prepare inputs
     text = processor.apply_chat_template(conversation, add_generation_prompt=True, tokenize=False)

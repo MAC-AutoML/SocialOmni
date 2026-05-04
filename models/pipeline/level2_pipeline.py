@@ -14,6 +14,7 @@ from typing import Any, Optional
 from config.paths import PATHS
 from config.settings import CONFIG
 from models.pipeline.model_client import ModelClient
+from models.pipeline.modality import add_payload_modality, add_row_modality, modality_metadata, output_path_for
 from models.pipeline.types import InferenceRequest
 from models.utils.dataset_downloader import ensure_default_dataset_available
 from models.utils.openai_compat_tester import OpenAICompatTester
@@ -44,10 +45,11 @@ class Level2Pipeline:
         self._judge_model_cfg: dict[str, Any] = {}
 
     def _setup_logger(self) -> logging.Logger:
+        meta = modality_metadata(2)
         model_log_dir = self.config.log_dir / self.omni_test.model_name
         model_log_dir.mkdir(parents=True, exist_ok=True)
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        log_file = model_log_dir / f"level2_{self.omni_test.model_name}_{timestamp}.log"
+        log_file = model_log_dir / f"level2_{self.omni_test.model_name}_{meta['modality']}_{timestamp}.log"
 
         logger = logging.getLogger(f"level2_{self.omni_test.model_name}")
         logger.setLevel(logging.INFO)
@@ -78,12 +80,8 @@ class Level2Pipeline:
         raise ValueError(f"Unsupported Level2 dataset format: {self.config.dataset_path}")
 
     def _resolve_modality(self) -> tuple[bool, bool]:
-        raw = str(CONFIG.benchmark("level2.modality", "avt")).strip().lower()
-        if raw in {"vt", "v", "vision", "vision+text", "video+text"}:
-            return True, False
-        if raw in {"at", "a", "audio", "audio+text"}:
-            return False, True
-        return True, True
+        meta = modality_metadata(2)
+        return bool(meta["use_video"]), bool(meta["use_audio"])
 
     def _parse_timestamp_to_seconds(self, timestamp_str: Any) -> float:
         text = str(timestamp_str or "").strip()
@@ -282,7 +280,9 @@ class Level2Pipeline:
         if not self._cut_video_at_timestamp(original_video_path, timestamp, cut_video_path):
             raise RuntimeError(f"Failed to cut video for sample {video_id} at {timestamp}s")
 
-        use_video, use_audio = self._resolve_modality()
+        meta = modality_metadata(2)
+        use_video = bool(meta["use_video"])
+        use_audio = bool(meta["use_audio"])
 
         q1_request = InferenceRequest(
             video_path=str(cut_video_path),
@@ -293,6 +293,7 @@ class Level2Pipeline:
                 "user_prompt": self._build_q1_prompt(sample),
                 "use_video": use_video,
                 "use_audio": use_audio,
+                "visual_mask": bool(meta.get("visual_mask", False)),
             },
         )
         q1_raw = self._infer_with_retry(q1_request)
@@ -315,6 +316,7 @@ class Level2Pipeline:
                         "user_prompt": self._build_q2_prompt(sample),
                         "use_video": use_video,
                         "use_audio": use_audio,
+                        "visual_mask": bool(meta.get("visual_mask", False)),
                     },
                 )
                 q2_response = self._infer_with_retry(q2_request)
@@ -349,7 +351,7 @@ class Level2Pipeline:
             if isinstance(r.get("q2_score"), (int, float)) and float(r.get("q2_score")) > 0
         ]
         q2_avg = (sum(q2_scores) / len(q2_scores)) if q2_scores else 0.0
-        return {
+        return add_payload_modality({
             "model": self.omni_test.model_name,
             "timestamp": run_timestamp,
             "q1_accuracy": q1_accuracy,
@@ -358,7 +360,7 @@ class Level2Pipeline:
             "q2_avg_score": q2_avg,
             "q2_count": len(q2_scores),
             "results": results,
-        }
+        }, 2)
 
     def run(self) -> dict[str, Any]:
         dataset = self._load_dataset()
@@ -397,7 +399,7 @@ class Level2Pipeline:
 
             try:
                 row = self._evaluate_one(sample)
-                results.append(row)
+                results.append(add_row_modality(row, 2))
                 if video_id:
                     completed_video_ids.add(video_id)
                 self.logger.info(
@@ -416,7 +418,7 @@ class Level2Pipeline:
             except Exception as exc:  # noqa: BLE001
                 self.logger.error("[%s/%s] %s failed: %s", idx, total_samples, video_id, exc)
                 results.append(
-                    {
+                    add_row_modality({
                         "video_id": video_id,
                         "timestamp": self._parse_timestamp_to_seconds(sample.get("question_1", {}).get("timestamp")),
                         "q1_correct": False,
@@ -427,7 +429,7 @@ class Level2Pipeline:
                         "q2_response": "",
                         "q2_reference": str(sample.get("question_2", {}).get("answer", "") or "").strip(),
                         "error": str(exc)[:1000],
-                    }
+                    }, 2)
                 )
                 print(
                     f"[PROGRESS] {self.omni_test.model_name}: "
@@ -454,16 +456,13 @@ class Level2Pipeline:
 def default_level2_config(model_name: str) -> Level2Config:
     dataset_path_raw = CONFIG.benchmark("level2.dataset_path", "")
     video_dir_raw = CONFIG.benchmark("level2.video_dir", "")
-    output_dir = CONFIG.benchmark("level2.output_dir", "")
-    output_pattern = CONFIG.benchmark("level2.output_pattern", "results_{model}_level2.json")
     log_dir = CONFIG.benchmark("level2.log_dir", "")
     max_retries = int(CONFIG.benchmark("level2.max_retries", 5) or 5)
     retry_delay = float(CONFIG.benchmark("level2.retry_delay", 3) or 3)
 
     dataset = Path(dataset_path_raw) if dataset_path_raw else PATHS.data_dir / "level_2" / "annotations.json"
     videos = Path(video_dir_raw) if video_dir_raw else PATHS.data_dir / "level_2" / "videos"
-    output_base = Path(output_dir) if output_dir else PATHS.results_dir
-    output_path = output_base / output_pattern.format(model=model_name)
+    output_path = output_path_for(2, model_name)
     logs = Path(log_dir) if log_dir else PATHS.results_logs
 
     if not dataset_path_raw and not video_dir_raw:
