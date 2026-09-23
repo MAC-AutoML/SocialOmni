@@ -1,0 +1,63 @@
+import json
+import tempfile
+import unittest
+from pathlib import Path
+
+from evaluate import (
+    WHO,
+    WHEN,
+    HOW,
+    file_hash,
+    gold_when,
+    participant,
+    prefix,
+    seconds,
+    summarize,
+    who_cutoff,
+)
+
+
+class ProtocolTests(unittest.TestCase):
+    def test_time_formats_and_rejection(self):
+        self.assertEqual(seconds("01:02:50"), 62.5)
+        self.assertEqual(who_cutoff("What happened from 0：04 to 0:08 seconds?"), 8)
+        self.assertEqual(
+            who_cutoff("What happened at the 2th and 6th second of the video?"), 6
+        )
+        self.assertEqual(who_cutoff("Who was speaking at 0:05 in the video?"), 5)
+        with self.assertRaises(ValueError):
+            who_cutoff("Who speaks sometime later?")
+
+    def test_failures_remain_in_denominator(self):
+        result = summarize(
+            [
+                {"task": "when", "gold": "YES", "prediction": "YES"},
+                {
+                    "task": "when",
+                    "gold": "YES",
+                    "prediction": None,
+                    "error": "request failed",
+                },
+                {"task": "when", "gold": "NO", "prediction": None},
+                {"task": "when", "gold": "NO", "prediction": "NO"},
+            ]
+        )["when"]
+        self.assertEqual(result["accuracy"], 50)
+        self.assertEqual(result["request_failures"], 1)
+        self.assertEqual(result["parse_failures"], 1)
+        self.assertEqual(result["class_counts"]["YES"]["fn"], 1)
+
+    def test_all_paper_queries_are_identified(self):
+        root = Path(__file__).resolve().parents[2] / "reproducibility/arxiv-v3/final_source/data"
+        if not root.exists():
+            self.fail("Missing archived paper annotations")
+        l1 = json.loads((root / "level_1/dataset.json").read_text())
+        l2 = json.loads((root / "level_2/annotations_200.json").read_text())["data"]
+        self.assertEqual(len(l1), 2000)
+        self.assertTrue(all(who_cutoff(row["question"]) > 0 for row in l1))
+        self.assertEqual(sum(gold_when(row) == "YES" for row in l2), 128)
+        self.assertTrue(all(participant(row) for row in l2))
+
+
+if __name__ == "__main__":
+    unittest.main()

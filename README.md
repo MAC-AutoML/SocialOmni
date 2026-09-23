@@ -57,6 +57,10 @@ Table 2 of arXiv v3. All values use a 0–100 scale. These are archived paper re
 
 The always-YES baseline reaches **64% When accuracy** on the core split. The six metrics describe different abilities and are not combined into an overall score. Newly evaluated configurations are listed separately on the [bilingual leaderboard](https://teeryxie.github.io/socialomni/) unless protocol equivalence has been established.
 
+## Hosted-model supplemental evaluation
+
+The [standalone hosted-model runner](evaluation/hosted-omni/README.md) uses the v3 item lists, query-time prefixes and prompt cards with a complete three-judge scoring stage. It has a separate lightweight Python environment and an immutable request cache. Supplemental runs remain separate from the frozen paper results.
+
 ## ⚙️ Requirements and Installation
 
 We recommend the following environment:
