@@ -183,10 +183,16 @@ async def run(args):
 
         await asyncio.gather(*(score(row) for row in responses))
 
-    await asyncio.gather(*(judge(spec) for spec in judges))
+    selected = [
+        spec
+        for spec in judges
+        if not args.only_judge or spec["name"] in args.only_judge
+    ]
+    await asyncio.gather(*(judge(spec) for spec in selected))
     report = metrics(when, responses, results)
     report["judge_errors"] = errors
     report["score_count"] = sum(len(panel) for panel in results.values())
+    report["requested_judges"] = [spec["name"] for spec in selected]
     atomic_json(args.output / "summary.json", report)
     print(json.dumps(report, indent=2))
     if not report["complete"]:
@@ -199,4 +205,5 @@ if __name__ == "__main__":
     parser.add_argument("--contexts", type=Path, required=True)
     parser.add_argument("--judges", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--only-judge", nargs="+", choices=sorted(JUDGES))
     asyncio.run(run(parser.parse_args()))
