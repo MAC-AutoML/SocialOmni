@@ -1,5 +1,7 @@
 # Qwen3.8-Omni-Flash — September 23, 2026
 
+The [GPT-5.6-Sol panel evaluation](gpt56-sol/) completes quality scoring with an explicitly disclosed GPT-4o replacement. This page and `results.json` retain the initial incomplete paper-panel snapshot.
+
 Supplemental hosted evaluation using the item lists released with [arXiv v3](https://arxiv.org/abs/2603.16859v3). This run is separate from Table 2: identical primary preprocessing and API envelopes have not been established. It evaluates `dashscope/qwen3.8-omni-flash` with thinking disabled.
 
 | Metric | Result |
@@ -25,7 +27,7 @@ Who item 1980 was rejected by the provider's input-video inspection (`data_inspe
 - Candidate code: [`c43ccec`](https://github.com/MAC-AutoML/SocialOmni/tree/c43ccec2c07dd9386cd26717eb710782b3f267b9/evaluation/hosted-omni). Candidate source, metadata, media and request hashes are recorded in `results.json`.
 - Judge runner: [`70ada75`](https://github.com/MAC-AutoML/SocialOmni/tree/70ada75bc56b1266cfac472f226034531b2a57bc/evaluation/hosted-omni).
 
-## Scoring status
+## Initial scoring status
 
 Gemini 2.5 Pro and Qwen3-Omni each completed 128 valid scores, with no judge request or parsing errors. The 256 scores are preserved in the export.
 

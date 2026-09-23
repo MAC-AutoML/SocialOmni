@@ -13,9 +13,11 @@ class ClientTests(unittest.IsolatedAsyncioTestCase):
         self.requests = 0
         self.finish = "stop"
         self.fail_first = False
+        self.response_text = "hello"
 
         async def handler(request):
             self.requests += 1
+            self.payload = await request.json()
             if self.fail_first and self.requests == 1:
                 return web.Response(status=429)
             response = web.StreamResponse(headers={"Content-Type": "text/event-stream"})
@@ -25,7 +27,7 @@ class ClientTests(unittest.IsolatedAsyncioTestCase):
                     "choices": [
                         {
                             "index": 0,
-                            "delta": {"content": "hello"},
+                            "delta": {"content": self.response_text},
                             "finish_reason": None,
                         }
                     ]
@@ -76,11 +78,33 @@ class ClientTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(self.requests, 2)
         self.assertEqual(len(list(Path(self.folder.name).rglob("attempt-*.json"))), 2)
 
+    async def test_text_only_interface_has_distinct_cache_identity(self):
+        original = await self.client.complete([])
+        self.assertEqual(self.payload["modalities"], ["text"])
+        text_only = await self.client.complete([], include_modalities=False)
+        self.assertNotIn("modalities", self.payload)
+        self.assertNotEqual(original["request_sha256"], text_only["request_sha256"])
+        await self.client.complete([], include_modalities=False)
+        self.assertEqual(self.requests, 2)
+
     async def test_truncation_not_cached_as_success(self):
         self.finish = "length"
         with self.assertRaises(RuntimeError):
             await self.client.complete([])
         self.assertFalse(list(Path(self.folder.name).rglob("result.json")))
+
+    async def test_empty_candidate_is_preserved_but_judge_requires_text(self):
+        self.response_text = ""
+        candidate = await self.client.complete([])
+        self.assertTrue(candidate["complete"])
+        self.client.max_attempts = 1
+        with self.assertRaises(RuntimeError):
+            await self.client.complete([], require_text=True)
+        self.response_text = "75"
+        judge = await self.client.complete([], require_text=True)
+        self.assertEqual(judge["text"], "75")
+        self.assertEqual(self.requests, 3)
+        self.assertEqual(len(list(Path(self.folder.name).rglob("attempt-*.json"))), 3)
 
 
 if __name__ == "__main__":

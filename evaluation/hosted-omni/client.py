@@ -92,6 +92,8 @@ class StreamingClient:
         top_p=1,
         max_tokens=8192,
         enable_thinking=None,
+        include_modalities=True,
+        require_text=False,
     ):
         payload = {
             "model": self.model,
@@ -99,10 +101,11 @@ class StreamingClient:
             "temperature": temperature,
             "top_p": top_p,
             "max_tokens": max_tokens,
-            "modalities": ["text"],
             "stream": True,
             "stream_options": {"include_usage": True},
         }
+        if include_modalities:
+            payload["modalities"] = ["text"]
         if enable_thinking is not None:
             payload["enable_thinking"] = enable_thinking
         request_hash = digest({"endpoint": self.url, "payload": payload})
@@ -111,7 +114,9 @@ class StreamingClient:
         result_path = folder / "result.json"
         if result_path.exists():
             result = json.loads(result_path.read_text())
-            if result.get("complete"):
+            if result.get("complete") and (
+                not require_text or (result.get("text") or "").strip()
+            ):
                 return result
         manifest = {
             "request_sha256": request_hash,
@@ -190,6 +195,9 @@ class StreamingClient:
                                     record["finish_reason"] = choice["finish_reason"]
                         record["stream_done"] = done
                         record["complete"] = done and record["finish_reason"] == "stop"
+                        if require_text and not record["text"].strip():
+                            record["complete"] = False
+                            raise RuntimeError("Empty text response")
                         if not record["complete"]:
                             raise RuntimeError("Incomplete stream or non-stop finish")
             except (

@@ -1,4 +1,4 @@
-"""Score a hosted SocialOmni run with the complete fixed three-judge panel."""
+"""Score a hosted SocialOmni run with an explicitly selected three-judge panel."""
 
 import argparse
 import asyncio
@@ -9,6 +9,10 @@ from pathlib import Path
 from client import StreamingClient, atomic_json, digest
 
 JUDGES = {"gpt-4o", "gemini-2.5-pro", "qwen3-omni"}
+PANELS = {
+    "paper-v3": JUDGES,
+    "gpt56-sol": {"gpt-5.6-sol", "gemini-2.5-pro", "qwen3-omni"},
+}
 SCORES = {"0", "25", "50", "75", "100"}
 RUBRIC = """Score the candidate continuation for contextual grounding, target-role consistency,
 coherence, and pragmatic appropriateness in this dialogue.
@@ -38,7 +42,8 @@ def prompt(context, candidate):
     )
 
 
-def metrics(when, responses, scores):
+def metrics(when, responses, scores, panel_name="paper-v3"):
+    required_judges = PANELS[panel_name]
     if len(when) != 200 or len(responses) != 128:
         raise ValueError("The complete 200/128 core split is required")
     when_by_id = {r["sample_id"]: r for r in when}
@@ -60,7 +65,9 @@ def metrics(when, responses, scores):
         if not text:
             continue
         panel = scores.get(sample_id, {})
-        if set(panel) != JUDGES or any(str(v) not in SCORES for v in panel.values()):
+        if set(panel) != required_judges or any(
+            str(v) not in SCORES for v in panel.values()
+        ):
             failures.append({"item": sample_id, "phase": "judging"})
             continue
         quality = sum(panel.values()) / 3
@@ -88,8 +95,8 @@ async def run(args):
     source = json.loads((args.candidates / "manifest.json").read_text())
     contexts = json.loads(args.contexts.read_text())
     judges = json.loads(args.judges.read_text())["judges"]
-    if len(judges) != 3 or {j["name"] for j in judges} != JUDGES:
-        raise ValueError("Exactly GPT-4o, Gemini 2.5 Pro and Qwen3-Omni are required")
+    if len(judges) != 3 or {j["name"] for j in judges} != PANELS[args.panel]:
+        raise ValueError("Judge configuration must match the selected panel")
     rows = [
         json.loads(p.read_text())
         for p in sorted((args.candidates / "items").glob("*.json"))
@@ -106,6 +113,7 @@ async def run(args):
         raise ValueError("Resolve candidate transport failures before judging")
     args.output.mkdir(parents=True, exist_ok=True)
     identity = {
+        "panel": args.panel,
         "candidate_manifest_sha256": digest(source),
         "candidate_rows_sha256": digest(responses),
         "contexts_sha256": digest(contexts),
@@ -156,6 +164,8 @@ async def run(args):
                         temperature=0,
                         top_p=1,
                         max_tokens=8192,
+                        include_modalities=spec.get("include_modalities", True),
+                        require_text=True,
                     )
                     value = response["text"].strip()
                     if value not in SCORES:
@@ -189,7 +199,7 @@ async def run(args):
         if not args.only_judge or spec["name"] in args.only_judge
     ]
     await asyncio.gather(*(judge(spec) for spec in selected))
-    report = metrics(when, responses, results)
+    report = metrics(when, responses, results, args.panel)
     report["judge_errors"] = errors
     report["score_count"] = sum(len(panel) for panel in results.values())
     report["requested_judges"] = [spec["name"] for spec in selected]
@@ -205,5 +215,8 @@ if __name__ == "__main__":
     parser.add_argument("--contexts", type=Path, required=True)
     parser.add_argument("--judges", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
-    parser.add_argument("--only-judge", nargs="+", choices=sorted(JUDGES))
+    parser.add_argument("--panel", choices=sorted(PANELS), default="paper-v3")
+    parser.add_argument(
+        "--only-judge", nargs="+", choices=sorted(set.union(*PANELS.values()))
+    )
     asyncio.run(run(parser.parse_args()))

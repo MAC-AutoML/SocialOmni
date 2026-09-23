@@ -5,8 +5,9 @@ import hashlib
 import json
 from pathlib import Path
 
+from client import digest
 from evaluate import summarize
-from judge_eval import JUDGES, metrics
+from judge_eval import PANELS, metrics
 
 
 def sha256(path):
@@ -29,7 +30,15 @@ def export(candidates, judges, output, allow_incomplete=False):
     how = [r for r in rows if r["task"] == "how"]
     score_path = judges / "scores.json"
     scores = json.loads(score_path.read_text()) if score_path.exists() else {}
-    quality = metrics(when, how, scores)
+    judge_manifest = judges / "manifest.json"
+    judging = json.loads(judge_manifest.read_text()) if judge_manifest.exists() else {}
+    if scores and (
+        judging.get("candidate_manifest_sha256") != digest(manifest)
+        or judging.get("candidate_rows_sha256") != digest(how)
+    ):
+        raise ValueError("Judge scores do not match the candidate inputs")
+    panel_name = judging.get("panel", "paper-v3")
+    quality = metrics(when, how, scores, panel_name)
     when_by_id = {r["sample_id"]: r for r in when}
     quality["covered_positive"] = sum(
         not r.get("error")
@@ -41,7 +50,6 @@ def export(candidates, judges, output, allow_incomplete=False):
     complete = quality["complete"] and not any(r.get("error") for r in rows)
     if not complete and not allow_incomplete:
         raise ValueError("Evaluation is incomplete; no official result can be exported")
-    judge_manifest = judges / "manifest.json"
     records = []
     for row in rows:
         record = {
@@ -64,7 +72,11 @@ def export(candidates, judges, output, allow_incomplete=False):
         records.append(record)
     result = {
         "model": manifest["model"],
-        "status": "complete" if complete else "incomplete",
+        "status": "complete"
+        if complete
+        else "scored_with_request_failures"
+        if quality["complete"]
+        else "incomplete",
         "paper": "https://arxiv.org/abs/2603.16859v3",
         "protocol": manifest["protocol"],
         "scope": "Supplemental hosted evaluation; original primary API envelopes were not fully released",
@@ -86,6 +98,9 @@ def export(candidates, judges, output, allow_incomplete=False):
             else None,
             "metadata_sha256": manifest["source_sha256"],
             "candidate_harness_sha256": manifest["harness_sha256"],
+            "judge_harness_sha256": judging.get("implementation_sha256"),
+            "judge_client_sha256": judging.get("client_implementation_sha256"),
+            "judge_contexts_sha256": judging.get("contexts_sha256"),
             "endpoints": "Private relay addresses and credentials omitted",
         },
         "classification": {k: classification[k] for k in ("who", "when")},
@@ -93,7 +108,15 @@ def export(candidates, judges, output, allow_incomplete=False):
             "count": len(how),
             "nonempty": sum(bool((r.get("text") or "").strip()) for r in how),
         },
-        "judges": sorted(JUDGES),
+        "judge_panel": panel_name,
+        "judge_settings": {
+            k: judging.get(k)
+            for k in ("temperature", "top_p", "max_tokens", "rubric", "rubric_source")
+        },
+        "judges": sorted(PANELS[panel_name]),
+        "judge_substitution": {"replaced": "gpt-4o", "replacement": "gpt-5.6-sol"}
+        if panel_name == "gpt56-sol"
+        else None,
         "judge_score_count": sum(len(v) for v in scores.values()),
         "quality": quality,
         "metrics": {

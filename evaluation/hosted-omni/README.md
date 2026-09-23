@@ -75,3 +75,23 @@ uv run python export_results.py --candidates runs/candidates --judges runs/judge
 ```
 
 The export keeps per-item predictions and judge scores but omits credentials and private relay addresses. It refuses an incomplete evaluation by default. `--allow-incomplete` is for an explicitly labeled progress artifact; missing-panel quality remains null.
+
+### Disclosed GPT-5.6-Sol panel
+
+`--panel gpt56-sol` selects GPT-5.6-Sol, Gemini 2.5 Pro and Qwen3-Omni for a supplemental evaluation. GPT-5.6-Sol replaces GPT-4o only in this panel; the default `paper-v3` panel still requires GPT-4o. Results must identify the replacement and remain separate from paper-panel scores.
+
+In the judge configuration, replace the GPT-4o entry with:
+
+```json
+{"name": "gpt-5.6-sol", "model": "gpt-5.6-sol", "base_url": "https://YOUR_ENDPOINT/v1", "api_key_env": "GPT56_API_KEY", "max_concurrency": 8, "include_modalities": false}
+```
+
+The text-only GPT-5.6-Sol endpoint does not accept `modalities`. Other judges retain their existing requests. Use a new output directory for the new panel; copy the existing Gemini and Qwen cache directories only when their endpoints, models, prompts and sampling settings are unchanged. Cache lookup uses the full request hash, so a changed payload cannot reuse those scores.
+
+```sh
+uv run python judge_eval.py --panel gpt56-sol --candidates runs/candidates --contexts judge-contexts.json --judges judges-sol.json --output runs/judges-sol
+```
+
+Exports record `judge_panel`, the three judge names and `judge_substitution`. Missing-panel quality remains null. With `--allow-incomplete`, a fully scored panel with retained candidate request failures has status `scored_with_request_failures`; those failures remain in the classification denominators.
+
+Judge requests require a non-empty score response. An empty successful stream is retried with the identical payload and retained as an attempt; existing valid scores are reused. Candidate generation keeps its original behavior, including preserving empty successful generations.

@@ -50,6 +50,19 @@ class JudgeMetricsTests(unittest.TestCase):
         self.responses[0]["error"] = "transport failure"
         self.assertFalse(metrics(self.when, self.responses, {})["complete"])
 
+    def test_substitute_panel_requires_explicit_selection(self):
+        scores = {"0": {"gpt-5.6-sol": 100, "gemini-2.5-pro": 50, "qwen3-omni": 75}}
+        self.assertFalse(metrics(self.when, self.responses, scores)["complete"])
+        summary = metrics(self.when, self.responses, scores, "gpt56-sol")
+        self.assertTrue(summary["complete"])
+        self.assertEqual(summary["qgold"], 75 / 128)
+
+    def test_original_scores_cannot_fill_substitute_panel(self):
+        scores = {"0": {"gpt-4o": 100, "gemini-2.5-pro": 50, "qwen3-omni": 75}}
+        self.assertFalse(
+            metrics(self.when, self.responses, scores, "gpt56-sol")["complete"]
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
