@@ -4,7 +4,6 @@ import unittest
 from pathlib import Path
 
 from aiohttp import web
-
 from client import StreamingClient
 
 

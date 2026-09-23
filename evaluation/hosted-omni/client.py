@@ -54,6 +54,7 @@ class StreamingClient:
         model="dashscope/qwen3.8-omni-flash",
         max_attempts=3,
         timeout=300,
+        trust_env=False,
     ):
         if not api_key or not api_key.strip():
             raise ValueError("Empty API key")
@@ -64,6 +65,7 @@ class StreamingClient:
         self.model = model
         self.max_attempts = max_attempts
         self.timeout = timeout
+        self.trust_env = trust_env
         parsed = urlsplit(base_url)
         if (
             parsed.scheme not in {"http", "https"}
@@ -142,7 +144,8 @@ class StreamingClient:
             retryable = True
             try:
                 async with aiohttp.ClientSession(
-                    timeout=aiohttp.ClientTimeout(total=self.timeout)
+                    timeout=aiohttp.ClientTimeout(total=self.timeout),
+                    trust_env=self.trust_env,
                 ) as session:
                     async with session.post(
                         self.url,

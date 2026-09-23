@@ -1,16 +1,10 @@
 import json
-import tempfile
 import unittest
 from pathlib import Path
 
 from evaluate import (
-    WHO,
-    WHEN,
-    HOW,
-    file_hash,
     gold_when,
     participant,
-    prefix,
     seconds,
     summarize,
     who_cutoff,
@@ -48,7 +42,10 @@ class ProtocolTests(unittest.TestCase):
         self.assertEqual(result["class_counts"]["YES"]["fn"], 1)
 
     def test_all_paper_queries_are_identified(self):
-        root = Path(__file__).resolve().parents[2] / "reproducibility/arxiv-v3/final_source/data"
+        root = (
+            Path(__file__).resolve().parents[2]
+            / "reproducibility/arxiv-v3/final_source/data"
+        )
         if not root.exists():
             self.fail("Missing archived paper annotations")
         l1 = json.loads((root / "level_1/dataset.json").read_text())

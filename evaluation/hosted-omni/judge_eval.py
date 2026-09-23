@@ -112,6 +112,9 @@ async def run(args):
         "rubric": RUBRIC,
         "rubric_source": "Implementation of arXiv v3 Appendix A.6; not a recovered primary API prompt",
         "implementation_sha256": digest(Path(__file__).read_text()),
+        "client_implementation_sha256": digest(
+            (Path(__file__).parent / "client.py").read_text()
+        ),
         "judges": [{k: v for k, v in j.items() if k != "api_key_env"} for j in judges],
         "temperature": 0,
         "top_p": 1,
@@ -132,6 +135,7 @@ async def run(args):
             base_url=spec["base_url"],
             model=spec["model"],
             timeout=600,
+            trust_env=True,
         )
         semaphore = asyncio.Semaphore(spec.get("max_concurrency", 2))
 
