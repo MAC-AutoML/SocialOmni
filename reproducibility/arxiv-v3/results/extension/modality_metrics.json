@@ -1,0 +1,339 @@
+[
+  {
+    "accuracy": 0.395,
+    "correct": 79,
+    "failures": 0,
+    "modality": "audio-only",
+    "model": "baichuan_omni_1_5",
+    "n": 200,
+    "task": "when",
+    "yes_gold": 128,
+    "yes_pred": 125
+  },
+  {
+    "accuracy": 0.234,
+    "correct": 468,
+    "failures": 0,
+    "invalid": 0,
+    "modality": "audio-only",
+    "model": "baichuan_omni_1_5",
+    "n": 2000,
+    "task": "who"
+  },
+  {
+    "accuracy": 0.07,
+    "correct": 14,
+    "failures": 0,
+    "modality": "video-only",
+    "model": "baichuan_omni_1_5",
+    "n": 200,
+    "task": "when",
+    "yes_gold": 128,
+    "yes_pred": 0
+  },
+  {
+    "accuracy": 0.2715,
+    "correct": 543,
+    "failures": 0,
+    "invalid": 0,
+    "modality": "video-only",
+    "model": "baichuan_omni_1_5",
+    "n": 2000,
+    "task": "who"
+  },
+  {
+    "accuracy": 0.36,
+    "correct": 72,
+    "failures": 0,
+    "modality": "frames-only",
+    "model": "gpt4o",
+    "n": 200,
+    "task": "when",
+    "yes_gold": 128,
+    "yes_pred": 0
+  },
+  {
+    "accuracy": 0.305,
+    "correct": 610,
+    "failures": 11,
+    "invalid": 16,
+    "modality": "frames-only",
+    "model": "gpt4o",
+    "n": 2000,
+    "task": "who"
+  },
+  {
+    "accuracy": 0.565,
+    "correct": 113,
+    "failures": 0,
+    "modality": "transcript-only",
+    "model": "gpt4o",
+    "n": 200,
+    "task": "when",
+    "yes_gold": 128,
+    "yes_pred": 93
+  },
+  {
+    "accuracy": 0.3575,
+    "correct": 715,
+    "failures": 0,
+    "invalid": 0,
+    "modality": "transcript-only",
+    "model": "gpt4o",
+    "n": 2000,
+    "task": "who"
+  },
+  {
+    "accuracy": 0.215,
+    "correct": 43,
+    "failures": 66,
+    "modality": "audio-only",
+    "model": "omnivinci",
+    "n": 200,
+    "task": "when",
+    "yes_gold": 128,
+    "yes_pred": 29
+  },
+  {
+    "accuracy": 0.3435,
+    "correct": 687,
+    "failures": 0,
+    "invalid": 0,
+    "modality": "audio-only",
+    "model": "omnivinci",
+    "n": 2000,
+    "task": "who"
+  },
+  {
+    "accuracy": 0.2,
+    "correct": 40,
+    "failures": 74,
+    "modality": "video-only",
+    "model": "omnivinci",
+    "n": 200,
+    "task": "when",
+    "yes_gold": 128,
+    "yes_pred": 32
+  },
+  {
+    "accuracy": 0.283,
+    "correct": 566,
+    "failures": 0,
+    "invalid": 88,
+    "modality": "video-only",
+    "model": "omnivinci",
+    "n": 2000,
+    "task": "who"
+  },
+  {
+    "accuracy": 0.245,
+    "correct": 49,
+    "failures": 43,
+    "modality": "audio-only",
+    "model": "qwen2_5_omni",
+    "n": 200,
+    "task": "when",
+    "yes_gold": 128,
+    "yes_pred": 23
+  },
+  {
+    "accuracy": 0.4145,
+    "correct": 829,
+    "failures": 0,
+    "invalid": 0,
+    "modality": "audio-only",
+    "model": "qwen2_5_omni",
+    "n": 2000,
+    "task": "who"
+  },
+  {
+    "accuracy": 0.205,
+    "correct": 41,
+    "failures": 73,
+    "modality": "video-only",
+    "model": "qwen2_5_omni",
+    "n": 200,
+    "task": "when",
+    "yes_gold": 128,
+    "yes_pred": 31
+  },
+  {
+    "accuracy": 0.3305,
+    "correct": 661,
+    "failures": 0,
+    "invalid": 0,
+    "modality": "video-only",
+    "model": "qwen2_5_omni",
+    "n": 2000,
+    "task": "who"
+  },
+  {
+    "accuracy": 0.33,
+    "correct": 66,
+    "failures": 21,
+    "modality": "audio-only",
+    "model": "qwen3_omni",
+    "n": 200,
+    "task": "when",
+    "yes_gold": 128,
+    "yes_pred": 6
+  },
+  {
+    "accuracy": 0.7145,
+    "correct": 1429,
+    "failures": 0,
+    "invalid": 0,
+    "modality": "audio-only",
+    "model": "qwen3_omni",
+    "n": 2000,
+    "task": "who"
+  },
+  {
+    "accuracy": 0.3,
+    "correct": 60,
+    "failures": 36,
+    "modality": "video-only",
+    "model": "qwen3_omni",
+    "n": 200,
+    "task": "when",
+    "yes_gold": 128,
+    "yes_pred": 12
+  },
+  {
+    "accuracy": 0.3705,
+    "correct": 741,
+    "failures": 0,
+    "invalid": 0,
+    "modality": "video-only",
+    "model": "qwen3_omni",
+    "n": 2000,
+    "task": "who"
+  },
+  {
+    "accuracy": 0.478,
+    "correct": 956,
+    "failures": 0,
+    "modality": "audio-only",
+    "model": "qwen3_omni_thinking",
+    "n": 2000,
+    "task": "unknown",
+    "yes_gold": 569,
+    "yes_pred": 367
+  },
+  {
+    "accuracy": 0.0,
+    "correct": 0,
+    "failures": 200,
+    "modality": "audio-only",
+    "model": "qwen3_omni_thinking",
+    "n": 200,
+    "task": "when",
+    "yes_gold": 128,
+    "yes_pred": 0
+  },
+  {
+    "accuracy": 0.478,
+    "correct": 956,
+    "failures": 0,
+    "invalid": 71,
+    "modality": "audio-only",
+    "model": "qwen3_omni_thinking",
+    "n": 2000,
+    "task": "who"
+  },
+  {
+    "accuracy": 0.348,
+    "correct": 696,
+    "failures": 0,
+    "modality": "video-only",
+    "model": "qwen3_omni_thinking",
+    "n": 2000,
+    "task": "unknown",
+    "yes_gold": 569,
+    "yes_pred": 576
+  },
+  {
+    "accuracy": 0.0,
+    "correct": 0,
+    "failures": 200,
+    "modality": "video-only",
+    "model": "qwen3_omni_thinking",
+    "n": 200,
+    "task": "when",
+    "yes_gold": 128,
+    "yes_pred": 0
+  },
+  {
+    "accuracy": 0.348,
+    "correct": 696,
+    "failures": 0,
+    "invalid": 7,
+    "modality": "video-only",
+    "model": "qwen3_omni_thinking",
+    "n": 2000,
+    "task": "who"
+  },
+  {
+    "accuracy": 0.605,
+    "correct": 121,
+    "failures": 0,
+    "modality": "audio-only",
+    "model": "vita_1_5",
+    "n": 200,
+    "task": "when",
+    "yes_gold": 128,
+    "yes_pred": 133
+  },
+  {
+    "accuracy": 0.3515,
+    "correct": 703,
+    "failures": 0,
+    "invalid": 0,
+    "modality": "audio-only",
+    "model": "vita_1_5",
+    "n": 2000,
+    "task": "who"
+  },
+  {
+    "accuracy": 0.68,
+    "correct": 136,
+    "failures": 0,
+    "modality": "audio-video",
+    "model": "vita_1_5",
+    "n": 200,
+    "task": "when",
+    "yes_gold": 128,
+    "yes_pred": 168
+  },
+  {
+    "accuracy": 0.378,
+    "correct": 756,
+    "failures": 0,
+    "invalid": 1,
+    "modality": "audio-video",
+    "model": "vita_1_5",
+    "n": 2000,
+    "task": "who"
+  },
+  {
+    "accuracy": 0.66,
+    "correct": 132,
+    "failures": 0,
+    "modality": "video-only",
+    "model": "vita_1_5",
+    "n": 200,
+    "task": "when",
+    "yes_gold": 128,
+    "yes_pred": 178
+  },
+  {
+    "accuracy": 0.3195,
+    "correct": 639,
+    "failures": 0,
+    "invalid": 1,
+    "modality": "video-only",
+    "model": "vita_1_5",
+    "n": 2000,
+    "task": "who"
+  }
+]

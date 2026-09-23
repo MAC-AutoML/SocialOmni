@@ -1,0 +1,69 @@
+{
+  "n": 200,
+  "models": 10,
+  "mapping_contract": "scores joined by calibration_id to current model/item candidate",
+  "response_level": {
+    "pearson": 0.6189486506176399,
+    "spearman": 0.5722670059806325,
+    "kendall": 0.4654832717761468,
+    "mae": 17.583333333333336,
+    "bootstrap_95_ci": {
+      "pearson": [
+        0.49227160439738543,
+        0.7259602751383473
+      ],
+      "spearman": [
+        0.45814441843649756,
+        0.670929157321726
+      ],
+      "kendall": [
+        0.365473707118607,
+        0.5566032745240577
+      ],
+      "mae": [
+        14.916666666666664,
+        20.416666666666664
+      ]
+    }
+  },
+  "model_level": {
+    "pearson": 0.8165944863639671,
+    "spearman": 0.6242424242424242,
+    "kendall": 0.5555555555555555,
+    "mae": 5.898135179486281,
+    "max_rank_shift": 6,
+    "tier_thresholds": {
+      "poor": "<25",
+      "moderate": "25-49.99",
+      "strong": ">=50"
+    },
+    "tier_agreement": 0.8,
+    "tier_kappa": 0.6551724137931035
+  },
+  "human_rater_agreement": {
+    "icc_2_1": 0.8035418157213134,
+    "icc_2_k": 0.9246444640634804,
+    "unanimous_fraction": 0.235,
+    "within_25_fraction": 0.94,
+    "pairwise": {
+      "human1_human2": {
+        "pearson": 0.8264262732045363,
+        "spearman": 0.6714006724716888,
+        "kendall": 0.60622214991763,
+        "mae": 12.875
+      },
+      "human1_human3": {
+        "pearson": 0.8215429951286621,
+        "spearman": 0.6584421517776646,
+        "kendall": 0.5983796891833681,
+        "mae": 12.5
+      },
+      "human2_human3": {
+        "pearson": 0.7601472732244694,
+        "spearman": 0.5646511235944218,
+        "kendall": 0.49930381223944165,
+        "mae": 15.875
+      }
+    }
+  }
+}

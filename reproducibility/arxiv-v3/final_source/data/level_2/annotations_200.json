@@ -1,0 +1,4606 @@
+{
+  "dataset_name": "SocialOmni interaction-generation core split",
+  "total_items": 200,
+  "data": [
+    {
+      "video_id": "video_0001",
+      "video_file": "video_0001.mp4",
+      "question_1": {
+        "question": "Should the man with his hand on the woman's shoulder speak at timestamp 00:17:00?",
+        "timestamp": "00:17:00",
+        "option_A": "YES",
+        "option_B": "NO",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man with his hand on the woman's shoulder say?",
+        "answer": " so I'd like to officially announce that Whitney is the newest and certainly the most feminine cofounder of Tider."
+      },
+      "metadata": {
+        "num_people": 4,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "As you know Whitney has been a one woman wrecking ball, strong arming every college student who dares cross her path in adjoining Tinder.Judging by these numbers guys, they're telling their friends, Okay so I'd like to officially announce that Whitney is the newest and certainly the most feminine cofounder of Tider."
+    },
+    {
+      "video_id": "video_0002",
+      "video_file": "video_0002.mp4",
+      "question_1": {
+        "question": "Should the woman sitting in the middle speak at timestamp 00:21:00?",
+        "timestamp": "00:21:00",
+        "option_A": "YES",
+        "option_B": "NO",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman sitting in the middle say?",
+        "answer": " the money is nothing.It's not nothing to me, it's a crazy amount to me, but for them it is a slap on the wrist"
+      },
+      "metadata": {
+        "num_people": 5,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up"
+      },
+      "full_asr": "When we filed the suit.You know, you said we had a strong case and we do you demonstrated a pattern of abuse that is systemic and company wide right and the picture of these text messages paint well, Justin Mat would exactly cut a sympathetic figure for a jury I mean he was suspended which is why we were able to get this settlement figure so high Now the money is nothing.It's not nothing to me, it's a crazy amount to me, but for them it is a slap on the wrist, I just want what I deserve."
+    },
+    {
+      "video_id": "video_0003",
+      "video_file": "video_0003.mp4",
+      "question_1": {
+        "question": "Should the woman in green speak at the 27th second?",
+        "timestamp": "27",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman in green say?",
+        "answer": "Pleasure doing business with you."
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "All right, all right, your sandwich for the cheese toasie, the bag of scratchings and a chocolate bar. Come on, I'm robbing myself. I don't want to swap it.  All right, all right, here's what I'll do. The toastie, the scratchings, a choccy bar and...a roast dinner with all the trimmings. How long has that been in there? Come on, I'll throw in the briefeases well. Fine, just take it. Lovely. Pleasure doing business with you."
+    },
+    {
+      "video_id": "video_0004",
+      "video_file": "video_0004.mp4",
+      "question_1": {
+        "question": "Should the little girl speak at the 23rd second?",
+        "timestamp": "23",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the little girl say?",
+        "answer": "What mates? I don't want to come in, I just want to give him this form."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "Hi, I've got a form to hand in. Name? Mr. Capp. Your name. Emily. No, if you name's not down, you're not coming in. I don't want to come in. I just want to give this to Mr Capp. Oh yeah that old one. I'll go inside I look for this Mr. Capp. Meanwhile you and all your mates sneak in. What mates? I don't want to come in, I just want to give him this form."
+    },
+    {
+      "video_id": "video_0005",
+      "video_file": "video_0005.mp4",
+      "question_1": {
+        "question": "Should the little girl speak at the 34th second?",
+        "timestamp": "34",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the little girl say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "scene transition"
+      },
+      "full_asr": "Time to make another batch of my aftershave. Now, where's the ammonia? Who's there? Sorry, Mr. Nasal, I didn't realise you were in here. I'm Miss Spray. She speaks. Miss Spryray? The new lab technician. Miss Spray. Mr. Nasal. Miss Spray. Mr. Nasal. Do you er...come here often? Before every lesson."
+    },
+    {
+      "video_id": "video_0006",
+      "video_file": "video_0006.mp4",
+      "question_1": {
+        "question": "Should the little boy speak at the 21st second?",
+        "timestamp": "21",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the little boy say?",
+        "answer": "Sir, just a plaster's fine."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "All right, sir? Have you got a plaster for this? Sure thing, little buddy! Let's take a look at you. Prep the ER! It's just a grace, sir. It's worse than I thought! Get me the crash team! I need five bags of O negative, stat! Sir, just a plaster's fine."
+    },
+    {
+      "video_id": "video_0007",
+      "video_file": "video_0007.mp4",
+      "question_1": {
+        "question": "Should the little girl speak at the 23rd second?",
+        "timestamp": "23",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the little girl say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "That was an excerpt from my new one-man show, Drama Teacher! About a drama teacher. I play the drama teacher. It was very good. I actually have a preview with the local press in about an hour so if we can try and make this quick. Right. Well, I have had a few concerns, actually. I know. I know, I didn't quite deliver on the emotions but I'm saving my voice for later. I was talking about Jasmine."
+    },
+    {
+      "video_id": "video_0008",
+      "video_file": "video_0008.mp4",
+      "question_1": {
+        "question": "Should the little girl speak at the 15th second?",
+        "timestamp": "15",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the little girl say?",
+        "answer": "Fine."
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "So Jasmine's not doing well in your class? She's rubbish. Hey, I'm sitting right here. Are you? I didn't realise because you have such little stage presence. Well, I can act better than you. Prove it. Play me, Jasmine. Play me. Fine."
+    },
+    {
+      "video_id": "video_0009",
+      "video_file": "video_0009.mp4",
+      "question_1": {
+        "question": "Should the little boy standing on the far right speak at the 17th second?",
+        "timestamp": "17",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the little boy standing on the far right say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "Boys, boys, boys. Have I got an offer for you! Not today, thanks, Mrs Tucker. We've got everything we want. Pasta, salad, juice. We are sorted. Thank you anyway,miss. Fair enough, boys. Fair enough. You are clearly not interested in upgrading your dining experience. What do you mean upgrading? Just this first-class,luxury dining package I've got on offer. For one day only."
+    },
+    {
+      "video_id": "video_0010",
+      "video_file": "video_0010.mp4",
+      "question_1": {
+        "question": "Should the little boy speak at the 21st second?",
+        "timestamp": "21",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the little boy say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 4,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "Hello, Mr Nasal. Miss Spray. I hope all those cakes aren't for you. These？No, no, no. I never eat cake, Miss Spray. I like to keep my body in peak physical condition. Very good. Well, see you later. Perhaps. I certainly hope so, Miss Spray."
+    },
+    {
+      "video_id": "video_0011",
+      "video_file": "video_0011.mp4",
+      "question_1": {
+        "question": "Should the man in camouflage speak at the 25th second?",
+        "timestamp": "25",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man in camouflage say?",
+        "answer": "I got it all under control."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Er, Dave. Sir. Sh. I'm on a stakeout. Right. Sorry. You know that bird you're trying to catch? Bird? Winged demon, more like. But there's no way he's getting away from me this time. Right, well, about that... I'm in a heightened state of alert. I could hear an ant cough a mile away. Doesn't sound like you need my help, then. I got it all under control."
+    },
+    {
+      "video_id": "video_0012",
+      "video_file": "video_0012.mp4",
+      "question_1": {
+        "question": "Should the woman in yellow speak at the 32nd second?",
+        "timestamp": "32",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman in yellow say?",
+        "answer": "Here's a map for yourself."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Good morning! Good morning. Mrs Collins, Ofsted. Here to see Mr Barker for the inspection. Certainly. One moment. Morning, Mr Barker. I've got a lady here to see you. Mrs Collins, Ofsted. Certainly. I'll let her know. Unfortunately, Mr Barker has been detained at the vets. He sends his apologies and asks if you'd mind showing yourself around? Of course. Here's a map for yourself."
+    },
+    {
+      "video_id": "video_0013",
+      "video_file": "video_0013.mp4",
+      "question_1": {
+        "question": "Did the woman speak at the 22nd second?",
+        "timestamp": "22",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "inconsistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "I always get up at seven o'clock. I have a shower and wash my hair. I have breakfast at half past seven. Then I get dressed. And what do you normally have for breakfast? Breakfast? Oh, l usually have a glass of orange juice......a grapefruit,two slices of toast one with butter and jam......and one with butter and marmalade. And two cups of coffee. You're very organized. Well, you have to be for this job. And what do you do in your free time?"
+    },
+    {
+      "video_id": "video_0014",
+      "video_file": "video_0014.mp4",
+      "question_1": {
+        "question": "Should the short-haired woman speak at the 26th second?",
+        "timestamp": "26",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": "Thanks."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "These are gonna be some tough times. You can call me anytime， even if it's the middle of the night. Here's the number at my uncle's farm. Thanks."
+    },
+    {
+      "video_id": "video_0015",
+      "video_file": "video_0015.mp4",
+      "question_1": {
+        "question": "Should the man speak at the 38th second?",
+        "timestamp": "38",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man say?",
+        "answer": "You're right, My family album USA feels right. I'll call in the morning and set up an appointment to see him."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Does the name Harvey Carlson ring a bell? Oh, yes, Harvey Carlson, I remember. He said I should call him. He is the publisher of the Carlson Publishing Company. He said they need a new book of photographs and he really liked my concept. So why don't you call him in the morning? Do you think I have enough to show him? I've been through every section with you, Richard. It's quite complete. And now that you're satisfied with the performing art section, I think you should show it to Mr. Carlson. You're right, My family album USA feels right. I'll call in the morning and set up an appointment to see him."
+    },
+    {
+      "video_id": "video_0016",
+      "video_file": "video_0016.mp4",
+      "question_1": {
+        "question": "Should the man with gray hair speak at the 47th second?",
+        "timestamp": "47",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man with gray hair say?",
+        "answer": "These are wonderful."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Okay, let's take a look. Good, very good. Family album U.S.A, is an excellent title. If you had to describe the book in one sentence, how would you do it? Well, I describe it as a book, which is a portrait of the United States, the places, the people, mostly the people. The things they do, the ways they live, the places they visit and the landmarks, a photographic journey. These are wonderful."
+    },
+    {
+      "video_id": "video_0017",
+      "video_file": "video_0017.mp4",
+      "question_1": {
+        "question": "Should the man with black hair speak at the 22nd second?",
+        "timestamp": "22",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man with black hair say?",
+        "answer": "What's that, Mr. Carlson？"
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "I'm glad you like them. I do, but... But? there's something missing. You've got a good eye, Richard, you're a terrific photographer. But before I can publish your work, I need to meet with my marketing department and you've got to do one more thing. What's that, Mr. Carlson？"
+    },
+    {
+      "video_id": "video_0018",
+      "video_file": "video_0018.mp4",
+      "question_1": {
+        "question": "Should the man with gray hair speak at the 33rd second?",
+        "timestamp": "33",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man with gray hair say?",
+        "answer": "I've never been more serious."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "In the section on culture, you've included performing art centers but you've left out street performance. The mimes, the musicians, the dancers in the parks and on the streets. Richard, if you go out and photograph street performances in the city, you'll have it. That is a great idea. The performing arts centers and the street performances. I'll do it. If you do it, I'll publish your work. Are you serious? I've never been more serious."
+    },
+    {
+      "video_id": "video_0019",
+      "video_file": "video_0019.mp4",
+      "question_1": {
+        "question": "Should the man with black hair speak at the 11th second?",
+        "timestamp": "11",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man with black hair say?",
+        "answer": "You won't be disappointed, Mr. Carlson. Thanks."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "When do you think you can return with street performances? A couple of weeks. If they're as good as the rest of these pictures, it's a deal. You won't be disappointed, Mr. Carlson. Thanks."
+    },
+    {
+      "video_id": "video_0020",
+      "video_file": "video_0020.mp4",
+      "question_1": {
+        "question": "Should the man with gray hair speak at the 11th second?",
+        "timestamp": "11",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man with gray hair say?",
+        "answer": "Absolutely."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "What a job! Good work, Richard! I'm so glad you like them so much. Like them? They represent your best work. Really? Absolutely."
+    },
+    {
+      "video_id": "video_0021",
+      "video_file": "video_0021.mp4",
+      "question_1": {
+        "question": "Should the woman speak at the 23rd second?",
+        "timestamp": "23",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": "I don't know. Maybe I'll run against him."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "But if Boswell wins, he'll be an important decision maker on the school board, and he doesn't know anything about our children's education. Who's running against him? Nobody, that's the problem. Well it sounds to me like Carter Boswell is going to win the seat on the board. Oh, not if I can stop him! And how are you going to stop him? I don't know. Maybe I'll run against him."
+    },
+    {
+      "video_id": "video_0022",
+      "video_file": "video_0022.mp4",
+      "question_1": {
+        "question": "Should the woman speak at the 16th second?",
+        "timestamp": "16",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "Well, you've got my vote. I'm serious, Philip. Why shouldn't I run? Why shouldn't you run for what mom? Your mother is thinking of running for the school board. Hey, that's terrific."
+    },
+    {
+      "video_id": "video_0023",
+      "video_file": "video_0023.mp4",
+      "question_1": {
+        "question": "Should the man speak at the 18th second?",
+        "timestamp": "18",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the man say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "Against Carter Boswell? Great. Well, if I run for office, the voters will have a clear choice. I stand for everything Boswell doesn't. I think a lot of people will vote for you against Boswell Ellen. I'll vote for you. Will you help me if I do run? Absolutely."
+    },
+    {
+      "video_id": "video_0024",
+      "video_file": "video_0024.mp4",
+      "question_1": {
+        "question": "Should the woman speak at the 19th second?",
+        "timestamp": "19",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": "Of course."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "A lot of people would like my help. Do you have a story? I'm planning to run for the school board. Against Carter Boswell? Yes. Well, that is news. Will you announce that I'm running? Sure, but I need some information. Of course."
+    },
+    {
+      "video_id": "video_0025",
+      "video_file": "video_0025.mp4",
+      "question_1": {
+        "question": "Should the woman speak at the 14th second?",
+        "timestamp": "14",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": "I don't know. I'm not sure I'm up to it."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "You have to go on television, too. Boswell's a powerful speaker. You can be too, your ideas are good ones. I don't know. I'm not sure I'm up to it."
+    },
+    {
+      "video_id": "video_0026",
+      "video_file": "video_0026.mp4",
+      "question_1": {
+        "question": "Should the woman speak at the 16th second?",
+        "timestamp": "16",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": "Thank you, Mr. Maxwell, I appreciate your kind words."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Hello, Mr. Maxwell. How are you? I just called to tell you that you are very impressive, you lost the election, but you won the attention of the residents of Riverdal,e of Boswell, and of me. Thank you, Mr. Maxwell, I appreciate your kind words."
+    },
+    {
+      "video_id": "video_0027",
+      "video_file": "video_0027.mp4",
+      "question_1": {
+        "question": "Should the man in red speak at the 28th second?",
+        "timestamp": "28",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the man in red say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 5,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "Not so good, Grandpa. We can't get this bow tie tied. Nobody knows how to do it. Do you? No, I never could, either. Well, you have your own tuxedo. How do you tie your bow tie? Yeah, Grandpa, I've seen you in it, You look great. How do you tie it? I don't. You don't? What do you mean? I never could tire one of those...things...bow ties. I have always worn a clip-on bow tie. A clip-on? Of course. Now I remember. Yes, it's so easy. All you do is clip it around under your collar."
+    },
+    {
+      "video_id": "video_0028",
+      "video_file": "video_0028.mp4",
+      "question_1": {
+        "question": "Should the woman in the blue-patterned dress speak at the 33rd second?",
+        "timestamp": "33",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman in the blue-patterned dress say?",
+        "answer": "Yes, honey, I did."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Something blue. My wristband. I, I wore it when I married your father. Oh oh mother, I forgot you're still had it. It's just so lovely. I bought it in an antique shop when I was about 18 years old. I saved it for my wedding day. And you saved it for me, didn't you, Mother? Yes, honey, I did."
+    },
+    {
+      "video_id": "video_0029",
+      "video_file": "video_0029.mp4",
+      "question_1": {
+        "question": "Should the woman in the wedding dress speak at the 21st second?",
+        "timestamp": "21",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the woman in the wedding dress say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "In less than two hours, you will be Missus Harry Bennet. That reminds me, if we don't get dressed, I won't be there to see Susan become Mrs. Harry Bennet. Before you leave, if I look all right? You never looked better."
+    },
+    {
+      "video_id": "video_0030",
+      "video_file": "video_0030.mp4",
+      "question_1": {
+        "question": "Should the young man in grey speak at the 19th second?",
+        "timestamp": "19",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the young man in grey say?",
+        "answer": "I guess you're right."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Where's mom? She went to a school board meeting. I don't know how she does it, she sure keeps busy. It's important to her. There are lots of places to go, lots of things to do. She can't sit around and do nothing, Philip works late. I guess you're right."
+    },
+    {
+      "video_id": "video_0031",
+      "video_file": "video_0031.mp4",
+      "question_1": {
+        "question": "Should the man in the white shirt speak at the 11th second?",
+        "timestamp": "11",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man in the white shirt say?",
+        "answer": "Yeah. I feel bad about us not having dinner with the family, but our schedules are so different."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "You' been working late almost every night this week, Dad, Aren't you exhausted? I don't have time to be exhausted. You and mom haven't had dinner together with us in almost a full week. Yeah. I feel bad about us not having dinner with the family, but our schedules are so different."
+    },
+    {
+      "video_id": "video_0032",
+      "video_file": "video_0032.mp4",
+      "question_1": {
+        "question": "Should the man in gray speak at the 13th second?",
+        "timestamp": "13",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man in grey say?",
+        "answer": "Well good night."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "It's not good to eat before going to bed. A cookie can't hurt, though. Well, I'm heading off for bed, and a good night's sleep. Well good night."
+    },
+    {
+      "video_id": "video_0033",
+      "video_file": "video_0033.mp4",
+      "question_1": {
+        "question": "Should the man in gray speak at the 13th second?",
+        "timestamp": "13",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the man in grey say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "Good night, Dad. I'm going to bed. Good night, Philip. Haven't you finished balancing that checkbook? I found another mistake. I'll be off to bed myself in a minute. OK. Good night."
+    },
+    {
+      "video_id": "video_0034",
+      "video_file": "video_0034.mp4",
+      "question_1": {
+        "question": "Should the man speak at the 18th second?",
+        "timestamp": "18",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man say?",
+        "answer": "Sure, if you don't mind listening."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Hello there,Robbie. What are you doing up this late? Reading. Reading? At this hour? Come on, Robbie, what are you doing up this late? Things on my mind. Do you care to talk about them? Sure, if you don't mind listening."
+    },
+    {
+      "video_id": "video_0035",
+      "video_file": "video_0035.mp4",
+      "question_1": {
+        "question": "Should the man speak at the 26th second?",
+        "timestamp": "26",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man say?",
+        "answer": "I am, mom, real proud. You are one fantastic mom, but, but I've been noticing how little quality time you spend with dad and me and the family."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "If you have something you want to talk about, I'm always prepared to listen. You haven't been around much lately. So that's it. Okay, let's talk. You and dad are like ships that pass the night. Dad works hard and he works late. You work hard on all your committees and you work late. I thought you were proud of the work I do. I am, mom, real proud. You are one fantastic mom, but, but I've been noticing how little quality time you spend with dad and me and the family."
+    },
+    {
+      "video_id": "video_0036",
+      "video_file": "video_0036.mp4",
+      "question_1": {
+        "question": "Should the woman speak at the 12th second?",
+        "timestamp": "12",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": "What is it?"
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "I think I have an idea. You do? Yep, I think I have an idea that will bring dad and you together in a more scheduled way. What is it?"
+    },
+    {
+      "video_id": "video_0037",
+      "video_file": "video_0037.mp4",
+      "question_1": {
+        "question": "Should the woman speak at the 12th second?",
+        "timestamp": "12",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": "You are a very smart young. I think I'll wait until tomorrow."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "You're right. We'll do it. I'm going to talk to daddy about it right now. But dad was so exhausted when he came home from work. Why don't you talk to him about it tomorrow? You are a very smart young. I think I'll wait until tomorrow."
+    },
+    {
+      "video_id": "video_0038",
+      "video_file": "video_0038.mp4",
+      "question_1": {
+        "question": "Should the woman speak at the 38th second?",
+        "timestamp": "38",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": "I do have an answer, Philip, or at least I think I do."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "I've been trying to find a way to encourage reading. Good luck. Oh, I think I may have found a way to do it. Yeah, tell me about it. I work with families every day, Ellen, I see how people spend their leisure time-- young and old. Mostly watching television. Well, that would be okay if and I repeat, if People took the time to read. I couldn't agree with you more. The question is, how do we get them to read more? I think you're going to give me the answer to that question, you... you have that look in your eye. I do have an answer, Philip, or at least I think I do."
+    },
+    {
+      "video_id": "video_0039",
+      "video_file": "video_0039.mp4",
+      "question_1": {
+        "question": "Should the man speak at the 42nd second?",
+        "timestamp": "42",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man say?",
+        "answer": "I love the idea."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "But how do you plan to do that? By arranging with the public schools to schedule one hour a week to start with. During that time, parents are invited to attend and to read along with the children, their children. It can go beyond the schools, Ellem. Really? I guarantee you it would go very well in the hospitals. As my patients, mostly kids would would love to read and be read to. You think so? I know so. Maybe we can experiment with your patients and see how the plan works. I love the idea."
+    },
+    {
+      "video_id": "video_0040",
+      "video_file": "video_0040.mp4",
+      "question_1": {
+        "question": "Should the woman speak at the 12th second?",
+        "timestamp": "12",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": "Well let's you and I talk about it."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "This would be a wonderful way to accomplish that. I have a question. Yes? What do we read? To the patients in the ward? Yes. Well let's you and I talk about it."
+    },
+    {
+      "video_id": "video_0041",
+      "video_file": "video_0041.mp4",
+      "question_1": {
+        "question": "Should the woman speak at the 8th second?",
+        "timestamp": "8",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 4,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "You two belong on stage, that was wonderful! Grandpa! Dad... Robbie. When did you come? We've been listening to you both."
+    },
+    {
+      "video_id": "video_0042",
+      "video_file": "video_0042.mp4",
+      "question_1": {
+        "question": "Should the woman in blue speak at the 14th second?",
+        "timestamp": "14",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the woman in blue say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "I really like this one, Susan, do you? Turn around Michelle, let me see the back of it. I like it a lot, it fits well, it doesn't need any alterations. We must have bought the right size. I like the color, she looks good in blue. I like blue too daddy."
+    },
+    {
+      "video_id": "video_0043",
+      "video_file": "video_0043.mp4",
+      "question_1": {
+        "question": "Should the man speak at the 6th second?",
+        "timestamp": "6",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the man say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "How do you like it, Daddy? It's my favorite outfit. It's good for every day. Oh, it will be good for school, Michelle. I like it, too. I always like sky circle like this."
+    },
+    {
+      "video_id": "video_0044",
+      "video_file": "video_0044.mp4",
+      "question_1": {
+        "question": "Should the man speak at the 8th second?",
+        "timestamp": "8",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the man say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "Do you want to see the winter jacket on me, Susan? Yes, I do. Change back into your jeans and put on the new winter jacket we bought today. Okay."
+    },
+    {
+      "video_id": "video_0045",
+      "video_file": "video_0045.mp4",
+      "question_1": {
+        "question": "Should the man speak at the 25th second?",
+        "timestamp": "25",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the man say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "Let's take a look at the winter jacket. Come on over here, honey. It's kind of warm. It is. That's why we bought it for you. This will be a perfect jacket for the wintertime, when it's very cold out. But it's kind of small also we must have bought the wrong size. Looks like we should have bought a bigger one. I guess we'll have to exchange it, too. I'm sure the store has others. I look silly! It is too small!"
+    },
+    {
+      "video_id": "video_0046",
+      "video_file": "video_0046.mp4",
+      "question_1": {
+        "question": "Should the woman in blue speak at the 6th second?",
+        "timestamp": "6",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman in blue say?",
+        "answer": "Sure."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "You're growing so fast, Michelle. Can I take it off? I'm hot. Sure."
+    },
+    {
+      "video_id": "video_0047",
+      "video_file": "video_0047.mp4",
+      "question_1": {
+        "question": "Should the woman speak at the 35th second?",
+        "timestamp": "35",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": "That's wonderful, Harry. What about the salary?"
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Well, are you going to tell me what's on your mind, Harry? I have been offered a job with a major accounting company in Los Angeles. But first, tell me about the job, Harry.If it's a good one, then we'll make it work for us I have a client in the garment business on seventhth Avenue I do his taxes every year.He has a big sales office in Los Angeles, and the company in Los Angeles that does his major accounting work is looking for an executive. And he recommended me. That's wonderful, Harry. What about the salary?"
+    },
+    {
+      "video_id": "video_0048",
+      "video_file": "video_0048.mp4",
+      "question_1": {
+        "question": "Should the man speak at the 13th second?",
+        "timestamp": "13",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man say?",
+        "answer": "What's the matter, Susan?"
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Oh hello there. Are you ready for lunch with your grandpa? Oh hi, grandpa, it's, of course I am, but my mind isn't. What's the matter, Susan?"
+    },
+    {
+      "video_id": "video_0049",
+      "video_file": "video_0049.mp4",
+      "question_1": {
+        "question": "Should the woman speak at the 39th second?",
+        "timestamp": "39",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": "Tell me."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "A real dilemma. Does it have anything to do with you and Harry? Yes, but I don't know where to start. Maybe I can help. Tell me what to do, Susan. Thanks, grandpa. Please sit down. Oh... Harry has been offered a job in Los Angeles. Well, this is something to think about. There are so many things to consider. There's Michelle... I wonder if a move would be a bad thing for her.And my job, I don't know if I can get a good job in Los Angeles. And what about our family? Can I tell you what I think? Tell me."
+    },
+    {
+      "video_id": "video_0050",
+      "video_file": "video_0050.mp4",
+      "question_1": {
+        "question": "Should the woman speak at the 21st second?",
+        "timestamp": "21",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": "I suppose I could call him."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "I think that you're very successful and that you have a fantastic reputation in the toy industry, I think you could talk to Mr. Marra.And I think he could help you find a real good job in Los Angeles. He was very helpful to me. Remember? I suppose I could call him."
+    },
+    {
+      "video_id": "video_0051",
+      "video_file": "video_0051.mp4",
+      "question_1": {
+        "question": "Should the man speak at the 14th second?",
+        "timestamp": "14",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man say?",
+        "answer": "Well, you should have to ask her."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "And what about Michelle? What do you think? I think Michelle is better off staying where she is. What does she think? I don't know for sure.Well, you should have to ask her."
+    },
+    {
+      "video_id": "video_0052",
+      "video_file": "video_0052.mp4",
+      "question_1": {
+        "question": "Should the man without glasses speak at the 12th second?",
+        "timestamp": "12",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man without glasses say?",
+        "answer": "She'll love it. It's a once in a lifetime offer, Harry."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Harry, it's the perfect job for you. You'll love it. It's a big decision for me, Bill, and I have to discuss it with my wife. I don't know if it's right for her. She'll love it. It's a once in a lifetime offer, Harry."
+    },
+    {
+      "video_id": "video_0053",
+      "video_file": "video_0053.mp4",
+      "question_1": {
+        "question": "Should the man speak at the 17th second?",
+        "timestamp": "17",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man say?",
+        "answer": "Sure I am."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "I met with Bill York today. And I talked with Mr. Marchcheta. Did York make the offer? Yep, he asked me if I want the job. That's exciting, Harry, what was it? A vice presidency with the biggest accounting company in the country, craft and craft. Aren't you excited about that. Sure I am."
+    },
+    {
+      "video_id": "video_0054",
+      "video_file": "video_0054.mp4",
+      "question_1": {
+        "question": "Should the woman speak at the 15th second?",
+        "timestamp": "15",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": "No, I'm not kidding."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "I talked to Mr. Marceta. What did he say? Did you tell him about me? Of course, Harry, I want what's best for you. And I think I can get a good job through Mr. Marcetta in Los Angeles, also. You're kidding. No, I'm not kidding."
+    },
+    {
+      "video_id": "video_0055",
+      "video_file": "video_0055.mp4",
+      "question_1": {
+        "question": "Should the man speak at the 10th second?",
+        "timestamp": "10",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man say?",
+        "answer": "Well, I feel fine about it, why should I?"
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "And how do you feel about taking the job in Los Angeles? How should I feel. It's the biggest company in the country. Well then you feel good about taking it? Well, I feel fine about it, why should I?"
+    },
+    {
+      "video_id": "video_0056",
+      "video_file": "video_0056.mp4",
+      "question_1": {
+        "question": "Should the woman in blue speak at the 28th second?",
+        "timestamp": "28",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman in blue say?",
+        "answer": "You're right, How do you feel about it?"
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Come and sit down for a minute, Michelle. I'd like to talk to you about something, something important. What's wrong, Susan? Oh there's nothing wrong, Michelle, but your daddy and I are talking about something that I'd like your opinion about. I know. I heard you talking about it the other night when I was trying on my new clothes. It's about moving to Los Angeles. You're right, How do you feel about it?"
+    },
+    {
+      "video_id": "video_0057",
+      "video_file": "video_0057.mp4",
+      "question_1": {
+        "question": "Should the woman in blue speak at the 13th second?",
+        "timestamp": "13",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman in blue say?",
+        "answer": "That's very considerate of you, Michelle."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Well, I really wouldn't want to move, but. But? But if you and daddy wanted to, I guess you know what's best for the family and for me. That's very considerate of you, Michelle."
+    },
+    {
+      "video_id": "video_0058",
+      "video_file": "video_0058.mp4",
+      "question_1": {
+        "question": "Should the little girl speak at the 19th second?",
+        "timestamp": "19",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the little girl say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "How was everybody's day today Michelle was chosen to do the school poster for the play this year congratulations Michelle, that's something and how was your day Susan? I see you're in a good mood Why don't you tell us about your day? I met with Bill York."
+    },
+    {
+      "video_id": "video_0059",
+      "video_file": "video_0059.mp4",
+      "question_1": {
+        "question": "Should the little girl speak at the 30th second?",
+        "timestamp": "30",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the little girl say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Really, Harry. Michelle and I have all kinds of feelings about leaving New York, the family and friends, But if you think you should take the job, we're behind you. What about Michelle's school? We'll move after the school turn. What about our new friends? I'll make new friends, wherever we are as long as we're together. We're a family, Harry. Whatever you think is right for you is right for us. I am so touched the two of you are really something."
+    },
+    {
+      "video_id": "video_0060",
+      "video_file": "video_0060.mp4",
+      "question_1": {
+        "question": "Should the little girl speak at the 11th second?",
+        "timestamp": "11",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the little girl say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "Okay, now tell us about your talk with Mr. York, did you take the job? Nope. What? No, you didn't take it? No, I did not take the job."
+    },
+    {
+      "video_id": "video_0061",
+      "video_file": "video_0061.mp4",
+      "question_1": {
+        "question": "Should the little girl speak at the 20th second?",
+        "timestamp": "20",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the little girl say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "But daddy... Harry, you didn't turn it down because of me... Or me? No, no I turned it down because of me. How's that? Well, I began to think about you and about Michelle. And then I asked myself, do I really want to work for the biggest company in the country? And? And I don't."
+    },
+    {
+      "video_id": "video_0062",
+      "video_file": "video_0062.mp4",
+      "question_1": {
+        "question": "Should the little girl speak at the 7th second?",
+        "timestamp": "7",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the little girl say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Oh, daddy, just that me we don't have to move? That's right, sweetheart. Are you sure? I couldn't be more sure, Susan."
+    },
+    {
+      "video_id": "video_0063",
+      "video_file": "video_0063.mp4",
+      "question_1": {
+        "question": "Should the man speak at the 29th second?",
+        "timestamp": "29",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man say?",
+        "answer": "I really understand, Marilin."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "I've been thinking a lot about our responsibilities in the past few weeks I never stopped thinking about them. I've been with the question of whether I go back to work or not I see and I'm torn I really want to go back to work, use my talents and pursue my career in fashion design like we always thought I would, but now,I want to be with Max as a full time mother, especially when he's a baby. I really understand, Marilin."
+    },
+    {
+      "video_id": "video_0064",
+      "video_file": "video_0064.mp4",
+      "question_1": {
+        "question": "Should the man speak at the 15th second?",
+        "timestamp": "15",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man say?",
+        "answer": "And you said?"
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Have you discussed going back to work with your boss? Rita Mae called yesterday. Ah, that's what's got you thinking, isn't it? She wants to know when I think I'll be returning to the boutique. And you said?"
+    },
+    {
+      "video_id": "video_0065",
+      "video_file": "video_0065.mp4",
+      "question_1": {
+        "question": "Should the man speak at the 18th second?",
+        "timestamp": "18",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man say?",
+        "answer": "That's something to consider, you've got yourself to think about too."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "I'm sure Rita may will understand and wait until you're ready to go back to work. Well, maybe she will and maybe she won't, who knows? If I don't accept her offer, Maybe she'll find someone else in the meantime and when I'm ready to go back there won't be a job for me. That's something to consider, you've got yourself to think about too."
+    },
+    {
+      "video_id": "video_0066",
+      "video_file": "video_0066.mp4",
+      "question_1": {
+        "question": "Should the woman in pink speak at the 35th second?",
+        "timestamp": "35",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman in pink say?",
+        "answer": "I think I did."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "There are so many things to consider one thing that makes it easier for you is is that you have us Max will always have a family member to watch over him while you're at work.I didn't have that when Richard and Susan were born, What did you do, I chose to continue with my career as a music teacher who hired a woman to watch Richard and then Susan. And I continued with my career. Do you think you made the right decision? I think I did."
+    },
+    {
+      "video_id": "video_0067",
+      "video_file": "video_0067.mp4",
+      "question_1": {
+        "question": "Should the woman in pink speak at the 13th second?",
+        "timestamp": "13",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the woman in pink say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "I miss Max and think about him all week long. We talk about him at dinner time. Will you please try to relax? I've never seen you so w up. You seem to be enjoying the pressure. The truth is, I am."
+    },
+    {
+      "video_id": "video_0068",
+      "video_file": "video_0068.mp4",
+      "question_1": {
+        "question": "Should the woman in pink speak at the 15th second?",
+        "timestamp": "15",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the woman in pink say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "My job is not an easy one, but I really enjoy it. That is exactly what I wanted to talk to you about, Susan. What's the problem.Marilyn's career. Well, my choice of careers. Choice?"
+    },
+    {
+      "video_id": "video_0069",
+      "video_file": "video_0069.mp4",
+      "question_1": {
+        "question": "Should the woman in pink speak at the 47th second?",
+        "timestamp": "47",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the woman in pink say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Why does it have to be one or the other? That's what I said. How's that? Why can't you do both? She's right. Both? Well that's what I do. I have a job and I have Michelle, I take care both to the best of my ability. It's not easy, but what is. And that's what I did, I did both with Richard and Susan and I did both with Robbie. I thought you stayed home with Robbie. I did, but I was lucky enough to have a career as a music teacher which I could continue at home. Why can't you work at home, Marilyn? You're very talented, Designing dresses is a career you could establish out of your home, couldn't you? I don't know why I didn't think of it."
+    },
+    {
+      "video_id": "video_0070",
+      "video_file": "video_0070.mp4",
+      "question_1": {
+        "question": "Should the woman in pink speak at the 21st second?",
+        "timestamp": "21",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the woman in pink say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "It seem so simple now. For a year or two, I could stay at home with Max and do my dress designs. And you could make your dresses at home. Sounds like a great way to solve the problem. That could solve your problem. Marilyn. I'm going to call Riita May at home and ask her to come by and talk about it. She wants to see Max, anyway."
+    },
+    {
+      "video_id": "video_0071",
+      "video_file": "video_0071.mp4",
+      "question_1": {
+        "question": "Should the woman in pink speak at the 29th second?",
+        "timestamp": "29",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the woman in pink say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "I think that really answers your questions, Marilyn. You can do it, do your designs at home here. And let Rita May do the selling at the boutique. And you can both benefit financially. I'm going to call Rita May right now. Oh Susan, thank you so much for coming all this way from the city to talk to me about it. I hope you don't mind having taken so much time away from your busy schedule. Are you kidding, I don't mind at all."
+    },
+    {
+      "video_id": "video_0072",
+      "video_file": "video_0072.mp4",
+      "question_1": {
+        "question": "Should the woman in white speak at the 11th second?",
+        "timestamp": "11",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the woman in white say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "I think you should call Rita Mae right now. I think the idea of working at home is perfect. I don't know what I would do without you. I'm lucky to have you all. We are lucky to have you, Marin."
+    },
+    {
+      "video_id": "video_0073",
+      "video_file": "video_0073.mp4",
+      "question_1": {
+        "question": "Should the woman in black speak at the 11th second?",
+        "timestamp": "11",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman in black say?",
+        "answer": "I'm disappointed, but I respect your decision."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Oh, Marilyn, you sounded like you made a decision when you called me, I'm all ears. I have made a decision, Rita Mae, I've decided to stay at home and be a full time mother. I'm disappointed, but I respect your decision."
+    },
+    {
+      "video_id": "video_0074",
+      "video_file": "video_0074.mp4",
+      "question_1": {
+        "question": "Should the woman in white speak at the 17th second?",
+        "timestamp": "17",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman in white say?",
+        "answer": "Exactly."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Do you remember our talks about custom design dresses for the boutique? I sure do. Why can't I design dresses for you here at home and make them here. Have the fittings here, too. And I could do the selling and the pricing at the boutique. Exactly."
+    },
+    {
+      "video_id": "video_0075",
+      "video_file": "video_0075.mp4",
+      "question_1": {
+        "question": "Should the woman in white speak at the 19th second?",
+        "timestamp": "19",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman in white say?",
+        "answer": "That's what I thought."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Oh, what kind of dresses would you design? I've thought about that for some time. Yes? Wedding dress. Wedding dresses. Brilliant idea. There's a big market today in wedding dress. That's what I thought."
+    },
+    {
+      "video_id": "video_0076",
+      "video_file": "video_0076.mp4",
+      "question_1": {
+        "question": "Should the woman in black speak at the 28th second?",
+        "timestamp": "28",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman in black say?",
+        "answer": "I really mean it."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "I like the idea very much and if it's successful, we can expand all kinds of dresses. That's what I thought. As a matter of fact, I have a customer for your first wedding dress, Well my niece is getting married and I've been trying to find just the right thing for her. Marilyn, you're going to design my niece's dress, that'll be our first one and then we'll use it to sell others. Do you really mean it? I really mean it."
+    },
+    {
+      "video_id": "video_0077",
+      "video_file": "video_0077.mp4",
+      "question_1": {
+        "question": "Should the elderly person in red speak at the 23rd second?",
+        "timestamp": "23",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the elderly person in red say?",
+        "answer": "It is."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "Is something the matter, grandpa? The editorial in this paper that has my friend Nat Baker real upset, he's coming over to talk about it. Is that serious a problem, grandpa? It is."
+    },
+    {
+      "video_id": "video_0078",
+      "video_file": "video_0078.mp4",
+      "question_1": {
+        "question": "Should the man in blue speak at the 16th second?",
+        "timestamp": "16",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the man in blue say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "I thought that was Nat Baker who rang the front doorbell. Don't let me interrupt you. No problem grandpa, we're just having some cola before getting to the tough stuff, math. He'll do anything to avoid getting down to math lessons, Mr.Stewart. I were the same way."
+    },
+    {
+      "video_id": "video_0079",
+      "video_file": "video_0079.mp4",
+      "question_1": {
+        "question": "Should the woman in blue speak at the 11th second?",
+        "timestamp": "11",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the woman in blue say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "I didn't like math, I wasn't good at it, and I didn't like studying it. But you had to be good at math, you graduated from engineering school. I was, but not in high school."
+    },
+    {
+      "video_id": "video_0080",
+      "video_file": "video_0080.mp4",
+      "question_1": {
+        "question": "Should the woman in blue speak at the 18th second?",
+        "timestamp": "18",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the woman in blue say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 4,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "There is a way now, .Malcolm. We get our friends to roll their sleeves up and get to work. It's certainly a good idea. If I could take a look at the place, I could probably tell what it requires to fix it up. I must paint How many hours of work... That's what I came to ask you to do, Mountain. If you would supervise the repfurbishing, I'll find the people to help do it."
+    },
+    {
+      "video_id": "video_0081",
+      "video_file": "video_0081.mp4",
+      "question_1": {
+        "question": "Should the woman in blue speak at the 28th second?",
+        "timestamp": "28",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the woman in blue say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 4,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "I'll help, too, Mr. Baker. I can get some of my friends to go around the neighborhood and collect the furniture we need. I'll help. Tomorrow. Yes, we'll meet tomorrowrow morning right here. Can we help? I'd really like to. Sure. we might need you to come through with your friends, Robbie, not just to go around the neighborhood asking for furniture, but to help with the paint job. That's back breakinging work and might be too much for us. I'll do it, I'll talk to them."
+    },
+    {
+      "video_id": "video_0082",
+      "video_file": "video_0082.mp4",
+      "question_1": {
+        "question": "Should the elderly woman in white speak at the 31st second?",
+        "timestamp": "31",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the elderly woman in white say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 4,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "I'd like you to meet my friend Malcolm Stewart Malcolm. This is Joanne Thompson. Hello, Joanne, nice to meet you. My pleasure, Malcolm. And this is Abe Lucas. You must remember, he ran the drugstore and used to play drums with the jazz band on weekends. Sure, I do hi Abe. Hello Mr. Stewart. Malcolm, please. Hello, Malcolm. Sit down, sit down, have some coffee. And I've got some delicious, Danish pastry for you. Where's your grandson Robbie and his friend Alexandra? Weren't they going to be here this morning? I thought so, too. I'm surprised they're not here."
+    },
+    {
+      "video_id": "video_0083",
+      "video_file": "video_0083.mp4",
+      "question_1": {
+        "question": "Should the old man on the far right speak at the 15th second?",
+        "timestamp": "15",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the old man on the far right say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 4,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "I understand you used to be in the construction business, Malcolm. I was indeed. I wonder if you would take a look at the old library and make sure that it is in good condition so that we don't have to worry about any structural problem. Well, when can I do that? I'd be happy to."
+    },
+    {
+      "video_id": "video_0084",
+      "video_file": "video_0084.mp4",
+      "question_1": {
+        "question": "Should the plaid-shirted elderly person on the far right speak at the 9th second?",
+        "timestamp": "9",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the plaid-shirted elderly person on the far right say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 4,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "In the meantime, let me give you some additional thoughts and ideas I have. Okay, go ahead Joanne. As I said, mostly the building just needs a good."
+    },
+    {
+      "video_id": "video_0085",
+      "video_file": "video_0085.mp4",
+      "question_1": {
+        "question": "Should the elderly woman speak at the 25th second?",
+        "timestamp": "25",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the elderly woman say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 4,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "This place can be developed with one real intergenerational program. That's an idea I like it, a community center but the kinds of programs that fit everyone. And programs that don't leave anyone out. It's asking a lot, but we can't do it without talking to the young people, finding out what they want. If only Robbie and Alexandra were here."
+    },
+    {
+      "video_id": "video_0086",
+      "video_file": "video_0086.mp4",
+      "question_1": {
+        "question": "Should the man speak at the 31st second?",
+        "timestamp": "31",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man say?",
+        "answer": "Yes I like her, she's a terrific person."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "Well, now that you're here you can help me with dinner. I need those potatoes peeled and sliced. Mom, give me a break. Alexandra's coming over to help me study for my math final. Well, in that case, you can wash the dishes and clean up after dinner. Can I invite Alexandra to stay for dinner? Of course. Thanks, mom. You and Alexandra have become good friends, haven't you? Yes I like her, she's a terrific person."
+    },
+    {
+      "video_id": "video_0087",
+      "video_file": "video_0087.mp4",
+      "question_1": {
+        "question": "Should the woman speak at the 28th second?",
+        "timestamp": "28",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": "Well, I suppose that might work."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "I'm going to miss her when she goes back to Greece. Would you like to give her a little farewell party? Mom, that would be terrific! Maybe we could make it a surprise. Oh I don't know surprise parties don't always work out well. Well, we could tell her it's a graduation party for me. When Alexander arrives, we'll surprise her. Well, I suppose that might work."
+    },
+    {
+      "video_id": "video_0088",
+      "video_file": "video_0088.mp4",
+      "question_1": {
+        "question": "Should the man speak at the 35th second?",
+        "timestamp": "35",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man say?",
+        "answer": "Thanks mom, I'll talk to him."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "I'd like to give her a nice going away present. Fine. There's only one problem. What's that? I'm broke. I should have saved some money. I'm sure Alexandra would be happy with something simple, Robbie. I know, but well, I'd like to give her something nice to remember me by. Maybe I could borrow some money from you and dad. Oh it's all right with me if it's all right with your dad. Thanks mom, I'll talk to him."
+    },
+    {
+      "video_id": "video_0089",
+      "video_file": "video_0089.mp4",
+      "question_1": {
+        "question": "Should the man in light blue speak at the 28th second?",
+        "timestamp": "28",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man in light blue say?",
+        "answer": "Sounds fine, Robbie."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "My friend Alexandra is going back to Greece. Nice girl. We'll all miss her. Mom says we can give her a going away surprise party. Good idea. And I'd like to get her a nice gift. What' do you have in mind? Well, a wristwatch, so she'll think of me when she looks at the time, nothing flashy, expensive, something simple, but a good one. Sounds fine, Robbie."
+    },
+    {
+      "video_id": "video_0090",
+      "video_file": "video_0090.mp4",
+      "question_1": {
+        "question": "Should the man in grey speak at the 19th second?",
+        "timestamp": "19",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man in grey say?",
+        "answer": "I will, thanks dad."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "Oh, and Robbie. Yes? You probably want a family car so you can drive her home after the party. Could I? If you drive carefully. I will, thanks dad."
+    },
+    {
+      "video_id": "video_0091",
+      "video_file": "video_0091.mp4",
+      "question_1": {
+        "question": "Should the man speak at the 29th second?",
+        "timestamp": "29",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man say?",
+        "answer": "Great, it's a date."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "When is your plane reservation for you flight to Athens? Sunday, why? Would you be able to come over Saturday night? Yes, I should be finished packing by then. My folks are giving me a little graduation party. Terrific! I'll pick you up. That isn't necessary. My dad's letting me borrow the car. Oh well, that would be very nice. About eight o'clock? Eight o'clock is fine. Great, it's a date."
+    },
+    {
+      "video_id": "video_0092",
+      "video_file": "video_0092.mp4",
+      "question_1": {
+        "question": "Should the woman speak at the 29th second?",
+        "timestamp": "29",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": "Thank you. I'm glad I got to know you."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Are you excited about graduating from high school? Sure, and a little scared. Scared? Why? Aren't you a little scared? I was when I first came to the United States. I'd never been away from home and I didn't know what it would be like, but then I found out that people are the same everywhere once you get to know them. I'm glad I got to know you. Thank you. I'm glad I got to know you."
+    },
+    {
+      "video_id": "video_0093",
+      "video_file": "video_0093.mp4",
+      "question_1": {
+        "question": "Should the woman speak at the 15th second?",
+        "timestamp": "15",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": "That's what I said, you are going to miss her."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "She's really a good friend, isn't she? Yeah. You are going to miss her. Am I going to miss her? That's what I said, you are going to miss her."
+    },
+    {
+      "video_id": "video_0094",
+      "video_file": "video_0094.mp4",
+      "question_1": {
+        "question": "Should the woman in white speak at the 8th second?",
+        "timestamp": "8",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the woman in white say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "How about the music? No's wait till Robbie gets stuck in the airport. Did she say why she had to leave today? She told Robbie that her flight tomorrow was canceled so she had to take an earlier flight today."
+    },
+    {
+      "video_id": "video_0095",
+      "video_file": "video_0095.mp4",
+      "question_1": {
+        "question": "Should the woman in white speak at the 12th second?",
+        "timestamp": "12",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the woman in white say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "This is terrible. Well, that must be him. Why is he blowing his born like that? I't know. Maybe he's angry. Do you think we should take down the decorations? They'll just make him sad. Too late now. We should have done it sooner."
+    },
+    {
+      "video_id": "video_0096",
+      "video_file": "video_0096.mp4",
+      "question_1": {
+        "question": "Should the woman in the white-collared blue dress speak at the 30th second?",
+        "timestamp": "30",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the woman in the white-collared blue dress say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 7,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Hi! What happened? I called my parents from the airport. When I told them my friends were giving me a party, they insisted that I stay. So now I'm taking a flight on Monday instead. That's great! Terrific! But how did you know the party was for you? Well, Robbie told me when he gave me this. It's lovely Robbie. All right! Now we can really start the party! No. Would you mind I'd like to say something first. Hear, hear!"
+    },
+    {
+      "video_id": "video_0097",
+      "video_file": "video_0097.mp4",
+      "question_1": {
+        "question": "Should the man in the blue T-shirt speak at the 32nd second?",
+        "timestamp": "32",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man in the blue T-shirt say?",
+        "answer": "I can't believe it."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "I would just like to thank all of you, my friends, who have made my stay in the United States so wonderful. And to Robbie and the Stewart family for opening their home to me. We should thank you, you're a real friend. And I also have a little surprise for you, Robbie. A little going away present. Thank you. Open it pleas.e I think you might be amused. OK. I can't believe it."
+    },
+    {
+      "video_id": "video_0098",
+      "video_file": "video_0098.mp4",
+      "question_1": {
+        "question": "Should the man with silver hair speak at the 18th second?",
+        "timestamp": "18",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man with silver hair say?",
+        "answer": "I always worry."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "I can't believe this is really happening! You've earned it. Years of work went into these pictures. I know, but it's still a dream come true. Well, remember we're not sure what the critics are going to write about your show yet. And you never know what the man from the New York Times is going to say about it. Are you worried? I always worry."
+    },
+    {
+      "video_id": "video_0099",
+      "video_file": "video_0099.mp4",
+      "question_1": {
+        "question": "Should the man with black hair speak at the 11th second?",
+        "timestamp": "11",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man with black hair say?",
+        "answer": "So do I."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "The reviews of this show are important for the sales of your book. When did we see the reviews soon? One of the critics is coming up this morning for a preview. I hope he's in a good mood. So do I."
+    },
+    {
+      "video_id": "video_0100",
+      "video_file": "video_0100.mp4",
+      "question_1": {
+        "question": "Should the man in the black suit speak at the 13th second?",
+        "timestamp": "13",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the man in the black suit say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "This one over here, Mr. Carlson? A little little further back ,Tom. It's too close to the refreshments. No, I think this one belongs in the \"people at Work\" section. You may be right. Try it there Tom. Right."
+    },
+    {
+      "video_id": "video_0101",
+      "video_file": "video_0101.mp4",
+      "question_1": {
+        "question": "Should the man in the black suit speak at the 32nd second?",
+        "timestamp": "32",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man in the black suit say?",
+        "answer": "I'm sure they'll like it."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "How about guests? How many people will you be bringing? Well, my family, I guess. My wife, Marilyn, my father and mother, my brother Robbie, my sister and her husband and their daughter. And my grandfather. Is that too many? No such thing as too many at an opening. I hope they like it. Your family or the public? Everybody, but especially my family, and they've stood by me through all this. I'm sure they'll like it."
+    },
+    {
+      "video_id": "video_0102",
+      "video_file": "video_0102.mp4",
+      "question_1": {
+        "question": "Should the man in the yellow tie speak at the 23rd second?",
+        "timestamp": "23",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the man in the yellow tie say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "Harvey, how are you? Mitchell, so nice of you to come. Richard, this is Mitchell Johnson. Mitchell is one of the most important syndicated reviewers in the country. Well, you're the young man who did all this. I'm afraid so. Nice to meet you. Nice to meet you, Mr. Johnson. Mitchell has always encouraged new talent. Well... do you mind if I look around and see what it says to me? Be our guest."
+    },
+    {
+      "video_id": "video_0103",
+      "video_file": "video_0103.mp4",
+      "question_1": {
+        "question": "Should the man in dark purple T-shirt speak at the 16th second?",
+        "timestamp": "16",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the man in dark purple T-shirt say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "I don't care what the critics say, Mr. Stewart. Your work is brilliant. Thank you, Tom. Tom is studying photography at NYU, he's working with me during the summer months as an intern. Oh really I'd like to see your work. It's not good enough to show I'm still learning. I'd still like to see your work."
+    },
+    {
+      "video_id": "video_0104",
+      "video_file": "video_0104.mp4",
+      "question_1": {
+        "question": "Should the man standing in the middle speak at the 10th second?",
+        "timestamp": "10",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the man standing in the middle say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "Very interesting pictures, Mr. Stewart. You have most unusual eye. Thank you. I hope that's a compliment. It is. Are you going to be reviewing the show, Mitchell? Oh yes, it's definitely worth reviewing."
+    },
+    {
+      "video_id": "video_0105",
+      "video_file": "video_0105.mp4",
+      "question_1": {
+        "question": "Should the man speak at the 26th second?",
+        "timestamp": "26",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man say?",
+        "answer": "Thank you."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "You're going to be a great success. Are you ready? As soon as I get these cuff links on. Let me help. Mom and dad are already on their way down to the gallery. There. You look very attractive. Thank you."
+    },
+    {
+      "video_id": "video_0106",
+      "video_file": "video_0106.mp4",
+      "question_1": {
+        "question": "Should the man speak at the 11th second?",
+        "timestamp": "11",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man say?",
+        "answer": "Oh, right."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "What is it? There's nobody here. Of course not, Richard. Your show doesn't begin until eight thirty. Oh, right."
+    },
+    {
+      "video_id": "video_0107",
+      "video_file": "video_0107.mp4",
+      "question_1": {
+        "question": "Should the man standing on the far right speak at the 16th second?",
+        "timestamp": "16",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the man standing on the far right say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "And this gentleman is my grandfather, Malcolm Stewart. Welcome Mr. Stewart. Well, make yourselves comfortable. There are ordurs at the table, fruit punch at the bar. Help yourselves. Can I get you something, Mr. Stewart? No, thank you."
+    },
+    {
+      "video_id": "video_0108",
+      "video_file": "video_0108.mp4",
+      "question_1": {
+        "question": "Should the woman speak at the 32nd second?",
+        "timestamp": "32",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "What's this? Read it. I can't. Would you read it Marilyn? Richard Stewart's show at the Carlson Gallery is a collection of photographs from his new book entitled Family Album U.S.A. There is power and beauty in Mr. Stewart's work and his book introduces us to a remarkable new talent. Oh, Richard It's wonderful! Congratulations! Wow my god! I'm overwhelmed."
+    },
+    {
+      "video_id": "video_0109",
+      "video_file": "video_0109.mp4",
+      "question_1": {
+        "question": "Should the woman speak at the 27th second?",
+        "timestamp": "27",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 4,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "In fact, I'd like your autograph. Oh well, really... On a contract. What's this about Harvey? Mr. O'Neill is the publisher of several magazine. Of course, I've seen you on television. Mr. O'Neill was so impressed with your work that he wants to develop it into a magazine concept. Well, that that sounds very exciting. But where would I fit into the plan? I'd like you to be the photo editor of the magazine."
+    },
+    {
+      "video_id": "video_0110",
+      "video_file": "video_0110.mp4",
+      "question_1": {
+        "question": "Should the woman speak at the 44th second?",
+        "timestamp": "44",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 4,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "It's a wonderful opportunity, Richard. Hold on. Wait a minute, please. What's the problem, Richard? The problem is that I'm a photographer, not an editor. I like what I do, in fact, I love what I do, which is going out with that camera and a roll of film and seeing the wonder of humanity and I appreciate your offer, but I've worked so hard on Family album U.S.A. And I'm giving some thought to a new book on a different subject, I'm flattered, but I enjoy taking pictures and I want to continue doing that thank you, but I'm happy being a photographer. I understand, Richard."
+    },
+    {
+      "video_id": "video_0111",
+      "video_file": "video_0111.mp4",
+      "question_1": {
+        "question": "Should the man speak at the 33rd second?",
+        "timestamp": "33",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man say?",
+        "answer": "Yes."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "A cigarette? No, thanks. A lollipop. A lollipop? How old are you? Excuse me? I'm sorry. It's okay, I'm 25 years old. You're 25? Yes. I'm 25 how old are you? Very old. No, you aren't. Yes I am my son. It's17 years old. Your son? Yes, my son. Your son is 17? Yes."
+    },
+    {
+      "video_id": "video_0112",
+      "video_file": "video_0112.mp4",
+      "question_1": {
+        "question": "Should the man speak at the 11th second?",
+        "timestamp": "11",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man say?",
+        "answer": "Great, what's your address?"
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "How about some coffee? Well, the movers are at my apartment, how about coffee at my place? it's near the studio. Great, what's your address?"
+    },
+    {
+      "video_id": "video_0113",
+      "video_file": "video_0113.mp4",
+      "question_1": {
+        "question": "Should the woman speak at the 11th second?",
+        "timestamp": "11",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": "They're beautiful Jake, thank you very much."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "Who is it? It's Jake. Jake. Jake Seltzer from the station. Jake. These are for you. Oh flowers. They're beautiful Jake, thank you very much."
+    },
+    {
+      "video_id": "video_0114",
+      "video_file": "video_0114.mp4",
+      "question_1": {
+        "question": "Should the woman in white speak at the 21st second?",
+        "timestamp": "21",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the woman in white say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "Where's the post office? It's here between the hospital and the theater. Where's the drugstore? Over here, right Carol? Yes, the drugstore is across from the post office. Excuse me. It's across from the post office next to the park. So is there a bank in this town? There are three banks in this town."
+    },
+    {
+      "video_id": "video_0115",
+      "video_file": "video_0115.mp4",
+      "question_1": {
+        "question": "Should the brunette woman speak at the 25th second?",
+        "timestamp": "25",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the brunette woman say?",
+        "answer": "Thanks."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Do you see them often? Well, not often enough. But the whole family will be here for Thanksgiving. And they are so eager to meet their Boston cousins. This will be our first Thanksgiving without Dad. It must be so hard for you. Well, we'll do what we can to make it easier. Thanks."
+    },
+    {
+      "video_id": "video_0116",
+      "video_file": "video_0116.mp4",
+      "question_1": {
+        "question": "Should the man speak at the 25th second?",
+        "timestamp": "25",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man say?",
+        "answer": "Merry Christmas."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Here's to a very special Christmas. To a very special person. To a great singer. Now, to make my day complete,I'm gonna call Alex. Let me wish him a Merry Christmas, too. Hi, Champ. It's me. Merry Christmas."
+    },
+    {
+      "video_id": "video_0117",
+      "video_file": "video_0117.mp4",
+      "question_1": {
+        "question": "Should the woman speak at the 46th second?",
+        "timestamp": "46",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": "Now you open your present."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Would you like to open your present? I'd love to. I have a present for you, too... under the Christmas tree. Well, you open your gifts first. All right. Merry Christmas and a Happy New Year. Your friend, Alex. He made the statue at school. 'Mighty Casey at the Bat'. What a riot! I'll keep it forever. It's so cute. All right, now you open your present."
+    },
+    {
+      "video_id": "video_0118",
+      "video_file": "video_0118.mp4",
+      "question_1": {
+        "question": "Should the woman speak at the 23rd second?",
+        "timestamp": "23",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": "I will."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Thanks again for the presents. You're welcome. I'll play your tape on my way home. Well, I'll have a whole new version of it this week, with backup singers and full orchestration and the works. It sounds like your dreams are coming true even before ekeko has his first cigarette. Oh-ah-and let me know how the recording session goes! I will."
+    },
+    {
+      "video_id": "video_0119",
+      "video_file": "video_0119.mp4",
+      "question_1": {
+        "question": "Should the woman speak at the 16th second?",
+        "timestamp": "16",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": "Bye."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Your gift inspired me to write it. Well, I'm glad. Gotta get goin'. See ya. Take care. OK. Bye. Bye."
+    },
+    {
+      "video_id": "video_0120",
+      "video_file": "video_0120.mp4",
+      "question_1": {
+        "question": "Should the woman in white speak at the 9th second?",
+        "timestamp": "9",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the woman in white say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "There wasn't any money in this bank. Very funny. Here, this is for you? What is it? It's a dollar for coffee and a donut."
+    },
+    {
+      "video_id": "video_0121",
+      "video_file": "video_0121.mp4",
+      "question_1": {
+        "question": "Should the man speak at the 24th second?",
+        "timestamp": "24",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man say?",
+        "answer": "And what kind of restaurant is it?"
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Is there a restaurant in this town? There are three restaurants in this town. Where are they? One restaurant is on the corner of Main Street and Park Lane. What kind of restaurant is it? It's a Chinese restaurant. There's also a restaurant on Park Lane behind the bank. Is it a Chinese restaurant, too? No it isn't. And what kind of restaurant is it?"
+    },
+    {
+      "video_id": "video_0122",
+      "video_file": "video_0122.mp4",
+      "question_1": {
+        "question": "Should the woman in red in the middle speak at the 16th second?",
+        "timestamp": "16",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the woman in red in the middle say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "I'm playing an online game. Could you be a little quieter? Sorry. Oh well, this game is getting boring anyway. Are you studying? I'm typing a paper and chatting with Aaron he's online at home. Oh tell him I said hi."
+    },
+    {
+      "video_id": "video_0123",
+      "video_file": "video_0123.mp4",
+      "question_1": {
+        "question": "Should the man in white on the right speak at the 17th second?",
+        "timestamp": "17",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the man in white on the right say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "Hello, hi Graham, oh I'm sorry, I didn't know it was so late, I'll be right there, bye. You forgot about your boyfriend? No, I just didn't know it was already 4:30."
+    },
+    {
+      "video_id": "video_0124",
+      "video_file": "video_0124.mp4",
+      "question_1": {
+        "question": "Should the man speak at the 18th second?",
+        "timestamp": "18",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man say?",
+        "answer": "Okay I won't send any more to you."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Wow, I have 16 new emails. Those are from me, I forwarded you some really funny emails. They're all junk mail you know, I don't like it when people forward things to me. But these are really funny. Maybe, but I'll just delete them. Okay I won't send any more to you."
+    },
+    {
+      "video_id": "video_0125",
+      "video_file": "video_0125.mp4",
+      "question_1": {
+        "question": "Should the woman in blue behind speak at the 12th second?",
+        "timestamp": "12",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the woman in blue behind say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "Are you two having fun? What are you doing? I'm in a chat room. I'm posting something on my favorite bulletin board. Do you need anything else to drink? No thanks."
+    },
+    {
+      "video_id": "video_0126",
+      "video_file": "video_0126.mp4",
+      "question_1": {
+        "question": "Should the woman in dark blue speak at the 30th second?",
+        "timestamp": "30",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the woman in dark blue say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "I just had an interesting conversation with Aaron. About what? He says he's chatting online with Claire. He says she just broke up with Graham. That's sad. But Claire isn't on the Internet right now, she's with Graham. You right, that's strange. Aaron thinks maybe Claire will finally go out with him. I hope he won't be disappointed... Oh oh you were right Amber, this wasn't nice."
+    },
+    {
+      "video_id": "video_0127",
+      "video_file": "video_0127.mp4",
+      "question_1": {
+        "question": "Should the man in brown speak at the 19th second?",
+        "timestamp": "19",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the man in brown say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 4,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "Thanks for inviting us to go Christmas shopping with you guys, that was fun! Yes it was. I'll meet you guys in the stop and shop. I need to put something in my office. Are you going to hide my Christmas present there? Maybe."
+    },
+    {
+      "video_id": "video_0128",
+      "video_file": "video_0128.mp4",
+      "question_1": {
+        "question": "Should the man in brown speak at the 18th second?",
+        "timestamp": "18",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the man in brown say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 4,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Hi Amber, we're here to buy a few things for our Christmas party. Great, I'm so excited about the party. Me too. After the party, I'm going to Paris. Oh, that's right. You must be really excited about your trip? I am. I can't wait."
+    },
+    {
+      "video_id": "video_0129",
+      "video_file": "video_0129.mp4",
+      "question_1": {
+        "question": "Should the woman speak at the 16th second?",
+        "timestamp": "17",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": "That's okay."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Honey, where should I put the candy dishes? Here on the table? Sure that's fine. Oh did you ask Greg to bring the ice cream? Oh no I forgot. Oh well, we'll still have enough food. Sorry Mia. That's okay."
+    },
+    {
+      "video_id": "video_0130",
+      "video_file": "video_0130.mp4",
+      "question_1": {
+        "question": "Should the man in dark blue speak at the 11th second?",
+        "timestamp": "11",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the man in dark blue say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 4,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "Hi guys welcome. Where should I put the cake? Right there on the table. It looks delicious. Thanks."
+    },
+    {
+      "video_id": "video_0131",
+      "video_file": "video_0131.mp4",
+      "question_1": {
+        "question": "Should the man in dark blue speak at the 8th second?",
+        "timestamp": "8",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the man in dark blue say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "Aaron, it's too bad you're leaving. The band won't be the same without you! Yeah, we'll really miss him. Let's not talk about it, I'll get sad, and Christmas is a time to be happy."
+    },
+    {
+      "video_id": "video_0132",
+      "video_file": "video_0132.mp4",
+      "question_1": {
+        "question": "Should the woman speak at the 25th second?",
+        "timestamp": "25",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": "You're right. We need some."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Becca, you've swept the floor three times, sit down. I can't, I'm too nervous. The new manager won't be here for another hour. Well, he might be early, I want everything to look perfect. Everything does look perfect, but we don't have any customers. You're right. We need some."
+    },
+    {
+      "video_id": "video_0133",
+      "video_file": "video_0133.mp4",
+      "question_1": {
+        "question": "Should the woman in purple speak at the 39th second?",
+        "timestamp": "39",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman in purple say?",
+        "answer": "Really? I'm sorry you don't like him"
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "What's wrong, Becca? I met the new manager of the Net cafe. And you don't like him? No, he's going to change a lot of things. He thinks I'm a bad manager. He said that? No, but I know that's what he thought. Well, it doesn't matter. I'll be in Atlanta. And we'll be in Brazil. So you sold the stop in shop? Yes, I haven't met the new owner yet. His name is Tyler Adams. Tyler is the new manager of the Ne Cafe. Really? I'm sorry you don't like him."
+    },
+    {
+      "video_id": "video_0134",
+      "video_file": "video_0134.mp4",
+      "question_1": {
+        "question": "Should the woman in black speak at the 23rd second?",
+        "timestamp": "23",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman in black say?",
+        "answer": "You're right. My customers will be okay."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "I don't want him managing my store. It's not your store anymore, Becca. But what about my customers? What if he treats them badly?Maybe Tyler was just having a bad day. Maybe. Don't be sad, worrying won't help. You're right. My customers will be okay."
+    },
+    {
+      "video_id": "video_0135",
+      "video_file": "video_0135.mp4",
+      "question_1": {
+        "question": "Should the woman in red speak at the 19th second?",
+        "timestamp": "19",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the woman in red say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "So Rita, did you have a good time in Paris? Oh yes we had a great time we have wonderful memories. That's good to hear. We really stayed busy, I think we saw all the sights. What was your favorite thing in Paris? We saw the Eiffel Tower and a lot of famous places. But my favorite thing was spending time with Amber and Mike!"
+    },
+    {
+      "video_id": "video_0136",
+      "video_file": "video_0136.mp4",
+      "question_1": {
+        "question": "Should the man in brown speak at the 18th second?",
+        "timestamp": "18",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the man in brown say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 5,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "So are you guys ready to go to Brazil? Yes, I think we're finally ready. We've been planning for more than a month. I wish I could go. Really? Why? I've heard Brazilian girls are the most beautiful girls in the world. That's not true. It isn't?"
+    },
+    {
+      "video_id": "video_0137",
+      "video_file": "video_0137.mp4",
+      "question_1": {
+        "question": "Should the woman speak at the 25th second?",
+        "timestamp": "25",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": "Impossible."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "You're not Mr. Barker. Very observant. Mr. Barker will be here at 9 a sharp after his morning walk. I am Mrs. McIntyre. Mr. Potter. Deputy head. That's right. I'm the new deputy head. There must be some mistake, I am the new deputy head. Impossible."
+    },
+    {
+      "video_id": "video_0138",
+      "video_file": "video_0138.mp4",
+      "question_1": {
+        "question": "Should the man speak at the 10th second?",
+        "timestamp": "10",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man say?",
+        "answer": "Yes, I was just going to say that."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "Perhaps you're the deputy deputy head. Perhaps you're the deputy deputy head. I can see we're going to have to find Mr. Barker at once to resolve this matter. Yes, I was just going to say that."
+    },
+    {
+      "video_id": "video_0139",
+      "video_file": "video_0139.mp4",
+      "question_1": {
+        "question": "Should the little girl speak at the 24th second?",
+        "timestamp": "24",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the little girl say?",
+        "answer": "I think it's done."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "My yes! A very accomplished piece of work, Emily. It really draws you in, doesn't it? Thanks Miss. But is it finished? Yes miss. Is it? Yes miss. Of course it is. How silly of me. Do you think it could do with maybe justum one more thing? I think it's done."
+    },
+    {
+      "video_id": "video_0140",
+      "video_file": "video_0140.mp4",
+      "question_1": {
+        "question": "Should the old woman speak at the 17th second?",
+        "timestamp": "17",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the old woman say?",
+        "answer": "So it looks like it's going to be an interesting new year."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "Well? What does that mean? Oh, don't be coy with your godmother. Are you two an item yet? Well, he asked me to spend New Year's Eve with him. And I'm going. Good. So it looks like it's going to be an interesting new year."
+    },
+    {
+      "video_id": "video_0141",
+      "video_file": "video_0141.mp4",
+      "question_1": {
+        "question": "Should the man on the far right speak at the 8th second?",
+        "timestamp": "8",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the man on the far right say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "This has been a great Christmas. I just wish Rebecca were here. Ah, you miss her,don't you? Yeah... I sure do."
+    },
+    {
+      "video_id": "video_0142",
+      "video_file": "video_0142.mp4",
+      "question_1": {
+        "question": "Should the woman speak at the 9th second?",
+        "timestamp": "9",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "Oh, I want you to meet my friend Bill. He's the one that's cool. He's putting it all together. Bill. Kevin, this is Bill. Bill, meet my brother, Kevin. Nice to meet you."
+    },
+    {
+      "video_id": "video_0143",
+      "video_file": "video_0143.mp4",
+      "question_1": {
+        "question": "Should the boy with glasses speak at the 20th second?",
+        "timestamp": "20",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the boy with glasses say?",
+        "answer": "Yeah!"
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "What are you doing Saturday? You mean, New Year's? Nothing, I guess. Why? Well, this could be our last New Year's together, right? Yeah. Next year, I'll be in Taiwan, and you'll be in L.A. So let's make it the best New Year's before we've ever had! Yeah!"
+    },
+    {
+      "video_id": "video_0144",
+      "video_file": "video_0144.mp4",
+      "question_1": {
+        "question": "Should the man speak at the 19th second?",
+        "timestamp": "19",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man say?",
+        "answer": "Kids'll do crazy things."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "I just can't imagine what those boys are doing right now. Hey... It's New Year's. They're probably out celebrating. They're only ten... They wouldn't do that. You'd be surprised what kids will do. Do you remember when I ran away from home? I was only seven. Right.You went down two blocks and then chickened out. Kids'll do crazy things."
+    },
+    {
+      "video_id": "video_0145",
+      "video_file": "video_0145.mp4",
+      "question_1": {
+        "question": "Should the child speak at the 33rd second?",
+        "timestamp": "33",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the child say?",
+        "answer": "I will."
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Vincent,your father and I have talked. You and I will stay here. And your father will go and work in Taiwan. Really? Your father will go for one year. And that is a very long time. I... I will need your help to manage the store. I'll help... I promise. We expect you to keep up your grades and to be an obedient son to your mother. I will."
+    },
+    {
+      "video_id": "video_0146",
+      "video_file": "video_0146.mp4",
+      "question_1": {
+        "question": "Should the woman speak between the 21st and 22nd second?",
+        "timestamp": "21",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Listen carefully to what I'm going to say. You don't have to worry about who you're going to live with. I promise, your mother and I are going to work things out, somehow. And I promise that your happiness will be our first priority. Understood?"
+    },
+    {
+      "video_id": "video_0147",
+      "video_file": "video_0147.mp4",
+      "question_1": {
+        "question": "Should the woman speak at the 7th second?",
+        "timestamp": "7",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": "Yes. I'd like that."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Tell me about your book. Oh, it's not finished yet, but I have some of the pictures. Would you like to see them? Yes. I'd like that."
+    },
+    {
+      "video_id": "video_0148",
+      "video_file": "video_0148.mp4",
+      "question_1": {
+        "question": "Should the man speak at the 17th second?",
+        "timestamp": "17",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man say?",
+        "answer": "Oh, thank you!"
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "I had a really bad day. I left my bag of film on the ferry. I went back for it, but the ferry was gone. I lost a whole day's work. I'll call the Staten Island Ferry lost-and-found office. Alexandra! Hello, Richard. I found your bag! Oh, thank you!"
+    },
+    {
+      "video_id": "video_0149",
+      "video_file": "video_0149.mp4",
+      "question_1": {
+        "question": "Should the man in the blue shirt speak at the 20th second?",
+        "timestamp": "20",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man in the blue shirt say?",
+        "answer": "Yeah. A left."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "Excuse me. Can you help me? Sure, what do you want? Where is 83 Wooster Street? That's easy. Walk to the corner. Then make a left turn. Then walk two blocks to the traffic light. Make another left to Wooster. Thank you. To the corner and then a left? Yeah. A left."
+    },
+    {
+      "video_id": "video_0150",
+      "video_file": "video_0150.mp4",
+      "question_1": {
+        "question": "Should the man speak at the 14th second?",
+        "timestamp": "14",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man say?",
+        "answer": "Thank you, thank you!"
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Excuse me, ma'am. I'm looking for 83 Wooster Street. Yes. Wooster Street is two blocks, and 83 is to the right,about two houses. Thank you, thank you!"
+    },
+    {
+      "video_id": "video_0151",
+      "video_file": "video_0151.mp4",
+      "question_1": {
+        "question": "Should the woman speak at the 13th second?",
+        "timestamp": "13",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": "Don't worry about being late. It's fine."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "Hello, Harry. It's nice to meet you. Nice to meet you, Susan. Sorry I'm late. The traffic. The parking. I was lost. Don't worry about being late. It's fine."
+    },
+    {
+      "video_id": "video_0152",
+      "video_file": "video_0152.mp4",
+      "question_1": {
+        "question": "Should the woman speak at the 12th second?",
+        "timestamp": "12",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": "Sure."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Are we too late for our dinner reservation? No, the restaurant will hold our table. I know the owner very well. I eat there a lot. Do you know the phone number of the restaurant? I'd like to call home and leave the number with the baby-sitter. Sure."
+    },
+    {
+      "video_id": "video_0153",
+      "video_file": "video_0153.mp4",
+      "question_1": {
+        "question": "Should the woman in black speak at the 20th second?",
+        "timestamp": "20",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the woman in black say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "What happened? The baby-sitter called. His daughter is sick. What's wrong? I think she has a stomachache. He's a good father. So...what do you think of him? He's very nice."
+    },
+    {
+      "video_id": "video_0154",
+      "video_file": "video_0154.mp4",
+      "question_1": {
+        "question": "Should the woman in black speak at the 23rd second?",
+        "timestamp": "23",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the woman in black say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "I'm going to excuse myself. I have a lot of work to do to get ready for tomorrow. Good night, Harry. It was nice meeting you. Bye, Marilyn. Good night, Susan. Good night, Marilyn. She's going to a fashion show here in the city tomorrow. She is sleeping here so she won't have to travel from Riverdale in the morning. You two must be close. we are."
+    },
+    {
+      "video_id": "video_0155",
+      "video_file": "video_0155.mp4",
+      "question_1": {
+        "question": "Should the man speak at the 31st second?",
+        "timestamp": "31",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man say?",
+        "answer": "Of course."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Two years ago,my wife died. You miss her. I do... yes, but l have Michelle... and with time... Is there anyone else in your life? No, not yet.What about you?  Oh, I date occasionally, but my work keeps me busy. Harry. Yes? I'd like to meet your daughter someday. Does that mean that I can see you again? Of course."
+    },
+    {
+      "video_id": "video_0156",
+      "video_file": "video_0156.mp4",
+      "question_1": {
+        "question": "Should the woman speak at the 10th second?",
+        "timestamp": "10",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": "I'm sorry. Really, I'm sorry."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "Are you married? My wife died four years ago. She was a wonderful woman. A real friend. I'm sorry. Really, I'm sorry."
+    },
+    {
+      "video_id": "video_0157",
+      "video_file": "video_0157.mp4",
+      "question_1": {
+        "question": "Should the man speak at the 13th second?",
+        "timestamp": "13",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man say?",
+        "answer": "Oh, congratulations! That's nice."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "Lots of wonderful memories. We were married almost fifty years. Well,forty-seven, to be exact. John and I celebrate our fortieth anniversary next month. Oh, congratulations! That's nice."
+    },
+    {
+      "video_id": "video_0158",
+      "video_file": "video_0158.mp4",
+      "question_1": {
+        "question": "Should the woman speak at the 26th second?",
+        "timestamp": "26",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": "The advanced class is nonstop."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "I am exhausted. My new exercise class is so hard. Your new exercise class? Yeah. My new advanced exercise class. Why advanced? My instructor thought that the beginner's class was too easy for me. In the beginner's class, they give you a chance to rest between exercises. So? The advanced class is nonstop."
+    },
+    {
+      "video_id": "video_0159",
+      "video_file": "video_0159.mp4",
+      "question_1": {
+        "question": "Should the man speak at the 25th second?",
+        "timestamp": "25",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man say?",
+        "answer": "It's a nap."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Doing aerobics for an hour is a lot different than lifting weights. Yeah. Quite a bit different. I think aerobics is easy. I could work out in your class with no problem. You think so? Oh, without a doubt. When's the next class? Tomorrow morning at ten o'clock. Try it. It's a nap."
+    },
+    {
+      "video_id": "video_0160",
+      "video_file": "video_0160.mp4",
+      "question_1": {
+        "question": "Should the woman speak at the 16th second?",
+        "timestamp": "16",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": "Yeah. What's the bet?"
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "You are not going to be able to move after this and the aerobics class. Are you kidding me? It's going to be a piece of cake. You want to bet? Yeah. What's the bet?"
+    },
+    {
+      "video_id": "video_0161",
+      "video_file": "video_0161.mp4",
+      "question_1": {
+        "question": "Should the man in green speak at the 38th second?",
+        "timestamp": "38",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man in green say?",
+        "answer": "Terrific!"
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "What do you do for a living, Mr.Stewart? I'm a photographer. Interesting. What do you photograph? Everything. The American scene. People, places, events. Did you ever think of photographing an aerobics class? No... I can't remember taking pictures of people exercising. But don't you think it'd be a good subject? Sure. I need some good photos for my advertising, Mr.Stewart. Maybe you can photogragh a class, and I can give you and Mrs.Stewart a month of classes ree. When can I photograph a class? Anytime. How about today? Terrific!"
+    },
+    {
+      "video_id": "video_0162",
+      "video_file": "video_0162.mp4",
+      "question_1": {
+        "question": "Should the man speak at the 19th second?",
+        "timestamp": "19",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man say?",
+        "answer": "No."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Well, I didn't really exercise. I knew it! I wanted to,but Jack Davis needed a photographer. I'm sorry, Marilyn. I don't understand. Did you exercise or not? No. Instead of exercising, I photographed the class. And you didn't exercise? No."
+    },
+    {
+      "video_id": "video_0163",
+      "video_file": "video_0163.mp4",
+      "question_1": {
+        "question": "Should the man in blue speak at the 14th second?",
+        "timestamp": "14",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the man in blue say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Is this your very first advanced aerobics class? Yes, it is. You are in great shape, Richard. Very few people last in this class for the full hour the very first time. It's true. You are in great shape."
+    },
+    {
+      "video_id": "video_0164",
+      "video_file": "video_0164.mp4",
+      "question_1": {
+        "question": "Should the man in green speak at the 12th second?",
+        "timestamp": "12",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man in green say?",
+        "answer": "Anytime. It's really easy."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Do you have any other plans for the day? I'll work on my computer. I have a new math program,and I want to learn how to use it. Maybe you can teach me how to work on a computer someday. Anytime. It's really easy."
+    },
+    {
+      "video_id": "video_0165",
+      "video_file": "video_0165.mp4",
+      "question_1": {
+        "question": "Should the man in green speak at the 22nd second?",
+        "timestamp": "22",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man in green say?",
+        "answer": "Sure, I can."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "Oh, what are you doing tomorrow? Nothing much. Well, maybe your dad and I could take you fishing with us. I'd like that, but... But what? But Dad is always so busy. Well, can you come fishing with me tomorrow? Sure, I can."
+    },
+    {
+      "video_id": "video_0166",
+      "video_file": "video_0166.mp4",
+      "question_1": {
+        "question": "Should the elderly person speak at the 13th second?",
+        "timestamp": "13",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the elderly person say?",
+        "answer": "Definitely. We should."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "Robbie says you can't take him to the game today. I really feel bad about it, but they need me at the hospital today, in the children's ward. l understand. Maybe we can spend some time together next weekend. Definitely. We should."
+    },
+    {
+      "video_id": "video_0167",
+      "video_file": "video_0167.mp4",
+      "question_1": {
+        "question": "Should the woman speak at the 16th second?",
+        "timestamp": "16",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "Here's your cinnamon, Pop. It was a dollar and sixty cents. You forgot to ask me for the change. Or did you forget to give it to me?"
+    },
+    {
+      "video_id": "video_0168",
+      "video_file": "video_0168.mp4",
+      "question_1": {
+        "question": "Should the man speak at the 20th second?",
+        "timestamp": "20",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man say?",
+        "answer": "OK, let's talk."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "Is something wrong, Alexandra? No, nothing. Yes, there is. I can tell. What's the matter? Come on, you can tell me. What's up? I don't know. Something's wrong. OK, let's talk."
+    },
+    {
+      "video_id": "video_0169",
+      "video_file": "video_0169.mp4",
+      "question_1": {
+        "question": "Should the woman speak at the 10th second?",
+        "timestamp": "10",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": "Yes."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "But when I received the letter with photographs of my family, I cried. I cried because I miss them all. You really miss your family, don't you? Yes."
+    },
+    {
+      "video_id": "video_0170",
+      "video_file": "video_0170.mp4",
+      "question_1": {
+        "question": "Should the woman speak at the 24th second?",
+        "timestamp": "24",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": "That's a good idea."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "I know I must seem silly. It's not like I have nobody. I like the Molininas very much, and they're so kind to me.Hey, why don't we go out for a cheeseburger and fch fries, that'll cheer you up and you can use my walkman.That's a good idea."
+    },
+    {
+      "video_id": "video_0171",
+      "video_file": "video_0171.mp4",
+      "question_1": {
+        "question": "Should the woman speak at the 20th second?",
+        "timestamp": "20",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": "Robby, let's call them."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "This dog is well trained. And she likes you too. So how are we going to find the owners? With a little help from the ASPCA, the American Society for the Prevention of Cruelty to Animals. They're the ones. We once found a cat. She was caught in the branches of our tree. And dad called the ASPCA. They came and solved the problem. Robby, let's call them."
+    },
+    {
+      "video_id": "video_0172",
+      "video_file": "video_0172.mp4",
+      "question_1": {
+        "question": "Should the woman speak at the 25th second?",
+        "timestamp": "25",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": "I like to keep her, too."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Let's take Gemma by there now. They'll find the owner. I hope so. I'm so sad to see this little dog without her family. I'm sure they'll find the owner. But if they don't, I'll adopt her. She's so cute. Look at those eyes. She's hard to resist, don't you just love her? I like to keep her, too."
+    },
+    {
+      "video_id": "video_0173",
+      "video_file": "video_0173.mp4",
+      "question_1": {
+        "question": "Should the woman in pink speak at the 8th second?",
+        "timestamp": "8",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the woman in pink say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "Maybe the real owners will come to claim her. Her eyes look so sad. She must really miss them. I see you're both animal lovers. We are."
+    },
+    {
+      "video_id": "video_0174",
+      "video_file": "video_0174.mp4",
+      "question_1": {
+        "question": "Should the man speak at the 30th second?",
+        "timestamp": "30",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man say?",
+        "answer": "I know you'll be able to take care."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "I need your special talent for handling special matters. Like what special matters? Well, I have a scheduling problem. Yes? I have three tonsillectomies set for Friday with Dr.Earl. Yes? I need to fit a fourth operation into his schedule. And... I know you can do it. Well, I'll try to arrange the scheduled, Dr.Stewart. But it's not going to be easy. I know you'll be able to take care."
+    },
+    {
+      "video_id": "video_0175",
+      "video_file": "video_0175.mp4",
+      "question_1": {
+        "question": "Should the elderly person in blue speak at the 17th second?",
+        "timestamp": "17",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the elderly person in blue say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "Dad, growing up means making my own decisions, doesn't it? You're right, Robbie, but like your grandpa suggested, have the interview. And then make your own decision. That sounds fine."
+    },
+    {
+      "video_id": "video_0176",
+      "video_file": "video_0176.mp4",
+      "question_1": {
+        "question": "Should the man in blue speak at the 38th second?",
+        "timestamp": "38",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man in blue say?",
+        "answer": "I am too, dad."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Well, grandpa wanted me to study engineering like him. Well, I wasn't clear about my future, but I knew engineering was not for me. What did you tell grandpa? The truth. Then you're not upset about my not wanting to go into medicine. I'm not upset at all, I'm just happy that we're able to talk about it. I am too, dad."
+    },
+    {
+      "video_id": "video_0177",
+      "video_file": "video_0177.mp4",
+      "question_1": {
+        "question": "Should the man speak at the 20th second?",
+        "timestamp": "20",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man say?",
+        "answer": "Will do."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Now, what else is on the schedule today? Well at one o'clock you have a lunch appointment with Mr. Levine, the client from the toy town stores. Where? At Rossano's. Anything else? At four o'clock you have a meeting with the production staff in the conference room. Make sure everybody is at that meeting. Will do."
+    },
+    {
+      "video_id": "video_0178",
+      "video_file": "video_0178.mp4",
+      "question_1": {
+        "question": "Should the man speak at the 28th second?",
+        "timestamp": "28",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the man say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Oh, it's a quarter to four, and I have a production meeting at four. I planned to take you for a ride in Central Park in a horse and carriage. I'd love to, but I have work to do. Okay, we'll walk back to your office with you. It's so nice out. I decided to forget about my accounting problems and just enjoy this beautiful spring day. Take the time, Susan. I know I should, but... well, there are too many things to do."
+    },
+    {
+      "video_id": "video_0179",
+      "video_file": "video_0179.mp4",
+      "question_1": {
+        "question": "Should the man speak at the 13th second?",
+        "timestamp": "13",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the man say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "I'll go for the ride with Michelle. Right. Well, I had a really nice time. So did I. So did I, I'm sorry you can't come with us Susan. So am I."
+    },
+    {
+      "video_id": "video_0180",
+      "video_file": "video_0180.mp4",
+      "question_1": {
+        "question": "Should the woman in black speak at the 35th second?",
+        "timestamp": "35",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman in black say?",
+        "answer": "Good idea."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "When did you buy a house? After Richard was born. I was teaching music, and Philip was opening his first medical office. Where was the house? Right here in Riverdale. Of course, it was a small house, but just right for us. It's funny, history repeats itself. Now Richard and I are having a baby, and we probably won't be able to afford a house right away, either. Why don't you look at some houses, Marilyn? Good idea."
+    },
+    {
+      "video_id": "video_0181",
+      "video_file": "video_0181.mp4",
+      "question_1": {
+        "question": "Should the man speak at the 10th second?",
+        "timestamp": "10",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the man say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "I've been friendly with the Stewart family for a long time, so it's my pleasure to help you find a house now. Well, we're not sure we can afford one. But we'd like to find out about the possibilities. That's a good idea."
+    },
+    {
+      "video_id": "video_0182",
+      "video_file": "video_0182.mp4",
+      "question_1": {
+        "question": "Should the woman in pink speak at the 22nd second?",
+        "timestamp": "22",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the woman in pink say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Oh this is a wonderful house. I know it well. I sold it to the present owners. It looks wonderful. This is a two-bedroom, two-bath house. It has a full basement, and it is on a half-acre lot.You can probably afford this one. I like this house. So do I. And the price is right, would you like to go see it? Yes."
+    },
+    {
+      "video_id": "video_0183",
+      "video_file": "video_0183.mp4",
+      "question_1": {
+        "question": "Should the woman in pink speak at the 25th second?",
+        "timestamp": "25",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman in pink say?",
+        "answer": "It's a good investment."
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Oh, my! Here's a real buy. It's a bargain. This house just came on the market. It's quite lovely. Is it a two bedroom house? No, it has three bedrooms and three baths. I know the house. It has a brand new kitchen, and a living room with a 12 foot ceiling and there's a two car garage. The why don' we go look at this house, too? It's a good investment."
+    },
+    {
+      "video_id": "video_0184",
+      "video_file": "video_0184.mp4",
+      "question_1": {
+        "question": "Should the man speak at the 14th second?",
+        "timestamp": "14",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man say?",
+        "answer": "Thanks Mrs. Martinelli, I'll give them your regards."
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "Thank you, Mrs. Martinelli. Thanks so much. My pleasure. Give my best to your parents. Your father's a wonderful doctor, Richard. He took care of my daughter when she was a child. He's the best pediatrician in Westchester. Thanks Mrs. Martinelli, I'll give them your regards."
+    },
+    {
+      "video_id": "video_0185",
+      "video_file": "video_0185.mp4",
+      "question_1": {
+        "question": "Should the woman speak at the 17th second?",
+        "timestamp": "17",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": "I understand your feelings about it, Richard."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "It all sounded so easy until they mentioned needing collateral or a guarantor. We have no collateral. And I don't think it's a good idea to ask dad to sign as a guarantor. I don't feel right about it. I understand your feelings about it, Richard."
+    },
+    {
+      "video_id": "video_0186",
+      "video_file": "video_0186.mp4",
+      "question_1": {
+        "question": "Should the woman in white speak at the 24th second?",
+        "timestamp": "24",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman in white say?",
+        "answer": "It has been a learning experience, that's true."
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "What about the house in Mount Kisco? Somebody else will buy it by then. Well, then there'll be other house, Marilyn. Oh Richard has a point. You're just beginning to look. We're no great rush. It's true. This has been a great learning experience for us, Marilyn. Talking to the real estate agent. Looking at the houses. Talking to the loan officer at the bank. It has been a learning experience, that's true."
+    },
+    {
+      "video_id": "video_0187",
+      "video_file": "video_0187.mp4",
+      "question_1": {
+        "question": "Should the woman in blue speak at the 14th second?",
+        "timestamp": "14",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman in blue say?",
+        "answer": "Yes, I'm very fond of her."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "Children usually resemble their parents. It's true. Michelle is a lot like Harry in so many ways. And she shy with new people just like he is. You really like Michelle don't you. Yes, I'm very fond of her."
+    },
+    {
+      "video_id": "video_0188",
+      "video_file": "video_0188.mp4",
+      "question_1": {
+        "question": "Should the woman speak at the 22nd second?",
+        "timestamp": "22",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": "There's a lot of good things about suburban living."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "You like living in New York, don't you? Oh I love it, it's so convenient. I can take the bus to work...or the subway...or a taxi. And there's so much to do. Lots of movie houses and the theater. I know what you mean. I'd like to live in the city, but living in New Jersey in the suburbs is better for Michel. Trees, grass. There's a lot of good things about suburban living."
+    },
+    {
+      "video_id": "video_0189",
+      "video_file": "video_0189.mp4",
+      "question_1": {
+        "question": "Should the woman speak at the 18th second?",
+        "timestamp": "18",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": "You're right, Harry."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "As a working woman, I think New York has all the conveniences, including the best tomatoes. The truth is, I'd like to live in the city. Michle's the right age. There are lots of things for her here. You're right, Harry."
+    },
+    {
+      "video_id": "video_0190",
+      "video_file": "video_0190.mp4",
+      "question_1": {
+        "question": "Should the woman speak at the 16th second?",
+        "timestamp": "16",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": "Perhaps, I will."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "You ought to think about spending more time with Michelle at all the great places in this city. Well, perhaps you'll help me select some of the great places. And perhaps you'll join us? Perhaps, I will."
+    },
+    {
+      "video_id": "video_0191",
+      "video_file": "video_0191.mp4",
+      "question_1": {
+        "question": "Should the man speak at the 16th second?",
+        "timestamp": "16",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man say?",
+        "answer": "Thank you."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Susan, I, I really appreciate you doing this for Michelle and her friends. Oh, please, Harry, it's nothing. I'm not just doing it for Michelle. I'm doing it for you. Thank you."
+    },
+    {
+      "video_id": "video_0192",
+      "video_file": "video_0192.mp4",
+      "question_1": {
+        "question": "Should the woman speak at the 30th second?",
+        "timestamp": "30",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": "Of course, Harry."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "That makes me feel good. What, Harry? What makes you feel good well? That you care about Michelle, that you care about me and that you care about us. Well, Harry, that that's because I do. I do care. They'll be here any minute. Susan, I'd like to...continue this conversation later. Of course, Harry."
+    },
+    {
+      "video_id": "video_0193",
+      "video_file": "video_0193.mp4",
+      "question_1": {
+        "question": "Should the man speak at the 36th second?",
+        "timestamp": "36",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man say?",
+        "answer": "Absolutely."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Susan, will you marry me? It's such an important decision. There's so many things to talk about. There are three things that have to be done first, Harry. Three things? First, we have to decide where to live. Well, that's easy we talked about that earlier. We'll live in New York. All right. Second, we have to talk to Michelle together about being married. We'll do that immediately. What's the third thing? You have to ask for my father's permission. Absolutely."
+    },
+    {
+      "video_id": "video_0194",
+      "video_file": "video_0194.mp4",
+      "question_1": {
+        "question": "Should the man speak at the 19th second?",
+        "timestamp": "19",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man say?",
+        "answer": "I couldn't wait."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "What's this for? Just because. How's the baby? Fast asleep. I'm sorry, I missed him. I had to work late. What are the flowers for, Richard? Five years of happiness, Happy anniversary our anniversary. But our anniversary isn't until Saturday. I couldn't wait."
+    },
+    {
+      "video_id": "video_0195",
+      "video_file": "video_0195.mp4",
+      "question_1": {
+        "question": "Should the woman speak at the 24th second?",
+        "timestamp": "24",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman say?",
+        "answer": "Oh, Richard, that's wonderful."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "If you had your choice of all the places in the world, where would you choose to spend our anniversary? The Watermile Inn. I loved that place when we went on our honeymoon. Perfect! You picked the right place. I don't understand. you and I, Missus Stuwart, are going to spend a second honeymoon at the Watermile Inn. Oh, Richard, that's wonderful."
+    },
+    {
+      "video_id": "video_0196",
+      "video_file": "video_0196.mp4",
+      "question_1": {
+        "question": "Should the man speak at the 17th second?",
+        "timestamp": "17",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man say?",
+        "answer": "Great."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "Come on, Mar. It's time you and I had a romantic weekend alone together. We've earned it. What do you say? It does sound tempting. You're right, we burned it. Great."
+    },
+    {
+      "video_id": "video_0197",
+      "video_file": "video_0197.mp4",
+      "question_1": {
+        "question": "Should the man speak at the 26th second?",
+        "timestamp": "26",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "B"
+      },
+      "question_2": {
+        "question": "What should the man say?",
+        "answer": ""
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "Welcome to the Watermill Inn. Oh, Richard, it's exactly as it was when we were married! And when I got married. Even the old patchwork quilt is the same! My great grandmother made that quilt when Teddy Roosevelt was president. In those days, when they made quilts, they cut patches from the old clothing of every member in the family so that each one would be a part of it. What a lovely tradition!"
+    },
+    {
+      "video_id": "video_0198",
+      "video_file": "video_0198.mp4",
+      "question_1": {
+        "question": "Should the woman in white speak at the 12th second?",
+        "timestamp": "12",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the woman in white say?",
+        "answer": "How wonderful! A boy or a girl?"
+      },
+      "metadata": {
+        "num_people": 3,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "close-up single person"
+      },
+      "full_asr": "Thank you for calling us. I remember you and your wife from the first time you stayed with us. We were very young. And very much in love. We have a baby now. How wonderful! A boy or a girl?"
+    },
+    {
+      "video_id": "video_0199",
+      "video_file": "video_0199.mp4",
+      "question_1": {
+        "question": "Should the man speak at the 10th second?",
+        "timestamp": "10",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the man say?",
+        "answer": "You're right, of course."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "Let's eat first. I want to call home and check on your mother and the baby. Honey, if there were any problems, she would call us. She doesn't know we've changed hotels. You're right, of course."
+    },
+    {
+      "video_id": "video_0200",
+      "video_file": "video_0200.mp4",
+      "question_1": {
+        "question": "Should the elderly man speak at the 21st second?",
+        "timestamp": "21",
+        "option_A": "Yes",
+        "option_B": "No",
+        "correct_answer": "A"
+      },
+      "question_2": {
+        "question": "What should the elderly man say?",
+        "answer": "Yes, just like I said, Robbie. Nothing interesting."
+      },
+      "metadata": {
+        "num_people": 2,
+        "turn_taking": "take turns speaking",
+        "lighting": "normal lighting",
+        "consistency": "consistent",
+        "camera_shot": "panorama"
+      },
+      "full_asr": "The mailman just drops a mail in our box, Grandpa. Oh probably a lot of advertising and bills. You were right, grandpa. Advertising, bills, bills, advertising. Yes, just like I said, Robbie. Nothing interesting."
+    }
+  ]
+}

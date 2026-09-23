@@ -1,0 +1,38 @@
+{
+  "gpt4o_vs_gemini_2_5_pro": {
+    "pearson": 0.545204613659196,
+    "spearman": 0.5144817946823835,
+    "kendall": 0.4470135737685555,
+    "mae": 28.2703488372093
+  },
+  "gpt4o_vs_qwen3_omni": {
+    "pearson": 0.7406693201159963,
+    "spearman": 0.7344006896497984,
+    "kendall": 0.6410631775848011,
+    "mae": 17.223837209302324
+  },
+  "gemini_2_5_pro_vs_qwen3_omni": {
+    "pearson": 0.6257021875793143,
+    "spearman": 0.5890473966480975,
+    "kendall": 0.5111875460003116,
+    "mae": 24.055232558139537
+  },
+  "leave_one_judge_out_ranking": {
+    "gpt4o": {
+      "kendall": 0.9272727272727274,
+      "maximum_rank_shift": 1
+    },
+    "gemini_2_5_pro": {
+      "kendall": 0.9272727272727274,
+      "maximum_rank_shift": 1
+    },
+    "qwen3_omni": {
+      "kendall": 0.9636363636363636,
+      "maximum_rank_shift": 1
+    }
+  },
+  "same_family_removal_ranking": {
+    "kendall": 1.0,
+    "maximum_rank_shift": 0
+  }
+}

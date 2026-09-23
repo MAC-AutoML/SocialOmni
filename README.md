@@ -1,124 +1,61 @@
 <p align="center">
-  <img src="docs/assets/socialomni_logo.png" alt="SocialOmni Logo" width="320" />
+  <img src="docs/assets/socialomni_logo.png" alt="SocialOmni" width="320" />
 </p>
 
-<h2 align="center">SocialOmni: Benchmarking Audio-Visual Social Interactivity in Omni Models</h2>
-<h5 align="center">A benchmark for evaluating <i>who</i>, <i>when</i>, and <i>how</i> in omni-modal dialogue interaction.</h5>
+# SocialOmni: Benchmarking Audio-Visual Social Interactivity in Omni Models
 
-<p align="center">
-  <a href="https://arxiv.org/abs/2603.16859"><img src="https://img.shields.io/badge/arXiv-2603.16859-b31b1b.svg?logo=arxiv" alt="arXiv"></a>
-  <a href="https://huggingface.co/papers/2603.16859"><img src="https://img.shields.io/badge/🤗-Paper%20In%20HF-red.svg" alt="HF Paper"></a>
-  <a href="https://github.com/Alexisxty/SocialOmni"><img src="https://img.shields.io/badge/GitHub-SocialOmni-black?logo=github" alt="GitHub"></a>
-  <a href="https://huggingface.co/datasets/alexisty/SocialOmni"><img src="https://img.shields.io/badge/🤗%20Dataset-SocialOmni-orange" alt="Dataset"></a>
-  <img src="https://img.shields.io/badge/Python-3.10-blue" alt="Python 3.10">
-  <img src="https://img.shields.io/badge/Tasks-Who%20%7C%20When%20%7C%20How-6f42c1" alt="Tasks">
-  <img src="https://img.shields.io/badge/Samples-2%2C209-0a7ea4" alt="Samples">
-</p>
+[Paper (arXiv v3)](https://arxiv.org/abs/2603.16859v3) · [PDF](docs/papers/socialomni-arxiv-v3.pdf) · [Leaderboard](https://teeryxie.github.io/socialomni/) · [Dataset](https://huggingface.co/datasets/alexisty/SocialOmni) · [中文](docs/README.zh-CN.md)
 
-<p align="center">
-  <a href="#-highlights">Highlights</a> ·
-  <a href="#-benchmark-overview">Benchmark Overview</a> ·
-  <a href="#-quick-start">Quick Start</a> ·
-  <a href="#-main-results">Main Results</a> ·
-  <a href="#-citation">Citation</a>
-</p>
+SocialOmni is an offline diagnostic benchmark for audio-visual social interaction. It evaluates **who** is speaking, **when** a designated participant should enter at an annotated query time, and **how** that participant should continue the dialogue. It does not measure persistent streaming state or wall-clock response latency.
 
-SocialOmni is a benchmark for **audio-visual social interactivity** in omni-modal large language models (OLMs). Instead of reducing evaluation to static answer correctness, SocialOmni measures whether a model can behave appropriately in real dialogue by jointly evaluating three tightly coupled dimensions:
+## Paper and reproducibility
 
-- **Who** is speaking: speaker separation and identification
-- **When** to enter: interruption timing control
-- **How** to respond: natural interruption generation
+This repository includes the September 20, 2026 revision, **arXiv:2603.16859v3**, and its [public reproducibility package](reproducibility/arxiv-v3/README.md). The package is an unchanged copy of the arXiv ancillary files, with the original SHA-256 checksums. It supports offline verification of the recorded results; it is not a complete environment for rerunning all model APIs.
 
-The repository contains the benchmark pipeline, model clients and servers, runtime configurations, and reproducible evaluation entrypoints for both perception and interaction-generation settings.
+The paper uses **2,000 perception items** and a **200-item interaction core** (`video_0001`–`video_0200`, including 128 positive entry states). The broader public interaction dataset has 209 items. Use the frozen core annotations for paper comparisons.
 
-## 😮 Highlights
+To verify the archived results without GPUs, video files or API credentials:
 
-### 1. Beyond Static QA: A Benchmark for Social Interaction
-Existing benchmarks are trapped in "answer-centric" metrics. SocialOmni shifts the focus to socially appropriate behavior in multi-party dialogues, where a "correct" answer is still a failure if the timing is unnatural.
-
-### 2. The "Who-When-How" Protocol
-We operationalize conversational interactivity into a unified joint profile:
-
-Who: Active speaker identification.
-
-When: Socially appropriate interruption timing.
-
-How: Contextually coherent response generation.
-
-### 3. Joint Diagnostics: Decoding the Interaction Gap
-SocialOmni provides a high-fidelity map of failure by deconstructing the friction between three critical axes:
-
-- Perceptual Resilience: Robustness across audio-visual (in)consistency.
-
-- Timing Precision: Millisecond-level accuracy within "social windows."
-
-- Generative Quality: AI-judged naturalness and coherence of interruptions.
-
-> The Core Insight: By decoupling these dimensions, we pinpoint exactly where strong perception fails to translate into fluid social interaction.
-
-
-## 🧩 Tasks
-
-### Task I: Perception (`who`)
-
-Given a video clip and a timestamp `t`, the model answers:
-
-> At timestamp `t`, who is speaking?
-
-The model chooses from `{A, B, C, D}`.
-
-### Task II: Interaction Generation (`when` + `how`)
-
-Given a video prefix `V[0:t]` and a candidate speaker `X`, the model performs two sub-questions:
-
-- **Q1 (`when`)**: should `X` interrupt immediately after `t`?
-- **Q2 (`how`)**: if yes, what is the natural interruption content?
-
-## 📏 Evaluation Protocol
-
-### Perception metrics
-
-- Top-1 Accuracy
-- Consistent / inconsistent split accuracy
-- Gap:
-
-```text
-Δ = Acc_consistent - Acc_inconsistent
+```bash
+cd reproducibility/arxiv-v3
+uv sync --python 3.13 --frozen
+uv run python scripts/verify_package.py
 ```
 
-### Generation metrics
+See the [archive manifest](docs/papers/README.md) for sources and file integrity.
 
-- **Q1**: Accuracy / Precision / Recall / F1 under tolerance windows such as `δ = 0.2s`
-- **Q2**: LLM-judge score on `{0, 25, 50, 75, 100}`
+## Evaluation protocol
 
-The paper protocol uses three judges for Q2:
+- **Who:** four-choice speaker attribution, reported as accuracy.
+- **When:** a fixed-time YES/NO decision from query-time-bounded audio and video. Report classification metrics separately from response quality.
+- **QGold:** mean quality over all 128 gold-positive items, forcing generation even when the model predicts NO.
+- **QEns:** mean quality of non-empty responses at true-positive entry decisions.
+- **Cov+:** the percentage of gold-positive items with a predicted YES and a non-empty response.
+- **QEns_joint:** `QEns × Cov+ / 100`; missed positive opportunities contribute zero.
 
-- GPT-4o
-- Gemini 3 Pro
-- Qwen3-Omni
+The fixed primary judges are **GPT-4o, Gemini 2.5 Pro and Qwen3-Omni**. Each eligible response requires all three scores from {0, 25, 50, 75, 100}; zero scores are retained. Human references and manually verified judge context are not inputs to the evaluated model. Appendix A.8–A.10 describes inference settings, prompts and parsing.
 
-## 🐳 Main Results
+## Main results
 
-### SocialOmni reveals cross-axis decoupling
+Table 2 of arXiv v3. All values use a 0–100 scale. These are archived paper results, not new runs of the repository entrypoints.
 
-Perception strength does not guarantee interaction quality. Some models identify speakers well but perform poorly on natural interruption generation, while others generate plausible responses despite weak speaker grounding.
+| Model | Interface | Who | When | QGold | QEns | Cov+ | QEns_joint |
+|---|---|---:|---:|---:|---:|---:|---:|
+| GPT-4o | Cascade | 35.05 | 50.50 | 77.15 | 76.50 | 30.47 | 23.31 |
+| Gemini 2.5 Pro | Visual-only | 39.90 | 52.50 | 15.62 | 12.37 | 48.44 | 5.99 |
+| Gemini 2.5 Flash | Visual-only | 33.70 | 55.50 | 21.35 | 21.36 | 42.97 | 9.18 |
+| Gemini 3 Flash | Visual-only | 48.10 | 49.50 | 13.93 | 17.61 | 34.38 | 6.05 |
+| Gemini 3 Pro | Visual-only | 45.40 | 52.00 | 21.55 | 25.00 | 32.03 | 8.01 |
+| Qwen3-Omni | Native AV | 74.65 | 58.00 | 44.47 | 42.59 | 63.28 | 26.95 |
+| Qwen3-Omni-Thinking | Native AV | 67.65 | 56.00 | 67.77 | 64.86 | 46.88 | 30.40 |
+| Qwen2.5-Omni | Native AV | 40.95 | 60.50 | 36.00 | 33.14 | 67.97 | 22.53 |
+| OmniVinci | Native AV | 29.75 | 64.50 | 40.82 | 38.52 | 70.31 | 27.08 |
+| VITA-1.5 | Native AV | 32.05 | 65.50 | 48.37 | 49.93 | 88.28 | 44.08 |
+| Baichuan-Omni-1.5 | Native AV | 22.45 | 36.50 | 18.36 | 19.27 | 12.50 | 2.41 |
 
-| Model | Who (%) | When Acc. (%) | How (/100) |
-|---|---:|---:|---:|
-| GPT-4o | 36.75 | 46.89 | 69.64 |
-| Gemini 2.5 Pro | 44.69 | 55.67 | 72.32 |
-| Gemini 2.5 Flash | 47.03 | 61.50 | **85.08** |
-| Gemini 3 Flash Preview | 53.23 | 61.06 | 79.08 |
-| Gemini 3 Pro Preview | 64.99 | **67.31** | 81.77 |
-| Qwen3-Omni | **69.25** | 63.64 | 45.57 |
+`Native AV` denotes joint audio-video input. GPT-4o uses a cascade of prefix transcription and video frames; the Gemini interfaces in this snapshot receive visual frames only. Input interfaces are part of each evaluated configuration.
 
-Key observation:
-
-- **Who leader**: Qwen3-Omni
-- **When leader**: Gemini 3 Pro Preview
-- **How leader**: Gemini 2.5 Flash
-
-This rank inversion is why SocialOmni evaluates the full interaction profile instead of a single aggregate score.
+The always-YES baseline reaches **64% When accuracy** on the core split. The six metrics describe different abilities and are not combined into an overall score. Newly evaluated configurations are listed separately on the [bilingual leaderboard](https://teeryxie.github.io/socialomni/) unless protocol equivalence has been established.
 
 ## ⚙️ Requirements and Installation
 
@@ -131,12 +68,14 @@ We recommend the following environment:
 Install with:
 
 ```bash
-git clone https://github.com/Alexisxty/SocialOmni.git
+git clone https://github.com/MAC-AutoML/SocialOmni.git
 cd SocialOmni
 uv sync
 ```
 
 ## 🚀 Quick Start
+
+These development entrypoints operate on the public dataset and use their configured prompts and judges. Running the defaults does not reproduce Table 2 automatically; use the frozen snapshot above to verify the published numbers.
 
 ### 1. Configure runtime and paths
 
@@ -288,7 +227,7 @@ If you find SocialOmni useful in your research, please cite:
 ```bibtex
 @article{xie2026socialomni,
   title={SocialOmni: Benchmarking Audio-Visual Social Interactivity in Omni Models},
-  author={Tianyu Xie and Jinfa Huang and Yuexiao Ma and Rongfang Luo and Yan Yang and Wang Chen and Yuhui Zeng and Ruize Fang and Yixuan Zou and Xiawu Zheng and Jiebo Luo and Rongrong Ji},
+  author={Xie, Tianyu and Huang, Jinfa and Ma, Yuexiao and Luo, Rongfang and Yang, Yan and Ma, Qingchuan and Chen, Wang and Zeng, Yuhui and Zou, Yixuan and Lu, Zhiqiang and Fang, Ruize and Luo, Jiebo and Ji, Rongrong and Zheng, Xiawu},
   journal={arXiv preprint arXiv:2603.16859},
   year={2026}
 }

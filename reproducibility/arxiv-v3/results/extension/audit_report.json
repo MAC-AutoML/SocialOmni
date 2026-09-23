@@ -1,0 +1,46 @@
+{
+  "bootstrap_iters": 2000,
+  "complete": true,
+  "errors": [],
+  "held_out_judges": [
+    "claude-sonnet-4-6",
+    "deepseek-v3.2"
+  ],
+  "inputs": {
+    "base_ensemble_rows": 688,
+    "base_snapshot": "[LOCAL_PATH]",
+    "extension_root": "[LOCAL_PATH]",
+    "model_summary_rows": 11
+  },
+  "outputs": {
+    "baselines": {
+      "baselines": 9,
+      "protocol": "when-baselines-v1",
+      "total_items": 200
+    },
+    "how_gold": {
+      "errors": [],
+      "groups": 25
+    },
+    "judges": {
+      "judge_rows": 10620,
+      "max_rank_shift": 5,
+      "usable_judge_rows": 10620
+    },
+    "modality": {
+      "groups": 32,
+      "rows": 37000
+    },
+    "sanity": {
+      "control_rows": 1496,
+      "groups": 16,
+      "score_rows": 4920
+    }
+  },
+  "primary_judges": [
+    "gpt4o",
+    "gemini_2_5_pro",
+    "qwen3_omni"
+  ],
+  "seed": 20270724
+}

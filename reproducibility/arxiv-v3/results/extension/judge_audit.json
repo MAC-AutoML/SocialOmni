@@ -1,0 +1,1453 @@
+{
+  "aggregations": [
+    {
+      "judge": "gemini_2_5_pro",
+      "mean": 7.8125,
+      "median": 0.0,
+      "model": "baichuan_omni_1_5",
+      "n": 16,
+      "reference_mode": "reference-aware",
+      "source": "ensemble_response_scores"
+    },
+    {
+      "judge": "gpt4o",
+      "mean": 26.5625,
+      "median": 12.5,
+      "model": "baichuan_omni_1_5",
+      "n": 16,
+      "reference_mode": "reference-aware",
+      "source": "ensemble_response_scores"
+    },
+    {
+      "judge": "qwen3_omni",
+      "mean": 23.4375,
+      "median": 25.0,
+      "model": "baichuan_omni_1_5",
+      "n": 16,
+      "reference_mode": "reference-aware",
+      "source": "ensemble_response_scores"
+    },
+    {
+      "judge": "gemini_2_5_pro",
+      "mean": 19.545454545454547,
+      "median": 0.0,
+      "model": "gemini_2_5_flash",
+      "n": 55,
+      "reference_mode": "reference-aware",
+      "source": "ensemble_response_scores"
+    },
+    {
+      "judge": "gpt4o",
+      "mean": 25.90909090909091,
+      "median": 25.0,
+      "model": "gemini_2_5_flash",
+      "n": 55,
+      "reference_mode": "reference-aware",
+      "source": "ensemble_response_scores"
+    },
+    {
+      "judge": "qwen3_omni",
+      "mean": 21.818181818181817,
+      "median": 25.0,
+      "model": "gemini_2_5_flash",
+      "n": 55,
+      "reference_mode": "reference-aware",
+      "source": "ensemble_response_scores"
+    },
+    {
+      "judge": "gemini_2_5_pro",
+      "mean": 9.274193548387096,
+      "median": 0.0,
+      "model": "gemini_2_5_pro",
+      "n": 62,
+      "reference_mode": "reference-aware",
+      "source": "ensemble_response_scores"
+    },
+    {
+      "judge": "gpt4o",
+      "mean": 14.919354838709678,
+      "median": 0.0,
+      "model": "gemini_2_5_pro",
+      "n": 62,
+      "reference_mode": "reference-aware",
+      "source": "ensemble_response_scores"
+    },
+    {
+      "judge": "qwen3_omni",
+      "mean": 17.338709677419356,
+      "median": 25.0,
+      "model": "gemini_2_5_pro",
+      "n": 62,
+      "reference_mode": "reference-aware",
+      "source": "ensemble_response_scores"
+    },
+    {
+      "judge": "gemini_2_5_pro",
+      "mean": 19.318181818181817,
+      "median": 0.0,
+      "model": "gemini_3_flash_preview",
+      "n": 44,
+      "reference_mode": "reference-aware",
+      "source": "ensemble_response_scores"
+    },
+    {
+      "judge": "gpt4o",
+      "mean": 17.045454545454547,
+      "median": 0.0,
+      "model": "gemini_3_flash_preview",
+      "n": 44,
+      "reference_mode": "reference-aware",
+      "source": "ensemble_response_scores"
+    },
+    {
+      "judge": "qwen3_omni",
+      "mean": 19.318181818181817,
+      "median": 0.0,
+      "model": "gemini_3_flash_preview",
+      "n": 44,
+      "reference_mode": "reference-aware",
+      "source": "ensemble_response_scores"
+    },
+    {
+      "judge": "gemini_2_5_pro",
+      "mean": 22.5609756097561,
+      "median": 0.0,
+      "model": "gemini_3_pro_preview",
+      "n": 41,
+      "reference_mode": "reference-aware",
+      "source": "ensemble_response_scores"
+    },
+    {
+      "judge": "gpt4o",
+      "mean": 27.4390243902439,
+      "median": 25.0,
+      "model": "gemini_3_pro_preview",
+      "n": 41,
+      "reference_mode": "reference-aware",
+      "source": "ensemble_response_scores"
+    },
+    {
+      "judge": "qwen3_omni",
+      "mean": 28.658536585365855,
+      "median": 25.0,
+      "model": "gemini_3_pro_preview",
+      "n": 41,
+      "reference_mode": "reference-aware",
+      "source": "ensemble_response_scores"
+    },
+    {
+      "judge": "gemini_2_5_pro",
+      "mean": 67.94871794871794,
+      "median": 100.0,
+      "model": "gpt4o",
+      "n": 39,
+      "reference_mode": "reference-aware",
+      "source": "ensemble_response_scores"
+    },
+    {
+      "judge": "gpt4o",
+      "mean": 85.8974358974359,
+      "median": 100.0,
+      "model": "gpt4o",
+      "n": 39,
+      "reference_mode": "reference-aware",
+      "source": "ensemble_response_scores"
+    },
+    {
+      "judge": "qwen3_omni",
+      "mean": 78.84615384615384,
+      "median": 75.0,
+      "model": "gpt4o",
+      "n": 39,
+      "reference_mode": "reference-aware",
+      "source": "ensemble_response_scores"
+    },
+    {
+      "judge": "gemini_2_5_pro",
+      "mean": 26.38888888888889,
+      "median": 0.0,
+      "model": "omnivinci",
+      "n": 90,
+      "reference_mode": "reference-aware",
+      "source": "ensemble_response_scores"
+    },
+    {
+      "judge": "gpt4o",
+      "mean": 50.0,
+      "median": 50.0,
+      "model": "omnivinci",
+      "n": 90,
+      "reference_mode": "reference-aware",
+      "source": "ensemble_response_scores"
+    },
+    {
+      "judge": "qwen3_omni",
+      "mean": 44.72222222222222,
+      "median": 25.0,
+      "model": "omnivinci",
+      "n": 90,
+      "reference_mode": "reference-aware",
+      "source": "ensemble_response_scores"
+    },
+    {
+      "judge": "gemini_2_5_pro",
+      "mean": 4.022988505747127,
+      "median": 0.0,
+      "model": "qwen2_5_omni",
+      "n": 87,
+      "reference_mode": "reference-aware",
+      "source": "ensemble_response_scores"
+    },
+    {
+      "judge": "gpt4o",
+      "mean": 52.01149425287356,
+      "median": 50.0,
+      "model": "qwen2_5_omni",
+      "n": 87,
+      "reference_mode": "reference-aware",
+      "source": "ensemble_response_scores"
+    },
+    {
+      "judge": "qwen3_omni",
+      "mean": 43.39080459770115,
+      "median": 50.0,
+      "model": "qwen2_5_omni",
+      "n": 87,
+      "reference_mode": "reference-aware",
+      "source": "ensemble_response_scores"
+    },
+    {
+      "judge": "gemini_2_5_pro",
+      "mean": 26.54320987654321,
+      "median": 0.0,
+      "model": "qwen3_omni",
+      "n": 81,
+      "reference_mode": "reference-aware",
+      "source": "ensemble_response_scores"
+    },
+    {
+      "judge": "gpt4o",
+      "mean": 57.71604938271605,
+      "median": 50.0,
+      "model": "qwen3_omni",
+      "n": 81,
+      "reference_mode": "reference-aware",
+      "source": "ensemble_response_scores"
+    },
+    {
+      "judge": "qwen3_omni",
+      "mean": 43.51851851851852,
+      "median": 25.0,
+      "model": "qwen3_omni",
+      "n": 81,
+      "reference_mode": "reference-aware",
+      "source": "ensemble_response_scores"
+    },
+    {
+      "judge": "gemini_2_5_pro",
+      "mean": 53.333333333333336,
+      "median": 75.0,
+      "model": "qwen3_omni_thinking",
+      "n": 60,
+      "reference_mode": "reference-aware",
+      "source": "ensemble_response_scores"
+    },
+    {
+      "judge": "gpt4o",
+      "mean": 73.75,
+      "median": 75.0,
+      "model": "qwen3_omni_thinking",
+      "n": 60,
+      "reference_mode": "reference-aware",
+      "source": "ensemble_response_scores"
+    },
+    {
+      "judge": "qwen3_omni",
+      "mean": 67.5,
+      "median": 75.0,
+      "model": "qwen3_omni_thinking",
+      "n": 60,
+      "reference_mode": "reference-aware",
+      "source": "ensemble_response_scores"
+    },
+    {
+      "judge": "gemini_2_5_pro",
+      "mean": 35.176991150442475,
+      "median": 25.0,
+      "model": "vita_1_5",
+      "n": 113,
+      "reference_mode": "reference-aware",
+      "source": "ensemble_response_scores"
+    },
+    {
+      "judge": "gpt4o",
+      "mean": 53.76106194690266,
+      "median": 50.0,
+      "model": "vita_1_5",
+      "n": 113,
+      "reference_mode": "reference-aware",
+      "source": "ensemble_response_scores"
+    },
+    {
+      "judge": "qwen3_omni",
+      "mean": 60.84070796460177,
+      "median": 75.0,
+      "model": "vita_1_5",
+      "n": 113,
+      "reference_mode": "reference-aware",
+      "source": "ensemble_response_scores"
+    },
+    {
+      "judge": "gemini_2_5_pro",
+      "mean": 9.031413612565444,
+      "median": 0.0,
+      "model": "baichuan_omni_1_5",
+      "n": 382,
+      "reference_mode": "reference-aware",
+      "source": "how_gold"
+    },
+    {
+      "judge": "gpt4o",
+      "mean": 17.277486910994764,
+      "median": 0.0,
+      "model": "baichuan_omni_1_5",
+      "n": 382,
+      "reference_mode": "reference-aware",
+      "source": "how_gold"
+    },
+    {
+      "judge": "qwen3_omni",
+      "mean": 17.146596858638745,
+      "median": 0.0,
+      "model": "baichuan_omni_1_5",
+      "n": 382,
+      "reference_mode": "reference-aware",
+      "source": "how_gold"
+    },
+    {
+      "judge": "gemini_2_5_pro",
+      "mean": 10.648148148148149,
+      "median": 0.0,
+      "model": "gemini_2_5_flash",
+      "n": 108,
+      "reference_mode": "reference-aware",
+      "source": "how_gold"
+    },
+    {
+      "judge": "gpt4o",
+      "mean": 28.47222222222222,
+      "median": 25.0,
+      "model": "gemini_2_5_flash",
+      "n": 108,
+      "reference_mode": "reference-aware",
+      "source": "how_gold"
+    },
+    {
+      "judge": "qwen3_omni",
+      "mean": 26.85185185185185,
+      "median": 25.0,
+      "model": "gemini_2_5_flash",
+      "n": 108,
+      "reference_mode": "reference-aware",
+      "source": "how_gold"
+    },
+    {
+      "judge": "gemini_2_5_pro",
+      "mean": 11.89516129032258,
+      "median": 0.0,
+      "model": "gemini_2_5_pro",
+      "n": 124,
+      "reference_mode": "reference-aware",
+      "source": "how_gold"
+    },
+    {
+      "judge": "gpt4o",
+      "mean": 17.137096774193548,
+      "median": 0.0,
+      "model": "gemini_2_5_pro",
+      "n": 124,
+      "reference_mode": "reference-aware",
+      "source": "how_gold"
+    },
+    {
+      "judge": "qwen3_omni",
+      "mean": 19.35483870967742,
+      "median": 25.0,
+      "model": "gemini_2_5_pro",
+      "n": 124,
+      "reference_mode": "reference-aware",
+      "source": "how_gold"
+    },
+    {
+      "judge": "gemini_2_5_pro",
+      "mean": 7.936507936507937,
+      "median": 0.0,
+      "model": "gemini_3_flash_preview",
+      "n": 126,
+      "reference_mode": "reference-aware",
+      "source": "how_gold"
+    },
+    {
+      "judge": "gpt4o",
+      "mean": 16.071428571428573,
+      "median": 0.0,
+      "model": "gemini_3_flash_preview",
+      "n": 126,
+      "reference_mode": "reference-aware",
+      "source": "how_gold"
+    },
+    {
+      "judge": "qwen3_omni",
+      "mean": 16.071428571428573,
+      "median": 0.0,
+      "model": "gemini_3_flash_preview",
+      "n": 126,
+      "reference_mode": "reference-aware",
+      "source": "how_gold"
+    },
+    {
+      "judge": "gemini_2_5_pro",
+      "mean": 15.65040650406504,
+      "median": 0.0,
+      "model": "gemini_3_pro_preview",
+      "n": 123,
+      "reference_mode": "reference-aware",
+      "source": "how_gold"
+    },
+    {
+      "judge": "gpt4o",
+      "mean": 25.40650406504065,
+      "median": 25.0,
+      "model": "gemini_3_pro_preview",
+      "n": 123,
+      "reference_mode": "reference-aware",
+      "source": "how_gold"
+    },
+    {
+      "judge": "qwen3_omni",
+      "mean": 24.390243902439025,
+      "median": 25.0,
+      "model": "gemini_3_pro_preview",
+      "n": 123,
+      "reference_mode": "reference-aware",
+      "source": "how_gold"
+    },
+    {
+      "judge": "gemini_2_5_pro",
+      "mean": 50.26809651474531,
+      "median": 50.0,
+      "model": "gpt4o",
+      "n": 373,
+      "reference_mode": "reference-aware",
+      "source": "how_gold"
+    },
+    {
+      "judge": "gpt4o",
+      "mean": 67.49329758713137,
+      "median": 75.0,
+      "model": "gpt4o",
+      "n": 373,
+      "reference_mode": "reference-aware",
+      "source": "how_gold"
+    },
+    {
+      "judge": "qwen3_omni",
+      "mean": 62.265415549597854,
+      "median": 75.0,
+      "model": "gpt4o",
+      "n": 373,
+      "reference_mode": "reference-aware",
+      "source": "how_gold"
+    },
+    {
+      "judge": "gemini_2_5_pro",
+      "mean": 17.877906976744185,
+      "median": 0.0,
+      "model": "omnivinci",
+      "n": 344,
+      "reference_mode": "reference-aware",
+      "source": "how_gold"
+    },
+    {
+      "judge": "gpt4o",
+      "mean": 42.65988372093023,
+      "median": 50.0,
+      "model": "omnivinci",
+      "n": 344,
+      "reference_mode": "reference-aware",
+      "source": "how_gold"
+    },
+    {
+      "judge": "qwen3_omni",
+      "mean": 38.372093023255815,
+      "median": 25.0,
+      "model": "omnivinci",
+      "n": 344,
+      "reference_mode": "reference-aware",
+      "source": "how_gold"
+    },
+    {
+      "judge": "gemini_2_5_pro",
+      "mean": 8.877284595300262,
+      "median": 0.0,
+      "model": "qwen2_5_omni",
+      "n": 383,
+      "reference_mode": "reference-aware",
+      "source": "how_gold"
+    },
+    {
+      "judge": "gpt4o",
+      "mean": 36.684073107049606,
+      "median": 50.0,
+      "model": "qwen2_5_omni",
+      "n": 383,
+      "reference_mode": "reference-aware",
+      "source": "how_gold"
+    },
+    {
+      "judge": "qwen3_omni",
+      "mean": 33.35509138381201,
+      "median": 25.0,
+      "model": "qwen2_5_omni",
+      "n": 383,
+      "reference_mode": "reference-aware",
+      "source": "how_gold"
+    },
+    {
+      "judge": "gemini_2_5_pro",
+      "mean": 27.967625899280577,
+      "median": 0.0,
+      "model": "qwen3_omni",
+      "n": 278,
+      "reference_mode": "reference-aware",
+      "source": "how_gold"
+    },
+    {
+      "judge": "gpt4o",
+      "mean": 49.010791366906474,
+      "median": 50.0,
+      "model": "qwen3_omni",
+      "n": 278,
+      "reference_mode": "reference-aware",
+      "source": "how_gold"
+    },
+    {
+      "judge": "qwen3_omni",
+      "mean": 43.16546762589928,
+      "median": 25.0,
+      "model": "qwen3_omni",
+      "n": 278,
+      "reference_mode": "reference-aware",
+      "source": "how_gold"
+    },
+    {
+      "judge": "gemini_2_5_pro",
+      "mean": 42.91530944625407,
+      "median": 25.0,
+      "model": "qwen3_omni_thinking",
+      "n": 307,
+      "reference_mode": "reference-aware",
+      "source": "how_gold"
+    },
+    {
+      "judge": "gpt4o",
+      "mean": 57.57328990228013,
+      "median": 50.0,
+      "model": "qwen3_omni_thinking",
+      "n": 307,
+      "reference_mode": "reference-aware",
+      "source": "how_gold"
+    },
+    {
+      "judge": "qwen3_omni",
+      "mean": 53.82736156351792,
+      "median": 50.0,
+      "model": "qwen3_omni_thinking",
+      "n": 307,
+      "reference_mode": "reference-aware",
+      "source": "how_gold"
+    },
+    {
+      "judge": "gemini_2_5_pro",
+      "mean": 29.6875,
+      "median": 0.0,
+      "model": "vita_1_5",
+      "n": 304,
+      "reference_mode": "reference-aware",
+      "source": "how_gold"
+    },
+    {
+      "judge": "gpt4o",
+      "mean": 38.98026315789474,
+      "median": 25.0,
+      "model": "vita_1_5",
+      "n": 304,
+      "reference_mode": "reference-aware",
+      "source": "how_gold"
+    },
+    {
+      "judge": "qwen3_omni",
+      "mean": 44.73684210526316,
+      "median": 25.0,
+      "model": "vita_1_5",
+      "n": 304,
+      "reference_mode": "reference-aware",
+      "source": "how_gold"
+    }
+  ],
+  "correlations": [
+    {
+      "kendall": 0.6517841500963808,
+      "mae": 17.248062015503876,
+      "metric": "reference-aware:gemini_2_5_pro",
+      "n": 688,
+      "pearson": 0.8398481838505821,
+      "scope": "response",
+      "spearman": 0.7558269249693378
+    },
+    {
+      "kendall": 0.7939516128102654,
+      "mae": 13.977713178294573,
+      "metric": "reference-aware:gpt4o",
+      "n": 688,
+      "pearson": 0.8673376800109465,
+      "scope": "response",
+      "spearman": 0.8953276772037608
+    },
+    {
+      "kendall": 0.9800149733976654,
+      "mae": 0.8236434108527132,
+      "metric": "reference-aware:primary-mean",
+      "n": 688,
+      "pearson": 0.9961308201263935,
+      "scope": "response",
+      "spearman": 0.9942252245079714
+    },
+    {
+      "kendall": 0.8002333868251312,
+      "mae": 11.337209302325581,
+      "metric": "reference-aware:qwen3_omni",
+      "n": 688,
+      "pearson": 0.9045378743492718,
+      "scope": "response",
+      "spearman": 0.8980214829640344
+    },
+    {
+      "kendall": 0.7454545454545454,
+      "mae": 1.0909090909090908,
+      "metric": "reference-aware:gemini_2_5_pro",
+      "n": 11,
+      "pearson": 0.8363636363636361,
+      "scope": "model-rank",
+      "spearman": 0.8363636363636365
+    },
+    {
+      "kendall": 0.8909090909090909,
+      "mae": 0.5454545454545454,
+      "metric": "reference-aware:gpt4o",
+      "n": 11,
+      "pearson": 0.9727272727272723,
+      "scope": "model-rank",
+      "spearman": 0.9727272727272729
+    },
+    {
+      "kendall": 1.0,
+      "mae": 0.0,
+      "metric": "reference-aware:primary-mean",
+      "n": 11,
+      "pearson": 0.9999999999999997,
+      "scope": "model-rank",
+      "spearman": 1.0
+    },
+    {
+      "kendall": 0.9272727272727274,
+      "mae": 0.36363636363636365,
+      "metric": "reference-aware:qwen3_omni",
+      "n": 11,
+      "pearson": 0.9818181818181814,
+      "scope": "model-rank",
+      "spearman": 0.9818181818181818
+    }
+  ],
+  "pairwise": [
+    {
+      "kendall": 0.4470135737685555,
+      "mae": 28.2703488372093,
+      "metric": "reference-aware:gpt4o vs reference-aware:gemini_2_5_pro",
+      "n": 688,
+      "pearson": 0.545204613659196,
+      "scope": "response",
+      "spearman": 0.5144817946823835
+    },
+    {
+      "kendall": 0.6410631775848011,
+      "mae": 17.223837209302324,
+      "metric": "reference-aware:gpt4o vs reference-aware:qwen3_omni",
+      "n": 688,
+      "pearson": 0.7406693201159963,
+      "scope": "response",
+      "spearman": 0.7344006896497984
+    },
+    {
+      "kendall": 0.5111875460003116,
+      "mae": 24.055232558139537,
+      "metric": "reference-aware:gemini_2_5_pro vs reference-aware:qwen3_omni",
+      "n": 688,
+      "pearson": 0.6257021875793143,
+      "scope": "response",
+      "spearman": 0.5890473966480975
+    }
+  ],
+  "rank_shifts": [
+    {
+      "base_rank": 9,
+      "metric": "reference-aware:gemini_2_5_pro",
+      "metric_mean": 7.8125,
+      "metric_rank": 10,
+      "model": "baichuan_omni_1_5",
+      "rank_shift": 1
+    },
+    {
+      "base_rank": 8,
+      "metric": "reference-aware:gemini_2_5_pro",
+      "metric_mean": 19.545454545454547,
+      "metric_rank": 7,
+      "model": "gemini_2_5_flash",
+      "rank_shift": -1
+    },
+    {
+      "base_rank": 11,
+      "metric": "reference-aware:gemini_2_5_pro",
+      "metric_mean": 9.274193548387096,
+      "metric_rank": 9,
+      "model": "gemini_2_5_pro",
+      "rank_shift": -2
+    },
+    {
+      "base_rank": 10,
+      "metric": "reference-aware:gemini_2_5_pro",
+      "metric_mean": 19.318181818181817,
+      "metric_rank": 8,
+      "model": "gemini_3_flash_preview",
+      "rank_shift": -2
+    },
+    {
+      "base_rank": 7,
+      "metric": "reference-aware:gemini_2_5_pro",
+      "metric_mean": 22.5609756097561,
+      "metric_rank": 6,
+      "model": "gemini_3_pro_preview",
+      "rank_shift": -1
+    },
+    {
+      "base_rank": 1,
+      "metric": "reference-aware:gemini_2_5_pro",
+      "metric_mean": 67.94871794871794,
+      "metric_rank": 1,
+      "model": "gpt4o",
+      "rank_shift": 0
+    },
+    {
+      "base_rank": 5,
+      "metric": "reference-aware:gemini_2_5_pro",
+      "metric_mean": 26.38888888888889,
+      "metric_rank": 5,
+      "model": "omnivinci",
+      "rank_shift": 0
+    },
+    {
+      "base_rank": 6,
+      "metric": "reference-aware:gemini_2_5_pro",
+      "metric_mean": 4.022988505747127,
+      "metric_rank": 11,
+      "model": "qwen2_5_omni",
+      "rank_shift": 5
+    },
+    {
+      "base_rank": 4,
+      "metric": "reference-aware:gemini_2_5_pro",
+      "metric_mean": 26.54320987654321,
+      "metric_rank": 4,
+      "model": "qwen3_omni",
+      "rank_shift": 0
+    },
+    {
+      "base_rank": 2,
+      "metric": "reference-aware:gemini_2_5_pro",
+      "metric_mean": 53.333333333333336,
+      "metric_rank": 2,
+      "model": "qwen3_omni_thinking",
+      "rank_shift": 0
+    },
+    {
+      "base_rank": 3,
+      "metric": "reference-aware:gemini_2_5_pro",
+      "metric_mean": 35.176991150442475,
+      "metric_rank": 3,
+      "model": "vita_1_5",
+      "rank_shift": 0
+    },
+    {
+      "base_rank": 9,
+      "metric": "reference-aware:gpt4o",
+      "metric_mean": 26.5625,
+      "metric_rank": 8,
+      "model": "baichuan_omni_1_5",
+      "rank_shift": -1
+    },
+    {
+      "base_rank": 8,
+      "metric": "reference-aware:gpt4o",
+      "metric_mean": 25.90909090909091,
+      "metric_rank": 9,
+      "model": "gemini_2_5_flash",
+      "rank_shift": 1
+    },
+    {
+      "base_rank": 11,
+      "metric": "reference-aware:gpt4o",
+      "metric_mean": 14.919354838709678,
+      "metric_rank": 11,
+      "model": "gemini_2_5_pro",
+      "rank_shift": 0
+    },
+    {
+      "base_rank": 10,
+      "metric": "reference-aware:gpt4o",
+      "metric_mean": 17.045454545454547,
+      "metric_rank": 10,
+      "model": "gemini_3_flash_preview",
+      "rank_shift": 0
+    },
+    {
+      "base_rank": 7,
+      "metric": "reference-aware:gpt4o",
+      "metric_mean": 27.4390243902439,
+      "metric_rank": 7,
+      "model": "gemini_3_pro_preview",
+      "rank_shift": 0
+    },
+    {
+      "base_rank": 1,
+      "metric": "reference-aware:gpt4o",
+      "metric_mean": 85.8974358974359,
+      "metric_rank": 1,
+      "model": "gpt4o",
+      "rank_shift": 0
+    },
+    {
+      "base_rank": 5,
+      "metric": "reference-aware:gpt4o",
+      "metric_mean": 50.0,
+      "metric_rank": 6,
+      "model": "omnivinci",
+      "rank_shift": 1
+    },
+    {
+      "base_rank": 6,
+      "metric": "reference-aware:gpt4o",
+      "metric_mean": 52.01149425287356,
+      "metric_rank": 5,
+      "model": "qwen2_5_omni",
+      "rank_shift": -1
+    },
+    {
+      "base_rank": 4,
+      "metric": "reference-aware:gpt4o",
+      "metric_mean": 57.71604938271605,
+      "metric_rank": 3,
+      "model": "qwen3_omni",
+      "rank_shift": -1
+    },
+    {
+      "base_rank": 2,
+      "metric": "reference-aware:gpt4o",
+      "metric_mean": 73.75,
+      "metric_rank": 2,
+      "model": "qwen3_omni_thinking",
+      "rank_shift": 0
+    },
+    {
+      "base_rank": 3,
+      "metric": "reference-aware:gpt4o",
+      "metric_mean": 53.76106194690266,
+      "metric_rank": 4,
+      "model": "vita_1_5",
+      "rank_shift": 1
+    },
+    {
+      "base_rank": 9,
+      "metric": "reference-aware:primary-mean",
+      "metric_mean": 19.270833333333336,
+      "metric_rank": 9,
+      "model": "baichuan_omni_1_5",
+      "rank_shift": 0
+    },
+    {
+      "base_rank": 8,
+      "metric": "reference-aware:primary-mean",
+      "metric_mean": 22.424242424242426,
+      "metric_rank": 8,
+      "model": "gemini_2_5_flash",
+      "rank_shift": 0
+    },
+    {
+      "base_rank": 11,
+      "metric": "reference-aware:primary-mean",
+      "metric_mean": 13.844086021505376,
+      "metric_rank": 11,
+      "model": "gemini_2_5_pro",
+      "rank_shift": 0
+    },
+    {
+      "base_rank": 10,
+      "metric": "reference-aware:primary-mean",
+      "metric_mean": 18.560606060606062,
+      "metric_rank": 10,
+      "model": "gemini_3_flash_preview",
+      "rank_shift": 0
+    },
+    {
+      "base_rank": 7,
+      "metric": "reference-aware:primary-mean",
+      "metric_mean": 26.21951219512195,
+      "metric_rank": 7,
+      "model": "gemini_3_pro_preview",
+      "rank_shift": 0
+    },
+    {
+      "base_rank": 1,
+      "metric": "reference-aware:primary-mean",
+      "metric_mean": 77.56410256410257,
+      "metric_rank": 1,
+      "model": "gpt4o",
+      "rank_shift": 0
+    },
+    {
+      "base_rank": 5,
+      "metric": "reference-aware:primary-mean",
+      "metric_mean": 40.370370370370374,
+      "metric_rank": 5,
+      "model": "omnivinci",
+      "rank_shift": 0
+    },
+    {
+      "base_rank": 6,
+      "metric": "reference-aware:primary-mean",
+      "metric_mean": 33.14176245210728,
+      "metric_rank": 6,
+      "model": "qwen2_5_omni",
+      "rank_shift": 0
+    },
+    {
+      "base_rank": 4,
+      "metric": "reference-aware:primary-mean",
+      "metric_mean": 42.592592592592595,
+      "metric_rank": 4,
+      "model": "qwen3_omni",
+      "rank_shift": 0
+    },
+    {
+      "base_rank": 2,
+      "metric": "reference-aware:primary-mean",
+      "metric_mean": 64.86111111111111,
+      "metric_rank": 2,
+      "model": "qwen3_omni_thinking",
+      "rank_shift": 0
+    },
+    {
+      "base_rank": 3,
+      "metric": "reference-aware:primary-mean",
+      "metric_mean": 49.926253687315636,
+      "metric_rank": 3,
+      "model": "vita_1_5",
+      "rank_shift": 0
+    },
+    {
+      "base_rank": 9,
+      "metric": "reference-aware:qwen3_omni",
+      "metric_mean": 23.4375,
+      "metric_rank": 8,
+      "model": "baichuan_omni_1_5",
+      "rank_shift": -1
+    },
+    {
+      "base_rank": 8,
+      "metric": "reference-aware:qwen3_omni",
+      "metric_mean": 18.636363636363637,
+      "metric_rank": 9,
+      "model": "gemini_2_5_flash",
+      "rank_shift": 1
+    },
+    {
+      "base_rank": 11,
+      "metric": "reference-aware:qwen3_omni",
+      "metric_mean": 12.903225806451612,
+      "metric_rank": 11,
+      "model": "gemini_2_5_pro",
+      "rank_shift": 0
+    },
+    {
+      "base_rank": 10,
+      "metric": "reference-aware:qwen3_omni",
+      "metric_mean": 16.477272727272727,
+      "metric_rank": 10,
+      "model": "gemini_3_flash_preview",
+      "rank_shift": 0
+    },
+    {
+      "base_rank": 7,
+      "metric": "reference-aware:qwen3_omni",
+      "metric_mean": 25.0,
+      "metric_rank": 7,
+      "model": "gemini_3_pro_preview",
+      "rank_shift": 0
+    },
+    {
+      "base_rank": 1,
+      "metric": "reference-aware:qwen3_omni",
+      "metric_mean": 75.64102564102564,
+      "metric_rank": 1,
+      "model": "gpt4o",
+      "rank_shift": 0
+    },
+    {
+      "base_rank": 5,
+      "metric": "reference-aware:qwen3_omni",
+      "metric_mean": 39.166666666666664,
+      "metric_rank": 6,
+      "model": "omnivinci",
+      "rank_shift": 1
+    },
+    {
+      "base_rank": 6,
+      "metric": "reference-aware:qwen3_omni",
+      "metric_mean": 43.39080459770115,
+      "metric_rank": 5,
+      "model": "qwen2_5_omni",
+      "rank_shift": -1
+    },
+    {
+      "base_rank": 4,
+      "metric": "reference-aware:qwen3_omni",
+      "metric_mean": 43.51851851851852,
+      "metric_rank": 4,
+      "model": "qwen3_omni",
+      "rank_shift": 0
+    },
+    {
+      "base_rank": 2,
+      "metric": "reference-aware:qwen3_omni",
+      "metric_mean": 67.5,
+      "metric_rank": 2,
+      "model": "qwen3_omni_thinking",
+      "rank_shift": 0
+    },
+    {
+      "base_rank": 3,
+      "metric": "reference-aware:qwen3_omni",
+      "metric_mean": 60.84070796460177,
+      "metric_rank": 3,
+      "model": "vita_1_5",
+      "rank_shift": 0
+    }
+  ],
+  "sensitivity": [
+    {
+      "combo": "primary",
+      "mean": 19.270833333333336,
+      "median": 12.5,
+      "model": "baichuan_omni_1_5",
+      "n": 16,
+      "rank": 9,
+      "rank_shift": 0
+    },
+    {
+      "combo": "primary",
+      "mean": 21.363636363636363,
+      "median": 8.333333333333334,
+      "model": "gemini_2_5_flash",
+      "n": 55,
+      "rank": 8,
+      "rank_shift": 0
+    },
+    {
+      "combo": "primary",
+      "mean": 12.365591397849462,
+      "median": 8.333333333333334,
+      "model": "gemini_2_5_pro",
+      "n": 62,
+      "rank": 11,
+      "rank_shift": 0
+    },
+    {
+      "combo": "primary",
+      "mean": 17.613636363636363,
+      "median": 8.333333333333334,
+      "model": "gemini_3_flash_preview",
+      "n": 44,
+      "rank": 10,
+      "rank_shift": 0
+    },
+    {
+      "combo": "primary",
+      "mean": 25.0,
+      "median": 16.666666666666668,
+      "model": "gemini_3_pro_preview",
+      "n": 41,
+      "rank": 7,
+      "rank_shift": 0
+    },
+    {
+      "combo": "primary",
+      "mean": 76.4957264957265,
+      "median": 91.66666666666667,
+      "model": "gpt4o",
+      "n": 39,
+      "rank": 1,
+      "rank_shift": 0
+    },
+    {
+      "combo": "primary",
+      "mean": 38.51851851851852,
+      "median": 29.166666666666668,
+      "model": "omnivinci",
+      "n": 90,
+      "rank": 5,
+      "rank_shift": 0
+    },
+    {
+      "combo": "primary",
+      "mean": 33.14176245210728,
+      "median": 33.333333333333336,
+      "model": "qwen2_5_omni",
+      "n": 87,
+      "rank": 6,
+      "rank_shift": 0
+    },
+    {
+      "combo": "primary",
+      "mean": 42.592592592592595,
+      "median": 33.333333333333336,
+      "model": "qwen3_omni",
+      "n": 81,
+      "rank": 4,
+      "rank_shift": 0
+    },
+    {
+      "combo": "primary",
+      "mean": 64.86111111111111,
+      "median": 66.66666666666667,
+      "model": "qwen3_omni_thinking",
+      "n": 60,
+      "rank": 2,
+      "rank_shift": 0
+    },
+    {
+      "combo": "primary",
+      "mean": 49.926253687315636,
+      "median": 50.0,
+      "model": "vita_1_5",
+      "n": 113,
+      "rank": 3,
+      "rank_shift": 0
+    },
+    {
+      "combo": "gpt4o+gemini_2_5_pro",
+      "mean": 17.1875,
+      "median": 12.5,
+      "model": "baichuan_omni_1_5",
+      "n": 16,
+      "rank": 10,
+      "rank_shift": 1
+    },
+    {
+      "combo": "gpt4o+gemini_2_5_pro",
+      "mean": 22.727272727272727,
+      "median": 12.5,
+      "model": "gemini_2_5_flash",
+      "n": 55,
+      "rank": 8,
+      "rank_shift": 0
+    },
+    {
+      "combo": "gpt4o+gemini_2_5_pro",
+      "mean": 12.096774193548388,
+      "median": 0.0,
+      "model": "gemini_2_5_pro",
+      "n": 62,
+      "rank": 11,
+      "rank_shift": 0
+    },
+    {
+      "combo": "gpt4o+gemini_2_5_pro",
+      "mean": 18.181818181818183,
+      "median": 0.0,
+      "model": "gemini_3_flash_preview",
+      "n": 44,
+      "rank": 9,
+      "rank_shift": -1
+    },
+    {
+      "combo": "gpt4o+gemini_2_5_pro",
+      "mean": 25.0,
+      "median": 12.5,
+      "model": "gemini_3_pro_preview",
+      "n": 41,
+      "rank": 7,
+      "rank_shift": 0
+    },
+    {
+      "combo": "gpt4o+gemini_2_5_pro",
+      "mean": 76.92307692307692,
+      "median": 100.0,
+      "model": "gpt4o",
+      "n": 39,
+      "rank": 1,
+      "rank_shift": 0
+    },
+    {
+      "combo": "gpt4o+gemini_2_5_pro",
+      "mean": 38.19444444444444,
+      "median": 25.0,
+      "model": "omnivinci",
+      "n": 90,
+      "rank": 5,
+      "rank_shift": 0
+    },
+    {
+      "combo": "gpt4o+gemini_2_5_pro",
+      "mean": 28.017241379310345,
+      "median": 25.0,
+      "model": "qwen2_5_omni",
+      "n": 87,
+      "rank": 6,
+      "rank_shift": 0
+    },
+    {
+      "combo": "gpt4o+gemini_2_5_pro",
+      "mean": 42.129629629629626,
+      "median": 25.0,
+      "model": "qwen3_omni",
+      "n": 81,
+      "rank": 4,
+      "rank_shift": 0
+    },
+    {
+      "combo": "gpt4o+gemini_2_5_pro",
+      "mean": 63.541666666666664,
+      "median": 75.0,
+      "model": "qwen3_omni_thinking",
+      "n": 60,
+      "rank": 2,
+      "rank_shift": 0
+    },
+    {
+      "combo": "gpt4o+gemini_2_5_pro",
+      "mean": 44.469026548672566,
+      "median": 37.5,
+      "model": "vita_1_5",
+      "n": 113,
+      "rank": 3,
+      "rank_shift": 0
+    },
+    {
+      "combo": "gpt4o+qwen3_omni",
+      "mean": 25.0,
+      "median": 18.75,
+      "model": "baichuan_omni_1_5",
+      "n": 16,
+      "rank": 8,
+      "rank_shift": -1
+    },
+    {
+      "combo": "gpt4o+qwen3_omni",
+      "mean": 22.272727272727273,
+      "median": 12.5,
+      "model": "gemini_2_5_flash",
+      "n": 55,
+      "rank": 9,
+      "rank_shift": 1
+    },
+    {
+      "combo": "gpt4o+qwen3_omni",
+      "mean": 13.911290322580646,
+      "median": 0.0,
+      "model": "gemini_2_5_pro",
+      "n": 62,
+      "rank": 11,
+      "rank_shift": 0
+    },
+    {
+      "combo": "gpt4o+qwen3_omni",
+      "mean": 16.761363636363637,
+      "median": 0.0,
+      "model": "gemini_3_flash_preview",
+      "n": 44,
+      "rank": 10,
+      "rank_shift": 0
+    },
+    {
+      "combo": "gpt4o+qwen3_omni",
+      "mean": 26.21951219512195,
+      "median": 25.0,
+      "model": "gemini_3_pro_preview",
+      "n": 41,
+      "rank": 7,
+      "rank_shift": 0
+    },
+    {
+      "combo": "gpt4o+qwen3_omni",
+      "mean": 80.76923076923077,
+      "median": 87.5,
+      "model": "gpt4o",
+      "n": 39,
+      "rank": 1,
+      "rank_shift": 0
+    },
+    {
+      "combo": "gpt4o+qwen3_omni",
+      "mean": 44.583333333333336,
+      "median": 37.5,
+      "model": "omnivinci",
+      "n": 90,
+      "rank": 6,
+      "rank_shift": 1
+    },
+    {
+      "combo": "gpt4o+qwen3_omni",
+      "mean": 47.701149425287355,
+      "median": 50.0,
+      "model": "qwen2_5_omni",
+      "n": 87,
+      "rank": 5,
+      "rank_shift": -1
+    },
+    {
+      "combo": "gpt4o+qwen3_omni",
+      "mean": 50.617283950617285,
+      "median": 50.0,
+      "model": "qwen3_omni",
+      "n": 81,
+      "rank": 4,
+      "rank_shift": 0
+    },
+    {
+      "combo": "gpt4o+qwen3_omni",
+      "mean": 70.625,
+      "median": 75.0,
+      "model": "qwen3_omni_thinking",
+      "n": 60,
+      "rank": 2,
+      "rank_shift": 0
+    },
+    {
+      "combo": "gpt4o+qwen3_omni",
+      "mean": 57.30088495575221,
+      "median": 62.5,
+      "model": "vita_1_5",
+      "n": 113,
+      "rank": 3,
+      "rank_shift": 0
+    },
+    {
+      "combo": "gemini_2_5_pro+qwen3_omni",
+      "mean": 15.625,
+      "median": 12.5,
+      "model": "baichuan_omni_1_5",
+      "n": 16,
+      "rank": 10,
+      "rank_shift": 1
+    },
+    {
+      "combo": "gemini_2_5_pro+qwen3_omni",
+      "mean": 19.09090909090909,
+      "median": 12.5,
+      "model": "gemini_2_5_flash",
+      "n": 55,
+      "rank": 8,
+      "rank_shift": 0
+    },
+    {
+      "combo": "gemini_2_5_pro+qwen3_omni",
+      "mean": 11.088709677419354,
+      "median": 0.0,
+      "model": "gemini_2_5_pro",
+      "n": 62,
+      "rank": 11,
+      "rank_shift": 0
+    },
+    {
+      "combo": "gemini_2_5_pro+qwen3_omni",
+      "mean": 17.897727272727273,
+      "median": 0.0,
+      "model": "gemini_3_flash_preview",
+      "n": 44,
+      "rank": 9,
+      "rank_shift": -1
+    },
+    {
+      "combo": "gemini_2_5_pro+qwen3_omni",
+      "mean": 23.78048780487805,
+      "median": 12.5,
+      "model": "gemini_3_pro_preview",
+      "n": 41,
+      "rank": 6,
+      "rank_shift": -1
+    },
+    {
+      "combo": "gemini_2_5_pro+qwen3_omni",
+      "mean": 71.7948717948718,
+      "median": 87.5,
+      "model": "gpt4o",
+      "n": 39,
+      "rank": 1,
+      "rank_shift": 0
+    },
+    {
+      "combo": "gemini_2_5_pro+qwen3_omni",
+      "mean": 32.77777777777778,
+      "median": 25.0,
+      "model": "omnivinci",
+      "n": 90,
+      "rank": 5,
+      "rank_shift": 0
+    },
+    {
+      "combo": "gemini_2_5_pro+qwen3_omni",
+      "mean": 23.70689655172414,
+      "median": 25.0,
+      "model": "qwen2_5_omni",
+      "n": 87,
+      "rank": 7,
+      "rank_shift": 1
+    },
+    {
+      "combo": "gemini_2_5_pro+qwen3_omni",
+      "mean": 35.03086419753087,
+      "median": 12.5,
+      "model": "qwen3_omni",
+      "n": 81,
+      "rank": 4,
+      "rank_shift": 0
+    },
+    {
+      "combo": "gemini_2_5_pro+qwen3_omni",
+      "mean": 60.416666666666664,
+      "median": 62.5,
+      "model": "qwen3_omni_thinking",
+      "n": 60,
+      "rank": 2,
+      "rank_shift": 0
+    },
+    {
+      "combo": "gemini_2_5_pro+qwen3_omni",
+      "mean": 48.008849557522126,
+      "median": 37.5,
+      "model": "vita_1_5",
+      "n": 113,
+      "rank": 3,
+      "rank_shift": 0
+    }
+  ]
+}

@@ -1,135 +1,57 @@
-# SocialOmni：面向 Omni 模型的音视频社会交互基准
+# SocialOmni：面向全模态模型的音视频社会交互评测
 
-<p align="center">
-  <img src="assets/socialomni_logo.png" alt="SocialOmni Logo" width="320" />
-</p>
+[论文（arXiv v3）](https://arxiv.org/abs/2603.16859v3) · [PDF](papers/socialomni-arxiv-v3.pdf) · [中英双语排行榜](https://teeryxie.github.io/socialomni/) · [数据集](https://huggingface.co/datasets/alexisty/SocialOmni) · [English](../README.md)
 
-<h2 align="center">SocialOmni：面向 Omni 模型的音视频社会交互基准</h2>
-<h5 align="center">一个联合评测 <i>who</i>、<i>when</i>、<i>how</i> 三个维度的 Omni 对话交互基准。</h5>
+SocialOmni 是离线诊断评测，分别衡量模型能否识别**谁在说话**、判断指定参与者在标注时刻**是否应开口**、以及生成**合适的后续话语**。该协议不测量持续流式状态或真实运行延迟。
 
-<p align="center">
-  <a href="../README.md">English</a>
-  ·
-  <a href="#-基准概览">基准概览</a>
-  ·
-  <a href="#-快速开始">快速开始</a>
-  ·
-  <a href="#-主要结果">主要结果</a>
-</p>
+## 论文与复现材料
 
-SocialOmni 是一个面向 omni-modal large language models（OLMs）的**音视频社会交互能力**评测基准。与只关心最终答案是否正确的静态评测不同，SocialOmni 聚焦模型在真实对话中的交互行为，联合评估三个紧密耦合的维度：
+仓库收录 **2026 年 9 月 20 日的 arXiv:2603.16859v3**，以及原样保存的[公开复现附件](../reproducibility/arxiv-v3/README.md)。附件保留 arXiv 发布的 SHA-256 文件校验和，可离线核验已有结果；它不是全部模型 API 实验的完整重跑环境。
 
-- **Who**：谁在说话，是否能正确识别当前说话人
-- **When**：什么时候该介入，是否能把握合适的打断时机
-- **How**：如何回应，是否能生成自然且符合语境的插话内容
+论文使用 **2,000 条感知样本**与 **200 条交互核心样本**（`video_0001`–`video_0200`，其中 128 条应回应）。公开交互数据集有 209 条，复现论文比较时应使用固定的 200 条核心标注。
 
-本仓库提供完整的 benchmark 流水线、模型客户端与服务端、运行配置，以及可复现的感知任务与交互生成任务评测入口。
+离线核验不需要 GPU、视频或 API 密钥：
 
-## 😮 亮点
-
-### 1. 面向“社会交互”而不是静态理解
-
-现有 omni 模型评测大多仍然围绕静态问答和答案正确率展开。SocialOmni 关注的是多方对话中的真实交互能力，因为在现实场景里，一个答案即使语义正确，也可能因为打断时机错误或续说不自然而导致整体交互失败。
-
-### 2. 统一的 who-when-how 联合评测协议
-
-SocialOmni 将对话交互能力具体化为一个联合画像：
-
-- **Who**：模型能否在目标时刻定位真实说话人
-- **When**：模型能否判断此刻是否适合介入
-- **How**：模型能否给出上下文一致、语气自然的打断内容
-
-这套设计可以直接暴露“感知强但交互差”或“能续说但不会择机”的模型失配问题。
-
-### 3. 交互失败通过感知与生成联合刻画
-
-SocialOmni 不只是给出总分，而是显式刻画：
-
-- 音视频一致 / 不一致条件下的鲁棒性
-- 打断时机判断的 Precision / Recall / F1
-- 插话内容的 LLM Judge 质量评分
-- 感知、时机、生成三轴之间的解耦现象
-
-<p align="center">
-  <img src="assets/socialomni_result_radar.png" alt="SocialOmni Cross-Axis Capability Profiles" width="88%" />
-</p>
-
-## 🔍 基准概览
-
-<p align="center">
-  <img src="assets/socialomni_overview.png" alt="SocialOmni Overview" width="100%" />
-</p>
-
-### 数据概况
-
-- **2,209** 条 benchmark 样本
-- **2,000** 条说话人感知样本
-- **209** 条交互生成样本
-- 覆盖 **15** 个对话子领域
-- 显式划分音视频**一致 / 不一致**子集，用于鲁棒性分析
-
-## 🧩 任务定义
-
-### 任务一：感知（`who`）
-
-给定一个视频片段和时间点 `t`，模型需要回答：
-
-> 在时间点 `t`，谁在说话？
-
-模型从 `{A, B, C, D}` 中选择一个选项。
-
-### 任务二：交互生成（`when` + `how`）
-
-给定视频前缀 `V[0:t]` 和候选说话者 `X`，模型需要完成两个子问题：
-
-- **Q1（`when`）**：`X` 是否应该在 `t` 之后立刻打断
-- **Q2（`how`）**：如果应该打断，合适的插话内容是什么
-
-## 📏 评测协议
-
-### 感知任务指标
-
-- Top-1 Accuracy
-- 一致 / 不一致子集准确率
-- 差值指标：
-
-```text
-Δ = Acc_consistent - Acc_inconsistent
+```bash
+cd reproducibility/arxiv-v3
+uv sync --python 3.13 --frozen
+uv run python scripts/verify_package.py
 ```
 
-### 生成任务指标
+来源及文件校验信息见[归档说明](papers/README.md)。
 
-- **Q1**：在容忍窗口（例如 `δ = 0.2s`）下计算 Accuracy / Precision / Recall / F1
-- **Q2**：在 `{0, 25, 50, 75, 100}` 上进行 LLM Judge 打分
+## 评测协议
 
-论文协议中，Q2 默认使用三位评审模型：
+- **Who**：四选一的说话者归属判断准确率。
+- **When**：仅依据查询时刻及之前的音视频，判断指定参与者是否应开口。分类指标与回答质量分别报告。
+- **QGold**：全部 128 条应回应样本的平均回答质量；即使模型预测 NO，也强制生成回答。
+- **QEns**：应回应且模型预测 YES、生成非空回答的样本平均质量。
+- **Cov+**：应回应样本中，模型预测 YES 且生成非空回答的比例。
+- **QEns_joint**：`QEns × Cov+ / 100`；漏掉的应回应机会贡献零分。
 
-- GPT-4o
-- Gemini 3 Pro
-- Qwen3-Omni
+固定主评委为 **GPT-4o、Gemini 2.5 Pro、Qwen3-Omni**。每条符合条件的回答必须具有三份完整评分，分档为 {0, 25, 50, 75, 100}，零分不能过滤。标准后续话语和人工核验的评委上下文不提供给被测模型。推理设置、提示词与解析规则见论文附录 A.8–A.10。
 
-## 🐳 主要结果
+## 主要结果
 
-### SocialOmni 揭示了明显的跨轴解耦
+以下为 arXiv v3 表 2 的归档结果，六项指标均为 0–100 标度，不代表重新运行仓库默认入口得到的结果。
 
-感知能力强，并不意味着交互能力强；会自然续说，也不等于真的知道该在什么时候介入。SocialOmni 的核心价值就在于把这种解耦显式量化出来。
+| 模型 | 输入方式 | Who | When | QGold | QEns | Cov+ | QEns_joint |
+|---|---|---:|---:|---:|---:|---:|---:|
+| GPT-4o | Cascade | 35.05 | 50.50 | 77.15 | 76.50 | 30.47 | 23.31 |
+| Gemini 2.5 Pro | Visual-only | 39.90 | 52.50 | 15.62 | 12.37 | 48.44 | 5.99 |
+| Gemini 2.5 Flash | Visual-only | 33.70 | 55.50 | 21.35 | 21.36 | 42.97 | 9.18 |
+| Gemini 3 Flash | Visual-only | 48.10 | 49.50 | 13.93 | 17.61 | 34.38 | 6.05 |
+| Gemini 3 Pro | Visual-only | 45.40 | 52.00 | 21.55 | 25.00 | 32.03 | 8.01 |
+| Qwen3-Omni | Native AV | 74.65 | 58.00 | 44.47 | 42.59 | 63.28 | 26.95 |
+| Qwen3-Omni-Thinking | Native AV | 67.65 | 56.00 | 67.77 | 64.86 | 46.88 | 30.40 |
+| Qwen2.5-Omni | Native AV | 40.95 | 60.50 | 36.00 | 33.14 | 67.97 | 22.53 |
+| OmniVinci | Native AV | 29.75 | 64.50 | 40.82 | 38.52 | 70.31 | 27.08 |
+| VITA-1.5 | Native AV | 32.05 | 65.50 | 48.37 | 49.93 | 88.28 | 44.08 |
+| Baichuan-Omni-1.5 | Native AV | 22.45 | 36.50 | 18.36 | 19.27 | 12.50 | 2.41 |
 
-| 模型 | Who (%) | When Acc. (%) | How (/100) |
-|---|---:|---:|---:|
-| GPT-4o | 36.75 | 46.89 | 69.64 |
-| Gemini 2.5 Pro | 44.69 | 55.67 | 72.32 |
-| Gemini 2.5 Flash | 47.03 | 61.50 | **85.08** |
-| Gemini 3 Flash Preview | 53.23 | 61.06 | 79.08 |
-| Gemini 3 Pro Preview | 64.99 | **67.31** | 81.77 |
-| Qwen3-Omni | **69.25** | 63.64 | 45.57 |
+Native AV 表示原生音视频输入；GPT-4o 接收视频前缀的机器转录和采样帧；该快照中的 Gemini 接口仅接收视频帧。输入方式是被测配置的一部分。
 
-关键观察：
-
-- **Who 最强**：Qwen3-Omni
-- **When 最强**：Gemini 3 Pro Preview
-- **How 最强**：Gemini 2.5 Flash
-
-这说明单一总分不足以描述 omni 模型的真实对话能力，必须联合评测整个交互画像。
+在核心样本上，始终预测 YES 的 When 准确率为 **64%**。六项指标衡量不同能力，不合成为总分。新增实测配置在[排行榜](https://teeryxie.github.io/socialomni/)单独列组，确认评测口径一致后才合并比较。
 
 ## ⚙️ 环境与安装
 
@@ -142,18 +64,20 @@ SocialOmni 不只是给出总分，而是显式刻画：
 安装方式：
 
 ```bash
-git clone https://github.com/Alexisxty/SocialOmni.git
+git clone https://github.com/MAC-AutoML/SocialOmni.git
 cd SocialOmni
 uv sync
 ```
 
 ## 🚀 快速开始
 
+以下开发入口使用公开数据集及各自配置的提示词、评委。默认运行不等于复现表 2；核验论文数字请使用上述固定快照。
+
 ### 1. 配置路径与运行参数
 
 编辑 `config/config.yaml`，至少配置以下内容：
 
-- API key / API endpoint
+- API endpoint（密钥放在 `.env` 的 `OPENAI_API_KEY`，不写入 YAML）
 - 本地模型路径或 `server_url`
 - 数据集路径
 - 输出目录和结果目录
@@ -236,8 +160,10 @@ ming
 如果 SocialOmni 对你的研究有帮助，请引用：
 
 ```bibtex
-@misc{socialomni,
+@article{xie2026socialomni,
   title={SocialOmni: Benchmarking Audio-Visual Social Interactivity in Omni Models},
-  author={Tianyu Xie and Jinfa Huang and Yuexiao Ma and Rongfang Luo and Yan Yang and Wang Chen and Yuhui Zeng and Ruize Fang and Yixuan Zou and Xiawu Zheng and Jiebo Luo and Rongrong Ji}
+  author={Xie, Tianyu and Huang, Jinfa and Ma, Yuexiao and Luo, Rongfang and Yang, Yan and Ma, Qingchuan and Chen, Wang and Zeng, Yuhui and Zou, Yixuan and Lu, Zhiqiang and Fang, Ruize and Luo, Jiebo and Ji, Rongrong and Zheng, Xiawu},
+  journal={arXiv preprint arXiv:2603.16859},
+  year={2026}
 }
 ```

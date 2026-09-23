@@ -1,0 +1,4 @@
+scope,metric,n,pearson,spearman,kendall,mae
+response,reference-aware:gpt4o vs reference-aware:gemini_2_5_pro,688,0.545204613659196,0.5144817946823835,0.4470135737685555,28.2703488372093
+response,reference-aware:gpt4o vs reference-aware:qwen3_omni,688,0.7406693201159963,0.7344006896497984,0.6410631775848011,17.223837209302324
+response,reference-aware:gemini_2_5_pro vs reference-aware:qwen3_omni,688,0.6257021875793143,0.5890473966480975,0.5111875460003116,24.055232558139537

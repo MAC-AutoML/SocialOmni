@@ -1,0 +1,5 @@
+[project]
+name = "socialomni-reproducibility"
+version = "1.0.0"
+requires-python = ">=3.10,<3.14"
+dependencies = ["numpy>=1.26,<3", "scipy>=1.11,<1.16", "matplotlib>=3.8,<3.11"]

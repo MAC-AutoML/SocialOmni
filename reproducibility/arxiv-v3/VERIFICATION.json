@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "perception_items": 2000,
+  "interaction_items": 200,
+  "positive_states": 128,
+  "models": 11,
+  "conditional_responses": 688,
+  "complete_primary_judge_scores": 2064,
+  "human_calibration_responses": 200,
+  "classification_and_generation_metrics": "recomputed from per-item records and matched canonical summaries",
+  "human_calibration": "all stored statistics reproduced, including bootstrap intervals",
+  "artifact_rendering": "primary, judge, extension and human analysis scripts completed",
+  "limits": [
+    "No video media or model weights",
+    "No live API rerun",
+    "Extension raw invocation logs not included"
+  ],
+  "runtime": {
+    "python": "3.13.13",
+    "scipy": "1.15.3",
+    "numpy": "2.4.6",
+    "matplotlib": "3.10.9"
+  }
+}
