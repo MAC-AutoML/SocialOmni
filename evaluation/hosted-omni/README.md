@@ -7,6 +7,8 @@ The current run configuration is `dashscope/qwen3.8-omni-flash` with `enable_thi
 Candidate generation uses 2,000 Who items, 200 When items and forced How generation on all 128 gold-positive items. Both audio and video are trimmed before encoding. Who uses the end of the marked interval, or the stated point for point queries; the query naming both seconds 2 and 6 uses second 6. When and How use the annotated query timestamp. Candidate prompts contain no reference response or full transcript.
 
 ```sh
+cd evaluation/hosted-omni
+uv sync --python 3.12 --frozen
 uv run python evaluate.py \
   --annotations /path/to/ancillary/final_source/data \
   --media /path/to/SocialOmni \
@@ -65,3 +67,11 @@ uv run python -m unittest -v test_client test_evaluate test_judges
 No partial judge panel is averaged. Successfully empty responses contribute zero to the fixed-denominator metrics; transport failures keep the run incomplete. Source metadata, media, prompts, sampling and implementation hashes prevent reuse across different candidate protocols.
 
 If one endpoint is temporarily unavailable, `--only-judge gemini-2.5-pro` (or another configured judge name) can save that judge’s work first. Rerun without `--only-judge` to assemble the complete panel using the same request cache. Until all three scores exist, quality metrics remain null and the command exits with an incomplete status. Judge requests honor `HTTP_PROXY`, `HTTPS_PROXY` and `NO_PROXY`; candidate requests use the endpoint directly.
+
+Export a public result file after all stages finish:
+
+```sh
+uv run python export_results.py --candidates runs/candidates --judges runs/judges --output results.json
+```
+
+The export keeps per-item predictions and judge scores but omits credentials and private relay addresses. It refuses an incomplete evaluation by default. `--allow-incomplete` is for an explicitly labeled progress artifact; missing-panel quality remains null.
