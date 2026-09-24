@@ -12,6 +12,7 @@ JUDGES = {"gpt-4o", "gemini-2.5-pro", "qwen3-omni"}
 PANELS = {
     "paper-v3": JUDGES,
     "gpt56-sol": {"gpt-5.6-sol", "gemini-2.5-pro", "qwen3-omni"},
+    "modern-20260924": {"gpt-5.6-sol", "gemini-3.8-flash", "qwen3.8-omni"},
 }
 SCORES = {"0", "25", "50", "75", "100"}
 RUBRIC = """Score the candidate continuation for contextual grounding, target-role consistency,
@@ -166,6 +167,8 @@ async def run(args):
                         max_tokens=8192,
                         include_modalities=spec.get("include_modalities", True),
                         require_text=True,
+                        enable_thinking=spec.get("enable_thinking"),
+                        reasoning_effort=spec.get("reasoning_effort"),
                     )
                     value = response["text"].strip()
                     if value not in SCORES:

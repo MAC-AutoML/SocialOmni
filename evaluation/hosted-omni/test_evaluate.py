@@ -4,6 +4,7 @@ from pathlib import Path
 
 from evaluate import (
     gold_when,
+    media_input,
     participant,
     seconds,
     summarize,
@@ -12,6 +13,17 @@ from evaluate import (
 
 
 class ProtocolTests(unittest.TestCase):
+    def test_file_input_preserves_mp4_payload(self):
+        part = {"type": "video_url", "video_url": {"url": "data:video/mp4;base64,AA=="}}
+        self.assertIs(media_input(part, "video_url"), part)
+        self.assertEqual(
+            media_input(part, "file"),
+            {
+                "type": "file",
+                "file": {"file_data": part["video_url"]["url"], "filename": "clip.mp4"},
+            },
+        )
+
     def test_time_formats_and_rejection(self):
         self.assertEqual(seconds("01:02:50"), 62.5)
         self.assertEqual(who_cutoff("What happened from 0：04 to 0:08 seconds?"), 8)

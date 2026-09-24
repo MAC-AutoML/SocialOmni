@@ -89,6 +89,15 @@ def parse_prediction(task, output):
     return output.strip() or None
 
 
+def media_input(part, input_type):
+    if input_type == "file":
+        return {
+            "type": "file",
+            "file": {"file_data": part["video_url"]["url"], "filename": "clip.mp4"},
+        }
+    return part
+
+
 def media_path(root, level, name):
     relative = Path(name)
     if relative.is_absolute() or ".." in relative.parts:
@@ -263,6 +272,8 @@ async def run(args):
         "top_p": 1,
         "max_tokens": args.max_tokens,
         "enable_thinking": thinking,
+        "include_modalities": not args.omit_modalities,
+        "media_input_type": args.media_input_type,
         "prefix_encoding": ENCODING,
         "who_cutoff_rule": "interval-end-or-explicit-point; paired-points-use-later; normalize-fullwidth-colon",
         "tasks": args.tasks,
@@ -328,6 +339,7 @@ async def run(args):
                     inventory[f"{task}-{sample_id}"],
                 )
                 part, media_hash = await asyncio.to_thread(video_part, video)
+                part = media_input(part, args.media_input_type)
                 if task == "who":
                     prompt = (
                         WHO + "\n" + row["question"] + "\n" + "\n".join(row["options"])
@@ -346,6 +358,7 @@ async def run(args):
                     media_sha256=[media_hash],
                     max_tokens=args.max_tokens,
                     enable_thinking=thinking,
+                    include_modalities=not args.omit_modalities,
                 )
                 result.update(
                     text=response["text"],
@@ -398,6 +411,14 @@ def main():
         "--thinking", choices=["default", "on", "off"], default="default"
     )
     parser.add_argument("--max-tokens", type=int, default=8192)
+    parser.add_argument(
+        "--media-input-type", choices=["video_url", "file"], default="video_url"
+    )
+    parser.add_argument(
+        "--omit-modalities",
+        action="store_true",
+        help="Omit the optional output modalities field for providers that reject it",
+    )
     parser.add_argument("--concurrency", type=int, default=8)
     parser.add_argument(
         "--tasks",

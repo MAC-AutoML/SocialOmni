@@ -95,3 +95,41 @@ uv run python judge_eval.py --panel gpt56-sol --candidates runs/candidates --con
 Exports record `judge_panel`, the three judge names and `judge_substitution`. Missing-panel quality remains null. With `--allow-incomplete`, a fully scored panel with retained candidate request failures has status `scored_with_request_failures`; those failures remain in the classification denominators.
 
 Judge requests require a non-empty score response. An empty successful stream is retried with the identical payload and retained as an attempt; existing valid scores are reused. Candidate generation keeps its original behavior, including preserving empty successful generations.
+
+## Rejudge archived answers with the September 24 panel
+
+The `modern-20260924` panel uses Gemini 3.8 Flash (`gemini-3.8-flash`), Qwen3.8-Omni-Flash (`dashscope/qwen3.8-omni-flash`) and GPT-5.6-Sol (`gpt-5.6-sol`). It is a separate result cohort. Candidate answers and correctness labels are not rewritten when the judges change.
+
+Each judge uses temperature 0, top-p 1 and an 8,192-token output limit. Qwen's thinking mode is disabled. GPT-5.6-Sol explicitly uses `reasoning_effort: "none"`, as required by the endpoint for top-p support. Gemini retains its provider-default thinking behavior. Set `include_modalities: false` for Gemini and GPT's text-only scoring requests.
+
+Prepare the paper's canonical 688 responses:
+
+```sh
+uv run python prepare_rescore.py --paper ../../reproducibility/arxiv-v3 --output runs/paper-input.json
+uv run python rescore.py --input runs/paper-input.json --judges judges-modern.json --output runs/paper-modern --panel modern-20260924
+```
+
+Or prepare all 128 forced responses from a completed hosted candidate run:
+
+```sh
+uv run python prepare_rescore.py --candidates runs/candidates --contexts judge-contexts.json --model MODEL_KEY --output runs/model-input.json
+uv run python rescore.py --input runs/model-input.json --judges judges-modern.json --output runs/model-modern --panel modern-20260924
+```
+
+The normalized input records the original contexts, reference continuations, candidate text, item IDs and When decisions. Its source file hashes and the complete scoring configuration are frozen before judging. All three valid scores are required for each non-empty answer; zeros count. Incomplete panels never produce an averaged quality score.
+
+The archived primary answers cover gold-positive items where the original model predicted YES. They support QEns, Cov+ and QEns_joint, but not QGold over all 128 gold-positive items. QGold therefore remains null when rejudging those 688 answers. New full-gold runs support all four metrics. Who and When remain accuracy against the original labels; they are not LLM-judge scores. Both these new models and the new judges may share a model family; no same-family judge exclusion is applied.
+
+For the Gemini 3.8 Flash candidate, use `--model gemini-3.8-flash --thinking default --media-input-type file --omit-modalities`. The formal run uses an MP4 file content part because this relay's `video_url` route omitted media during verification. The Qwen3.5 candidates use `--thinking off` with the default `video_url` input and exact model IDs `dashscope/qwen3.5-omni-plus` and `dashscope/qwen3.5-omni-flash-2026-03-15`.
+
+Add `--candidate-output candidates.json` to hosted input preparation to export all 2,328 candidate records without private relay addresses. Judging may begin after When and How finish; in that case the normalized input leaves Who null until the separate complete candidate artifact is available.
+
+A `judges-modern.json` configuration has these three entries (replace each endpoint and set the named credential variable):
+
+```json
+{"judges": [
+  {"name": "gemini-3.8-flash", "model": "gemini-3.8-flash", "base_url": "https://YOUR_ENDPOINT/v1", "api_key_env": "SOCIALOMNI_API_KEY", "include_modalities": false, "max_concurrency": 2},
+  {"name": "qwen3.8-omni", "model": "dashscope/qwen3.8-omni-flash", "base_url": "https://YOUR_ENDPOINT/v1", "api_key_env": "SOCIALOMNI_API_KEY", "enable_thinking": false, "max_concurrency": 2},
+  {"name": "gpt-5.6-sol", "model": "gpt-5.6-sol", "base_url": "https://YOUR_ENDPOINT/v1", "api_key_env": "SOCIALOMNI_API_KEY", "include_modalities": false, "reasoning_effort": "none", "max_concurrency": 2}
+]}
+```

@@ -87,6 +87,13 @@ class ClientTests(unittest.IsolatedAsyncioTestCase):
         await self.client.complete([], include_modalities=False)
         self.assertEqual(self.requests, 2)
 
+    async def test_explicit_reasoning_setting_has_distinct_cache_identity(self):
+        original = await self.client.complete([])
+        self.assertNotIn("reasoning_effort", self.payload)
+        explicit = await self.client.complete([], reasoning_effort="none")
+        self.assertEqual(self.payload["reasoning_effort"], "none")
+        self.assertNotEqual(original["request_sha256"], explicit["request_sha256"])
+
     async def test_truncation_not_cached_as_success(self):
         self.finish = "length"
         with self.assertRaises(RuntimeError):

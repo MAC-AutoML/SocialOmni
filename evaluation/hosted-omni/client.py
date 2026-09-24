@@ -94,6 +94,7 @@ class StreamingClient:
         enable_thinking=None,
         include_modalities=True,
         require_text=False,
+        reasoning_effort=None,
     ):
         payload = {
             "model": self.model,
@@ -108,6 +109,8 @@ class StreamingClient:
             payload["modalities"] = ["text"]
         if enable_thinking is not None:
             payload["enable_thinking"] = enable_thinking
+        if reasoning_effort is not None:
+            payload["reasoning_effort"] = reasoning_effort
         request_hash = digest({"endpoint": self.url, "payload": payload})
         folder = self.cache_dir / request_hash
         folder.mkdir(parents=True, exist_ok=True)
