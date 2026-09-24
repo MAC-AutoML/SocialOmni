@@ -61,6 +61,8 @@ The always-YES baseline reaches **64% When accuracy** on the core split. The six
 
 The [standalone hosted-model runner](evaluation/hosted-omni/README.md) uses the v3 item lists, query-time prefixes and prompt cards with a complete three-judge scoring stage. It has a separate lightweight Python environment and an immutable request cache. Supplemental runs remain separate from the frozen paper results.
 
+The [September 24 supplement](evaluation/results/modern-panel-20260924/README.md) rescores 688 archived answers with Gemini 3.8 Flash, Qwen3.8-Omni-Flash and GPT-5.6-Sol. It also reports Gemini 3.8 Flash and both Qwen3.5-Omni variants alongside the existing Qwen3.8 run, with all 3,600 judge scores, candidate outputs and an auxiliary output-format diagnostic.
+
 ## ⚙️ Requirements and Installation
 
 We recommend the following environment:

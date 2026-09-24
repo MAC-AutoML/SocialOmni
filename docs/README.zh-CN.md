@@ -57,6 +57,8 @@ Native AV 表示原生音视频输入；GPT-4o 接收视频前缀的机器转录
 
 [独立 API 评测程序](../evaluation/hosted-omni/README.md)使用 v3 样本清单、时间截断输入和提示词，并以三位固定评委完成评分。它使用单独的轻量 Python 环境，支持按请求恢复缓存。补测结果与论文固定快照分开报告。
 
+[9 月 24 日补充评测](../evaluation/results/modern-panel-20260924/README.md)使用 Gemini 3.8 Flash、Qwen3.8-Omni-Flash 和 GPT-5.6-Sol 对 688 条论文归档回答重新评分，并新增 Gemini 3.8 Flash、Qwen3.5-Omni-Plus 和 Qwen3.5-Omni-Flash，与此前的 Qwen3.8 实测一同报告。材料包含全部 3,600 份评委评分、候选回答及输出格式辅助诊断。
+
 ## ⚙️ 环境与安装
 
 推荐环境如下：

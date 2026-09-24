@@ -1,4 +1,4 @@
-# Qwen3.8-Omni SocialOmni supplemental evaluation
+# SocialOmni hosted-model supplemental evaluation
 
 This standalone runner uses the arXiv v3 ancillary item lists, Appendix A.8 sampling settings and A.10 prompt cards. It reports supplemental evaluations separately from the frozen paper snapshot.
 
