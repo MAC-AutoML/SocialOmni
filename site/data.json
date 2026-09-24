@@ -346,16 +346,16 @@
       "variant": "Native AV",
       "status": "published",
       "metrics": {
-        "who": 32.05,
-        "when": 65.5,
-        "qgold": null,
-        "qens": 54.79351032448377,
-        "cov_plus": 88.28125,
-        "qens_joint": 48.37239583333333
+        "who": 34.65,
+        "when": 56.0,
+        "qgold": 50.1953125,
+        "qens": 49.43502824858757,
+        "cov_plus": 46.09375,
+        "qens_joint": 22.786458333333332
       },
       "classification": {
-        "who_macro_f1": 31.379389099281752,
-        "when_macro_f1": 55.44794188861986
+        "who_macro_f1": 41.48866134735696,
+        "when_macro_f1": 55.96036432789511
       },
       "judge_panel": "modern-20260924",
       "judges": [
@@ -368,7 +368,7 @@
           "en": "Answers and scores",
           "zh": "回答与评分"
         },
-        "url": "https://github.com/MAC-AutoML/SocialOmni/tree/main/evaluation/results/modern-panel-20260924/paper"
+        "url": "https://github.com/MAC-AutoML/SocialOmni/tree/main/evaluation/results/local-native-av-20260924/vita_1_5"
       }
     },
     {

@@ -1,0 +1,48 @@
+{
+  "original_manifest_sha256": "ae6ddcd13d6727cc73aa8095f17dcdf71be276022a60178643515c23a30d45ea",
+  "model_repository": "VITA-MLLM/VITA-1.5",
+  "model_revision": "c4dbe41dd185fda036c1394832e25015e421743f",
+  "manifest": {
+    "model": "vita_1_5",
+    "weights": "VITA-MLLM/VITA-1.5/c4dbe41dd185fda036c1394832e25015e421743f",
+    "manifest_sha256": "0fa198836d9432be29b40aa220206d4dffc0821998361d80337a75fb2c4c82c0",
+    "temperature": 0.3,
+    "top_p": 1.0,
+    "max_new_tokens": 9000,
+    "runner_sha256": "c4a7d54a34753062fd38710fa228256c9c12c77efa17f410c35775b5c752cc96",
+    "execution_threads": {
+      "torch": 4,
+      "interop": 1,
+      "ffmpeg": 1,
+      "cpu_affinity": [
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ]
+    },
+    "response_control_prefix": {
+      "rule": "remove exactly one initial U+261E/U+261F/U+261C after whitespace trimming; preserve raw",
+      "source": "models/model_server/vita/vita_lib/vita/util/data_utils_video_audio_neg_patch.py:128-135",
+      "source_sha256": "400224f897277850adf33d8a2f66ca1170f269f303e76b64fa3bd3c8f9db2b10"
+    },
+    "selection": "all",
+    "package_versions": {
+      "torch": "2.7.1",
+      "transformers": "4.44.2",
+      "numpy": "1.26.4",
+      "av": "18.1.0"
+    },
+    "native_input": "video-and-its-original-audio-no-transcript",
+    "repo_archive_sha256": "31af70d6b69fbe470c7edd4e263b1efefe5dc5170e5948cbebb8e0bb9e67e540"
+  },
+  "runtime_source_sha256": {
+    "generate_native.py": "94ded5c2d4e89e3d9ce461a9b3d7a4002d557114fb5a4cfaf8c1380b352a6379",
+    "runtime_threads.py": "36a3000053a7d7cd9fdabf3016ed3269a726e6faadfbf91b6c9f3756293e1293",
+    "generate_vita_bounded.py": "c4a7d54a34753062fd38710fa228256c9c12c77efa17f410c35775b5c752cc96"
+  }
+}
