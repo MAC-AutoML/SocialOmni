@@ -178,3 +178,23 @@ footer { background: var(--color-bg); }
 .metric-headings th { border-bottom: 1px solid var(--color-line); }
 .metric-headings button { padding-block: 10px; }
 .methods dl { grid-template-columns: minmax(130px, 185px) minmax(0, 1fr); }
+
+#results table th, #results table td, #results table th button { text-align: center; }
+.how-case { margin-block: 28px; }
+.how-context { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px; align-items: start; }
+.how-context video { width: 100%; border-radius: 8px; background: #111; }
+.how-context h3 { margin-top: 0; }
+.how-responses { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-top: 28px; }
+.how-response { padding: 24px; border: 1px solid var(--color-line); border-radius: 10px; min-width: 0; }
+.how-response h3 { margin: 8px 0 16px; }
+.how-response blockquote { margin: 0 0 24px; padding: 14px 16px; border-left: 3px solid var(--color-accent); background: var(--color-bg); white-space: pre-wrap; overflow-wrap: anywhere; }
+.how-label { font-size: 12px; font-weight: 600; color: var(--color-accent); }
+.how-judge { padding-block: 16px; border-top: 1px solid var(--color-line); }
+.how-judge h4 { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin: 0 0 8px; font-size: 14px; }
+.how-judge p, .how-review p { margin: 8px 0; font-size: 14px; line-height: 1.7; }
+.how-judge .explanation-label { font-size: 11px; color: var(--color-muted); }
+.how-review { margin-top: 24px; padding: 20px 24px; border: 1px solid var(--color-line); border-radius: 10px; background: var(--color-bg); }
+.how-review h4 { margin: 0 0 10px; }
+.how-case mark { background: #fff0aa; color: inherit; padding: 1px 3px; border-radius: 2px; }
+.how-sources { display: flex; flex-wrap: wrap; gap: 16px; font-size: 12px; margin-top: 16px; }
+@media (max-width: 48rem) { .how-context, .how-responses { grid-template-columns: minmax(0, 1fr); } .how-response { padding: 18px; } }

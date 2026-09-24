@@ -28,3 +28,7 @@ Verify both languages, all-model display, metric sorting in both directions, mis
 `cases.json` preserves the selected dataset annotations, public source identifiers and video hashes. Chinese translations are separate `_zh` fields; original annotations are unchanged. The two Level 2 clips end at the annotated decision time. Reference answers are initially collapsed.
 
 `media/socialomni-introduction.mp4` is the author-provided project video, remuxed for progressive playback without re-encoding. Videos load only on interaction. Case clips use H.264 video and AAC audio.
+
+## How examples
+
+`how-cases.json` presents two recorded answers to the same observation prefix, the original three-judge scores, later explanations from those judges, and an independent Codex evidence review. Original English answers and quoted context are preserved; Chinese translations are displayed separately. Highlighted quotes must occur verbatim in the stored context. The explanation requests and source hashes are archived under `evaluation/examples/how-20260924/`. Follow-up explanations do not change leaderboard scores.

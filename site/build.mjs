@@ -6,7 +6,8 @@ const read = (name) => readFile(new URL(name, import.meta.url), "utf8");
 const [resultText, caseText, script] = await Promise.all([read("data.json"), read("cases.json"), read("leaderboard.js")]);
 const results = JSON.parse(resultText);
 const examples = JSON.parse(caseText);
-const messages = runInNewContext(`${script.slice(0, script.indexOf("let examples;"))}\nmessages;`);
+const howExamples = JSON.parse(await read("how-cases.json"));
+const {messages, howCasesHTML} = runInNewContext(`${script.slice(0, script.indexOf("let examples;"))}\n({messages, howCasesHTML});`);
 const escape = (value = "") => String(value).replace(/[&<>"']/g, char => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"})[char]);
 const english = (value) => typeof value === "string" ? value : value?.en || "";
 const score = (record, key) => record.status === "pending" ? null : record.metrics?.[key];
@@ -35,7 +36,7 @@ const cases = examples.cases.map(item => {
 }).join("\n");
 const metrics = messages.en.metrics.map(([name, description]) => `<dt>${escape(name)}</dt><dd>${escape(description)}</dd>`).join("\n");
 let html = await read("index.html");
-for (const [id, tag, content] of [["rows", "tbody", rows], ["case-list", "div", cases], ["metric-definitions", "dl", metrics]]) {
+for (const [id, tag, content] of [["how-case-list", "div", howCasesHTML(howExamples, "en")], ["rows", "tbody", rows], ["case-list", "div", cases], ["metric-definitions", "dl", metrics]]) {
   const start = `<!-- generated:${id}:start -->`, end = `<!-- generated:${id}:end -->`;
   if (html.includes(start)) {
     const from = html.indexOf(start), to = html.indexOf(end, from);
@@ -48,7 +49,9 @@ for (const [id, tag, content] of [["rows", "tbody", rows], ["case-list", "div", 
   }
 }
 html = html.replace(/(<p id="load-status"[^>]*>)[^<]*(<\/p>)/, `$1${records.length} models shown$2`);
-const payload = JSON.stringify({results, examples}).replace(/</g, "\\u003c");
+html = html.replace(/(<h2 id="how-title"[^>]*>)[\s\S]*?(<\/h2>)/, `$1${escape(english(howExamples.title))}$2`);
+html = html.replace(/(<p[^>]*data-i18n="howIntro"[^>]*>)[\s\S]*?(<\/p>)/, `$1${escape(english(howExamples.intro))}$2`);
+const payload = JSON.stringify({results, examples, howExamples}).replace(/</g, "\\u003c");
 const bootstrap = `<script id="socialomni-data" type="application/json">${payload}</script>`;
 if (html.includes('id="socialomni-data"')) html = html.replace(/<script id="socialomni-data" type="application\/json">[\s\S]*?<\/script>/, () => bootstrap);
 else html = html.replace("</body>", `${bootstrap}\n</body>`);

@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "title": {
+    "en": "How: two ways to continue the same conversation",
+    "zh": "How：同一段对话，两种回应"
+  },
+  "intro": {
+    "en": "Compare a fitting reply with a reply that repeats an offer after it has already been accepted.",
+    "zh": "对比一句自然的收尾，和一句在交易已被接受后重复提出的条件。"
+  },
+  "item_id": "video_0003",
+  "video": "media/cases/l2-3.mp4",
+  "poster": "media/cases/l2-3.jpg",
+  "question": {
+    "en": "What should the woman in green say?",
+    "zh": "穿绿色衣服的女士接下来应该说什么？"
+  },
+  "context": "All right, all right, your sandwich for the cheese toasie, the bag of scratchings and a chocolate bar. Come on, I'm robbing myself. I don't want to swap it.  All right, all right, here's what I'll do. The toastie, the scratchings, a choccy bar and...a roast dinner with all the trimmings. How long has that been in there? Come on, I'll throw in the briefeases well. Fine, just take it. Lovely.",
+  "context_highlights": [
+    "Fine, just take it. Lovely."
+  ],
+  "reference": {
+    "en": "Pleasure doing business with you.",
+    "zh": "很高兴与你做生意。"
+  },
+  "explanation_note": {
+    "en": "Scores are from the recorded evaluation. The same judges supplied the brief explanations afterward; the scores are unchanged.",
+    "zh": "分数来自原始评测；简短说明由同一组评委后续补充，原分数未改动。"
+  },
+  "responses": [
+    {
+      "id": "positive",
+      "polarity": "positive",
+      "model": "Gemini 3.1 Pro Preview",
+      "answer": {
+        "en": "Pleasure doing business with you.",
+        "zh": "很高兴与你做生意。"
+      },
+      "answer_highlights": [
+        "Pleasure doing business with you."
+      ],
+      "source_url": "https://github.com/MAC-AutoML/SocialOmni/blob/main/evaluation/results/gemini-native-av-20260924/gemini31pro/results.json",
+      "judges": [
+        {
+          "name": "GPT-5.6-Sol",
+          "score": 100,
+          "reason": {
+            "en": "The response is a natural, role-consistent closing after the exchange is accepted, fitting the satisfied tone of the dialogue.",
+            "zh": "该回答是在交换获准后自然且符合角色的收尾，也契合对话中满意的语气。"
+          },
+          "evidence_quotes": [
+            "Fine, just take it.",
+            "Lovely."
+          ],
+          "supports_recorded_score": true
+        },
+        {
+          "name": "Gemini 3.8 Flash",
+          "score": 100,
+          "reason": {
+            "en": "The candidate continuation perfectly fits the conclusion of the bargaining exchange, maintaining role consistency and natural pragmatics.",
+            "zh": "候选回答与讨价还价达成一致的语境完美契合，角色一致且语用自然。"
+          },
+          "evidence_quotes": [
+            "Fine, just take it. Lovely."
+          ],
+          "supports_recorded_score": true
+        },
+        {
+          "name": "Qwen3.8-Omni-Flash",
+          "score": 100,
+          "reason": {
+            "en": "The candidate perfectly matches the reference, providing a socially appropriate and coherent closing remark for the transaction described in the context.",
+            "zh": "候选答案与参考完全一致，为语境中描述的交易提供了恰当且连贯的结束语。"
+          },
+          "evidence_quotes": [
+            "Fine, just take it. Lovely."
+          ],
+          "supports_recorded_score": true
+        }
+      ],
+      "review": {
+        "verdict": {
+          "en": "The high scores are well supported.",
+          "zh": "高分有充分依据。"
+        },
+        "text": {
+          "en": "The exchange has been accepted and acknowledged. A short closing remark fits that point in the conversation and the target participant. Matching the reference supports the reading, but an equally appropriate paraphrase could also deserve full credit.",
+          "zh": "对方已接受交换，随后出现确认。这句简短的成交收尾符合当前对话状态和目标人物。与参考答案一致是佐证，但同样得体的改写也可以获得满分。"
+        },
+        "evidence_quotes": [
+          "Fine, just take it. Lovely."
+        ]
+      }
+    },
+    {
+      "id": "negative",
+      "polarity": "negative",
+      "model": "Qwen3.5-Omni-Plus",
+      "answer": {
+        "en": "Come on, I'll throw in the briefcase as well.",
+        "zh": "来吧，我连公文包也一起给你。"
+      },
+      "answer_highlights": [
+        "I'll throw in the briefcase as well."
+      ],
+      "source_url": "https://github.com/MAC-AutoML/SocialOmni/blob/main/evaluation/results/modern-panel-20260924/qwen35plus/results.json",
+      "judges": [
+        {
+          "name": "GPT-5.6-Sol",
+          "score": 25,
+          "reason": {
+            "en": "The candidate repeats an earlier bargaining line rather than responding after the deal is accepted, so it does not fit the dialogue state. A closing acknowledgment would be more appropriate.",
+            "zh": "候选回答重复了先前讨价还价时的话，而不是在交易被接受后作出回应，因此不符合当前对话状态。此处更适合用一句表示成交的结束语。"
+          },
+          "evidence_quotes": [
+            "Come on, I'll throw in the briefeases well.",
+            "Fine, just take it. Lovely."
+          ],
+          "supports_recorded_score": true
+        },
+        {
+          "name": "Gemini 3.8 Flash",
+          "score": 0,
+          "reason": {
+            "en": "The candidate repeats an offer that was already made earlier in the negotiation, making it incompatible with the current dialogue state where the deal has already been concluded.",
+            "zh": "候选回答重复了谈判前期已经提出过的条件，与交易刚刚达成后的对话状态完全不符。"
+          },
+          "evidence_quotes": [
+            "Come on, I'll throw in the briefeases well. Fine, just take it. Lovely."
+          ],
+          "supports_recorded_score": true
+        },
+        {
+          "name": "Qwen3.8-Omni-Flash",
+          "score": 25,
+          "reason": {
+            "en": "The candidate repeats a line already spoken by the previous speaker, failing to provide a distinct response from the target role. This results in a lack of conversational progression and pragmatic inappropriateness.",
+            "zh": "候选答案重复了前一位说话者已经说过的话，未能提供目标角色的独立回应。这导致对话缺乏进展且不符合语用规范。"
+          },
+          "evidence_quotes": [
+            "Come on, I'll throw in the briefeases well."
+          ],
+          "supports_recorded_score": true
+        }
+      ],
+      "review": {
+        "verdict": {
+          "en": "Low scores are justified; the exact penalty is debatable.",
+          "zh": "低分合理，具体扣分档位存在判断空间。"
+        },
+        "text": {
+          "en": "The reply repeats an earlier bargaining offer after acceptance, so it fails to advance the current turn. It is still about the same exchange: 25 can credit that relevance, while 0 reflects a stricter penalty for contradicting the dialogue state. The evidence supports a poor continuation, not a uniquely determined numerical score. Qwen’s explanation attributes the repeated line to a previous speaker, but the supplied transcript has no speaker labels; that attribution is not established by its evidence.",
+          "zh": "回答在对方接受交换之后重提之前的加码条件，没有顺着当前话轮推进。它仍与这笔交换有关，因此25分可保留主题相关性上的部分分；0分则对不符合当前对话状态作了更严格的处罚。证据支持它是一句较差的续写，但不足以断言只有一个唯一正确的分值。 Qwen评委把重复台词归于“前一位说话者”，但提供给评委的文本没有逐句说话者标注，无法据此确认这项归因。"
+        },
+        "evidence_quotes": [
+          "Come on, I'll throw in the briefeases well.",
+          "Fine, just take it. Lovely."
+        ]
+      }
+    }
+  ],
+  "explanation_source_url": "https://github.com/MAC-AutoML/SocialOmni/tree/main/evaluation/examples/how-20260924"
+}

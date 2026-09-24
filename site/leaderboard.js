@@ -8,7 +8,7 @@ const messages = {
     results: "Results", comparison: "",
     search: "Find a model", placeholder: "Model name", loading: "Loading results…",
     tableRegion: "Model results, scroll horizontally for all metrics", caption: "Model scores on a 0–100 scale. Higher is better. Select a column heading to sort.",
-    model: "Model", whoTask: "Speaker identification", whenTask: "Response timing", howTask: "Response quality", jointTask: "Coverage and joint quality", accuracy: "Accuracy", tableHelp: "Click a metric to sort. All scores use a 0–100 scale; higher is better. — means unavailable and is placed last in either sort direction.",
+    model: "Model", howTitle: "How · Response examples", howIntro: "One conversation, two responses. Compare the answers, three judges’ scores and the supporting evidence.", whoTask: "Speaker identification", whenTask: "Response timing", howTask: "Response quality", jointTask: "Coverage and joint quality", accuracy: "Accuracy", tableHelp: "Click a metric to sort. All scores use a 0–100 scale; higher is better. — means unavailable and is placed last in either sort direction.",
     metricsTitle: "Reading the metrics", jointNote: "QEns_joint = QEns × Cov+ / 100. A high response-quality score alone does not imply reliable decisions about when to speak.",
     sourcesTitle: "Evaluation", sourcesText: "New evaluations use Gemini 3.8 Flash, Qwen3.8-Omni-Flash and GPT-5.6-Sol as judges. Model names link to the corresponding results and evaluation settings.",
     archive: "Historical results and original materials ↗",
@@ -32,7 +32,7 @@ const messages = {
     results: "评测结果", comparison: "",
     search: "查找模型", placeholder: "输入模型名称", loading: "正在加载结果…",
     tableRegion: "模型结果，可横向滚动查看全部指标", caption: "模型分数均采用 0–100 标度，越高越好。点击列标题排序。",
-    model: "模型", whoTask: "说话者识别", whenTask: "回应时机", howTask: "回答质量", jointTask: "覆盖率与联合质量", accuracy: "准确率", tableHelp: "点击指标名称排序。所有分数均采用 0–100 标度，越高越好。— 表示缺失值，升序和降序均置于末尾。",
+    model: "模型", howTitle: "How · 回答对照", howIntro: "同一段对话，两种真实回答。对照回答内容、三位评委的分数与依据。", whoTask: "说话者识别", whenTask: "回应时机", howTask: "回答质量", jointTask: "覆盖率与联合质量", accuracy: "准确率", tableHelp: "点击指标名称排序。所有分数均采用 0–100 标度，越高越好。— 表示缺失值，升序和降序均置于末尾。",
     metricsTitle: "指标说明", jointNote: "QEns_joint = QEns × Cov+ / 100。回答质量高，不一定意味着模型能可靠判断何时应该开口。",
     sourcesTitle: "评测方法", sourcesText: "新增评测使用 Gemini 3.8 Flash、Qwen3.8-Omni-Flash 和 GPT-5.6-Sol 评分。模型名称链接至对应结果与评测设置。",
     archive: "历史结果与原始材料 ↗",
@@ -53,7 +53,42 @@ const messages = {
 
 Object.assign(messages.en, {"navIntro":"Introduction","navResults":"Leaderboard","navExamples":"Dataset examples","subtitle":"Who speaks. When to respond. What to say.","overview":"Social interaction requires more than understanding a video. SocialOmni evaluates whether a model can identify speakers, recognize when it should respond, and generate an appropriate reply from audio and visual context.","level1Title":"Who is speaking?","level1Text":"Connect voices to people using audio and visual cues.","level2Title":"When and how to respond?","level2Text":"Decide whether to speak at a given moment, then produce a context-appropriate response.","filmCaption":"SocialOmni · Project introduction","examplesIntro":"Explore the tasks through selected videos and their reference annotations.","question":"Question","reference":"Reference answer","showAnswer":"Show reference answer","caseSource":"Source annotation ↗"});
 Object.assign(messages.zh, {"navIntro":"项目介绍","navResults":"排行榜","navExamples":"视频案例","subtitle":"谁在说话，何时回应，如何回应。","overview":"社会交互不止于理解视频。SocialOmni 评测模型能否结合音视频线索识别说话者、判断何时应当开口，并生成符合语境的回应。","level1Title":"谁在说话？","level1Text":"结合声音与视觉线索，将说话内容与人物对应。","level2Title":"何时回应，如何回应？","level2Text":"在指定时刻判断是否应该开口，并生成符合当前语境的回答。","filmCaption":"SocialOmni · 项目介绍视频","examplesIntro":"通过精选视频和原始参考标注，了解两个层级的评测任务。","question":"题目","reference":"参考答案","showAnswer":"查看参考答案","caseSource":"查看原始标注 ↗"});
+function howCasesHTML(data, lang = "en") {
+  if (!data) return "";
+  const escape = value => String(value ?? "").replace(/[&<>"']/g, char => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"})[char]);
+  const text = value => typeof value === "string" ? value : value?.[lang] || value?.en || "";
+  const highlight = (value, quotes = []) => {
+    const source = String(value || "");
+    const matches = [...new Set(quotes.filter(quote => quote && source.includes(quote)))].sort((a, b) => b.length - a.length);
+    let output = "", cursor = 0;
+    while (cursor < source.length) {
+      let next = -1, selected = "";
+      for (const quote of matches) {
+        const at = source.indexOf(quote, cursor);
+        if (at >= 0 && (next < 0 || at < next)) { next = at; selected = quote; }
+      }
+      if (next < 0) return output + escape(source.slice(cursor));
+      output += escape(source.slice(cursor, next)) + `<mark>${escape(selected)}</mark>`;
+      cursor = next + selected.length;
+    }
+    return output;
+  };
+  const labels = lang === "zh" ? {question:"How 问题", reference:"参考回答", context:"上下文与高亮依据", positive:"正向案例", negative:"反向案例", translation:"中文翻译", explanation:"补充解释", review:"Codex 复核", source:"原始回答与评分 ↗", explanationSource:"评委补充说明 ↗", score:"原评分", evidence:"依据", agree:"与原评分一致", differ:"对原评分保留判断"} : {question:"How question", reference:"Reference answer", context:"Context and highlighted evidence", positive:"Positive example", negative:"Negative example", translation:"Chinese translation", explanation:"Follow-up explanation", review:"Codex review", source:"Original answer and scores ↗", explanationSource:"Judge explanations ↗", score:"Recorded score", evidence:"Evidence", agree:"Supports the recorded score", differ:"Reservation about the recorded score"};
+  const evidence = quotes => (quotes || []).map(quote => `<p class="how-evidence"><mark>${escape(quote)}</mark></p>`).join("");
+  const responses = data.responses.map(response => {
+    const judges = response.judges.map(judge => `<div class="how-judge"><h4><span>${escape(judge.name)}</span><span>${labels.score}: ${escape(judge.score)} / 100</span></h4><p>${escape(text(judge.reason))}</p>${evidence(judge.evidence_quotes)}${judge.supports_recorded_score === false ? `<p class="explanation-label">${labels.differ}</p>` : ""}</div>`).join("");
+    const review = response.review ? `<aside class="how-review"><h4>${labels.review} · ${escape(text(response.review.verdict))}</h4><p>${escape(text(response.review.text))}</p>${evidence(response.review.evidence_quotes)}</aside>` : "";
+    const answer = typeof response.answer === "string" ? response.answer : response.answer.en;
+    const translation = lang === "zh" && response.answer.zh ? `<p class="explanation-label">${labels.translation}</p><p>${escape(response.answer.zh)}</p>` : "";
+    const source = /^https?:\/\//.test(response.source_url) ? `<a href="${escape(response.source_url)}">${labels.source}</a>` : "";
+    return `<article class="how-response"><span class="how-label">${labels[response.polarity]}</span><h3>${escape(response.model)}</h3><blockquote>${highlight(answer, response.answer_highlights)}</blockquote>${translation}<div class="how-judges">${judges}</div>${review}<div class="how-sources">${source}</div></article>`;
+  }).join("");
+  const explanationSource = /^https?:\/\//.test(data.explanation_source_url) ? `<a href="${escape(data.explanation_source_url)}">${labels.explanationSource}</a>` : "";
+  return `<article class="how-case"><div class="how-context"><div><video controls playsinline preload="none" src="${escape(data.video)}" poster="${escape(data.poster)}" aria-label="${escape(text(data.question))}"></video><div class="how-key-evidence"><h4>${labels.evidence}</h4>${evidence(data.context_highlights)}</div><details><summary>${labels.context}</summary><p class="how-transcript">${highlight(data.context, data.context_highlights)}</p></details></div><div><span class="level-label">LEVEL 2 · ${escape(data.item_id)}</span><h3>${labels.question}</h3><p>${escape(text(data.question))}</p><h4>${labels.reference}</h4><p>${escape(text(data.reference))}</p><p class="method-note">${escape(text(data.explanation_note))}</p><div class="how-sources">${explanationSource}</div></div></div><div class="how-responses">${responses}</div></article>`;
+}
+
 let examples;
+let howExamples;
 
 const metricKeys = ["who", "when", "qgold", "qens", "cov_plus", "qens_joint"];
 let language = "en";
@@ -97,6 +132,11 @@ function render() {
   document.querySelectorAll("[data-lang]").forEach((node) => node.setAttribute("aria-pressed", String(node.dataset.lang === language)));
   document.getElementById("metric-definitions").replaceChildren(...t.metrics.flatMap(([name, definition]) => [element("dt", name), element("dd", definition)]));
   renderCases();
+  if (howExamples) {
+    document.getElementById("how-case-list").innerHTML = howCasesHTML(howExamples, language);
+    document.getElementById("how-title").textContent = localized(howExamples.title);
+    document.querySelector("[data-i18n=howIntro]").textContent = localized(howExamples.intro);
+  }
   if (!dataset) {
     if (!document.getElementById("rows").children.length) status.textContent = failed ? t.loadError : t.loading;
     return;
@@ -166,6 +206,7 @@ if (bootstrap) {
   try {
     const data = JSON.parse(bootstrap.textContent);
     useDataset(data.results);
+    howExamples = data.howExamples;
     if (Array.isArray(data.examples.cases)) examples = data.examples.cases;
   } catch {
     // Keep the generated HTML visible if embedded data cannot be read.
