@@ -36,7 +36,7 @@ The Gemini route accepts an MP4 as a `file` content part. Its `video_url` route 
 
 Normalized inputs preserve candidate answers, observed contexts, references and When decisions. Public score files include individual judge scores and their request hashes. New candidate exports preserve all per-item answers, parsing outcomes and request-success flags. Failed candidate requests remain in the fixed classification denominators; they are not silently dropped.
 
-Each Qwen3.5 run retains one Who request failure on item 1980 after repeated HTTP 500 responses; the cause is unconfirmed. Recovery reduced failed requests from 232 to 1 for Plus and from 259 to 1 for Flash, preserving every previously successful item. Gemini's completed run has no request failures. Parsing failures remain incorrect under the strict protocol and are not regenerated.
+Unsuccessful requests and refusals count as incorrect in the fixed classification denominator. Request verification and bounded retry records are retained in the [request audit](technical-retry-audit.json). All 9,312 candidate records remained unchanged during this audit.
 
 Private endpoints, credentials and raw service logs are excluded from the repository. Full request-attempt caches and the exact runtime sources are retained in the owner's persistent storage. The [runner documentation](../../hosted-omni/) provides the preparation, scoring and resumption commands.
 

@@ -1,0 +1,783 @@
+{
+  "updated_at": "2026-09-23",
+  "links": {
+    "paper": "https://arxiv.org/abs/2603.16859v3",
+    "code": "https://github.com/MAC-AutoML/SocialOmni",
+    "dataset": "https://huggingface.co/datasets/alexisty/SocialOmni"
+  },
+  "cohorts": [
+    {
+      "id": "paper-v3",
+      "label": {
+        "en": "Paper results · arXiv v3",
+        "zh": "论文结果 · arXiv v3"
+      },
+      "description": {
+        "en": "Eleven evaluated configurations from Table 2, with the input interface disclosed per model. Scores are transcribed from the September 20, 2026 revision.",
+        "zh": "转录自 2026 年 9 月 20 日版本 Table 2 的 11 组模型配置，各行注明实际输入方式。"
+      },
+      "source": {
+        "label": "arXiv:2603.16859v3 · Table 2",
+        "url": "https://arxiv.org/pdf/2603.16859v3#page=6"
+      },
+      "samples": {
+        "who": 2000,
+        "when": 200,
+        "gold_positive": 128
+      },
+      "notes": {
+        "en": "The 200 interaction items are video_0001–video_0200. Judges: GPT-4o, Gemini 2.5 Pro and Qwen3-Omni. All three scores are required. The always-YES baseline reaches 64% When accuracy. These metrics describe separate abilities, not an overall score.",
+        "zh": "交互样本为 video_0001–video_0200。固定评委为 GPT-4o、Gemini 2.5 Pro、Qwen3-Omni，每条回答要求三份完整评分。始终预测 YES 的 When 准确率为 64%。各指标衡量不同能力，不合成为总分。"
+      },
+      "provenance": {
+        "title": "SocialOmni: Benchmarking Audio-Visual Social Interactivity in Omni Models",
+        "url": "https://arxiv.org/abs/2603.16859v3",
+        "pdf_url": "https://arxiv.org/pdf/2603.16859v3",
+        "version": "arXiv:2603.16859v3",
+        "version_date": "2026-09-20",
+        "sha256": "fda885323158cc1f648849db92acc521d221c2bfa042a4ccb74763d101a21b9c",
+        "pages": 23,
+        "extraction": "Table 2 p6, Table 3 p7, Tables S1 p17 and S2/S3 p18 visually verified"
+      }
+    },
+    {
+      "id": "hosted-v3-sol-20260923",
+      "label": {
+        "en": "Supplemental · GPT-5.6-Sol judge panel",
+        "zh": "补充评测 · GPT-5.6-Sol 评委组"
+      },
+      "description": {
+        "en": "Qwen3.8-Omni-Flash in non-thinking mode on the v3 item lists. GPT-5.6-Sol replaces GPT-4o as a judge; the other judges are Gemini 2.5 Pro and original Qwen3-Omni. This is a separate evaluation group, not the paper’s original judge panel.",
+        "zh": "使用 v3 样本列表补测 Qwen3.8-Omni-Flash，关闭思考模式。评委 GPT-4o 替换为 GPT-5.6-Sol，另外两位为 Gemini 2.5 Pro 和原版 Qwen3-Omni。本组独立展示，不属于论文原始评委组结果。"
+      },
+      "source": {
+        "label": {
+          "en": "Per-item results and evaluation settings",
+          "zh": "逐样本结果与评测设置"
+        },
+        "url": "https://github.com/MAC-AutoML/SocialOmni/tree/main/evaluation/results/qwen38-omni-flash-20260923/gpt56-sol"
+      },
+      "samples": {
+        "who": 2000,
+        "when": 200,
+        "gold_positive": 128
+      },
+      "notes": {
+        "en": "Candidate settings: temperature 0.3, top-p 1, output limit 8,192 tokens. Audio and video end at the query boundary. All three judges score each of the 128 non-empty responses; no partial-panel average is used. The primary paper’s exact preprocessing and API envelopes have not been established for this run.",
+        "zh": "候选模型设置：温度 0.3、top-p 1、输出上限 8,192 token，音视频均在查询边界截断。128 条非空回答均由三位评委评分，不使用缺少评委的平均分。本次运行尚未确认与论文原始预处理及接口请求完全一致。"
+      }
+    }
+  ],
+  "records": [
+    {
+      "id": "gpt-4o",
+      "cohort": "paper-v3",
+      "model": "GPT-4o",
+      "variant": "Cascade",
+      "status": "published",
+      "metrics": {
+        "who": 35.05,
+        "when": 50.5,
+        "qgold": 77.15,
+        "qens": 76.5,
+        "cov_plus": 30.47,
+        "qens_joint": 23.31
+      },
+      "visibility": {
+        "visible": 35.59,
+        "mismatch": 31.64,
+        "gap": 3.96
+      },
+      "classification": {
+        "who_macro_f1": 31.18,
+        "when_macro_f1": 49.84
+      },
+      "intervals_95": {
+        "q_ens": [
+          67.31,
+          85.26
+        ],
+        "cov_positive": [
+          23.16,
+          38.92
+        ],
+        "confidence_level": 0.95,
+        "who": [
+          32.99,
+          37.17
+        ],
+        "when": [
+          43.63,
+          57.35
+        ],
+        "methods": {
+          "who": "Wilson",
+          "when": "Wilson",
+          "q_ens": "bootstrap",
+          "cov_positive": "Wilson"
+        }
+      },
+      "source_pages": {
+        "primary_table": 2,
+        "primary_page": 6,
+        "visibility_table": 3,
+        "visibility_page": 7,
+        "classification_table": "S1",
+        "classification_page": 17,
+        "interval_table": "S2/S3",
+        "interval_page": 18
+      },
+      "notes": {
+        "en": "Audio is transcribed with gpt-4o-transcribe, then supplied as text with sampled video frames.",
+        "zh": "截断音频经 gpt-4o-transcribe 转写，与采样视频帧一同输入。"
+      }
+    },
+    {
+      "id": "gemini-2-5-pro",
+      "cohort": "paper-v3",
+      "model": "Gemini 2.5 Pro",
+      "variant": "Visual-only",
+      "status": "published",
+      "metrics": {
+        "who": 39.9,
+        "when": 52.5,
+        "qgold": 15.62,
+        "qens": 12.37,
+        "cov_plus": 48.44,
+        "qens_joint": 5.99
+      },
+      "visibility": {
+        "visible": 40.81,
+        "mismatch": 34.18,
+        "gap": 6.63
+      },
+      "classification": {
+        "who_macro_f1": 39.62,
+        "when_macro_f1": 52.2
+      },
+      "intervals_95": {
+        "q_ens": [
+          8.2,
+          17.07
+        ],
+        "cov_positive": [
+          39.95,
+          57.01
+        ],
+        "confidence_level": 0.95,
+        "who": [
+          37.78,
+          42.06
+        ],
+        "when": [
+          45.6,
+          59.31
+        ],
+        "methods": {
+          "who": "Wilson",
+          "when": "Wilson",
+          "q_ens": "bootstrap",
+          "cov_positive": "Wilson"
+        }
+      },
+      "source_pages": {
+        "primary_table": 2,
+        "primary_page": 6,
+        "visibility_table": 3,
+        "visibility_page": 7,
+        "classification_table": "S1",
+        "classification_page": 17,
+        "interval_table": "S2/S3",
+        "interval_page": 18
+      },
+      "notes": {
+        "en": "Frames-only relay; raw audio was not available to this evaluated configuration.",
+        "zh": "该评测中使用仅接收视频帧的转接接口，不包含原始音频。"
+      }
+    },
+    {
+      "id": "gemini-2-5-flash",
+      "cohort": "paper-v3",
+      "model": "Gemini 2.5 Flash",
+      "variant": "Visual-only",
+      "status": "published",
+      "metrics": {
+        "who": 33.7,
+        "when": 55.5,
+        "qgold": 21.35,
+        "qens": 21.36,
+        "cov_plus": 42.97,
+        "qens_joint": 9.18
+      },
+      "visibility": {
+        "visible": 34.2,
+        "mismatch": 30.55,
+        "gap": 3.66
+      },
+      "classification": {
+        "who_macro_f1": 33.64,
+        "when_macro_f1": 55.5
+      },
+      "intervals_95": {
+        "q_ens": [
+          15.3,
+          27.88
+        ],
+        "cov_positive": [
+          34.72,
+          51.63
+        ],
+        "confidence_level": 0.95,
+        "who": [
+          31.66,
+          35.8
+        ],
+        "when": [
+          48.57,
+          62.22
+        ],
+        "methods": {
+          "who": "Wilson",
+          "when": "Wilson",
+          "q_ens": "bootstrap",
+          "cov_positive": "Wilson"
+        }
+      },
+      "source_pages": {
+        "primary_table": 2,
+        "primary_page": 6,
+        "visibility_table": 3,
+        "visibility_page": 7,
+        "classification_table": "S1",
+        "classification_page": 17,
+        "interval_table": "S2/S3",
+        "interval_page": 18
+      },
+      "notes": {
+        "en": "Frames-only relay; raw audio was not available to this evaluated configuration.",
+        "zh": "该评测中使用仅接收视频帧的转接接口，不包含原始音频。"
+      }
+    },
+    {
+      "id": "gemini-3-flash",
+      "cohort": "paper-v3",
+      "model": "Gemini 3 Flash",
+      "variant": "Visual-only",
+      "status": "published",
+      "metrics": {
+        "who": 48.1,
+        "when": 49.5,
+        "qgold": 13.93,
+        "qens": 17.61,
+        "cov_plus": 34.38,
+        "qens_joint": 6.05
+      },
+      "visibility": {
+        "visible": 49.39,
+        "mismatch": 40,
+        "gap": 9.39
+      },
+      "classification": {
+        "who_macro_f1": 47.88,
+        "when_macro_f1": 49.47
+      },
+      "intervals_95": {
+        "q_ens": [
+          10.98,
+          25
+        ],
+        "cov_positive": [
+          26.71,
+          42.95
+        ],
+        "confidence_level": 0.95,
+        "who": [
+          45.92,
+          50.29
+        ],
+        "when": [
+          42.65,
+          56.37
+        ],
+        "methods": {
+          "who": "Wilson",
+          "when": "Wilson",
+          "q_ens": "bootstrap",
+          "cov_positive": "Wilson"
+        }
+      },
+      "source_pages": {
+        "primary_table": 2,
+        "primary_page": 6,
+        "visibility_table": 3,
+        "visibility_page": 7,
+        "classification_table": "S1",
+        "classification_page": 17,
+        "interval_table": "S2/S3",
+        "interval_page": 18
+      },
+      "notes": {
+        "en": "Frames-only relay; raw audio was not available to this evaluated configuration.",
+        "zh": "该评测中使用仅接收视频帧的转接接口，不包含原始音频。"
+      }
+    },
+    {
+      "id": "gemini-3-pro",
+      "cohort": "paper-v3",
+      "model": "Gemini 3 Pro",
+      "variant": "Visual-only",
+      "status": "published",
+      "metrics": {
+        "who": 45.4,
+        "when": 52,
+        "qgold": 21.55,
+        "qens": 25,
+        "cov_plus": 32.03,
+        "qens_joint": 8.01
+      },
+      "visibility": {
+        "visible": 46.78,
+        "mismatch": 36.73,
+        "gap": 10.06
+      },
+      "classification": {
+        "who_macro_f1": 45.2,
+        "when_macro_f1": 51.41
+      },
+      "intervals_95": {
+        "q_ens": [
+          18.29,
+          32.11
+        ],
+        "cov_positive": [
+          24.57,
+          40.54
+        ],
+        "confidence_level": 0.95,
+        "who": [
+          43.23,
+          47.59
+        ],
+        "when": [
+          45.1,
+          58.82
+        ],
+        "methods": {
+          "who": "Wilson",
+          "when": "Wilson",
+          "q_ens": "bootstrap",
+          "cov_positive": "Wilson"
+        }
+      },
+      "source_pages": {
+        "primary_table": 2,
+        "primary_page": 6,
+        "visibility_table": 3,
+        "visibility_page": 7,
+        "classification_table": "S1",
+        "classification_page": 17,
+        "interval_table": "S2/S3",
+        "interval_page": 18
+      },
+      "notes": {
+        "en": "Frames-only relay; raw audio was not available to this evaluated configuration.",
+        "zh": "该评测中使用仅接收视频帧的转接接口，不包含原始音频。"
+      }
+    },
+    {
+      "id": "qwen3-omni",
+      "cohort": "paper-v3",
+      "model": "Qwen3-Omni",
+      "variant": "Native AV",
+      "status": "published",
+      "metrics": {
+        "who": 74.65,
+        "when": 58,
+        "qgold": 44.47,
+        "qens": 42.59,
+        "cov_plus": 63.28,
+        "qens_joint": 26.95
+      },
+      "visibility": {
+        "visible": 75.25,
+        "mismatch": 70.91,
+        "gap": 4.34
+      },
+      "classification": {
+        "who_macro_f1": 74.34,
+        "when_macro_f1": 55.65
+      },
+      "intervals_95": {
+        "q_ens": [
+          35.39,
+          49.59
+        ],
+        "cov_positive": [
+          54.66,
+          71.13
+        ],
+        "confidence_level": 0.95,
+        "who": [
+          72.7,
+          76.51
+        ],
+        "when": [
+          51.07,
+          64.63
+        ],
+        "methods": {
+          "who": "Wilson",
+          "when": "Wilson",
+          "q_ens": "bootstrap",
+          "cov_positive": "Wilson"
+        }
+      },
+      "source_pages": {
+        "primary_table": 2,
+        "primary_page": 6,
+        "visibility_table": 3,
+        "visibility_page": 7,
+        "classification_table": "S1",
+        "classification_page": 17,
+        "interval_table": "S2/S3",
+        "interval_page": 18
+      }
+    },
+    {
+      "id": "qwen3-omni-thinking",
+      "cohort": "paper-v3",
+      "model": "Qwen3-Omni-Thinking",
+      "variant": "Native AV",
+      "status": "published",
+      "metrics": {
+        "who": 67.65,
+        "when": 56,
+        "qgold": 67.77,
+        "qens": 64.86,
+        "cov_plus": 46.88,
+        "qens_joint": 30.4
+      },
+      "visibility": {
+        "visible": 68.35,
+        "mismatch": 63.27,
+        "gap": 5.08
+      },
+      "classification": {
+        "who_macro_f1": 67.94,
+        "when_macro_f1": 55.93
+      },
+      "intervals_95": {
+        "q_ens": [
+          57.5,
+          72.36
+        ],
+        "cov_positive": [
+          38.45,
+          55.48
+        ],
+        "confidence_level": 0.95,
+        "who": [
+          65.57,
+          69.66
+        ],
+        "when": [
+          49.07,
+          62.7
+        ],
+        "methods": {
+          "who": "Wilson",
+          "when": "Wilson",
+          "q_ens": "bootstrap",
+          "cov_positive": "Wilson"
+        }
+      },
+      "source_pages": {
+        "primary_table": 2,
+        "primary_page": 6,
+        "visibility_table": 3,
+        "visibility_page": 7,
+        "classification_table": "S1",
+        "classification_page": 17,
+        "interval_table": "S2/S3",
+        "interval_page": 18
+      }
+    },
+    {
+      "id": "qwen2-5-omni",
+      "cohort": "paper-v3",
+      "model": "Qwen2.5-Omni",
+      "variant": "Native AV",
+      "status": "published",
+      "metrics": {
+        "who": 40.95,
+        "when": 60.5,
+        "qgold": 36,
+        "qens": 33.14,
+        "cov_plus": 67.97,
+        "qens_joint": 22.53
+      },
+      "visibility": {
+        "visible": 41.28,
+        "mismatch": 38.91,
+        "gap": 2.37
+      },
+      "classification": {
+        "who_macro_f1": 39.5,
+        "when_macro_f1": 57.52
+      },
+      "intervals_95": {
+        "q_ens": [
+          29.6,
+          36.88
+        ],
+        "cov_positive": [
+          59.46,
+          75.43
+        ],
+        "confidence_level": 0.95,
+        "who": [
+          38.81,
+          43.12
+        ],
+        "when": [
+          53.59,
+          67.02
+        ],
+        "methods": {
+          "who": "Wilson",
+          "when": "Wilson",
+          "q_ens": "bootstrap",
+          "cov_positive": "Wilson"
+        }
+      },
+      "source_pages": {
+        "primary_table": 2,
+        "primary_page": 6,
+        "visibility_table": 3,
+        "visibility_page": 7,
+        "classification_table": "S1",
+        "classification_page": 17,
+        "interval_table": "S2/S3",
+        "interval_page": 18
+      }
+    },
+    {
+      "id": "omnivinci",
+      "cohort": "paper-v3",
+      "model": "OmniVinci",
+      "variant": "Native AV",
+      "status": "published",
+      "metrics": {
+        "who": 29.75,
+        "when": 64.5,
+        "qgold": 40.82,
+        "qens": 38.52,
+        "cov_plus": 70.31,
+        "qens_joint": 27.08
+      },
+      "visibility": {
+        "visible": 30.09,
+        "mismatch": 27.64,
+        "gap": 2.45
+      },
+      "classification": {
+        "who_macro_f1": 30,
+        "when_macro_f1": 62.03
+      },
+      "intervals_95": {
+        "q_ens": [
+          31.94,
+          45.28
+        ],
+        "cov_positive": [
+          61.9,
+          77.54
+        ],
+        "confidence_level": 0.95,
+        "who": [
+          27.79,
+          31.79
+        ],
+        "when": [
+          57.65,
+          70.8
+        ],
+        "methods": {
+          "who": "Wilson",
+          "when": "Wilson",
+          "q_ens": "bootstrap",
+          "cov_positive": "Wilson"
+        }
+      },
+      "source_pages": {
+        "primary_table": 2,
+        "primary_page": 6,
+        "visibility_table": 3,
+        "visibility_page": 7,
+        "classification_table": "S1",
+        "classification_page": 17,
+        "interval_table": "S2/S3",
+        "interval_page": 18
+      }
+    },
+    {
+      "id": "vita-1-5",
+      "cohort": "paper-v3",
+      "model": "VITA-1.5",
+      "variant": "Native AV",
+      "status": "published",
+      "metrics": {
+        "who": 32.05,
+        "when": 65.5,
+        "qgold": 48.37,
+        "qens": 49.93,
+        "cov_plus": 88.28,
+        "qens_joint": 44.08
+      },
+      "visibility": {
+        "visible": 31.42,
+        "mismatch": 36,
+        "gap": -4.58
+      },
+      "classification": {
+        "who_macro_f1": 31.38,
+        "when_macro_f1": 55.45
+      },
+      "intervals_95": {
+        "q_ens": [
+          43.88,
+          55.75
+        ],
+        "cov_positive": [
+          81.56,
+          92.77
+        ],
+        "confidence_level": 0.95,
+        "who": [
+          30.04,
+          34.13
+        ],
+        "when": [
+          58.68,
+          71.74
+        ],
+        "methods": {
+          "who": "Wilson",
+          "when": "Wilson",
+          "q_ens": "bootstrap",
+          "cov_positive": "Wilson"
+        }
+      },
+      "source_pages": {
+        "primary_table": 2,
+        "primary_page": 6,
+        "visibility_table": 3,
+        "visibility_page": 7,
+        "classification_table": "S1",
+        "classification_page": 17,
+        "interval_table": "S2/S3",
+        "interval_page": 18
+      }
+    },
+    {
+      "id": "baichuan-omni-1-5",
+      "cohort": "paper-v3",
+      "model": "Baichuan-Omni-1.5",
+      "variant": "Native AV",
+      "status": "published",
+      "metrics": {
+        "who": 22.45,
+        "when": 36.5,
+        "qgold": 18.36,
+        "qens": 19.27,
+        "cov_plus": 12.5,
+        "qens_joint": 2.41
+      },
+      "visibility": {
+        "visible": 23.13,
+        "mismatch": 18.18,
+        "gap": 4.95
+      },
+      "classification": {
+        "who_macro_f1": 11.6,
+        "when_macro_f1": 38.82
+      },
+      "intervals_95": {
+        "q_ens": [
+          10.42,
+          29.69
+        ],
+        "cov_positive": [
+          7.84,
+          19.34
+        ],
+        "confidence_level": 0.95,
+        "who": [
+          20.68,
+          24.33
+        ],
+        "when": [
+          30.14,
+          43.37
+        ],
+        "methods": {
+          "who": "Wilson",
+          "when": "Wilson",
+          "q_ens": "bootstrap",
+          "cov_positive": "Wilson"
+        }
+      },
+      "source_pages": {
+        "primary_table": 2,
+        "primary_page": 6,
+        "visibility_table": 3,
+        "visibility_page": 7,
+        "classification_table": "S1",
+        "classification_page": 17,
+        "interval_table": "S2/S3",
+        "interval_page": 18
+      }
+    },
+    {
+      "id": "qwen38-omni-flash-nonthinking",
+      "cohort": "hosted-v3-sol-20260923",
+      "model": "Qwen3.8-Omni-Flash",
+      "variant": "Native AV · Non-thinking",
+      "status": "published",
+      "metrics": {
+        "who": 89.45,
+        "when": 44,
+        "qgold": 73.95833333333337,
+        "qens": 68.11594202898553,
+        "cov_plus": 17.96875,
+        "qens_joint": 12.239583333333337
+      },
+      "classification": {
+        "who_macro_f1": 89.43111188946638,
+        "when_macro_f1": 41.41646615754786
+      },
+      "source": {
+        "label": {
+          "en": "Run artifacts",
+          "zh": "评测记录"
+        },
+        "url": "https://github.com/MAC-AutoML/SocialOmni/tree/main/evaluation/results/qwen38-omni-flash-20260923/gpt56-sol"
+      },
+      "notes": {
+        "en": "GPT-4o → GPT-5.6-Sol for judging only. Candidate outputs are unchanged. Who: 1,789/2,000; one provider video rejection and one noncompliant answer count as incorrect. When: 88/200; 23 of 128 gold-positive items have a YES decision and a non-empty response. Gemini and Qwen scores are reused from identical requests.",
+        "zh": "仅将评委 GPT-4o 替换为 GPT-5.6-Sol，候选回答未改动。Who：1,789/2,000；一条视频被平台拒绝、一条回答格式不合规，均计错。When：88/200；128 条应回应样本中，23 条预测 YES 且生成非空回答。Gemini 和 Qwen 评分复用完全相同请求的缓存。"
+      },
+      "judges": [
+        "gemini-2.5-pro",
+        "gpt-5.6-sol",
+        "qwen3-omni"
+      ],
+      "judge_panel": "gpt56-sol",
+      "judge_substitution": {
+        "replaced": "gpt-4o",
+        "replacement": "gpt-5.6-sol"
+      },
+      "judge_score_count": 384
+    }
+  ]
+}

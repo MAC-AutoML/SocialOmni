@@ -33,29 +33,42 @@ See the [archive manifest](docs/papers/README.md) for sources and file integrity
 - **Cov+:** the percentage of gold-positive items with a predicted YES and a non-empty response.
 - **QEns_joint:** `QEns × Cov+ / 100`; missed positive opportunities contribute zero.
 
-The fixed primary judges are **GPT-4o, Gemini 2.5 Pro and Qwen3-Omni**. Each eligible response requires all three scores from {0, 25, 50, 75, 100}; zero scores are retained. Human references and manually verified judge context are not inputs to the evaluated model. Appendix A.8–A.10 describes inference settings, prompts and parsing.
+Displayed response-quality results use **Gemini 3.8 Flash, Qwen3.8-Omni-Flash and GPT-5.6-Sol**. Each eligible response requires all three scores from {0, 25, 50, 75, 100}; zero scores are retained. Human references and manually verified judge context are not inputs to the evaluated model. Appendix A.8–A.10 describes inference settings, prompts and parsing.
 
 ## Main results
 
-Table 2 of arXiv v3. All values use a 0–100 scale. These are archived paper results, not new runs of the repository entrypoints.
+All displayed quality scores use the September 24 judge panel, on a 0–100 scale. Hosted runs and archived paper answers retain separate groups because their input and classification protocols differ. See the [per-item results and settings](evaluation/results/modern-panel-20260924/README.md) for scores and the output-format diagnostic.
 
-| Model | Interface | Who | When | QGold | QEns | Cov+ | QEns_joint |
-|---|---|---:|---:|---:|---:|---:|---:|
-| GPT-4o | Cascade | 35.05 | 50.50 | 77.15 | 76.50 | 30.47 | 23.31 |
-| Gemini 2.5 Pro | Visual-only | 39.90 | 52.50 | 15.62 | 12.37 | 48.44 | 5.99 |
-| Gemini 2.5 Flash | Visual-only | 33.70 | 55.50 | 21.35 | 21.36 | 42.97 | 9.18 |
-| Gemini 3 Flash | Visual-only | 48.10 | 49.50 | 13.93 | 17.61 | 34.38 | 6.05 |
-| Gemini 3 Pro | Visual-only | 45.40 | 52.00 | 21.55 | 25.00 | 32.03 | 8.01 |
-| Qwen3-Omni | Native AV | 74.65 | 58.00 | 44.47 | 42.59 | 63.28 | 26.95 |
-| Qwen3-Omni-Thinking | Native AV | 67.65 | 56.00 | 67.77 | 64.86 | 46.88 | 30.40 |
-| Qwen2.5-Omni | Native AV | 40.95 | 60.50 | 36.00 | 33.14 | 67.97 | 22.53 |
-| OmniVinci | Native AV | 29.75 | 64.50 | 40.82 | 38.52 | 70.31 | 27.08 |
-| VITA-1.5 | Native AV | 32.05 | 65.50 | 48.37 | 49.93 | 88.28 | 44.08 |
-| Baichuan-Omni-1.5 | Native AV | 22.45 | 36.50 | 18.36 | 19.27 | 12.50 | 2.41 |
+### Hosted candidates
 
-`Native AV` denotes joint audio-video input. GPT-4o uses a cascade of prefix transcription and video frames; the Gemini interfaces in this snapshot receive visual frames only. Input interfaces are part of each evaluated configuration.
+| Model | Who | When | QGold | QEns | Cov+ | QEns_joint |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Qwen3.8-Omni-Flash | 89.45 | 44.00 | 77.02 | 69.93 | 17.97 | 12.57 |
+| Gemini 3.8 Flash | 25.40 | 82.50 | 86.52 | 86.48 | 82.81 | 71.61 |
+| Qwen3.5-Omni-Plus | 91.05 | 58.50 | 80.27 | 77.82 | 48.44 | 37.70 |
+| Qwen3.5-Omni-Flash (2026-03-15) | 86.55 | 71.00 | 33.14 | 34.72 | 70.31 | 24.41 |
 
-The always-YES baseline reaches **64% When accuracy** on the core split. The six metrics describe different abilities and are not combined into an overall score. Newly evaluated configurations are listed separately on the [bilingual leaderboard](https://teeryxie.github.io/socialomni/) unless protocol equivalence has been established.
+Who and When use strict label parsing; request failures remain in the denominators. Auxiliary format extraction is diagnostic and does not replace these scores.
+
+### Archived paper answers, rescored
+
+The 688 archived responses are reused. Who, When and coverage retain their original outputs. QGold is unavailable because the archive does not contain all 128 forced responses per model.
+
+| Model | Who | When | QGold | QEns | Cov+ | QEns_joint |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| GPT-4o | 35.05 | 50.50 | — | 77.56 | 30.47 | 23.63 |
+| Gemini 2.5 Pro | 39.90 | 52.50 | — | 20.97 | 48.44 | 10.16 |
+| Gemini 2.5 Flash | 33.70 | 55.50 | — | 30.30 | 42.97 | 13.02 |
+| Gemini 3 Flash | 48.10 | 49.50 | — | 21.59 | 34.38 | 7.42 |
+| Gemini 3 Pro | 45.40 | 52.00 | — | 32.11 | 32.03 | 10.29 |
+| Qwen3-Omni | 74.65 | 58.00 | — | 44.96 | 63.28 | 28.45 |
+| Qwen3-Omni-Thinking | 67.65 | 56.00 | — | 61.53 | 46.88 | 28.84 |
+| Qwen2.5-Omni | 40.95 | 60.50 | — | 34.67 | 67.97 | 23.57 |
+| OmniVinci | 29.75 | 64.50 | — | 41.67 | 70.31 | 29.30 |
+| VITA-1.5 | 32.05 | 65.50 | — | 54.79 | 88.28 | 48.37 |
+| Baichuan-Omni-1.5 | 22.45 | 36.50 | — | 31.25 | 12.50 | 3.91 |
+
+The original paper panel and the earlier substitute panel remain in the [historical materials archive](evaluation/results/archive/README.md), together with the original data, scores, paper and verification scripts.
 
 ## Hosted-model supplemental evaluation
 
