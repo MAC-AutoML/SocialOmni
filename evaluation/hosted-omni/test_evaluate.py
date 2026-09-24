@@ -21,6 +21,9 @@ class ProtocolTests(unittest.TestCase):
             "dashscope/qwen3.5-omni-plus",
             "dashscope/qwen3.5-omni-flash-2026-03-15",
             "gemini-3.8-flash",
+            "gemini-3-flash-preview",
+            "gemini-2.5-flash",
+            "gemini-2.5-pro",
             "custom-model",
         ):
             with self.subTest(model=model):
@@ -31,7 +34,7 @@ class ProtocolTests(unittest.TestCase):
                     omit_modalities=None,
                 )
                 apply_model_defaults(args)
-                gemini = model == "gemini-3.8-flash"
+                gemini = model.startswith("gemini-")
                 self.assertEqual(
                     args.media_input_type, "file" if gemini else "video_url"
                 )

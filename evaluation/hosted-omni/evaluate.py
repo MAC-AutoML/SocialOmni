@@ -28,6 +28,9 @@ MODEL_DEFAULTS = {
     "dashscope/qwen3.5-omni-plus": ("off", "video_url", False),
     "dashscope/qwen3.5-omni-flash-2026-03-15": ("off", "video_url", False),
     "gemini-3.8-flash": ("default", "file", True),
+    "gemini-3-flash-preview": ("default", "file", True),
+    "gemini-2.5-flash": ("default", "file", True),
+    "gemini-2.5-pro": ("default", "file", True),
 }
 
 
