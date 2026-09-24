@@ -198,6 +198,66 @@
       "response_model": null,
       "answer": null,
       "availability": "Original model route discontinued"
+    },
+    {
+      "model": "gemini-3.1-pro-preview",
+      "control": "av",
+      "input_type": "file",
+      "media_sha256": "6a893430c8b563a8afb1de4d1c3153c77a5fa19ba7b9a37f2b27625e8e16af4c",
+      "prompt": "Report (1) the visible scene in the video, (2) the password and number spoken aloud. If a modality is absent, say unavailable. Do not infer audio from visible content.",
+      "request_sha256": "4b59e86ff8513174965bf8fa67ac683277897180ee2ab2310130704aad836b75",
+      "http_status": 200,
+      "response_model": "gemini-3.1-pro-preview",
+      "answer": "A red square is centered on a blue background. The spoken password is 'silver lantern' and the spoken number is '47'.",
+      "availability": "available"
+    },
+    {
+      "model": "gemini-3.1-pro-preview",
+      "control": "silent-av",
+      "input_type": "file",
+      "media_sha256": "dea6355c5924be71b167e95c67a46ca257303153b68be10cb02fd6264e73b16f",
+      "prompt": "Report (1) the visible scene in the video, (2) the password and number spoken aloud. If a modality is absent, say unavailable. Do not infer audio from visible content.",
+      "request_sha256": "24c5cd5f35ce44776aa71f085b8c054bcfee66fe8a3e5e2f263982e0d5d038f7",
+      "http_status": 200,
+      "response_model": "gemini-3.1-pro-preview",
+      "answer": "The video displays a red square centered on a blue background. The spoken password is 'password' and the number is '1234'.",
+      "availability": "available"
+    },
+    {
+      "model": "gemini-3.5-flash",
+      "control": "av",
+      "input_type": "file",
+      "media_sha256": "6a893430c8b563a8afb1de4d1c3153c77a5fa19ba7b9a37f2b27625e8e16af4c",
+      "prompt": "Report (1) the visible scene in the video, (2) the password and number spoken aloud. If a modality is absent, say unavailable. Do not infer audio from visible content.",
+      "request_sha256": "44c515687be7fe35aa56356a51dc98454db57edc961fd47e0645dcb05d445d5a",
+      "http_status": 200,
+      "response_model": "gemini-3.5-flash",
+      "answer": "Based on the video, here is the requested information:\n\n* **Visible scene:** A solid red square centered on a dark blue background.\n* **Spoken password:** silver lantern\n* **Spoken number:** 47",
+      "availability": "available"
+    },
+    {
+      "model": "gemini-3.5-flash",
+      "control": "silent-av",
+      "input_type": "file",
+      "media_sha256": "dea6355c5924be71b167e95c67a46ca257303153b68be10cb02fd6264e73b16f",
+      "prompt": "Report (1) the visible scene in the video, (2) the password and number spoken aloud. If a modality is absent, say unavailable. Do not infer audio from visible content.",
+      "request_sha256": "816c5597679f84ca497478269a0ca24ff5a30582f95ea0b95e6de57b93c64e25",
+      "http_status": 200,
+      "response_model": "gemini-3.5-flash",
+      "answer": "Based on the video:\n\n1. **Visible scene:** A solid red square is centered on a solid dark blue background. The image remains static throughout the video.\n2. **Password and number:** Unavailable (there is no audio in the video).",
+      "availability": "available"
     }
-  ]
+  ],
+  "request_settings": {
+    "max_tokens": 4096,
+    "temperature": 0,
+    "stream": false,
+    "top_p": "provider default",
+    "qwen_overrides": {
+      "enable_thinking": false,
+      "modalities": [
+        "text"
+      ]
+    }
+  }
 }

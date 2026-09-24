@@ -16,6 +16,8 @@ Supported candidate models and their request defaults:
 | Model ID | Thinking | Video input | Output modalities field |
 | --- | --- | --- | --- |
 | `gemini-3.8-flash` | Provider default | MP4 file | Omitted |
+| `gemini-3.5-flash` | Provider default | MP4 file | Omitted |
+| `gemini-3.1-pro-preview` | Provider default | MP4 file | Omitted |
 | `gemini-3-flash-preview` | Provider default | MP4 file | Omitted |
 | `gemini-2.5-flash` | Provider default | MP4 file | Omitted |
 | `gemini-2.5-pro` | Provider default | MP4 file | Omitted |
@@ -25,7 +27,7 @@ Supported candidate models and their request defaults:
 
 Both input forms preserve the audio track. Model defaults are selected by `--model`. Explicit `--thinking`, `--media-input-type`, and `--omit-modalities` / `--no-omit-modalities` options override them. Other OpenAI-compatible model IDs are accepted with provider-default thinking, `video_url` input and text output modalities; check that the endpoint accepts audio-bearing video.
 
-The seven listed routes passed an audio-track check with paired audible and silent videos: each recovered a spoken password and number from the audible video, without recovering them from the silent control. This verifies audio input through the tested route, not general benchmark accuracy. The earlier Gemini adapters under `models/model_server` send sampled images only; their archived scores must not be relabeled as audio-video results. Use a new output directory for a full evaluation with this runner.
+The listed routes passed an [audio-track check](../input-checks/20260924/) with paired audible and silent videos: each recovered a spoken password and number from the audible video, without recovering them from the silent control. This verifies audio input through the tested route, not general benchmark accuracy. The earlier Gemini adapters under `models/model_server` send sampled images only; their archived scores must not be relabeled as audio-video results. Use a new output directory for a full evaluation with this runner.
 
 ## Generate answers
 
