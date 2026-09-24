@@ -1,0 +1,195 @@
+{
+  "source": "https://arxiv.org/abs/2603.16859v3",
+  "authors": [
+    {
+      "name": "Tianyu Xie",
+      "affiliation": 1,
+      "corresponding": false,
+      "scholar_url": "https://scholar.google.com/citations?user=_vZWAnkAAAAJ",
+      "link_type": "profile",
+      "identity_evidence": {
+        "url": "https://scholar.google.com/citations?user=_vZWAnkAAAAJ&hl=en",
+        "note": "Profile confirms MSc student, Xiamen University, verified stu.xmu.edu.cn email and SocialOmni paper.",
+        "checked_at": "2026-09-24"
+      }
+    },
+    {
+      "name": "Jinfa Huang",
+      "affiliation": 2,
+      "corresponding": false,
+      "scholar_url": "https://scholar.google.com/citations?user=2t7iBnkAAAAJ",
+      "link_type": "profile",
+      "identity_evidence": {
+        "url": "https://scholar.google.com/citations?user=2t7iBnkAAAAJ&hl=en",
+        "note": "Profile confirms University of Rochester, Peking University and verified ur.rochester.edu email. Also linked by name in Tianyu Xie’s Scholar coauthor list (_vZWAnkAAAAJ).",
+        "checked_at": "2026-09-24"
+      }
+    },
+    {
+      "name": "Yuexiao Ma",
+      "affiliation": 3,
+      "corresponding": false,
+      "scholar_url": "https://scholar.google.com/citations?user=DVszibYAAAAJ",
+      "link_type": "profile",
+      "identity_evidence": {
+        "url": "https://scholar.google.com/citations?user=DVszibYAAAAJ&hl=en",
+        "note": "Profile confirms Nanyang Technological University, verified ntu.edu.sg email and SocialOmni paper. Also linked by name in Tianyu Xie’s Scholar coauthor list (_vZWAnkAAAAJ).",
+        "checked_at": "2026-09-24"
+      }
+    },
+    {
+      "name": "Rongfang Luo",
+      "affiliation": 4,
+      "corresponding": false,
+      "scholar_url": "https://scholar.google.com/scholar?q=%22Rongfang%20Luo%22%20%22SocialOmni%22",
+      "link_type": "search",
+      "identity_evidence": {
+        "url": "https://www.google.com/search?q=%22Rongfang%20Luo%22%20%22SocialOmni%22%20scholar",
+        "note": "Unknown: searched exact name with institution and SocialOmni; no profile tied to this author verified. Same-name or similar-name profiles were not accepted. No matching author link in Tianyu Xie or Yuhui Zeng Scholar coauthor lists.",
+        "checked_at": "2026-09-24"
+      }
+    },
+    {
+      "name": "Yan Yang",
+      "affiliation": 4,
+      "corresponding": false,
+      "scholar_url": "https://scholar.google.com/scholar?q=%22Yan%20Yang%22%20%22SocialOmni%22",
+      "link_type": "search",
+      "identity_evidence": {
+        "url": "https://www.google.com/search?q=%22Yan%20Yang%22%20%22SocialOmni%22%20scholar",
+        "note": "Unknown: searched exact name with institution and SocialOmni; no profile tied to this author verified. Same-name or similar-name profiles were not accepted. No matching author link in Tianyu Xie or Yuhui Zeng Scholar coauthor lists.",
+        "checked_at": "2026-09-24"
+      }
+    },
+    {
+      "name": "Qingchuan Ma",
+      "affiliation": 1,
+      "corresponding": false,
+      "scholar_url": "https://scholar.google.com/citations?user=K6jn8f8AAAAJ",
+      "link_type": "profile",
+      "identity_evidence": {
+        "url": "https://scholar.google.com/citations?user=K6jn8f8AAAAJ&hl=en",
+        "note": "Profile confirms xmu, verified stu.xmu.edu.cn email and SocialOmni paper. Also linked by name in Tianyu Xie’s Scholar coauthor list (_vZWAnkAAAAJ).",
+        "checked_at": "2026-09-24"
+      }
+    },
+    {
+      "name": "Wang Chen",
+      "affiliation": 1,
+      "corresponding": false,
+      "scholar_url": "https://scholar.google.com/citations?user=POf8d3UAAAAJ",
+      "link_type": "profile",
+      "identity_evidence": {
+        "url": "https://scholar.google.com/citations?user=POf8d3UAAAAJ&hl=en",
+        "note": "Profile confirms Xiamen University, verified stu.xmu.edu.cn email and SocialOmni paper. Also linked by name in Tianyu Xie’s Scholar coauthor list (_vZWAnkAAAAJ).",
+        "checked_at": "2026-09-24"
+      }
+    },
+    {
+      "name": "Yuhui Zeng",
+      "affiliation": 1,
+      "corresponding": false,
+      "scholar_url": "https://scholar.google.com/citations?user=9QoO7mYAAAAJ",
+      "link_type": "profile",
+      "identity_evidence": {
+        "url": "https://scholar.google.com/citations?user=9QoO7mYAAAAJ&hl=en",
+        "note": "Profile confirms Xiamen University, verified stu.xmu.edu.cn email and SocialOmni paper. Also linked by name in Tianyu Xie’s Scholar coauthor list (_vZWAnkAAAAJ).",
+        "checked_at": "2026-09-24"
+      }
+    },
+    {
+      "name": "Yixuan Zou",
+      "affiliation": 1,
+      "corresponding": false,
+      "scholar_url": "https://scholar.google.com/scholar?q=%22Yixuan%20Zou%22%20%22SocialOmni%22",
+      "link_type": "search",
+      "identity_evidence": {
+        "url": "https://www.google.com/search?q=%22Yixuan%20Zou%22%20%22SocialOmni%22%20scholar",
+        "note": "Unknown: searched exact name with institution and SocialOmni; no profile tied to this author verified. Same-name or similar-name profiles were not accepted. No matching author link in Tianyu Xie or Yuhui Zeng Scholar coauthor lists.",
+        "checked_at": "2026-09-24"
+      }
+    },
+    {
+      "name": "Zhiqiang Lu",
+      "affiliation": 1,
+      "corresponding": false,
+      "scholar_url": "https://scholar.google.com/scholar?q=%22Zhiqiang%20Lu%22%20%22SocialOmni%22",
+      "link_type": "search",
+      "identity_evidence": {
+        "url": "https://www.google.com/search?q=%22Zhiqiang%20Lu%22%20%22SocialOmni%22%20scholar",
+        "note": "Unknown: searched exact name with institution and SocialOmni; no profile tied to this author verified. Same-name or similar-name profiles were not accepted. No matching author link in Tianyu Xie or Yuhui Zeng Scholar coauthor lists.",
+        "checked_at": "2026-09-24"
+      }
+    },
+    {
+      "name": "Ruize Fang",
+      "affiliation": 1,
+      "corresponding": false,
+      "scholar_url": "https://scholar.google.com/scholar?q=%22Ruize%20Fang%22%20%22SocialOmni%22",
+      "link_type": "search",
+      "identity_evidence": {
+        "url": "https://www.google.com/search?q=%22Ruize%20Fang%22%20%22SocialOmni%22%20scholar",
+        "note": "Unknown: searched exact name with institution and SocialOmni; no profile tied to this author verified. Same-name or similar-name profiles were not accepted. No matching author link in Tianyu Xie or Yuhui Zeng Scholar coauthor lists.",
+        "checked_at": "2026-09-24"
+      }
+    },
+    {
+      "name": "Jiebo Luo",
+      "affiliation": 2,
+      "corresponding": false,
+      "scholar_url": "https://scholar.google.com/citations?user=CcbnBvgAAAAJ",
+      "link_type": "profile",
+      "identity_evidence": {
+        "url": "https://scholar.google.com/citations?user=CcbnBvgAAAAJ&hl=en",
+        "note": "Profile confirms Albert Arendt Hopeman Professor of Engineering, University of Rochester and verified cs.rochester.edu email. Also linked by name in Tianyu Xie’s Scholar coauthor list (_vZWAnkAAAAJ).",
+        "checked_at": "2026-09-24"
+      }
+    },
+    {
+      "name": "Rongrong Ji",
+      "affiliation": 1,
+      "corresponding": false,
+      "scholar_url": "https://scholar.google.com/citations?user=lRSD7PQAAAAJ",
+      "link_type": "profile",
+      "identity_evidence": {
+        "url": "https://scholar.google.com/citations?user=lRSD7PQAAAAJ&hl=en",
+        "note": "Profile confirms Professor, Xiamen University and verified xmu.edu.cn email. Also linked by name in Tianyu Xie’s Scholar coauthor list (_vZWAnkAAAAJ).",
+        "checked_at": "2026-09-24"
+      }
+    },
+    {
+      "name": "Xiawu Zheng",
+      "affiliation": 1,
+      "corresponding": true,
+      "scholar_url": "https://scholar.google.com/citations?user=jBgXocYAAAAJ",
+      "link_type": "profile",
+      "identity_evidence": {
+        "url": "https://scholar.google.com/citations?user=jBgXocYAAAAJ&hl=en",
+        "note": "Profile confirms Associate Professor, Xiamen University and verified xmu.edu.cn email. Also linked by name in Tianyu Xie’s Scholar coauthor list (_vZWAnkAAAAJ).",
+        "checked_at": "2026-09-24"
+      }
+    }
+  ],
+  "affiliations": [
+    {
+      "id": 1,
+      "en": "Xiamen University",
+      "zh": "厦门大学"
+    },
+    {
+      "id": 2,
+      "en": "University of Rochester",
+      "zh": "罗切斯特大学"
+    },
+    {
+      "id": 3,
+      "en": "Nanyang Technological University",
+      "zh": "南洋理工大学"
+    },
+    {
+      "id": 4,
+      "en": "Sichuan Agricultural University",
+      "zh": "四川农业大学"
+    }
+  ]
+}

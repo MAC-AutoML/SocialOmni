@@ -198,3 +198,17 @@ footer { background: var(--color-bg); }
 .how-case mark { background: #fff0aa; color: inherit; padding: 1px 3px; border-radius: 2px; }
 .how-sources { display: flex; flex-wrap: wrap; gap: 16px; font-size: 12px; margin-top: 16px; }
 @media (max-width: 48rem) { .how-context, .how-responses { grid-template-columns: minmax(0, 1fr); } .how-response { padding: 18px; } }
+
+.author-list { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px 18px; list-style: none; padding: 0; margin: 22px auto 12px; max-width: 900px; font-size: 17px; }
+.author-list li { white-space: nowrap; }
+.author-list a { text-decoration: none; }
+.author-list a:hover { text-decoration: underline; }
+.author-list sup, .affiliations sup { margin-left: 3px; font-size: 10px; }
+.affiliations { display: flex; justify-content: center; flex-wrap: wrap; gap: 4px 18px; margin: 0; color: var(--color-muted); font-size: 14px; }
+.affiliations sup { margin-right: 4px; }
+.corresponding-note { margin: 8px 0 20px; font-size: 12px; color: var(--color-muted); }
+.citation { margin-top: 48px; }
+.citation-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 18px; font-size: 13px; }
+.citation-actions button { padding: 8px 14px; border: 1px solid var(--color-line); border-radius: 6px; background: var(--color-bg); cursor: pointer; }
+.citation pre { padding: 22px; border: 1px solid var(--color-line); border-radius: 10px; background: var(--color-bg); white-space: pre-wrap; overflow-wrap: anywhere; font-size: 13px; line-height: 1.7; }
+.author-search { margin-left: 4px; font-size: 10px; font-weight: 400; color: var(--color-muted); }

@@ -87,7 +87,24 @@ function howCasesHTML(data, lang = "en") {
   return `<article class="how-case"><div class="how-context"><div><video controls playsinline preload="none" src="${escape(data.video)}" poster="${escape(data.poster)}" aria-label="${escape(text(data.question))}"></video><div class="how-key-evidence"><h4>${labels.evidence}</h4>${evidence(data.context_highlights)}</div><details><summary>${labels.context}</summary><p class="how-transcript">${highlight(data.context, data.context_highlights)}</p></details></div><div><span class="level-label">LEVEL 2 · ${escape(data.item_id)}</span><h3>${labels.question}</h3><p>${escape(text(data.question))}</p><h4>${labels.reference}</h4><p>${escape(text(data.reference))}</p><p class="method-note">${escape(text(data.explanation_note))}</p><div class="how-sources">${explanationSource}</div></div></div><div class="how-responses">${responses}</div></article>`;
 }
 
+Object.assign(messages.en, {authors: "Authors", corresponding: "Corresponding author", citation: "Citation", citeText: "If you use SocialOmni in your research, please cite:", copyCitation: "Copy BibTeX", copiedCitation: "Copied", copyFailed: "Select and copy the citation below", downloadCitation: "Download BibTeX"});
+Object.assign(messages.zh, {authors: "作者", corresponding: "通讯作者", citation: "引用", citeText: "如果你的研究使用了 SocialOmni，请引用：", copyCitation: "复制 BibTeX", copiedCitation: "已复制", copyFailed: "请选中下方引用文本复制", downloadCitation: "下载 BibTeX"});
+
+function authorsHTML(publication, lang = "en") {
+  const escape = value => String(value).replace(/[&<>"']/g, char => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"})[char]);
+  const names = publication.authors.map(author => {
+    const url = author.scholar_url;
+    const label = author.link_type === "search" ? "Google Scholar search / 谷歌学术检索" : "Google Scholar";
+    const searchLabel = author.link_type === "search" ? `<span class="author-search">${lang === "zh" ? "检索" : "search"}</span>` : "";
+    const name = url && /^https:\/\/scholar\.google\.com\//.test(url) ? `<a href="${escape(url)}" title="${label}">${escape(author.name)}${searchLabel}</a>` : escape(author.name);
+    return `<li>${name}<sup>${author.affiliation}${author.corresponding ? ",†" : ""}</sup></li>`;
+  }).join("");
+  const affiliations = publication.affiliations.map(item => `<span><sup>${item.id}</sup>${escape(item[lang])}</span>`).join("");
+  return `<ul class="author-list" aria-label="${messages[lang].authors}">${names}</ul><p class="affiliations">${affiliations}</p><p class="corresponding-note">† ${messages[lang].corresponding}</p>`;
+}
+
 let examples;
+let publication;
 let howExamples;
 
 const metricKeys = ["who", "when", "qgold", "qens", "cov_plus", "qens_joint"];
@@ -132,6 +149,7 @@ function render() {
   document.querySelectorAll("[data-lang]").forEach((node) => node.setAttribute("aria-pressed", String(node.dataset.lang === language)));
   document.getElementById("metric-definitions").replaceChildren(...t.metrics.flatMap(([name, definition]) => [element("dt", name), element("dd", definition)]));
   renderCases();
+  if (publication) document.getElementById("authors").innerHTML = authorsHTML(publication, language);
   if (howExamples) {
     document.getElementById("how-case-list").innerHTML = howCasesHTML(howExamples, language);
     document.getElementById("how-title").textContent = localized(howExamples.title);
@@ -207,12 +225,22 @@ if (bootstrap) {
     const data = JSON.parse(bootstrap.textContent);
     useDataset(data.results);
     howExamples = data.howExamples;
+    publication = data.publication;
     if (Array.isArray(data.examples.cases)) examples = data.examples.cases;
   } catch {
     // Keep the generated HTML visible if embedded data cannot be read.
   }
 }
 render();
+document.getElementById("copy-citation").addEventListener("click", async (event) => {
+  const button = event.currentTarget;
+  try {
+    await navigator.clipboard.writeText(document.getElementById("citation-code").textContent);
+    button.textContent = messages[language].copiedCitation;
+  } catch {
+    button.textContent = messages[language].copyFailed;
+  }
+});
 if (!dataset) {
   fetch("data.json").then((response) => {
     if (!response.ok) throw new Error("Data unavailable");

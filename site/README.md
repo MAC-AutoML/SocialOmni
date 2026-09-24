@@ -32,3 +32,7 @@ Verify both languages, all-model display, metric sorting in both directions, mis
 ## How examples
 
 `how-cases.json` presents two recorded answers to the same observation prefix, the original three-judge scores, later explanations from those judges, and an independent Codex evidence review. Original English answers and quoted context are preserved; Chinese translations are displayed separately. Highlighted quotes must occur verbatim in the stored context. The explanation requests and source hashes are archived under `evaluation/examples/how-20260924/`. Follow-up explanations do not change leaderboard scores.
+
+## Authors and citation
+
+`publication.json` follows the author order, affiliations and corresponding-author designation in arXiv v3. Scholar profiles are linked only after identity checks; entries marked `search` link to a name-and-paper query instead of an unverified profile. Each entry retains its verification source. `citation.bib` is the paper's BibTeX entry, displayed at the end of the page with copy and download controls.
