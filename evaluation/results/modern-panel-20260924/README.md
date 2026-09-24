@@ -1,6 +1,6 @@
 # SocialOmni — September 24 judge panel
 
-This supplement evaluates response quality with **Gemini 3.8 Flash**, **Qwen3.8-Omni-Flash**, and **GPT-5.6-Sol**. The paper's original results and the earlier GPT-5.6-Sol replacement panel remain archived separately.
+This supplement evaluates response quality with **Gemini 3.8 Flash**, **Qwen3.8-Omni-Flash**, and **GPT-5.6-Sol**.
 
 ## Scope
 

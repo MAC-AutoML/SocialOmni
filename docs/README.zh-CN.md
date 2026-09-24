@@ -31,11 +31,11 @@ uv run python scripts/verify_package.py
 
 新评测的回答质量分使用 **Gemini 3.8 Flash、Qwen3.8-Omni-Flash、GPT-5.6-Sol**。每条符合条件的回答必须具有三份完整评分，分档为 {0, 25, 50, 75, 100}，零分不能过滤。标准后续话语和人工核验的评委上下文不提供给被测模型。推理设置、提示词与解析规则见论文附录 A.8–A.10。
 
-How 通过 QGold 和 QEns 衡量回答质量；Cov+ 和 QEns_joint 衡量开口决策与回答的联合表现。GPT-4o、Gemini 3 Pro 和 OmniVinci 保留论文整行指标及原评委来源。
+How 通过 QGold 和 QEns 衡量回答质量；Cov+ 和 QEns_joint 衡量开口决策与回答的联合表现。
 
 ## 主要结果
 
-新评测的回答质量由 **Gemini 3.8 Flash、Qwen3.8-Omni-Flash 和 GPT-5.6-Sol** 评分，此前模型的已有回答也已重新评分。全部模型在[中英双语排行榜](https://mac-automl.github.io/SocialOmni/)中展示，可按各项指标排序。
+全部模型在[中英双语排行榜](https://mac-automl.github.io/SocialOmni/)中展示，可按各项指标排序。
 
 | 模型 | Who | When | How: QGold | How: QEns | Cov+ | QEns_joint |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |

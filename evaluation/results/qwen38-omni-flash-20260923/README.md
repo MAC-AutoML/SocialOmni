@@ -1,6 +1,6 @@
 # Qwen3.8-Omni-Flash — September 23, 2026
 
-The [GPT-5.6-Sol panel evaluation](gpt56-sol/) completes quality scoring with an explicitly disclosed GPT-4o replacement. This page and `results.json` retain the initial incomplete paper-panel snapshot.
+This release contains candidate outputs and an incomplete scoring snapshot. A completed evaluation using GPT-5.6-Sol, Gemini 2.5 Pro and Qwen3-Omni is available in the [panel results](gpt56-sol/).
 
 Supplemental hosted evaluation using the item lists released with [arXiv v3](https://arxiv.org/abs/2603.16859v3). This run is separate from Table 2: identical primary preprocessing and API envelopes have not been established. It evaluates `dashscope/qwen3.8-omni-flash` with thinking disabled.
 
@@ -31,6 +31,6 @@ Who item 1980 was rejected by the provider's input-video inspection (`data_inspe
 
 Gemini 2.5 Pro and Qwen3-Omni each completed 128 valid scores, with no judge request or parsing errors. The 256 scores are preserved in the export.
 
-GPT-4o is unavailable with the configured credentials/credits. Quality requires GPT-4o, Gemini 2.5 Pro and original Qwen3-Omni on every non-empty response; no two-judge average is reported. Cov+ depends only on decisions and non-empty responses, so it is available before judging completes. The export is explicitly marked incomplete and retains available individual judge scores for resumption.
+This snapshot specifies GPT-4o, Gemini 2.5 Pro and Qwen3-Omni as judges. GPT-4o scores are missing, so response-quality metrics are incomplete. Cov+ depends only on decisions and non-empty responses and is reported independently. Available individual scores are included in the export.
 
 `results.json` contains all 2,328 item records, available judge scores and provenance hashes. Private endpoints and credentials are omitted. See the [runner documentation](../../hosted-omni/) for commands and cache behavior.

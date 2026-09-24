@@ -6,7 +6,7 @@ After editing data, examples, translations or styles, run `node site/build.mjs` 
 
 The table groups metrics by task: Who and When accuracy, How response quality (QGold and QEns), and When + How coverage and joint quality (Cov+ and QEns_joint). These labels do not introduce a new aggregate score.
 
-All models appear in one table, initially sorted by QEns_joint. New evaluations use Gemini 3.8 Flash, Qwen3.8-Omni-Flash and GPT-5.6-Sol, including rescoring of earlier models' existing responses. GPT-4o, Gemini 3 Pro and OmniVinci retain the six metrics and original judge panel reported in arXiv v3 Table 2. Each record identifies its source and judge panel. Original outputs, evaluation settings, diagnostics and historical panels remain in the source repository. Model names link to their supporting results.
+All models appear in one table, initially sorted by QEns_joint. Model names link to supporting results. Each result record includes its source, judge panel and evaluation metadata.
 
 ## Results data
 

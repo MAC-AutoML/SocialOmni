@@ -35,11 +35,11 @@ See the [archive manifest](docs/papers/README.md) for sources and file integrity
 
 New response-quality evaluations use **Gemini 3.8 Flash, Qwen3.8-Omni-Flash and GPT-5.6-Sol**. Each eligible response requires all three scores from {0, 25, 50, 75, 100}; zero scores are retained. Human references and manually verified judge context are not inputs to the evaluated model. Appendix A.8–A.10 describes inference settings, prompts and parsing.
 
-How response quality is reported as QGold and QEns; Cov+ and QEns_joint describe the combined entry decision and response. GPT-4o, Gemini 3 Pro and OmniVinci retain the complete paper rows and original judge provenance.
+How response quality is reported as QGold and QEns; Cov+ and QEns_joint describe the combined entry decision and response.
 
 ## Main results
 
-New response-quality evaluations are scored by **Gemini 3.8 Flash, Qwen3.8-Omni-Flash and GPT-5.6-Sol**, including rescoring of existing responses from earlier models. The [bilingual leaderboard](https://mac-automl.github.io/SocialOmni/) lists all models and supports sorting by each metric.
+The [bilingual leaderboard](https://mac-automl.github.io/SocialOmni/) lists all models and supports sorting by each metric.
 
 | Model | Who | When | How: QGold | How: QEns | Cov+ | QEns_joint |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
