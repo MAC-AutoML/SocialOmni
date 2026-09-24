@@ -1,6 +1,6 @@
 # SocialOmni：面向全模态模型的音视频社会交互评测
 
-[论文（arXiv v3）](https://arxiv.org/abs/2603.16859v3) · [PDF](papers/socialomni-arxiv-v3.pdf) · [中英双语排行榜](https://teeryxie.github.io/socialomni/) · [数据集](https://huggingface.co/datasets/alexisty/SocialOmni) · [English](../README.md)
+[论文（arXiv v3）](https://arxiv.org/abs/2603.16859v3) · [PDF](papers/socialomni-arxiv-v3.pdf) · [中英双语排行榜](https://mac-automl.github.io/SocialOmni/) · [数据集](https://huggingface.co/datasets/alexisty/SocialOmni) · [English](../README.md)
 
 SocialOmni 是离线诊断评测，分别衡量模型能否识别**谁在说话**、判断指定参与者在标注时刻**是否应开口**、以及生成**合适的后续话语**。该协议不测量持续流式状态或真实运行延迟。
 
@@ -29,27 +29,31 @@ uv run python scripts/verify_package.py
 - **Cov+**：应回应样本中，模型预测 YES 且生成非空回答的比例。
 - **QEns_joint**：`QEns × Cov+ / 100`；漏掉的应回应机会贡献零分。
 
-当前展示的回答质量分统一使用 **Gemini 3.8 Flash、Qwen3.8-Omni-Flash、GPT-5.6-Sol**。每条符合条件的回答必须具有三份完整评分，分档为 {0, 25, 50, 75, 100}，零分不能过滤。标准后续话语和人工核验的评委上下文不提供给被测模型。推理设置、提示词与解析规则见论文附录 A.8–A.10。
+新评测的回答质量分使用 **Gemini 3.8 Flash、Qwen3.8-Omni-Flash、GPT-5.6-Sol**。每条符合条件的回答必须具有三份完整评分，分档为 {0, 25, 50, 75, 100}，零分不能过滤。标准后续话语和人工核验的评委上下文不提供给被测模型。推理设置、提示词与解析规则见论文附录 A.8–A.10。
+
+How 通过 QGold 和 QEns 衡量回答质量；Cov+ 和 QEns_joint 衡量开口决策与回答的联合表现。GPT-4o、Gemini 3 Pro 和 OmniVinci 保留论文整行指标及原评委来源。
 
 ## 主要结果
 
-回答质量统一由 **Gemini 3.8 Flash、Qwen3.8-Omni-Flash 和 GPT-5.6-Sol** 评分，此前模型的已有回答也已重新评分。全部模型在[中英双语排行榜](https://teeryxie.github.io/socialomni/)中展示，可按各项指标排序。
+新评测的回答质量由 **Gemini 3.8 Flash、Qwen3.8-Omni-Flash 和 GPT-5.6-Sol** 评分，此前模型的已有回答也已重新评分。全部模型在[中英双语排行榜](https://mac-automl.github.io/SocialOmni/)中展示，可按各项指标排序。
 
-| 模型 | Who | When | QGold | QEns | Cov+ | QEns_joint |
+| 模型 | Who | When | How: QGold | How: QEns | Cov+ | QEns_joint |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
 | Gemini 3.8 Flash | 25.40 | 82.50 | 86.52 | 86.48 | 82.81 | 71.61 |
+| Gemini 3.1 Pro Preview | 45.05 | 84.00 | 80.01 | 81.92 | 82.81 | 67.84 |
 | VITA-1.5 | 32.05 | 65.50 | — | 54.79 | 88.28 | 48.37 |
+| Gemini 3.5 Flash | 6.00 | 60.50 | 79.56 | 82.95 | 50.78 | 42.12 |
 | Qwen3.5-Omni-Plus | 91.05 | 58.50 | 80.27 | 77.82 | 48.44 | 37.70 |
-| OmniVinci | 29.75 | 64.50 | — | 41.67 | 70.31 | 29.30 |
 | Qwen3-Omni-Thinking | 67.65 | 56.00 | — | 61.53 | 46.88 | 28.84 |
 | Qwen3-Omni | 74.65 | 58.00 | — | 44.96 | 63.28 | 28.45 |
+| OmniVinci | 29.75 | 64.50 | 40.82 | 38.52 | 70.31 | 27.08 |
 | Qwen3.5-Omni-Flash (2026-03-15) | 86.55 | 71.00 | 33.14 | 34.72 | 70.31 | 24.41 |
-| GPT-4o | 35.05 | 50.50 | — | 77.56 | 30.47 | 23.63 |
 | Qwen2.5-Omni | 40.95 | 60.50 | — | 34.67 | 67.97 | 23.57 |
+| GPT-4o | 35.05 | 50.50 | 77.15 | 76.50 | 30.47 | 23.31 |
 | Gemini 2.5 Flash | 33.70 | 55.50 | — | 30.30 | 42.97 | 13.02 |
 | Qwen3.8-Omni-Flash | 89.45 | 44.00 | 77.02 | 69.93 | 17.97 | 12.57 |
-| Gemini 3 Pro | 45.40 | 52.00 | — | 32.11 | 32.03 | 10.29 |
 | Gemini 2.5 Pro | 39.90 | 52.50 | — | 20.97 | 48.44 | 10.16 |
+| Gemini 3 Pro | 45.40 | 52.00 | 21.55 | 25.00 | 32.03 | 8.01 |
 | Gemini 3 Flash | 48.10 | 49.50 | — | 21.59 | 34.38 | 7.42 |
 | Baichuan-Omni-1.5 | 22.45 | 36.50 | — | 31.25 | 12.50 | 3.91 |
 

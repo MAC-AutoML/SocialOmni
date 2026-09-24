@@ -4,7 +4,7 @@
 
 # SocialOmni: Benchmarking Audio-Visual Social Interactivity in Omni Models
 
-[Paper (arXiv v3)](https://arxiv.org/abs/2603.16859v3) · [PDF](docs/papers/socialomni-arxiv-v3.pdf) · [Leaderboard](https://teeryxie.github.io/socialomni/) · [Dataset](https://huggingface.co/datasets/alexisty/SocialOmni) · [中文](docs/README.zh-CN.md)
+[Paper (arXiv v3)](https://arxiv.org/abs/2603.16859v3) · [PDF](docs/papers/socialomni-arxiv-v3.pdf) · [Leaderboard](https://mac-automl.github.io/SocialOmni/) · [Dataset](https://huggingface.co/datasets/alexisty/SocialOmni) · [中文](docs/README.zh-CN.md)
 
 SocialOmni is an offline diagnostic benchmark for audio-visual social interaction. It evaluates **who** is speaking, **when** a designated participant should enter at an annotated query time, and **how** that participant should continue the dialogue. It does not measure persistent streaming state or wall-clock response latency.
 
@@ -33,27 +33,31 @@ See the [archive manifest](docs/papers/README.md) for sources and file integrity
 - **Cov+:** the percentage of gold-positive items with a predicted YES and a non-empty response.
 - **QEns_joint:** `QEns × Cov+ / 100`; missed positive opportunities contribute zero.
 
-Displayed response-quality results use **Gemini 3.8 Flash, Qwen3.8-Omni-Flash and GPT-5.6-Sol**. Each eligible response requires all three scores from {0, 25, 50, 75, 100}; zero scores are retained. Human references and manually verified judge context are not inputs to the evaluated model. Appendix A.8–A.10 describes inference settings, prompts and parsing.
+New response-quality evaluations use **Gemini 3.8 Flash, Qwen3.8-Omni-Flash and GPT-5.6-Sol**. Each eligible response requires all three scores from {0, 25, 50, 75, 100}; zero scores are retained. Human references and manually verified judge context are not inputs to the evaluated model. Appendix A.8–A.10 describes inference settings, prompts and parsing.
+
+How response quality is reported as QGold and QEns; Cov+ and QEns_joint describe the combined entry decision and response. GPT-4o, Gemini 3 Pro and OmniVinci retain the complete paper rows and original judge provenance.
 
 ## Main results
 
-Response quality is scored by **Gemini 3.8 Flash, Qwen3.8-Omni-Flash and GPT-5.6-Sol**, including rescoring of existing responses from earlier models. The [bilingual leaderboard](https://teeryxie.github.io/socialomni/) lists all models and supports sorting by each metric.
+New response-quality evaluations are scored by **Gemini 3.8 Flash, Qwen3.8-Omni-Flash and GPT-5.6-Sol**, including rescoring of existing responses from earlier models. The [bilingual leaderboard](https://mac-automl.github.io/SocialOmni/) lists all models and supports sorting by each metric.
 
-| Model | Who | When | QGold | QEns | Cov+ | QEns_joint |
+| Model | Who | When | How: QGold | How: QEns | Cov+ | QEns_joint |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
 | Gemini 3.8 Flash | 25.40 | 82.50 | 86.52 | 86.48 | 82.81 | 71.61 |
+| Gemini 3.1 Pro Preview | 45.05 | 84.00 | 80.01 | 81.92 | 82.81 | 67.84 |
 | VITA-1.5 | 32.05 | 65.50 | — | 54.79 | 88.28 | 48.37 |
+| Gemini 3.5 Flash | 6.00 | 60.50 | 79.56 | 82.95 | 50.78 | 42.12 |
 | Qwen3.5-Omni-Plus | 91.05 | 58.50 | 80.27 | 77.82 | 48.44 | 37.70 |
-| OmniVinci | 29.75 | 64.50 | — | 41.67 | 70.31 | 29.30 |
 | Qwen3-Omni-Thinking | 67.65 | 56.00 | — | 61.53 | 46.88 | 28.84 |
 | Qwen3-Omni | 74.65 | 58.00 | — | 44.96 | 63.28 | 28.45 |
+| OmniVinci | 29.75 | 64.50 | 40.82 | 38.52 | 70.31 | 27.08 |
 | Qwen3.5-Omni-Flash (2026-03-15) | 86.55 | 71.00 | 33.14 | 34.72 | 70.31 | 24.41 |
-| GPT-4o | 35.05 | 50.50 | — | 77.56 | 30.47 | 23.63 |
 | Qwen2.5-Omni | 40.95 | 60.50 | — | 34.67 | 67.97 | 23.57 |
+| GPT-4o | 35.05 | 50.50 | 77.15 | 76.50 | 30.47 | 23.31 |
 | Gemini 2.5 Flash | 33.70 | 55.50 | — | 30.30 | 42.97 | 13.02 |
 | Qwen3.8-Omni-Flash | 89.45 | 44.00 | 77.02 | 69.93 | 17.97 | 12.57 |
-| Gemini 3 Pro | 45.40 | 52.00 | — | 32.11 | 32.03 | 10.29 |
 | Gemini 2.5 Pro | 39.90 | 52.50 | — | 20.97 | 48.44 | 10.16 |
+| Gemini 3 Pro | 45.40 | 52.00 | 21.55 | 25.00 | 32.03 | 8.01 |
 | Gemini 3 Flash | 48.10 | 49.50 | — | 21.59 | 34.38 | 7.42 |
 | Baichuan-Omni-1.5 | 22.45 | 36.50 | — | 31.25 | 12.50 | 3.91 |
 

@@ -1,0 +1,560 @@
+{
+  "updated_at": "2026-09-24",
+  "links": {
+    "paper": "https://arxiv.org/abs/2603.16859v3",
+    "code": "https://github.com/MAC-AutoML/SocialOmni",
+    "dataset": "https://huggingface.co/datasets/alexisty/SocialOmni"
+  },
+  "records": [
+    {
+      "id": "paper-gpt4o",
+      "model": "GPT-4o",
+      "variant": "Cascade",
+      "status": "published",
+      "metrics": {
+        "who": 35.05,
+        "when": 50.5,
+        "qgold": 77.1484375,
+        "qens": 76.4957264957265,
+        "cov_plus": 30.46875,
+        "qens_joint": 23.307291666666668
+      },
+      "classification": {
+        "who_macro_f1": 31.184205577225555,
+        "when_macro_f1": 49.83658888804439
+      },
+      "judge_panel": "paper-v3",
+      "judges": [
+        "gpt-4o",
+        "gemini-2.5-pro",
+        "qwen3-omni"
+      ],
+      "source": {
+        "label": {
+          "en": "Paper · Table 2",
+          "zh": "论文 · 表 2"
+        },
+        "url": "https://arxiv.org/abs/2603.16859v3"
+      },
+      "evaluation": {
+        "paper": "https://arxiv.org/abs/2603.16859v3",
+        "table": "2",
+        "source_csv": "https://github.com/MAC-AutoML/SocialOmni/blob/main/reproducibility/arxiv-v3/results/extension/main_extension_summary.csv",
+        "quality_scores": "Original paper three-judge panel"
+      }
+    },
+    {
+      "id": "modern-gemini_2_5_pro",
+      "model": "Gemini 2.5 Pro",
+      "variant": "Visual-only",
+      "status": "published",
+      "metrics": {
+        "who": 39.9,
+        "when": 52.5,
+        "qgold": null,
+        "qens": 20.967741935483875,
+        "cov_plus": 48.4375,
+        "qens_joint": 10.156250000000002
+      },
+      "classification": {
+        "who_macro_f1": 39.621044132987095,
+        "when_macro_f1": 52.197273049825135
+      },
+      "judge_panel": "modern-20260924",
+      "judges": [
+        "gemini-3.8-flash",
+        "qwen3.8-omni",
+        "gpt-5.6-sol"
+      ],
+      "source": {
+        "label": {
+          "en": "Answers and scores",
+          "zh": "回答与评分"
+        },
+        "url": "https://github.com/MAC-AutoML/SocialOmni/tree/main/evaluation/results/modern-panel-20260924/paper"
+      }
+    },
+    {
+      "id": "modern-gemini_2_5_flash",
+      "model": "Gemini 2.5 Flash",
+      "variant": "Visual-only",
+      "status": "published",
+      "metrics": {
+        "who": 33.7,
+        "when": 55.5,
+        "qgold": null,
+        "qens": 30.3030303030303,
+        "cov_plus": 42.96875,
+        "qens_joint": 13.020833333333332
+      },
+      "classification": {
+        "who_macro_f1": 33.63606343041651,
+        "when_macro_f1": 55.49888747218681
+      },
+      "judge_panel": "modern-20260924",
+      "judges": [
+        "gemini-3.8-flash",
+        "qwen3.8-omni",
+        "gpt-5.6-sol"
+      ],
+      "source": {
+        "label": {
+          "en": "Answers and scores",
+          "zh": "回答与评分"
+        },
+        "url": "https://github.com/MAC-AutoML/SocialOmni/tree/main/evaluation/results/modern-panel-20260924/paper"
+      }
+    },
+    {
+      "id": "modern-gemini_3_flash_preview",
+      "model": "Gemini 3 Flash",
+      "variant": "Visual-only",
+      "status": "published",
+      "metrics": {
+        "who": 48.1,
+        "when": 49.5,
+        "qgold": null,
+        "qens": 21.59090909090909,
+        "cov_plus": 34.375,
+        "qens_joint": 7.421875
+      },
+      "classification": {
+        "who_macro_f1": 47.882508409536925,
+        "when_macro_f1": 49.47060603004941
+      },
+      "judge_panel": "modern-20260924",
+      "judges": [
+        "gemini-3.8-flash",
+        "qwen3.8-omni",
+        "gpt-5.6-sol"
+      ],
+      "source": {
+        "label": {
+          "en": "Answers and scores",
+          "zh": "回答与评分"
+        },
+        "url": "https://github.com/MAC-AutoML/SocialOmni/tree/main/evaluation/results/modern-panel-20260924/paper"
+      }
+    },
+    {
+      "id": "paper-gemini3-pro-preview",
+      "model": "Gemini 3 Pro",
+      "variant": "Visual-only",
+      "status": "published",
+      "metrics": {
+        "who": 45.4,
+        "when": 52.0,
+        "qgold": 21.549479166666668,
+        "qens": 25.0,
+        "cov_plus": 32.03125,
+        "qens_joint": 8.0078125
+      },
+      "classification": {
+        "who_macro_f1": 45.20445213463031,
+        "when_macro_f1": 51.412086243546916
+      },
+      "judge_panel": "paper-v3",
+      "judges": [
+        "gpt-4o",
+        "gemini-2.5-pro",
+        "qwen3-omni"
+      ],
+      "source": {
+        "label": {
+          "en": "Paper · Table 2",
+          "zh": "论文 · 表 2"
+        },
+        "url": "https://arxiv.org/abs/2603.16859v3"
+      },
+      "evaluation": {
+        "paper": "https://arxiv.org/abs/2603.16859v3",
+        "table": "2",
+        "source_csv": "https://github.com/MAC-AutoML/SocialOmni/blob/main/reproducibility/arxiv-v3/results/extension/main_extension_summary.csv",
+        "quality_scores": "Original paper three-judge panel"
+      }
+    },
+    {
+      "id": "modern-qwen3_omni",
+      "model": "Qwen3-Omni",
+      "variant": "Native AV",
+      "status": "published",
+      "metrics": {
+        "who": 74.65,
+        "when": 58,
+        "qgold": null,
+        "qens": 44.95884773662551,
+        "cov_plus": 63.28125,
+        "qens_joint": 28.45052083333333
+      },
+      "classification": {
+        "who_macro_f1": 74.34376255552827,
+        "when_macro_f1": 55.654101995565405
+      },
+      "judge_panel": "modern-20260924",
+      "judges": [
+        "gemini-3.8-flash",
+        "qwen3.8-omni",
+        "gpt-5.6-sol"
+      ],
+      "source": {
+        "label": {
+          "en": "Answers and scores",
+          "zh": "回答与评分"
+        },
+        "url": "https://github.com/MAC-AutoML/SocialOmni/tree/main/evaluation/results/modern-panel-20260924/paper"
+      }
+    },
+    {
+      "id": "modern-qwen3_omni_thinking",
+      "model": "Qwen3-Omni-Thinking",
+      "variant": "Native AV",
+      "status": "published",
+      "metrics": {
+        "who": 67.65,
+        "when": 56,
+        "qgold": null,
+        "qens": 61.52777777777778,
+        "cov_plus": 46.875,
+        "qens_joint": 28.841145833333332
+      },
+      "classification": {
+        "who_macro_f1": 67.93948670118995,
+        "when_macro_f1": 55.92948717948718
+      },
+      "judge_panel": "modern-20260924",
+      "judges": [
+        "gemini-3.8-flash",
+        "qwen3.8-omni",
+        "gpt-5.6-sol"
+      ],
+      "source": {
+        "label": {
+          "en": "Answers and scores",
+          "zh": "回答与评分"
+        },
+        "url": "https://github.com/MAC-AutoML/SocialOmni/tree/main/evaluation/results/modern-panel-20260924/paper"
+      }
+    },
+    {
+      "id": "modern-qwen2_5_omni",
+      "model": "Qwen2.5-Omni",
+      "variant": "Native AV",
+      "status": "published",
+      "metrics": {
+        "who": 40.95,
+        "when": 60.5,
+        "qgold": null,
+        "qens": 34.674329501915715,
+        "cov_plus": 67.96875,
+        "qens_joint": 23.56770833333334
+      },
+      "classification": {
+        "who_macro_f1": 39.49736486583245,
+        "when_macro_f1": 57.5166034793364
+      },
+      "judge_panel": "modern-20260924",
+      "judges": [
+        "gemini-3.8-flash",
+        "qwen3.8-omni",
+        "gpt-5.6-sol"
+      ],
+      "source": {
+        "label": {
+          "en": "Answers and scores",
+          "zh": "回答与评分"
+        },
+        "url": "https://github.com/MAC-AutoML/SocialOmni/tree/main/evaluation/results/modern-panel-20260924/paper"
+      }
+    },
+    {
+      "id": "paper-omnivinci",
+      "model": "OmniVinci",
+      "variant": "Native AV",
+      "status": "published",
+      "metrics": {
+        "who": 29.75,
+        "when": 64.5,
+        "qgold": 40.8203125,
+        "qens": 38.51851851851852,
+        "cov_plus": 70.3125,
+        "qens_joint": 27.083333333333332
+      },
+      "classification": {
+        "who_macro_f1": 29.99703543216497,
+        "when_macro_f1": 62.03107034947459
+      },
+      "judge_panel": "paper-v3",
+      "judges": [
+        "gpt-4o",
+        "gemini-2.5-pro",
+        "qwen3-omni"
+      ],
+      "source": {
+        "label": {
+          "en": "Paper · Table 2",
+          "zh": "论文 · 表 2"
+        },
+        "url": "https://arxiv.org/abs/2603.16859v3"
+      },
+      "evaluation": {
+        "paper": "https://arxiv.org/abs/2603.16859v3",
+        "table": "2",
+        "source_csv": "https://github.com/MAC-AutoML/SocialOmni/blob/main/reproducibility/arxiv-v3/results/extension/main_extension_summary.csv",
+        "quality_scores": "Original paper three-judge panel"
+      }
+    },
+    {
+      "id": "modern-vita_1_5",
+      "model": "VITA-1.5",
+      "variant": "Native AV",
+      "status": "published",
+      "metrics": {
+        "who": 32.05,
+        "when": 65.5,
+        "qgold": null,
+        "qens": 54.79351032448377,
+        "cov_plus": 88.28125,
+        "qens_joint": 48.37239583333333
+      },
+      "classification": {
+        "who_macro_f1": 31.379389099281752,
+        "when_macro_f1": 55.44794188861986
+      },
+      "judge_panel": "modern-20260924",
+      "judges": [
+        "gemini-3.8-flash",
+        "qwen3.8-omni",
+        "gpt-5.6-sol"
+      ],
+      "source": {
+        "label": {
+          "en": "Answers and scores",
+          "zh": "回答与评分"
+        },
+        "url": "https://github.com/MAC-AutoML/SocialOmni/tree/main/evaluation/results/modern-panel-20260924/paper"
+      }
+    },
+    {
+      "id": "modern-baichuan_omni_1_5",
+      "model": "Baichuan-Omni-1.5",
+      "variant": "Native AV",
+      "status": "published",
+      "metrics": {
+        "who": 22.45,
+        "when": 36.5,
+        "qgold": null,
+        "qens": 31.25,
+        "cov_plus": 12.5,
+        "qens_joint": 3.90625
+      },
+      "classification": {
+        "who_macro_f1": 11.596360589461232,
+        "when_macro_f1": 38.817072767547195
+      },
+      "judge_panel": "modern-20260924",
+      "judges": [
+        "gemini-3.8-flash",
+        "qwen3.8-omni",
+        "gpt-5.6-sol"
+      ],
+      "source": {
+        "label": {
+          "en": "Answers and scores",
+          "zh": "回答与评分"
+        },
+        "url": "https://github.com/MAC-AutoML/SocialOmni/tree/main/evaluation/results/modern-panel-20260924/paper"
+      }
+    },
+    {
+      "id": "modern-qwen38-omni-flash-nonthinking",
+      "model": "Qwen3.8-Omni-Flash",
+      "variant": "Native AV · Non-thinking",
+      "status": "published",
+      "metrics": {
+        "who": 89.45,
+        "when": 44,
+        "qgold": 77.01822916666666,
+        "qens": 69.92753623188408,
+        "cov_plus": 17.96875,
+        "qens_joint": 12.56510416666667
+      },
+      "classification": {
+        "who_macro_f1": 89.43111188946638,
+        "when_macro_f1": 41.41646615754786
+      },
+      "judge_panel": "modern-20260924",
+      "judges": [
+        "gemini-3.8-flash",
+        "qwen3.8-omni",
+        "gpt-5.6-sol"
+      ],
+      "source": {
+        "label": {
+          "en": "Answers and scores",
+          "zh": "回答与评分"
+        },
+        "url": "https://github.com/MAC-AutoML/SocialOmni/tree/main/evaluation/results/modern-panel-20260924/qwen38"
+      }
+    },
+    {
+      "id": "modern-gemini38-flash",
+      "model": "Gemini 3.8 Flash",
+      "variant": "Native AV · Default thinking",
+      "status": "published",
+      "metrics": {
+        "who": 25.4,
+        "when": 82.5,
+        "qgold": 86.5234375,
+        "qens": 86.47798742138366,
+        "cov_plus": 82.8125,
+        "qens_joint": 71.61458333333334
+      },
+      "classification": {
+        "who_macro_f1": 40.29710707255999,
+        "when_macro_f1": 83.05625017174576
+      },
+      "judge_panel": "modern-20260924",
+      "judges": [
+        "gemini-3.8-flash",
+        "qwen3.8-omni",
+        "gpt-5.6-sol"
+      ],
+      "source": {
+        "label": {
+          "en": "Answers and scores",
+          "zh": "回答与评分"
+        },
+        "url": "https://github.com/MAC-AutoML/SocialOmni/tree/main/evaluation/results/modern-panel-20260924/gemini38"
+      }
+    },
+    {
+      "id": "modern-qwen35-omni-plus",
+      "model": "Qwen3.5-Omni-Plus",
+      "variant": "Native AV · Non-thinking",
+      "status": "published",
+      "metrics": {
+        "who": 91.05,
+        "when": 58.5,
+        "qgold": 80.2734375,
+        "qens": 77.8225806451613,
+        "cov_plus": 48.4375,
+        "qens_joint": 37.6953125
+      },
+      "classification": {
+        "who_macro_f1": 91.09415774680379,
+        "when_macro_f1": 58.44910014768091
+      },
+      "judge_panel": "modern-20260924",
+      "judges": [
+        "gemini-3.8-flash",
+        "qwen3.8-omni",
+        "gpt-5.6-sol"
+      ],
+      "source": {
+        "label": {
+          "en": "Answers and scores",
+          "zh": "回答与评分"
+        },
+        "url": "https://github.com/MAC-AutoML/SocialOmni/tree/main/evaluation/results/modern-panel-20260924/qwen35plus"
+      }
+    },
+    {
+      "id": "modern-qwen35-omni-flash-20260315",
+      "model": "Qwen3.5-Omni-Flash (2026-03-15)",
+      "variant": "Native AV · Non-thinking",
+      "status": "published",
+      "metrics": {
+        "who": 86.55,
+        "when": 71,
+        "qgold": 33.138020833333336,
+        "qens": 34.722222222222236,
+        "cov_plus": 70.3125,
+        "qens_joint": 24.414062500000007
+      },
+      "classification": {
+        "who_macro_f1": 86.72272675439051,
+        "when_macro_f1": 69.91389148251893
+      },
+      "judge_panel": "modern-20260924",
+      "judges": [
+        "gemini-3.8-flash",
+        "qwen3.8-omni",
+        "gpt-5.6-sol"
+      ],
+      "source": {
+        "label": {
+          "en": "Answers and scores",
+          "zh": "回答与评分"
+        },
+        "url": "https://github.com/MAC-AutoML/SocialOmni/tree/main/evaluation/results/modern-panel-20260924/qwen35flash"
+      }
+    },
+    {
+      "id": "modern-gemini-3.1-pro-preview",
+      "model": "Gemini 3.1 Pro Preview",
+      "variant": "Native AV · Default thinking",
+      "status": "published",
+      "metrics": {
+        "who": 45.05,
+        "when": 84.0,
+        "qgold": 80.01302083333333,
+        "qens": 81.9182389937107,
+        "cov_plus": 82.8125,
+        "qens_joint": 67.83854166666667
+      },
+      "classification": {
+        "who_macro_f1": 59.38685587776218,
+        "when_macro_f1": 83.1862126944094
+      },
+      "judge_panel": "modern-20260924",
+      "judges": [
+        "gemini-3.8-flash",
+        "qwen3.8-omni",
+        "gpt-5.6-sol"
+      ],
+      "source": {
+        "label": {
+          "en": "Answers and scores",
+          "zh": "回答与评分"
+        },
+        "url": "https://github.com/MAC-AutoML/SocialOmni/tree/main/evaluation/results/gemini-native-av-20260924/gemini31pro"
+      }
+    },
+    {
+      "id": "modern-gemini-3.5-flash",
+      "model": "Gemini 3.5 Flash",
+      "variant": "Native AV · Default thinking",
+      "status": "published",
+      "metrics": {
+        "who": 6.0,
+        "when": 60.5,
+        "qgold": 79.55729166666667,
+        "qens": 82.94871794871796,
+        "cov_plus": 50.78125,
+        "qens_joint": 42.122395833333336
+      },
+      "classification": {
+        "who_macro_f1": 11.267280757667388,
+        "when_macro_f1": 71.68949771689496
+      },
+      "judge_panel": "modern-20260924",
+      "judges": [
+        "gemini-3.8-flash",
+        "qwen3.8-omni",
+        "gpt-5.6-sol"
+      ],
+      "source": {
+        "label": {
+          "en": "Answers and scores",
+          "zh": "回答与评分"
+        },
+        "url": "https://github.com/MAC-AutoML/SocialOmni/tree/main/evaluation/results/gemini-native-av-20260924/gemini35flash"
+      }
+    }
+  ],
+  "judges": [
+    "gemini-3.8-flash",
+    "dashscope/qwen3.8-omni-flash",
+    "gpt-5.6-sol"
+  ]
+}

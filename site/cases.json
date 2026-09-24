@@ -1,0 +1,242 @@
+{
+  "dataset": "SocialOmni",
+  "dataset_revision": "7e88c7e1afed65eb6fda17aac76bebbe2da57ec7",
+  "cases": [
+    {
+      "id": "l1-2",
+      "level": 1,
+      "title": {
+        "en": "Who asked the question?",
+        "zh": "是谁提出了问题？"
+      },
+      "video": "media/cases/l1-2.mp4",
+      "poster": "media/cases/l1-2.jpg",
+      "duration_seconds": 30.139,
+      "source_id": "2",
+      "source_url": "https://huggingface.co/datasets/alexisty/SocialOmni",
+      "source_file": "data/level_1/videos/video_2.mp4",
+      "annotation": {
+        "id": 2,
+        "video_path": "video_2.mp4",
+        "question": "What happened in the video from 0:20 to 0:23?",
+        "options": [
+          "A. The woman on the left asked what wealth management actually is.",
+          "B. The man on the right asked what wealth management actually is.",
+          "C. The woman on the left asked how wealth management differs from asset management.",
+          "D. The man on the right asked how wealth management differs from asset management."
+        ],
+        "correct_answer": "D",
+        "asr_content": "And yeah, I also learned about the concept of overtime so that was pretty cool too Okay so now you've been at JP Morgangan for about 25 years yes so and now you run one of the most important parts of JP Morgangan which is I say is the asset and wealth management business for people that aren't that familiar with wealth management, what actually is wealth management and how is that different than asset management?Great question, the two are often used interchangeably, but they have distinction.",
+        "metadata": {
+          "people_count": "2",
+          "alternating": "take turns speaking",
+          "lighting": "normal",
+          "consistency": "consistent",
+          "camera_shot": "close-up"
+        }
+      },
+      "source_sha256": "1a99b91cda930effa3174b1e3abcf179bd6b1dbf39ef8eaa15a1cf07e0d6f070",
+      "video_sha256": "779ace22079fd5f7a5a12fcf4d1866e169584ec212743e93f58967d3f29e6796",
+      "task": "Who",
+      "question": "What happened in the video from 0:20 to 0:23?",
+      "options": [
+        "A. The woman on the left asked what wealth management actually is.",
+        "B. The man on the right asked what wealth management actually is.",
+        "C. The woman on the left asked how wealth management differs from asset management.",
+        "D. The man on the right asked how wealth management differs from asset management."
+      ],
+      "answer": "D",
+      "reference": "D. The man on the right asked how wealth management differs from asset management.",
+      "description": {
+        "en": "Match the spoken words to the visible speaker.",
+        "zh": "结合声音和画面，将话语归属于正确的说话人。"
+      },
+      "question_zh": "视频 0:20 至 0:23 发生了什么？",
+      "options_zh": [
+        "A. 左边的女士询问财富管理究竟是什么。",
+        "B. 右边的男士询问财富管理究竟是什么。",
+        "C. 左边的女士询问财富管理与资产管理的区别。",
+        "D. 右边的男士询问财富管理与资产管理的区别。"
+      ],
+      "reference_zh": "右边的男士询问财富管理与资产管理的区别。"
+    },
+    {
+      "id": "l1-8",
+      "level": 1,
+      "title": {
+        "en": "Who is explaining the tool?",
+        "zh": "是谁在介绍工具？"
+      },
+      "video": "media/cases/l1-8.mp4",
+      "poster": "media/cases/l1-8.jpg",
+      "duration_seconds": 22.866667,
+      "source_id": "8",
+      "source_url": "https://huggingface.co/datasets/alexisty/SocialOmni",
+      "source_file": "data/level_1/videos/video_8.mp4",
+      "annotation": {
+        "id": 8,
+        "video_path": "video_8.mp4",
+        "question": "What happened in the video from the 15th second to the 20th second?",
+        "options": [
+          "A. The man on the left explains how it works and how it can be used in parallel with many different tools.",
+          "B. The man on the right said he would systematically explain all the most important concepts about how to use it.",
+          "C. The man on the left said he was very happy to be back here,",
+          "D. The man on the right said they would jointly create an authoritative course"
+        ],
+        "correct_answer": "A",
+        "asr_content": "And so we want to together with Anthropic to teach hopefully the definitive course on all of the most important ideas behind how to use it in a systematic way Thanks, Andrew, I'm excited to be back here and start like you mentioned from explaining what the tool is how it works all the way towards using it in parallel with many different tools including GitWorkre and MCP servers.",
+        "metadata": {
+          "people_count": "2",
+          "alternating": "take turns speaking",
+          "lighting": "normal",
+          "consistency": "consistent",
+          "camera_shot": "close-up"
+        }
+      },
+      "source_sha256": "73ca9f7202c5ff899026aa25302a1e6b3b335275f5028437e29ccf85b39ae116",
+      "video_sha256": "1ff6af5daa4aaccaf6879fdd00bf68fb9f52ba81f392f6397310835402820757",
+      "task": "Who",
+      "question": "What happened in the video from the 15th second to the 20th second?",
+      "options": [
+        "A. The man on the left explains how it works and how it can be used in parallel with many different tools.",
+        "B. The man on the right said he would systematically explain all the most important concepts about how to use it.",
+        "C. The man on the left said he was very happy to be back here,",
+        "D. The man on the right said they would jointly create an authoritative course"
+      ],
+      "answer": "A",
+      "reference": "A. The man on the left explains how it works and how it can be used in parallel with many different tools.",
+      "description": {
+        "en": "Match the spoken words to the visible speaker.",
+        "zh": "结合声音和画面，将话语归属于正确的说话人。"
+      },
+      "question_zh": "视频第 15 秒至第 20 秒发生了什么？",
+      "options_zh": [
+        "A. 左边的男士解释它的工作原理，以及如何与多种工具并行使用。",
+        "B. 右边的男士说他会系统地解释使用它的所有重要概念。",
+        "C. 左边的男士说他很高兴再次来到这里。",
+        "D. 右边的男士说他们将共同制作一门权威课程。"
+      ],
+      "reference_zh": "左边的男士解释它的工作原理，以及如何与多种工具并行使用。"
+    },
+    {
+      "id": "l2-3",
+      "level": 2,
+      "title": {
+        "en": "Take the next turn",
+        "zh": "在合适的时机接话"
+      },
+      "video": "media/cases/l2-3.mp4",
+      "poster": "media/cases/l2-3.jpg",
+      "duration_seconds": 27.003276,
+      "source_id": "video_0003",
+      "source_url": "https://huggingface.co/datasets/alexisty/SocialOmni",
+      "source_file": "data/level_2/videos/video_0003.mp4",
+      "annotation": {
+        "video_id": "video_0003",
+        "video_file": "video_0003.mp4",
+        "question_1": {
+          "question": "Should the woman in green speak at the 27th second?",
+          "timestamp": "27",
+          "option_A": "Yes",
+          "option_B": "No",
+          "correct_answer": "A"
+        },
+        "question_2": {
+          "question": "What should the woman in green say?",
+          "answer": "Pleasure doing business with you."
+        },
+        "metadata": {
+          "num_people": 3,
+          "turn_taking": "take turns speaking",
+          "lighting": "normal lighting",
+          "consistency": "consistent",
+          "camera_shot": "panorama"
+        }
+      },
+      "source_sha256": "02cf8d35e5227c1836cd10ee349cec12305cd7927f88c3450622fffeb0ffbd66",
+      "video_sha256": "a060603ade4a776d3ad352b306e40e0413180c0cbd4ba1958dde234b34dbb393",
+      "task": "When + How",
+      "question": "Should the woman in green speak at the 27th second?",
+      "options": [
+        "A. Yes",
+        "B. No"
+      ],
+      "answer": "A",
+      "reference": "Yes",
+      "how_question": "What should the woman in green say?",
+      "how_reference": "Pleasure doing business with you.",
+      "cutoff_seconds": 27,
+      "description": {
+        "en": "Watch only the conversation before the decision point.",
+        "zh": "只观察决策时刻之前的对话，判断是否接话以及如何回应。"
+      },
+      "question_zh": "穿绿色衣服的女士应该在第 27 秒开口吗？",
+      "options_zh": [
+        "A. 是",
+        "B. 否"
+      ],
+      "reference_zh": "是",
+      "how_question_zh": "穿绿色衣服的女士应该说什么？",
+      "how_reference_zh": "很高兴与你做生意。"
+    },
+    {
+      "id": "l2-9",
+      "level": 2,
+      "title": {
+        "en": "Knowing when to listen",
+        "zh": "判断何时应该倾听"
+      },
+      "video": "media/cases/l2-9.mp4",
+      "poster": "media/cases/l2-9.jpg",
+      "duration_seconds": 17.009383,
+      "source_id": "video_0009",
+      "source_url": "https://huggingface.co/datasets/alexisty/SocialOmni",
+      "source_file": "data/level_2/videos/video_0009.mp4",
+      "annotation": {
+        "video_id": "video_0009",
+        "video_file": "video_0009.mp4",
+        "question_1": {
+          "question": "Should the little boy standing on the far right speak at the 17th second?",
+          "timestamp": "17",
+          "option_A": "Yes",
+          "option_B": "No",
+          "correct_answer": "B"
+        },
+        "question_2": {
+          "question": "What should the little boy standing on the far right say?",
+          "answer": ""
+        },
+        "metadata": {
+          "num_people": 3,
+          "turn_taking": "take turns speaking",
+          "lighting": "normal lighting",
+          "consistency": "consistent",
+          "camera_shot": "panorama"
+        }
+      },
+      "source_sha256": "5bbf0482a01c768e6ce1d340e8ef9a61feac701a239d1c2994caf012c7c757f5",
+      "video_sha256": "4dd0a8f0179cbb86a8b66433a2f1da77c5277c0775142d647bf96ef5345dcd14",
+      "task": "When + How",
+      "question": "Should the little boy standing on the far right speak at the 17th second?",
+      "options": [
+        "A. Yes",
+        "B. No"
+      ],
+      "answer": "B",
+      "reference": "No",
+      "how_question": "What should the little boy standing on the far right say?",
+      "how_reference": "",
+      "cutoff_seconds": 17,
+      "description": {
+        "en": "Watch only the conversation before the decision point.",
+        "zh": "只观察决策时刻之前的对话，判断是否接话以及如何回应。"
+      },
+      "question_zh": "站在最右边的小男孩应该在第 17 秒开口吗？",
+      "options_zh": [
+        "A. 是",
+        "B. 否"
+      ],
+      "reference_zh": "否"
+    }
+  ]
+}
