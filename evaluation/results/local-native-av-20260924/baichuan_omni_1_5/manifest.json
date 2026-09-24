@@ -1,0 +1,30 @@
+{
+  "input.json": {
+    "sha256": "2f3081eb7ca0f5a70d46cda3b02571373bcf4baaeed9cc83187e006ae8563f12",
+    "bytes": 89661
+  },
+  "results.json": {
+    "sha256": "d9778a4a8c7bff8cbde62d552176a6423d680a45f0ec0819dd56735ace40d356",
+    "bytes": 206710
+  },
+  "candidates.json": {
+    "sha256": "178aac8285f81138faf330b4b96969a246263afbdd9510acc58efb2d927848e3",
+    "bytes": 4464847
+  },
+  "source-manifest.json": {
+    "sha256": "b7cb740ee06756fa3c77b5204661f18382c2780f666e7cc856af94822d7c1723",
+    "bytes": 2243
+  },
+  "attention-validation.json": {
+    "sha256": "b876ec25bd268e148bdafbc04cb5469bafa6b41d8014f47095f76f4c358720b6",
+    "bytes": 19137
+  },
+  "runtime-validation.json": {
+    "sha256": "e27e4227218ce5f0aae72afa65ad26933d2574ebda92dca50ec1ea7e4fc238d9",
+    "bytes": 871
+  },
+  "validation.json": {
+    "sha256": "98980f51a424157beb27ee9d0a257adfc0224b597e4e4610a0a5b50716b0595a",
+    "bytes": 1743
+  }
+}

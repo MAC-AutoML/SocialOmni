@@ -6,4 +6,4 @@ How responses are scored by Gemini 3.8 Flash, Qwen3.8-Omni-Flash and GPT-5.6-Sol
 
 Model directories contain the complete candidate answers, judge inputs, scores and provenance. Exact checkpoint revisions, preprocessing settings, package versions and implementation hashes are recorded with the results. Decoder thread limits changed execution concurrency; reused successful responses retained their original file hashes and manifests. Only technical failures were retried.
 
-Published results: [Qwen2.5-Omni](qwen2_5_omni/) · [Qwen3-Omni](qwen3_omni/).
+Published results: [Qwen2.5-Omni](qwen2_5_omni/) · [Qwen3-Omni](qwen3_omni/) · [Baichuan-Omni-1.5](baichuan_omni_1_5/).

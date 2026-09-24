@@ -1,0 +1,80 @@
+{
+  "model": "baichuan_omni_1_5",
+  "candidate_records": 2328,
+  "gold_positive": 128,
+  "judge_scores": 384,
+  "reused_records_verified": 0,
+  "source_archive_files_verified": 4672,
+  "independently_recomputed": {
+    "who": 8.4,
+    "when": 16.0,
+    "qgold": 44.270833333333336,
+    "qens": 40.625,
+    "cov_plus": 6.25,
+    "qens_joint": 2.5390625
+  },
+  "classification_details": {
+    "who": {
+      "n": 2000,
+      "correct": 168,
+      "accuracy": 8.4,
+      "macro_f1": 13.311024605884175,
+      "class_counts": {
+        "A": {
+          "tp": 104,
+          "fp": 48,
+          "fn": 465
+        },
+        "B": {
+          "tp": 28,
+          "fp": 35,
+          "fn": 533
+        },
+        "C": {
+          "tp": 17,
+          "fp": 20,
+          "fn": 436
+        },
+        "D": {
+          "tp": 19,
+          "fp": 12,
+          "fn": 398
+        }
+      },
+      "request_failures": 0,
+      "parse_failures": 1717
+    },
+    "when": {
+      "n": 200,
+      "correct": 32,
+      "accuracy": 16.0,
+      "macro_f1": 22.740824509098385,
+      "class_counts": {
+        "YES": {
+          "tp": 8,
+          "fp": 1,
+          "fn": 120
+        },
+        "NO": {
+          "tp": 24,
+          "fp": 46,
+          "fn": 48
+        }
+      },
+      "request_failures": 0,
+      "parse_failures": 121
+    }
+  },
+  "fresh_when_verified": true,
+  "raw_and_final_answers_preserved": true,
+  "original_scores_unchanged": true,
+  "sanitization": {
+    "omitted_fields": [
+      "video_path",
+      "gpu_visibility"
+    ],
+    "resume_source_replaced_with_run_identifier": true,
+    "raw_model_text_and_generation_fields_unchanged": true
+  },
+  "validator_sha256": "34e65cd730182542a220bef67915a216e6d9687eb84ce981d842723947b3ef12"
+}

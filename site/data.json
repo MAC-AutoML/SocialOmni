@@ -356,16 +356,16 @@
       "variant": "Native AV",
       "status": "published",
       "metrics": {
-        "who": 22.45,
-        "when": 36.5,
-        "qgold": null,
-        "qens": 31.25,
-        "cov_plus": 12.5,
-        "qens_joint": 3.90625
+        "who": 8.4,
+        "when": 16,
+        "qgold": 44.270833333333336,
+        "qens": 40.625,
+        "cov_plus": 6.25,
+        "qens_joint": 2.5390625
       },
       "classification": {
-        "who_macro_f1": 11.596360589461232,
-        "when_macro_f1": 38.817072767547195
+        "who_macro_f1": 13.311024605884175,
+        "when_macro_f1": 22.740824509098385
       },
       "judge_panel": "modern-20260924",
       "judges": [
@@ -378,7 +378,15 @@
           "en": "Answers and scores",
           "zh": "回答与评分"
         },
-        "url": "https://github.com/MAC-AutoML/SocialOmni/tree/main/evaluation/results/modern-panel-20260924/paper"
+        "url": "https://github.com/MAC-AutoML/SocialOmni/tree/main/evaluation/results/local-native-av-20260924/baichuan_omni_1_5"
+      },
+      "evaluation": {
+        "model": "baichuan-inc/Baichuan-Omni-1d5",
+        "revision": "0ab0aff5ceb02d9dbec8349151442ab839b17e61",
+        "who_items": 2000,
+        "when_items": 200,
+        "how_items": 128,
+        "judge_scores": 384
       }
     },
     {

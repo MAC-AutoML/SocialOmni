@@ -1,0 +1,50 @@
+{
+  "original_manifest_sha256": "33b8c40b2f6456891efb128645026001bf1661f09d826f58f1c26f817b44b0f5",
+  "model_repository": "baichuan-inc/Baichuan-Omni-1d5",
+  "model_revision": "0ab0aff5ceb02d9dbec8349151442ab839b17e61",
+  "manifest": {
+    "model": "baichuan_omni_1_5",
+    "weights": "baichuan-inc/Baichuan-Omni-1d5/0ab0aff5ceb02d9dbec8349151442ab839b17e61",
+    "manifest_sha256": "0fa198836d9432be29b40aa220206d4dffc0821998361d80337a75fb2c4c82c0",
+    "temperature": 0.3,
+    "top_p": 1.0,
+    "max_new_tokens": 9000,
+    "runner_sha256": "7a23c455251007a5ac0698b640c51e5b8ca8ed60b879a448f8dd1710707c5310",
+    "execution_threads": {
+      "torch": 4,
+      "interop": 1,
+      "cpu_affinity": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ]
+    },
+    "selection": "all",
+    "package_versions": {
+      "torch": "2.7.1",
+      "transformers": "4.45.0",
+      "numpy": "1.26.4",
+      "av": "18.1.0"
+    },
+    "native_input": "video-and-its-original-audio-no-transcript",
+    "repo_archive_sha256": "31af70d6b69fbe470c7edd4e263b1efefe5dc5170e5948cbebb8e0bb9e67e540",
+    "adapter_sha256": "31df28afbdf90c37661d4bef16675fe5ae79f60608c2e1edb1d78f7ea5e5a1db",
+    "efficient_adapter_sha256": "d91b3583e27d34b33ab07b754ebd847dbb6eb01f0900a0620bf93761d5393df1",
+    "attention_backend": "torch-sdpa-flash-or-efficient; original masks and inputs"
+  },
+  "runtime_source_sha256": {
+    "generate_native.py": "94ded5c2d4e89e3d9ce461a9b3d7a4002d557114fb5a4cfaf8c1380b352a6379",
+    "generate_qwen_bounded.py": "897778a7c5d6ec7b703c28b0be0e5285585a3504ff019204ae3e1aad66c214b3",
+    "runtime_threads.py": "36a3000053a7d7cd9fdabf3016ed3269a726e6faadfbf91b6c9f3756293e1293",
+    "check_baichuan_attention.py": "a20e293196f632c75d7fd00501f4482cdd0e66f23153528019e5e623c652afad",
+    "generate_baichuan_efficient.py": "9c2e699fdf00e2365b5fa9a1aba6147c862b18bf9f4f61271991a2faa7ffd39f",
+    "baichuan_runtime.py": "31df28afbdf90c37661d4bef16675fe5ae79f60608c2e1edb1d78f7ea5e5a1db",
+    "generate_baichuan_bounded.py": "7a23c455251007a5ac0698b640c51e5b8ca8ed60b879a448f8dd1710707c5310",
+    "baichuan_efficient_runtime.py": "d91b3583e27d34b33ab07b754ebd847dbb6eb01f0900a0620bf93761d5393df1"
+  }
+}
