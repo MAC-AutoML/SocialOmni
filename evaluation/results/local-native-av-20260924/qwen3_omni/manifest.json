@@ -1,0 +1,30 @@
+{
+  "input.json": {
+    "sha256": "434697f0cb5e503e9115c753c499b37b827cd37939cf2a14eccc9b75a4d2bb64",
+    "bytes": 87757
+  },
+  "results.json": {
+    "sha256": "bd60bf0df81eb0a27b9f8db19df000341a4c7f683cbec52fef9f32113ee61544",
+    "bytes": 204790
+  },
+  "candidates.json": {
+    "sha256": "dc4cb3c3066b1950f7bbaa9b8e088233d704e848d5de9570ee3ec38e7a6c6fdb",
+    "bytes": 4376907
+  },
+  "source-manifest.json": {
+    "sha256": "33d9261787ceba9fb0befd48b6af46fd4bb7846cdf900dc49194a27cdafc5c35",
+    "bytes": 2529
+  },
+  "resume-provenance.json": {
+    "sha256": "768a808b74b211ed8f5c58fc4efd4e7cda1a2301f082a2f9fde25101d0896dfb",
+    "bytes": 16207
+  },
+  "runtime-validation.json": {
+    "sha256": "e27e4227218ce5f0aae72afa65ad26933d2574ebda92dca50ec1ea7e4fc238d9",
+    "bytes": 871
+  },
+  "validation.json": {
+    "sha256": "25f8809680c6b4a6baa1cd72936bfa9ab85c0d97c7ff1fe8a24625735a3e03cd",
+    "bytes": 1793
+  }
+}

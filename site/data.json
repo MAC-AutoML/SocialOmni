@@ -179,16 +179,16 @@
       "variant": "Native AV",
       "status": "published",
       "metrics": {
-        "who": 74.65,
-        "when": 58,
-        "qgold": null,
-        "qens": 44.95884773662551,
-        "cov_plus": 63.28125,
-        "qens_joint": 28.45052083333333
+        "who": 70.85000000000001,
+        "when": 64,
+        "qgold": 49.218749999999986,
+        "qens": 45.49019607843137,
+        "cov_plus": 66.40625,
+        "qens_joint": 30.208333333333332
       },
       "classification": {
-        "who_macro_f1": 74.34376255552827,
-        "when_macro_f1": 55.654101995565405
+        "who_macro_f1": 70.37233594388586,
+        "when_macro_f1": 62.339156815566476
       },
       "judge_panel": "modern-20260924",
       "judges": [
@@ -201,7 +201,15 @@
           "en": "Answers and scores",
           "zh": "回答与评分"
         },
-        "url": "https://github.com/MAC-AutoML/SocialOmni/tree/main/evaluation/results/modern-panel-20260924/paper"
+        "url": "https://github.com/MAC-AutoML/SocialOmni/tree/main/evaluation/results/local-native-av-20260924/qwen3_omni"
+      },
+      "evaluation": {
+        "model": "Qwen/Qwen3-Omni-30B-A3B-Instruct",
+        "revision": "ea64d566a2a0731823dc44965e7f89bad78f95cb",
+        "who_items": 2000,
+        "when_items": 200,
+        "how_items": 128,
+        "judge_scores": 384
       }
     },
     {

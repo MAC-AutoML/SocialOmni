@@ -1,0 +1,485 @@
+{
+  "source_run": "native-full/qwen3_omni",
+  "original_resume_file_sha256": "455f3265490c02ad4cc0130460cc88abab9d840a2664823f5a229aa20a446228",
+  "original_manifest": {
+    "model": "qwen3_omni",
+    "weights": "Qwen/Qwen3-Omni-30B-A3B-Instruct/ea64d566a2a0731823dc44965e7f89bad78f95cb",
+    "manifest_sha256": "0fa198836d9432be29b40aa220206d4dffc0821998361d80337a75fb2c4c82c0",
+    "temperature": 0.3,
+    "top_p": 1.0,
+    "max_new_tokens": 9000,
+    "runner_sha256": "94ded5c2d4e89e3d9ce461a9b3d7a4002d557114fb5a4cfaf8c1380b352a6379",
+    "selection": "all",
+    "package_versions": {
+      "torch": "2.7.1",
+      "transformers": "4.57.1",
+      "numpy": "2.5.3",
+      "av": "18.1.0"
+    },
+    "native_input": "video-and-its-original-audio-no-transcript",
+    "repo_archive_sha256": "31af70d6b69fbe470c7edd4e263b1efefe5dc5170e5948cbebb8e0bb9e67e540",
+    "preprocessing": {
+      "qwen_omni_utils": "0.0.9",
+      "process_mm_info_module": "qwen_omni_utils.v2_5",
+      "audio_module": "qwen_omni_utils.v2_5.audio_process",
+      "vision_module": "qwen_omni_utils.v2_5.vision_process",
+      "audio_sample_rate": 16000,
+      "vision_defaults": {
+        "MAX_RATIO": 200,
+        "SPATIAL_MERGE_SIZE": 2,
+        "IMAGE_MIN_TOKEN_NUM": 4,
+        "IMAGE_MAX_TOKEN_NUM": 16384,
+        "VIDEO_MIN_TOKEN_NUM": 128,
+        "VIDEO_MAX_TOKEN_NUM": 768,
+        "FPS": 2.0,
+        "FRAME_FACTOR": 2,
+        "FPS_MIN_FRAMES": 4,
+        "FPS_MAX_FRAMES": 768,
+        "MAX_NUM_WORKERS_FETCH_VIDEO": 8,
+        "MODEL_SEQ_LEN": 128000
+      }
+    }
+  },
+  "reused": [
+    {
+      "file": "how-video_0001.json",
+      "sha256": "34faa64d3923b4f7072404490e7ac5e585acc3da12867738c7115638d98edf67"
+    },
+    {
+      "file": "how-video_0002.json",
+      "sha256": "189892f434ee295d1b55f41ea19ba2b22daa5ba89ef4e511b41b62b5562ad2f2"
+    },
+    {
+      "file": "how-video_0006.json",
+      "sha256": "ed1e79bbc7b3f279113af6702c7707ab02cca81ead1be9d930365d8f0fdc99ae"
+    },
+    {
+      "file": "how-video_0011.json",
+      "sha256": "78c95048032e62206d151f999d51cbe0f579cff919499afe60e4532a50ccf4e4"
+    },
+    {
+      "file": "how-video_0012.json",
+      "sha256": "c4e12489d6a8ace2f7996c56917b2cc8b79c34511ee5e98635c1612136afe56b"
+    },
+    {
+      "file": "how-video_0014.json",
+      "sha256": "5e9a7e1a2086ac4f82e2c5fcffbe2923a91dbd3cbaa6642b261e3e22406a410c"
+    },
+    {
+      "file": "how-video_0017.json",
+      "sha256": "67acf6294a9cd1162f148ea7ac073d2f76917b3f49217e835bd0488ecbe2cf41"
+    },
+    {
+      "file": "how-video_0018.json",
+      "sha256": "f3e6009d83dc45566cfb13ca74936f4cd3c00e5ed972b467289dae95c361eaa3"
+    },
+    {
+      "file": "how-video_0019.json",
+      "sha256": "aa96f100e468b60d18ae783fd9bf385db3545cc34a2f5ce66528b65a3a4fcbaa"
+    },
+    {
+      "file": "how-video_0020.json",
+      "sha256": "88225f01a2682567f0c42f3995c6898fd4628332c9313d8c5f80e9723faed7d0"
+    },
+    {
+      "file": "how-video_0024.json",
+      "sha256": "4ca91f58947e449f1d86b6e3f7be47d7896f02c09bf6332c64c13ec22db8b024"
+    },
+    {
+      "file": "how-video_0025.json",
+      "sha256": "c11492dd3fe75359b161db4985f099aa76b28c0e1a82a7366268cb9b1df566e3"
+    },
+    {
+      "file": "how-video_0026.json",
+      "sha256": "b5bf203e93958adc4539a987a2d90e727ea4abaa5df2723bcf2bf6b6658e7c6d"
+    },
+    {
+      "file": "how-video_0030.json",
+      "sha256": "c283903f001a7c444c9ad4a752f55db060283a584fc957147821b536c2d5b076"
+    },
+    {
+      "file": "how-video_0031.json",
+      "sha256": "88b6a0cca546f6f3b09a8b56be8e4f611653d9ebd6cf6f86b77bd5b577101d1f"
+    },
+    {
+      "file": "how-video_0032.json",
+      "sha256": "4a18147c50473e0511f26c195e7fba6d112767b93bc24b5fdd10b1bd7a0d12d5"
+    },
+    {
+      "file": "how-video_0034.json",
+      "sha256": "6c4a58f6e3aec84bdde0d301c34acd3ac10fa781fd6a1cc45204a36ce9395f77"
+    },
+    {
+      "file": "how-video_0036.json",
+      "sha256": "5370c3045cce3054a1f771dd46401f4e6f48d13d7852794c281db58a410f0798"
+    },
+    {
+      "file": "how-video_0037.json",
+      "sha256": "c67021554c748a78879bcc4c2efd81f1f38675cccd13e3bd54aace79df6c5294"
+    },
+    {
+      "file": "how-video_0040.json",
+      "sha256": "13c47f104cde7f8acbb9a9e76b539c04382783d0189e942553634ec8f8879c7b"
+    },
+    {
+      "file": "how-video_0046.json",
+      "sha256": "f97649543c01cc0c733894ce5e015bb0d8978a222171949b5460d08c2644c55f"
+    },
+    {
+      "file": "how-video_0048.json",
+      "sha256": "91cb93971084203368b3a27837ea95e0cc07a6201243c2ae6c24d35e5332d7e4"
+    },
+    {
+      "file": "how-video_0051.json",
+      "sha256": "e306f54988f5a349442afebbdccf874b9847be6c1722773555c2c0c8c41438fb"
+    },
+    {
+      "file": "how-video_0052.json",
+      "sha256": "1b53656d379c047cb4a319ed761e7fc35c700456aa077c8c149d4b68a7bf3f65"
+    },
+    {
+      "file": "how-video_0053.json",
+      "sha256": "ae0625f5bb0777cc7b52bfd5c40ce437ee7b172fd0f6e3dda2b7dbab834e7e4f"
+    },
+    {
+      "file": "how-video_0054.json",
+      "sha256": "15b756eda17b6ee05ac1654207a0af1b58a4fad4afca76e923660a894ded3c33"
+    },
+    {
+      "file": "how-video_0055.json",
+      "sha256": "55be76809cdce39b369edf39889aec2302feb00ae62c54dc4c67dee8e9c23a38"
+    },
+    {
+      "file": "how-video_0056.json",
+      "sha256": "1c0c26141c1fc6d03aea9b20b4fbcbe6edfb55d5039f87d1c3b51b27ddadcd91"
+    },
+    {
+      "file": "how-video_0057.json",
+      "sha256": "78f7432ecf971f4b868de41f7c2568a14712ee1fce2071c1d24bd3df33040648"
+    },
+    {
+      "file": "how-video_0063.json",
+      "sha256": "62458275b4eb739af08e8e0d398c57cd9bbe656c8a478782e1986aa099bc1f6e"
+    },
+    {
+      "file": "how-video_0064.json",
+      "sha256": "3eafa99b8ca98c1e6339110e3ad80d70869bd1ca00b37e8c5e40e2ea49b166b2"
+    },
+    {
+      "file": "how-video_0065.json",
+      "sha256": "d7f2719347b529f4f210304bbbe17f01409c6f7540d58b50ca708e8e37a20c1c"
+    },
+    {
+      "file": "how-video_0073.json",
+      "sha256": "222411d77a45eecf17ecfb2ab3bdf4ba95c9017482514b3a4856d3869958a9ca"
+    },
+    {
+      "file": "how-video_0074.json",
+      "sha256": "3af1c1778bb551d9314168973a42a791f5ab90009865bf62a3fc6a359f69a29c"
+    },
+    {
+      "file": "how-video_0075.json",
+      "sha256": "80c636af6cf45184b435b1819b3fc41e2daee19edc026da9e8ac705ff4578725"
+    },
+    {
+      "file": "how-video_0076.json",
+      "sha256": "fa30f1160f3445227488a63540bfb5c05569c7f91cb3f14237255dfc2f137e82"
+    },
+    {
+      "file": "how-video_0077.json",
+      "sha256": "1d2e4fc5d385b10dff0bf5c75b7fedd40fda3f9dc57933f31e5cbe1b1b270062"
+    },
+    {
+      "file": "how-video_0086.json",
+      "sha256": "6f5e94b3ab70909cc16e1fad19834d2d6e53a5550d3e3561f84eba20b32e4eb2"
+    },
+    {
+      "file": "how-video_0087.json",
+      "sha256": "e1eafd6d8e2670dd806ed689f7058ce81e8272d852fbce05b7c23fbe27c5d4cc"
+    },
+    {
+      "file": "how-video_0088.json",
+      "sha256": "ea475118de1ad5a8b9b1275bd68f48d76ad871f858fc232b3659d83b5c581548"
+    },
+    {
+      "file": "how-video_0089.json",
+      "sha256": "6aa44ba2c21eb57294c8e56b29718b318bd655890422bb08d0341b05bc25331a"
+    },
+    {
+      "file": "how-video_0090.json",
+      "sha256": "6780e9f6a732e074153d0f25c8ce1ffd384c0fd3abea149db13cb6e44d0d7d90"
+    },
+    {
+      "file": "how-video_0091.json",
+      "sha256": "1841073fcfeb9005678e424a021877d3206807de986626898bda6f0452e6eeeb"
+    },
+    {
+      "file": "how-video_0092.json",
+      "sha256": "e8ab0cc91199a71dbc6c67e361e037d8f0913f637a1d3ea732524729c20b5a48"
+    },
+    {
+      "file": "how-video_0093.json",
+      "sha256": "08ad2c82b84fc4cee86b63c5c5fa208192f20d64f0a87070b60d36c28da37b94"
+    },
+    {
+      "file": "how-video_0097.json",
+      "sha256": "a1ccb46d51da6ce0da3b9f27ee1c07da6f6d41f316cb27184f5f9e24210f4a88"
+    },
+    {
+      "file": "how-video_0099.json",
+      "sha256": "4ffa6ef5adc2523ee85dfae26a75f134c8f61d426462a532e358debc8a606d06"
+    },
+    {
+      "file": "how-video_0101.json",
+      "sha256": "34738b0a99f5c51041f194e75df8476cebb33cae98cebe6af1096d543888559b"
+    },
+    {
+      "file": "how-video_0105.json",
+      "sha256": "985f6b452462d884056ca0500baf95d589dc942b2eb5aee23f05cb43b8787a75"
+    },
+    {
+      "file": "how-video_0106.json",
+      "sha256": "ef00074b18f2af1e5a120bd5885f3be4026ff6970dec2afa98b059809b25ff09"
+    },
+    {
+      "file": "how-video_0112.json",
+      "sha256": "dbf67a0a6da3a033a5b7b7d1cc48339fb247b97325f6982cac0a5da0e96b7cfc"
+    },
+    {
+      "file": "how-video_0113.json",
+      "sha256": "59484d7823a14492e16903b3d3e692fad9d67df2cdcda2a1c5fd9e448f47f9d9"
+    },
+    {
+      "file": "how-video_0115.json",
+      "sha256": "68165b8c7e8622db5621c9cce11b23260f1d52a836d81574f94f05eea0fee2a6"
+    },
+    {
+      "file": "how-video_0116.json",
+      "sha256": "8b723464da617a1a49afb17b56a3ce0e512d2cdc06a5d6ccfff9fe7e95ef4c57"
+    },
+    {
+      "file": "how-video_0118.json",
+      "sha256": "6eb35cc39b9522b1c7acbdc1365fb0695ed9289e7ab7ffd4d6250ca2012c5846"
+    },
+    {
+      "file": "how-video_0119.json",
+      "sha256": "da38bab4270b1d6a2eec37e67fdde0dfee4958d3962d3f03e718e2953b07548e"
+    },
+    {
+      "file": "how-video_0121.json",
+      "sha256": "a2d2a55c5ae7a4d7d79106474e7e80b48bb7375ec4a11a6279eae72bb3674235"
+    },
+    {
+      "file": "how-video_0124.json",
+      "sha256": "aaf352a28e39cd2ca2e02b15d1f787854c4fdcd193ecce1b641c48671071a2fb"
+    },
+    {
+      "file": "how-video_0129.json",
+      "sha256": "3d2f537a11a7706036a3c7e39e5f07cbafde4b6ba4f856b40bf045a43640646e"
+    },
+    {
+      "file": "how-video_0132.json",
+      "sha256": "d85c5803ed69542f1acbb6fc5ddf63bd165362247b677ce4ad96f08b033f1d97"
+    },
+    {
+      "file": "how-video_0134.json",
+      "sha256": "947b558146b50bd06dbbba89a152fe3706c3d639d688e08777bfd52cf8a52206"
+    },
+    {
+      "file": "how-video_0138.json",
+      "sha256": "ae3e1e6f754bb037ec699e8ee2e8a8849603731e2d177111198ecc9e4ce014d1"
+    },
+    {
+      "file": "how-video_0139.json",
+      "sha256": "b394038fb30edee9b4fc1c95f67e0082d0d04e5baa2c374bcfc84acfab630439"
+    },
+    {
+      "file": "how-video_0140.json",
+      "sha256": "81e1f1847559a2912000085cdd1b871259dbfcb6fea631efdfc4489e135aa57f"
+    },
+    {
+      "file": "how-video_0143.json",
+      "sha256": "bbb70be72bfc26f8e82aa291870a6a5109261bab03c826d3d7603d3b1c72a372"
+    },
+    {
+      "file": "how-video_0144.json",
+      "sha256": "ceb6960299c8b18b884f0d18dca04c306ab5cb798d2e15abf22182bcb4c6447a"
+    },
+    {
+      "file": "how-video_0145.json",
+      "sha256": "6e779fc5e9d44a4f7d22340662702e6fd0e93fc3266658458995adc697710e41"
+    },
+    {
+      "file": "how-video_0147.json",
+      "sha256": "6ed818119c4953f6dd85753129bf2e04c06ac9c9a16b311db44432a41e6091d5"
+    },
+    {
+      "file": "how-video_0148.json",
+      "sha256": "5193cce5e4f6dc3dfaf725be2e14427d9c0158ab076fda145c47a58d9d4c97e8"
+    },
+    {
+      "file": "how-video_0149.json",
+      "sha256": "a9474b35476d60d0b55040001fb96b2b65f5810bd1395c6938614dc7d936bc39"
+    },
+    {
+      "file": "how-video_0150.json",
+      "sha256": "21dd6142548369cb7e831fe813ca2c217e6025ea26c2c4bbfa50a4c899990b39"
+    },
+    {
+      "file": "how-video_0151.json",
+      "sha256": "0f497b7747f68a8c2280f5abb986fa33ed12f389e8bf3907669bdc0c5b3fd6e1"
+    },
+    {
+      "file": "how-video_0152.json",
+      "sha256": "042d090510154b330a0d7c6a31b7f68c307878b33291e6656e730faf8319b871"
+    },
+    {
+      "file": "how-video_0155.json",
+      "sha256": "eae0a8a83793c41bb023146b19f775e07b74e513f3af3e404caf3d955e23cff4"
+    },
+    {
+      "file": "how-video_0156.json",
+      "sha256": "6ec0250acb4ac4cbdec6bc298ab5c75473fedebf3b7b42b3d937c0c821da4726"
+    },
+    {
+      "file": "how-video_0157.json",
+      "sha256": "25bf7819dd906b79a5d8afbbb18d7622816d726b4f5a50436d1351b396c68b48"
+    },
+    {
+      "file": "how-video_0158.json",
+      "sha256": "5bd29752ad6f3f3da51ece131daa25ad8189403f4b5f10968d36a0236ef052a1"
+    },
+    {
+      "file": "how-video_0159.json",
+      "sha256": "11b9fa2f6b318c0b253341e20ae00a54265e8cb80e25a73dfe2e17b1a58676db"
+    },
+    {
+      "file": "how-video_0160.json",
+      "sha256": "d7faf8bf7bf7fc211e3e7eb307d84fe6c857b49497eea9cabfa6597d0077d2a5"
+    },
+    {
+      "file": "how-video_0161.json",
+      "sha256": "635977127f2a181ee8c02e1a798de4c417948f2ae6ea4c50eac9c5638e5df404"
+    },
+    {
+      "file": "how-video_0162.json",
+      "sha256": "398c695ebba24a13d3faa43bfa35c769e5b6f9234a34146e3d37dbd0dac08e05"
+    },
+    {
+      "file": "how-video_0164.json",
+      "sha256": "084cab606dc026d827d35b3daae903ab87165a427a1e5ecedf0a8361a5c11363"
+    },
+    {
+      "file": "how-video_0165.json",
+      "sha256": "4431f843e689f5d58fe50c66a38f6d71ff68e9a43ea182e8213dd17482c8aa93"
+    },
+    {
+      "file": "how-video_0166.json",
+      "sha256": "0c64c52f46b12151d46769ee4e1fa75e5b47e7605fab3459d764e5ac42620821"
+    },
+    {
+      "file": "how-video_0168.json",
+      "sha256": "9c710a4900b7a4a76c0d85cfaf69b5f191faaa93e8340c2ea371dad091dd23ea"
+    },
+    {
+      "file": "how-video_0169.json",
+      "sha256": "74fd96f4cefc8de61747248b428a0e4d17001f26facfa9952e74bb673c1934f9"
+    },
+    {
+      "file": "how-video_0170.json",
+      "sha256": "378342741021b5ae0648958dc2d97f70f185edd3266a2a5a9d87ded344baafb1"
+    },
+    {
+      "file": "how-video_0171.json",
+      "sha256": "0f9cf4d3803d104a2274adc5fbbe10ca62a19772874a685e9bcc3fa30adff68d"
+    },
+    {
+      "file": "how-video_0172.json",
+      "sha256": "9023f9c0cb9626fff948e2f04214482423e093a18600b4cd25672ed6e6328e7c"
+    },
+    {
+      "file": "how-video_0174.json",
+      "sha256": "555d2f2671c4415b35835381b28e716715422605ee1b651fe6cd3b740ab4fbc1"
+    },
+    {
+      "file": "how-video_0176.json",
+      "sha256": "e97ec92386e0ca21792da271720a76afeda54f3ef5bc63f823b93b2e78504bbf"
+    },
+    {
+      "file": "how-video_0177.json",
+      "sha256": "b4f0351b2ef4f596c9f4cdfe5c558a29671d27bb1d54fade29918d6a3f4fc541"
+    },
+    {
+      "file": "how-video_0180.json",
+      "sha256": "dbf5a8b55851610b148282c0151f9af4b7b6b66de192dd8ee945881393ece638"
+    },
+    {
+      "file": "how-video_0183.json",
+      "sha256": "e1cef305884f2fc6d897304665f0c0036b3bee96c1d8b3d5f78c754c04dac08c"
+    },
+    {
+      "file": "how-video_0184.json",
+      "sha256": "3a73237030e7478ef10235f782d9fede5a87fc2d3136bc3fe4f08ded66cf5bb6"
+    },
+    {
+      "file": "how-video_0185.json",
+      "sha256": "4527f426252d3c083a73643d05a8d798556993f1f41bf11d357de6b302d05e6c"
+    },
+    {
+      "file": "how-video_0186.json",
+      "sha256": "770461b2d677b4c29418f1ea57c34221970b3adf920d7fbb42aabaa07b3672ac"
+    },
+    {
+      "file": "how-video_0187.json",
+      "sha256": "d2548080cbd2fe97a73f3cabefb4d9830fad7b8a433df8ec9cbb8a9204a6f5a7"
+    },
+    {
+      "file": "how-video_0188.json",
+      "sha256": "98b9efeb6a34fe03f6b3fffa7ca9035d75d5e6ed8215b32aab3355567fb8a88d"
+    },
+    {
+      "file": "how-video_0189.json",
+      "sha256": "3658f28b033d49bb9e62bbd7e2c8753d8fb56f6c2954ed7d1ab6c3ee7722e27b"
+    },
+    {
+      "file": "how-video_0190.json",
+      "sha256": "da0890d5e179efb741a9ba6033aad8ca5bd1f400c266d6104738e0ac44334ca3"
+    },
+    {
+      "file": "how-video_0191.json",
+      "sha256": "92d1784f1ee1a846d9e97324bbfd24b4ef7dbb68d5172d07bdeec452fa0ce939"
+    },
+    {
+      "file": "how-video_0192.json",
+      "sha256": "a67d05c84f460c73e9e258be857a1bc2c9f3f621062c742a2deb0800a6ddb25f"
+    },
+    {
+      "file": "how-video_0193.json",
+      "sha256": "44c28edbb732f328b61230921d9bcaf93492a62d55d5e976887d8d92c8546936"
+    },
+    {
+      "file": "how-video_0194.json",
+      "sha256": "508229620914d147ae684e21e257622f7c4412b424df08b8f7e363d1f938b1dd"
+    },
+    {
+      "file": "how-video_0195.json",
+      "sha256": "914cb15751741801944f324ba9d652d65a96315420e55786d927611b36793847"
+    },
+    {
+      "file": "how-video_0198.json",
+      "sha256": "486350229eb3cce6c6c302345524e4a2ba4007c3ca7de3a028c03b96b2dd64bd"
+    },
+    {
+      "file": "how-video_0199.json",
+      "sha256": "c8dbf9d7a082ca1cb364ba4f3030215bb13699bcc8f9f6b4bc6123236835e7e4"
+    },
+    {
+      "file": "how-video_0200.json",
+      "sha256": "e019d0dba4a79be279f9eba4b42dceefc34df66d99e4cd01dda838dbdc38b41f"
+    },
+    {
+      "file": "when-video_0001.json",
+      "sha256": "ddd76f74be5cb6d2d0ab4aa9270e15a19249c85db21a7bdd32d5e3c88fee6788"
+    }
+  ]
+}

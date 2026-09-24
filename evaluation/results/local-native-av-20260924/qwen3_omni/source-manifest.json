@@ -1,0 +1,59 @@
+{
+  "original_manifest_sha256": "7ef6652b196d10b6994a361ce2f30d08f5f67d396a6bc2e4eb6f97d4a36963ec",
+  "model_repository": "Qwen/Qwen3-Omni-30B-A3B-Instruct",
+  "model_revision": "ea64d566a2a0731823dc44965e7f89bad78f95cb",
+  "manifest": {
+    "model": "qwen3_omni",
+    "weights": "Qwen/Qwen3-Omni-30B-A3B-Instruct/ea64d566a2a0731823dc44965e7f89bad78f95cb",
+    "manifest_sha256": "0fa198836d9432be29b40aa220206d4dffc0821998361d80337a75fb2c4c82c0",
+    "temperature": 0.3,
+    "top_p": 1.0,
+    "max_new_tokens": 9000,
+    "runner_sha256": "897778a7c5d6ec7b703c28b0be0e5285585a3504ff019204ae3e1aad66c214b3",
+    "execution_threads": {
+      "torch_threads": 4,
+      "torch_interop_threads": 1,
+      "pyav_codec_threads": 1,
+      "swscale_threads": 1,
+      "torchvision_read_video_before_sha256": "958eacf1072a2ebe5eb471b8aa7fd24977b08f789a2efbc346db340248c61978",
+      "torchvision_read_video_after_sha256": "63693e80433a38464ebe498fc7721e76f656a56f74d6716dec62592456f879d2"
+    },
+    "thread_adapter_sha256": "36a3000053a7d7cd9fdabf3016ed3269a726e6faadfbf91b6c9f3756293e1293",
+    "selection": "all",
+    "package_versions": {
+      "torch": "2.7.1",
+      "transformers": "4.57.1",
+      "numpy": "2.5.3",
+      "av": "18.1.0"
+    },
+    "native_input": "video-and-its-original-audio-no-transcript",
+    "repo_archive_sha256": "31af70d6b69fbe470c7edd4e263b1efefe5dc5170e5948cbebb8e0bb9e67e540",
+    "preprocessing": {
+      "qwen_omni_utils": "0.0.9",
+      "process_mm_info_module": "qwen_omni_utils.v2_5",
+      "audio_module": "qwen_omni_utils.v2_5.audio_process",
+      "vision_module": "qwen_omni_utils.v2_5.vision_process",
+      "audio_sample_rate": 16000,
+      "vision_defaults": {
+        "MAX_RATIO": 200,
+        "SPATIAL_MERGE_SIZE": 2,
+        "IMAGE_MIN_TOKEN_NUM": 4,
+        "IMAGE_MAX_TOKEN_NUM": 16384,
+        "VIDEO_MIN_TOKEN_NUM": 128,
+        "VIDEO_MAX_TOKEN_NUM": 768,
+        "FPS": 2.0,
+        "FRAME_FACTOR": 2,
+        "FPS_MIN_FRAMES": 4,
+        "FPS_MAX_FRAMES": 768,
+        "MAX_NUM_WORKERS_FETCH_VIDEO": 8,
+        "MODEL_SEQ_LEN": 128000
+      }
+    }
+  },
+  "runtime_source_sha256": {
+    "generate_native.py": "94ded5c2d4e89e3d9ce461a9b3d7a4002d557114fb5a4cfaf8c1380b352a6379",
+    "generate_qwen_bounded.py": "897778a7c5d6ec7b703c28b0be0e5285585a3504ff019204ae3e1aad66c214b3",
+    "runtime_threads.py": "36a3000053a7d7cd9fdabf3016ed3269a726e6faadfbf91b6c9f3756293e1293",
+    "generate_baichuan_efficient.py": "9c2e699fdf00e2365b5fa9a1aba6147c862b18bf9f4f61271991a2faa7ffd39f"
+  }
+}

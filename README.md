@@ -49,8 +49,8 @@ The [bilingual leaderboard](https://mac-automl.github.io/SocialOmni/) lists all 
 | Gemini 3.5 Flash | 6.00 | 60.50 | 79.56 | 82.95 | 50.78 | 42.12 |
 | Qwen3.5-Omni-Plus | 91.05 | 58.50 | 80.27 | 77.82 | 48.44 | 37.70 |
 | Qwen2.5-Omni | 4.15 | 61.50 | 49.35 | 49.90 | 64.06 | 31.97 |
+| Qwen3-Omni | 70.85 | 64.00 | 49.22 | 45.49 | 66.41 | 30.21 |
 | Qwen3-Omni-Thinking | 67.65 | 56.00 | — | 61.53 | 46.88 | 28.84 |
-| Qwen3-Omni | 74.65 | 58.00 | — | 44.96 | 63.28 | 28.45 |
 | OmniVinci | 29.75 | 64.50 | 40.82 | 38.52 | 70.31 | 27.08 |
 | Qwen3.5-Omni-Flash (2026-03-15) | 86.55 | 71.00 | 33.14 | 34.72 | 70.31 | 24.41 |
 | GPT-4o | 35.05 | 50.50 | 77.15 | 76.50 | 30.47 | 23.31 |
@@ -61,9 +61,9 @@ The [bilingual leaderboard](https://mac-automl.github.io/SocialOmni/) lists all 
 | Gemini 3 Flash | 48.10 | 49.50 | — | 21.59 | 34.38 | 7.42 |
 | Baichuan-Omni-1.5 | 22.45 | 36.50 | — | 31.25 | 12.50 | 3.91 |
 
-All scores use a 0–100 scale; higher is better. — indicates that the required original responses are unavailable.
+All scores use a 0–100 scale; higher is better. — indicates an unavailable score.
 
-[Per-item responses, scores and evaluation settings](evaluation/results/modern-panel-20260924/README.md) · [Historical materials](evaluation/results/archive/README.md)
+[Per-item responses, scores and evaluation settings](evaluation/results/) · [Historical materials](evaluation/results/archive/README.md)
 
 ## Hosted-model evaluation
 
