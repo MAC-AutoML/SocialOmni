@@ -143,9 +143,9 @@
       "status": "published",
       "metrics": {
         "who": 45.4,
-        "when": 52.0,
+        "when": 52,
         "qgold": 21.549479166666668,
-        "qens": 25.0,
+        "qens": 25,
         "cov_plus": 32.03125,
         "qens_joint": 8.0078125
       },
@@ -241,16 +241,16 @@
       "variant": "Native AV",
       "status": "published",
       "metrics": {
-        "who": 40.95,
-        "when": 60.5,
-        "qgold": null,
-        "qens": 34.674329501915715,
-        "cov_plus": 67.96875,
-        "qens_joint": 23.56770833333334
+        "who": 4.15,
+        "when": 61.5,
+        "qgold": 49.34895833333333,
+        "qens": 49.89837398373984,
+        "cov_plus": 64.0625,
+        "qens_joint": 31.966145833333332
       },
       "classification": {
-        "who_macro_f1": 39.49736486583245,
-        "when_macro_f1": 57.5166034793364
+        "who_macro_f1": 6.472834613772034,
+        "when_macro_f1": 59.81105978757275
       },
       "judge_panel": "modern-20260924",
       "judges": [
@@ -263,7 +263,15 @@
           "en": "Answers and scores",
           "zh": "回答与评分"
         },
-        "url": "https://github.com/MAC-AutoML/SocialOmni/tree/main/evaluation/results/modern-panel-20260924/paper"
+        "url": "https://github.com/MAC-AutoML/SocialOmni/tree/main/evaluation/results/local-native-av-20260924/qwen2_5_omni"
+      },
+      "evaluation": {
+        "model": "Qwen/Qwen2.5-Omni-7B",
+        "revision": "966424e71a6ef4669fbba56d958f0ed23a5d17ab",
+        "who_items": 2000,
+        "when_items": 200,
+        "how_items": 128,
+        "judge_scores": 384
       }
     },
     {
@@ -496,7 +504,7 @@
       "status": "published",
       "metrics": {
         "who": 45.05,
-        "when": 84.0,
+        "when": 84,
         "qgold": 80.01302083333333,
         "qens": 81.9182389937107,
         "cov_plus": 82.8125,
@@ -526,7 +534,7 @@
       "variant": "Native AV · Default thinking",
       "status": "published",
       "metrics": {
-        "who": 6.0,
+        "who": 6,
         "when": 60.5,
         "qgold": 79.55729166666667,
         "qens": 82.94871794871796,
