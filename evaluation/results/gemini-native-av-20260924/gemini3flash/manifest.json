@@ -1,0 +1,18 @@
+{
+  "candidates.json": {
+    "sha256": "43d0efbde8abcbc4e4c3e9a05441a020dc5718846fbced56b5cb8da8f7509dcf",
+    "bytes": 1419888
+  },
+  "input.json": {
+    "sha256": "5daabaa389d09824ed7232905aca9c2669726939bd017a0a25a3e16398eb4fb6",
+    "bytes": 88310
+  },
+  "results.json": {
+    "sha256": "c5c4d673c29d3b29423d68aca068f2bcb490aa5ae7da6f6176f1a147c5bd67d5",
+    "bytes": 198476
+  },
+  "validation.json": {
+    "sha256": "096dd35c20540c18d31f1d240be11b2ed33a086089ada497617cc3419d9e48e2",
+    "bytes": 247166
+  }
+}
