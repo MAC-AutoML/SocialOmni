@@ -37,44 +37,33 @@ Displayed response-quality results use **Gemini 3.8 Flash, Qwen3.8-Omni-Flash an
 
 ## Main results
 
-All displayed quality scores use the September 24 judge panel, on a 0–100 scale. Hosted runs and archived paper answers retain separate groups because their input and classification protocols differ. See the [per-item results and settings](evaluation/results/modern-panel-20260924/README.md) for scores and the output-format diagnostic.
-
-### Hosted candidates
+Response quality is scored by **Gemini 3.8 Flash, Qwen3.8-Omni-Flash and GPT-5.6-Sol**, including rescoring of existing responses from earlier models. The [bilingual leaderboard](https://teeryxie.github.io/socialomni/) lists all models and supports sorting by each metric.
 
 | Model | Who | When | QGold | QEns | Cov+ | QEns_joint |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| Qwen3.8-Omni-Flash | 89.45 | 44.00 | 77.02 | 69.93 | 17.97 | 12.57 |
 | Gemini 3.8 Flash | 25.40 | 82.50 | 86.52 | 86.48 | 82.81 | 71.61 |
-| Qwen3.5-Omni-Plus | 91.05 | 58.50 | 80.27 | 77.82 | 48.44 | 37.70 |
-| Qwen3.5-Omni-Flash (2026-03-15) | 86.55 | 71.00 | 33.14 | 34.72 | 70.31 | 24.41 |
-
-Who and When use strict label parsing; request failures remain in the denominators. Auxiliary format extraction is diagnostic and does not replace these scores.
-
-### Archived paper answers, rescored
-
-The 688 archived responses are reused. Who, When and coverage retain their original outputs. QGold is unavailable because the archive does not contain all 128 forced responses per model.
-
-| Model | Who | When | QGold | QEns | Cov+ | QEns_joint |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| GPT-4o | 35.05 | 50.50 | — | 77.56 | 30.47 | 23.63 |
-| Gemini 2.5 Pro | 39.90 | 52.50 | — | 20.97 | 48.44 | 10.16 |
-| Gemini 2.5 Flash | 33.70 | 55.50 | — | 30.30 | 42.97 | 13.02 |
-| Gemini 3 Flash | 48.10 | 49.50 | — | 21.59 | 34.38 | 7.42 |
-| Gemini 3 Pro | 45.40 | 52.00 | — | 32.11 | 32.03 | 10.29 |
-| Qwen3-Omni | 74.65 | 58.00 | — | 44.96 | 63.28 | 28.45 |
-| Qwen3-Omni-Thinking | 67.65 | 56.00 | — | 61.53 | 46.88 | 28.84 |
-| Qwen2.5-Omni | 40.95 | 60.50 | — | 34.67 | 67.97 | 23.57 |
-| OmniVinci | 29.75 | 64.50 | — | 41.67 | 70.31 | 29.30 |
 | VITA-1.5 | 32.05 | 65.50 | — | 54.79 | 88.28 | 48.37 |
+| Qwen3.5-Omni-Plus | 91.05 | 58.50 | 80.27 | 77.82 | 48.44 | 37.70 |
+| OmniVinci | 29.75 | 64.50 | — | 41.67 | 70.31 | 29.30 |
+| Qwen3-Omni-Thinking | 67.65 | 56.00 | — | 61.53 | 46.88 | 28.84 |
+| Qwen3-Omni | 74.65 | 58.00 | — | 44.96 | 63.28 | 28.45 |
+| Qwen3.5-Omni-Flash (2026-03-15) | 86.55 | 71.00 | 33.14 | 34.72 | 70.31 | 24.41 |
+| GPT-4o | 35.05 | 50.50 | — | 77.56 | 30.47 | 23.63 |
+| Qwen2.5-Omni | 40.95 | 60.50 | — | 34.67 | 67.97 | 23.57 |
+| Gemini 2.5 Flash | 33.70 | 55.50 | — | 30.30 | 42.97 | 13.02 |
+| Qwen3.8-Omni-Flash | 89.45 | 44.00 | 77.02 | 69.93 | 17.97 | 12.57 |
+| Gemini 3 Pro | 45.40 | 52.00 | — | 32.11 | 32.03 | 10.29 |
+| Gemini 2.5 Pro | 39.90 | 52.50 | — | 20.97 | 48.44 | 10.16 |
+| Gemini 3 Flash | 48.10 | 49.50 | — | 21.59 | 34.38 | 7.42 |
 | Baichuan-Omni-1.5 | 22.45 | 36.50 | — | 31.25 | 12.50 | 3.91 |
 
-The original paper panel and the earlier substitute panel remain in the [historical materials archive](evaluation/results/archive/README.md), together with the original data, scores, paper and verification scripts.
+All scores use a 0–100 scale; higher is better. — indicates that the required original responses are unavailable.
 
-## Hosted-model supplemental evaluation
+[Per-item responses, scores and evaluation settings](evaluation/results/modern-panel-20260924/README.md) · [Historical materials](evaluation/results/archive/README.md)
 
-The [standalone hosted-model runner](evaluation/hosted-omni/README.md) uses the v3 item lists, query-time prefixes and prompt cards with a complete three-judge scoring stage. It has a separate lightweight Python environment and an immutable request cache. Supplemental runs remain separate from the frozen paper results.
+## Hosted-model evaluation
 
-The [September 24 supplement](evaluation/results/modern-panel-20260924/README.md) rescores 688 archived answers with Gemini 3.8 Flash, Qwen3.8-Omni-Flash and GPT-5.6-Sol. It also reports Gemini 3.8 Flash and both Qwen3.5-Omni variants alongside the existing Qwen3.8 run, with all 3,600 judge scores, candidate outputs and an auxiliary output-format diagnostic.
+The [evaluation runner and commands](evaluation/hosted-omni/README.md) support Gemini 3.8 Flash, Qwen3.8-Omni-Flash, Qwen3.5-Omni-Plus and Qwen3.5-Omni-Flash with model-specific audio-video request defaults. New generation and rescoring of existing answers use the same default three-judge configuration, with resumable requests and per-attempt records.
 
 ## ⚙️ Requirements and Installation
 

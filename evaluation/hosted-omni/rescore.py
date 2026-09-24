@@ -8,9 +8,9 @@ import os
 from pathlib import Path
 
 from client import StreamingClient, atomic_json, digest
-from judge_eval import PANELS, RUBRIC, prompt
+from judge_eval import DEFAULT_PANEL, PANELS, RUBRIC, prompt
 
-PANEL = "modern-20260924"
+PANEL = DEFAULT_PANEL
 VALUES = {0, 25, 50, 75, 100}
 PARAMETERS = {"temperature": 0, "top_p": 1, "max_tokens": 8192}
 

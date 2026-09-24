@@ -20,7 +20,7 @@ class JudgeMetricsTests(unittest.TestCase):
         summary = metrics(
             self.when,
             self.responses,
-            {"0": {"gpt-4o": 0, "gemini-2.5-pro": 0, "qwen3-omni": 0}},
+            {"0": {"gpt-5.6-sol": 0, "gemini-3.8-flash": 0, "qwen3.8-omni": 0}},
         )
         self.assertTrue(summary["complete"])
         self.assertEqual(summary["qgold"], 0)
@@ -29,7 +29,9 @@ class JudgeMetricsTests(unittest.TestCase):
 
     def test_incomplete_panel_never_averaged(self):
         summary = metrics(
-            self.when, self.responses, {"0": {"gpt-4o": 100, "gemini-2.5-pro": 100}}
+            self.when,
+            self.responses,
+            {"0": {"gpt-5.6-sol": 100, "gemini-3.8-flash": 100}},
         )
         self.assertFalse(summary["complete"])
         self.assertIsNone(summary["qgold"])
@@ -40,7 +42,7 @@ class JudgeMetricsTests(unittest.TestCase):
         summary = metrics(
             self.when,
             self.responses,
-            {"0": {"gpt-4o": 75, "gemini-2.5-pro": 75, "qwen3-omni": 75}},
+            {"0": {"gpt-5.6-sol": 75, "gemini-3.8-flash": 75, "qwen3.8-omni": 75}},
         )
         self.assertEqual(summary["qgold"], 75 / 128)
         self.assertEqual(summary["qens_joint"], 0)
@@ -56,6 +58,13 @@ class JudgeMetricsTests(unittest.TestCase):
         summary = metrics(self.when, self.responses, scores, "gpt56-sol")
         self.assertTrue(summary["complete"])
         self.assertEqual(summary["qgold"], 75 / 128)
+
+    def test_original_panel_remains_explicit(self):
+        scores = {"0": {"gpt-4o": 100, "gemini-2.5-pro": 50, "qwen3-omni": 75}}
+        self.assertFalse(metrics(self.when, self.responses, scores)["complete"])
+        self.assertTrue(
+            metrics(self.when, self.responses, scores, "paper-v3")["complete"]
+        )
 
     def test_original_scores_cannot_fill_substitute_panel(self):
         scores = {"0": {"gpt-4o": 100, "gemini-2.5-pro": 50, "qwen3-omni": 75}}

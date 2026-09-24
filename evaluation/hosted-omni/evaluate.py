@@ -23,6 +23,27 @@ ENCODING = {
 }
 
 
+MODEL_DEFAULTS = {
+    "dashscope/qwen3.8-omni-flash": ("off", "video_url", False),
+    "dashscope/qwen3.5-omni-plus": ("off", "video_url", False),
+    "dashscope/qwen3.5-omni-flash-2026-03-15": ("off", "video_url", False),
+    "gemini-3.8-flash": ("default", "file", True),
+}
+
+
+def apply_model_defaults(args):
+    thinking, media_type, omit_modalities = MODEL_DEFAULTS.get(
+        args.model, ("default", "video_url", False)
+    )
+    if args.thinking is None:
+        args.thinking = thinking
+    if args.media_input_type is None:
+        args.media_input_type = media_type
+    if args.omit_modalities is None:
+        args.omit_modalities = omit_modalities
+    return args
+
+
 def file_hash(path):
     h = hashlib.sha256()
     with Path(path).open("rb") as f:
@@ -407,16 +428,13 @@ def main():
     parser.add_argument("--key-field", default="OPENAI_API_KEY")
     parser.add_argument("--base-url", default=os.environ.get("OPENAI_API_BASE"))
     parser.add_argument("--model", default="dashscope/qwen3.8-omni-flash")
-    parser.add_argument(
-        "--thinking", choices=["default", "on", "off"], default="default"
-    )
+    parser.add_argument("--thinking", choices=["default", "on", "off"])
     parser.add_argument("--max-tokens", type=int, default=8192)
-    parser.add_argument(
-        "--media-input-type", choices=["video_url", "file"], default="video_url"
-    )
+    parser.add_argument("--media-input-type", choices=["video_url", "file"])
     parser.add_argument(
         "--omit-modalities",
-        action="store_true",
+        action=argparse.BooleanOptionalAction,
+        default=None,
         help="Omit the optional output modalities field for providers that reject it",
     )
     parser.add_argument("--concurrency", type=int, default=8)
@@ -427,7 +445,7 @@ def main():
         default=["when", "how", "who"],
     )
     parser.add_argument("--limit", type=int)
-    args = parser.parse_args()
+    args = apply_model_defaults(parser.parse_args())
     if not args.base_url:
         parser.error("Set --base-url or OPENAI_API_BASE")
     if (

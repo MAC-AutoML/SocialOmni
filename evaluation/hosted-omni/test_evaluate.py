@@ -1,8 +1,10 @@
+import argparse
 import json
 import unittest
 from pathlib import Path
 
 from evaluate import (
+    apply_model_defaults,
     gold_when,
     media_input,
     participant,
@@ -13,6 +15,39 @@ from evaluate import (
 
 
 class ProtocolTests(unittest.TestCase):
+    def test_model_request_defaults_and_overrides(self):
+        for model in (
+            "dashscope/qwen3.8-omni-flash",
+            "dashscope/qwen3.5-omni-plus",
+            "dashscope/qwen3.5-omni-flash-2026-03-15",
+            "gemini-3.8-flash",
+            "custom-model",
+        ):
+            with self.subTest(model=model):
+                args = argparse.Namespace(
+                    model=model,
+                    thinking=None,
+                    media_input_type=None,
+                    omit_modalities=None,
+                )
+                apply_model_defaults(args)
+                gemini = model == "gemini-3.8-flash"
+                self.assertEqual(
+                    args.media_input_type, "file" if gemini else "video_url"
+                )
+                self.assertEqual(args.omit_modalities, gemini)
+                self.assertEqual(
+                    args.thinking,
+                    "off" if model.startswith("dashscope/") else "default",
+                )
+                args.thinking = "on"
+                args.media_input_type = "video_url"
+                args.omit_modalities = False
+                apply_model_defaults(args)
+                self.assertEqual(args.thinking, "on")
+                self.assertEqual(args.media_input_type, "video_url")
+                self.assertFalse(args.omit_modalities)
+
     def test_file_input_preserves_mp4_payload(self):
         part = {"type": "video_url", "video_url": {"url": "data:video/mp4;base64,AA=="}}
         self.assertIs(media_input(part, "video_url"), part)

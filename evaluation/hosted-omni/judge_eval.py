@@ -8,8 +8,10 @@ from pathlib import Path
 
 from client import StreamingClient, atomic_json, digest
 
+DEFAULT_PANEL = "standard"
 JUDGES = {"gpt-4o", "gemini-2.5-pro", "qwen3-omni"}
 PANELS = {
+    DEFAULT_PANEL: {"gpt-5.6-sol", "gemini-3.8-flash", "qwen3.8-omni"},
     "paper-v3": JUDGES,
     "gpt56-sol": {"gpt-5.6-sol", "gemini-2.5-pro", "qwen3-omni"},
     "modern-20260924": {"gpt-5.6-sol", "gemini-3.8-flash", "qwen3.8-omni"},
@@ -43,7 +45,7 @@ def prompt(context, candidate):
     )
 
 
-def metrics(when, responses, scores, panel_name="paper-v3"):
+def metrics(when, responses, scores, panel_name=DEFAULT_PANEL):
     required_judges = PANELS[panel_name]
     if len(when) != 200 or len(responses) != 128:
         raise ValueError("The complete 200/128 core split is required")
@@ -218,7 +220,7 @@ if __name__ == "__main__":
     parser.add_argument("--contexts", type=Path, required=True)
     parser.add_argument("--judges", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
-    parser.add_argument("--panel", choices=sorted(PANELS), default="paper-v3")
+    parser.add_argument("--panel", choices=sorted(PANELS), default=DEFAULT_PANEL)
     parser.add_argument(
         "--only-judge", nargs="+", choices=sorted(set.union(*PANELS.values()))
     )
