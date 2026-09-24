@@ -1,0 +1,61 @@
+{
+  "source_run": "native-full/qwen3_omni_thinking",
+  "original_resume_file_sha256": "924f6aca873b36e182c8d539a69f5ac4b94ba94f7cfd1d93816c606c59d9fd88",
+  "original_manifest": {
+    "model": "qwen3_omni_thinking",
+    "weights": "Qwen/Qwen3-Omni-30B-A3B-Thinking/601ad8c82e091cf431a6f36143afb98908b1cf13",
+    "manifest_sha256": "0fa198836d9432be29b40aa220206d4dffc0821998361d80337a75fb2c4c82c0",
+    "temperature": 0.3,
+    "top_p": 1.0,
+    "max_new_tokens": 9000,
+    "runner_sha256": "94ded5c2d4e89e3d9ce461a9b3d7a4002d557114fb5a4cfaf8c1380b352a6379",
+    "selection": "all",
+    "package_versions": {
+      "torch": "2.7.1",
+      "transformers": "4.57.1",
+      "numpy": "2.5.3",
+      "av": "18.1.0"
+    },
+    "native_input": "video-and-its-original-audio-no-transcript",
+    "repo_archive_sha256": "31af70d6b69fbe470c7edd4e263b1efefe5dc5170e5948cbebb8e0bb9e67e540",
+    "preprocessing": {
+      "qwen_omni_utils": "0.0.9",
+      "process_mm_info_module": "qwen_omni_utils.v2_5",
+      "audio_module": "qwen_omni_utils.v2_5.audio_process",
+      "vision_module": "qwen_omni_utils.v2_5.vision_process",
+      "audio_sample_rate": 16000,
+      "vision_defaults": {
+        "MAX_RATIO": 200,
+        "SPATIAL_MERGE_SIZE": 2,
+        "IMAGE_MIN_TOKEN_NUM": 4,
+        "IMAGE_MAX_TOKEN_NUM": 16384,
+        "VIDEO_MIN_TOKEN_NUM": 128,
+        "VIDEO_MAX_TOKEN_NUM": 768,
+        "FPS": 2.0,
+        "FRAME_FACTOR": 2,
+        "FPS_MIN_FRAMES": 4,
+        "FPS_MAX_FRAMES": 768,
+        "MAX_NUM_WORKERS_FETCH_VIDEO": 8,
+        "MODEL_SEQ_LEN": 128000
+      }
+    }
+  },
+  "reused": [
+    {
+      "file": "how-video_0001.json",
+      "sha256": "da98f3ae1de9d458bd501bc33fde4e0fe83ded7a957db2aba57a29072204cdf7"
+    },
+    {
+      "file": "how-video_0002.json",
+      "sha256": "f89e1c5297b365947f9f73669afc0ec7fdfc2f554246fe75556419316d539410"
+    },
+    {
+      "file": "how-video_0004.json",
+      "sha256": "e7cfc6893a5046e77c444c3f8e609acf0cb00abe2f15fd9bdfe8ee767db06eae"
+    },
+    {
+      "file": "how-video_0006.json",
+      "sha256": "166fe06c411d8c3a0cc51a6e9b665f6b66cddf0f491d70fc73fa2d587be790ee"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "runtime": {
+    "torch_threads": 4,
+    "torch_interop_threads": 1,
+    "pyav_codec_threads": 1,
+    "swscale_threads": 1,
+    "torchvision_read_video_before_sha256": "958eacf1072a2ebe5eb471b8aa7fd24977b08f789a2efbc346db340248c61978",
+    "torchvision_read_video_after_sha256": "63693e80433a38464ebe498fc7721e76f656a56f74d6716dec62592456f879d2"
+  },
+  "comparisons": [
+    {
+      "sample_id": "video_0001",
+      "frames": [
+        425,
+        3,
+        752,
+        720
+      ],
+      "rgb_sha256": "0c27962fc22c2920bc80eebbc291dc7f38228e92d088677be2c9cbc8c35c053c",
+      "identical_audio_video": true
+    },
+    {
+      "sample_id": "video_0049",
+      "frames": [
+        975,
+        3,
+        160,
+        240
+      ],
+      "rgb_sha256": "3a77f3133ed37db44a7eda580604bcfdc44f96df38b0723efdf146d59f8de8b3",
+      "identical_audio_video": true
+    }
+  ]
+}

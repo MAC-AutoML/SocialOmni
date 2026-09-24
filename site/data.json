@@ -236,19 +236,19 @@
     {
       "id": "modern-qwen3_omni_thinking",
       "model": "Qwen3-Omni-Thinking",
-      "variant": "Native AV",
+      "variant": "Native AV · Thinking",
       "status": "published",
       "metrics": {
-        "who": 67.65,
-        "when": 56,
-        "qgold": null,
-        "qens": 61.52777777777778,
-        "cov_plus": 46.875,
-        "qens_joint": 28.841145833333332
+        "who": 75.65,
+        "when": 50.5,
+        "qgold": 63.1510416667,
+        "qens": 78.8461538462,
+        "cov_plus": 30.46875,
+        "qens_joint": 24.0234375
       },
       "classification": {
-        "who_macro_f1": 67.93948670118995,
-        "when_macro_f1": 55.92948717948718
+        "who_macro_f1": 75.31305535041041,
+        "when_macro_f1": 50.17486948147397
       },
       "judge_panel": "modern-20260924",
       "judges": [
@@ -261,7 +261,15 @@
           "en": "Answers and scores",
           "zh": "回答与评分"
         },
-        "url": "https://github.com/MAC-AutoML/SocialOmni/tree/main/evaluation/results/modern-panel-20260924/paper"
+        "url": "https://github.com/MAC-AutoML/SocialOmni/tree/main/evaluation/results/local-native-av-20260924/qwen3_omni_thinking"
+      },
+      "evaluation": {
+        "model": "Qwen/Qwen3-Omni-30B-A3B-Thinking",
+        "revision": "601ad8c82e091cf431a6f36143afb98908b1cf13",
+        "who_items": 2000,
+        "when_items": 200,
+        "how_items": 128,
+        "judge_scores": 363
       }
     },
     {

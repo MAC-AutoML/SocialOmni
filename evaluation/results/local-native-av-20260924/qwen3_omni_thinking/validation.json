@@ -1,0 +1,80 @@
+{
+  "model": "qwen3_omni_thinking",
+  "candidate_records": 2328,
+  "gold_positive": 128,
+  "judge_scores": 363,
+  "reused_records_verified": 4,
+  "source_archive_files_verified": 2604,
+  "independently_recomputed": {
+    "who": 75.64999999999999,
+    "when": 50.5,
+    "qgold": 63.15104166666667,
+    "qens": 78.84615384615384,
+    "cov_plus": 30.46875,
+    "qens_joint": 24.023437499999996
+  },
+  "classification_details": {
+    "who": {
+      "n": 2000,
+      "correct": 1513,
+      "accuracy": 75.64999999999999,
+      "macro_f1": 75.31305535041041,
+      "class_counts": {
+        "A": {
+          "tp": 459,
+          "fp": 125,
+          "fn": 110
+        },
+        "B": {
+          "tp": 424,
+          "fp": 118,
+          "fn": 137
+        },
+        "C": {
+          "tp": 354,
+          "fp": 167,
+          "fn": 99
+        },
+        "D": {
+          "tp": 276,
+          "fp": 73,
+          "fn": 141
+        }
+      },
+      "request_failures": 0,
+      "parse_failures": 4
+    },
+    "when": {
+      "n": 200,
+      "correct": 101,
+      "accuracy": 50.5,
+      "macro_f1": 50.17486948147397,
+      "class_counts": {
+        "YES": {
+          "tp": 41,
+          "fp": 12,
+          "fn": 87
+        },
+        "NO": {
+          "tp": 60,
+          "fp": 86,
+          "fn": 12
+        }
+      },
+      "request_failures": 0,
+      "parse_failures": 1
+    }
+  },
+  "fresh_when_verified": true,
+  "raw_and_final_answers_preserved": true,
+  "original_scores_unchanged": true,
+  "sanitization": {
+    "omitted_fields": [
+      "video_path",
+      "gpu_visibility"
+    ],
+    "resume_source_replaced_with_run_identifier": true,
+    "raw_model_text_and_generation_fields_unchanged": true
+  },
+  "validator_sha256": "34e65cd730182542a220bef67915a216e6d9687eb84ce981d842723947b3ef12"
+}

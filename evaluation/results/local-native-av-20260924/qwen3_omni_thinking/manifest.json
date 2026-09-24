@@ -1,0 +1,34 @@
+{
+  "input.json": {
+    "sha256": "98be22a5d01c7a3c3525797a9f5cfb55282005bd69e2eb06fcc4cbcf033b1985",
+    "bytes": 88076
+  },
+  "results.json": {
+    "sha256": "300cf900cfa7da1dcf74c86e2a77263da1ff68cba4f989bbce4df378f8c34cdd",
+    "bytes": 199758
+  },
+  "candidates.json": {
+    "sha256": "8c30fa44955b1154fb46753ae18abd8d960fcc673f578b675323f1b178cb5fa0",
+    "bytes": 24391661
+  },
+  "source-manifest.json": {
+    "sha256": "096087d4779592a5b0281fd1e80ef288c818f0f966ef388b0b57d9e4ce5062aa",
+    "bytes": 2432
+  },
+  "shard-provenance.json": {
+    "sha256": "3906897592a9a7a99a4bdb41518fc61115dae165f2adb7da436d1104753114e6",
+    "bytes": 907797
+  },
+  "resume-provenance.json": {
+    "sha256": "40c3f33f3864b6b9a0e2c1dcbce2fdf5822bb85b1b56246bc5514c1ba2c09372",
+    "bytes": 2126
+  },
+  "runtime-validation.json": {
+    "sha256": "e27e4227218ce5f0aae72afa65ad26933d2574ebda92dca50ec1ea7e4fc238d9",
+    "bytes": 871
+  },
+  "validation.json": {
+    "sha256": "c9d0a22e895ee313db6493a15cadcab11a5ecbf1040732f147bee555efd53245",
+    "bytes": 1797
+  }
+}
