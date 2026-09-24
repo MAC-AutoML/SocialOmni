@@ -44,6 +44,7 @@ The [bilingual leaderboard](https://mac-automl.github.io/SocialOmni/) lists all 
 | Model | Who | When | How: QGold | How: QEns | Cov+ | QEns_joint |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
 | Gemini 3.8 Flash | 25.40 | 82.50 | 86.52 | 86.48 | 82.81 | 71.61 |
+| Gemini 3.6 Flash | 13.20 | 88.00 | 79.23 | 79.50 | 88.28 | 70.18 |
 | Gemini 3 Flash | 0.75 | 78.50 | 86.59 | 87.79 | 78.91 | 69.27 |
 | Gemini 3.1 Pro Preview | 45.05 | 84.00 | 80.01 | 81.92 | 82.81 | 67.84 |
 | Gemini 2.5 Pro | 5.80 | 78.00 | 80.40 | 82.30 | 82.03 | 67.51 |

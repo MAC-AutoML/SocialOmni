@@ -626,6 +626,37 @@
         },
         "url": "https://github.com/MAC-AutoML/SocialOmni/tree/main/evaluation/results/gemini-catalog-av-20260924/gemini35flashlite"
       }
+    },
+    {
+      "id": "modern-gemini-3.6-flash",
+      "model": "Gemini 3.6 Flash",
+      "variant": "Native AV · Default thinking",
+      "status": "published",
+      "metrics": {
+        "who": 13.2,
+        "when": 88.0,
+        "qgold": 79.23177083333333,
+        "qens": 79.49852507374632,
+        "cov_plus": 88.28125,
+        "qens_joint": 70.18229166666667
+      },
+      "classification": {
+        "who_macro_f1": 23.19509897377386,
+        "when_macro_f1": 87.38152610441767
+      },
+      "judge_panel": "modern-20260924",
+      "judges": [
+        "gemini-3.8-flash",
+        "qwen3.8-omni",
+        "gpt-5.6-sol"
+      ],
+      "source": {
+        "label": {
+          "en": "Answers and scores",
+          "zh": "回答与评分"
+        },
+        "url": "https://github.com/MAC-AutoML/SocialOmni/tree/main/evaluation/results/gemini-catalog-av-20260924/gemini36flash"
+      }
     }
   ],
   "judges": [
