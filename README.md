@@ -59,6 +59,7 @@ The [bilingual leaderboard](https://mac-automl.github.io/SocialOmni/) lists all 
 | GPT-4o | 35.05 | 50.50 | 77.15 | 76.50 | 30.47 | 23.31 |
 | Qwen3.8-Omni-Flash | 89.45 | 44.00 | 77.02 | 69.93 | 17.97 | 12.57 |
 | Gemini 3 Pro | 45.40 | 52.00 | 21.55 | 25.00 | 32.03 | 8.01 |
+| Gemini 3.5 Flash-Lite | 78.45 | 38.50 | 74.61 | 65.28 | 4.69 | 3.06 |
 | Baichuan-Omni-1.5 | 8.40 | 16.00 | 44.27 | 40.63 | 6.25 | 2.54 |
 
 All scores use a 0–100 scale; higher is better. — indicates an unavailable score.
