@@ -77,19 +77,19 @@
     {
       "id": "modern-gemini_2_5_flash",
       "model": "Gemini 2.5 Flash",
-      "variant": "Visual-only",
+      "variant": "Native AV",
       "status": "published",
       "metrics": {
-        "who": 33.7,
-        "when": 55.5,
-        "qgold": null,
-        "qens": 30.3030303030303,
-        "cov_plus": 42.96875,
-        "qens_joint": 13.020833333333332
+        "who": 1.7000000000000002,
+        "when": 68,
+        "qgold": 67.57812499999999,
+        "qens": 72.11934156378601,
+        "cov_plus": 63.28125,
+        "qens_joint": 45.638020833333336
       },
       "classification": {
-        "who_macro_f1": 33.63606343041651,
-        "when_macro_f1": 55.49888747218681
+        "who_macro_f1": 2.999295187419116,
+        "when_macro_f1": 67.26342710997443
       },
       "judge_panel": "modern-20260924",
       "judges": [
@@ -102,7 +102,14 @@
           "en": "Answers and scores",
           "zh": "回答与评分"
         },
-        "url": "https://github.com/MAC-AutoML/SocialOmni/tree/main/evaluation/results/modern-panel-20260924/paper"
+        "url": "https://github.com/MAC-AutoML/SocialOmni/tree/main/evaluation/results/gemini-native-av-20260924/gemini25flash"
+      },
+      "evaluation": {
+        "model": "gemini-2.5-flash",
+        "who_items": 2000,
+        "when_items": 200,
+        "how_items": 128,
+        "judge_scores": 360
       }
     },
     {
