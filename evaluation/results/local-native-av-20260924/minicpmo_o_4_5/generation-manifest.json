@@ -1,0 +1,49 @@
+{
+  "model": "minicpmo_4_5",
+  "weights": "openbmb/MiniCPM-o-4_5/503e754207c94da6bb26850b4469f367c9ea3582",
+  "manifest_sha256": "41438a53089a74bcb40bd69157ab4a539e05a7be5c3f4e4b5d04fafb0b72e157",
+  "temperature": 0.0,
+  "do_sample": false,
+  "top_p": 1.0,
+  "max_new_tokens": 256,
+  "runner_sha256": "c617253a723dc0a077e15a3061d56ed8c62ccaec50ee0ba8236de86da54dbe68",
+  "selection": "all",
+  "native_input": "video-frames-and-original-audio-no-transcript",
+  "preprocessing": {
+    "stack_frames": 1,
+    "use_ffmpeg": true,
+    "adjust_audio_length": true
+  },
+  "package_versions": {
+    "torch": "2.7.1",
+    "transformers": "4.51.0",
+    "minicpmo-utils": "1.0.6",
+    "numpy": "2.5.3"
+  },
+  "source_shards": [
+    {
+      "directory": "part-0",
+      "manifest_sha256": "ac02991d233f4fcc72c62fa0e163bddd6c764115bd4ad3694cdc9696fed8d7c4",
+      "manifest_file_sha256": "3857c1fbd403cf0ab9160fce0cbcbb136072b795be486eb6bc312b16716bf793",
+      "count": 582
+    },
+    {
+      "directory": "part-1",
+      "manifest_sha256": "508c0d102de433ee5c2815a18ee14d763e99c37e2edcd68c4e4a38db18a6faad",
+      "manifest_file_sha256": "7f549366d84985f670c77bb35366adabd2afb1dd41114931ea012af7409b63d7",
+      "count": 582
+    },
+    {
+      "directory": "part-2",
+      "manifest_sha256": "84feaef9c69d5d91fda8ce891b08c54981991dcfd75c619e2fbc90ef6bc43867",
+      "manifest_file_sha256": "f5a672863642a0e6ea0061039080d02a7079289e11650717396e01694dbcafb1",
+      "count": 582
+    },
+    {
+      "directory": "part-3",
+      "manifest_sha256": "1d0cc2c3d1ee9cef958752c2b96e1035e953d948abfeb4ce6e5a6deab5067d41",
+      "manifest_file_sha256": "dbbf128b4ec49e29ebc2b4174cd11bfb6b410f825f03b53ad079021ee7c4ef01",
+      "count": 582
+    }
+  ]
+}

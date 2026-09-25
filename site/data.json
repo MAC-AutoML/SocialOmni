@@ -734,6 +734,44 @@
         "how_items": 128,
         "judge_scores": 384
       }
+    },
+    {
+      "id": "modern-minicpmo-o-4-5",
+      "model": "MiniCPM-o 4.5",
+      "variant": "Native AV",
+      "status": "published",
+      "metrics": {
+        "who": 72.8,
+        "when": 38.0,
+        "qgold": 57.8125,
+        "qens": 47.916666666666664,
+        "cov_plus": 6.25,
+        "qens_joint": 2.9947916666666665
+      },
+      "classification": {
+        "who_macro_f1": 72.52443805382262,
+        "when_macro_f1": 31.868131868131872
+      },
+      "judge_panel": "modern-20260924",
+      "judges": [
+        "gemini-3.8-flash",
+        "qwen3.8-omni",
+        "gpt-5.6-sol"
+      ],
+      "source": {
+        "label": {
+          "en": "Answers and scores",
+          "zh": "回答与评分"
+        },
+        "url": "https://github.com/MAC-AutoML/SocialOmni/tree/main/evaluation/results/local-native-av-20260924/minicpmo_o_4_5"
+      },
+      "evaluation": {
+        "model": "openbmb/MiniCPM-o-4_5",
+        "who_items": 2000,
+        "when_items": 200,
+        "how_items": 128,
+        "judge_scores": 384
+      }
     }
   ],
   "judges": [

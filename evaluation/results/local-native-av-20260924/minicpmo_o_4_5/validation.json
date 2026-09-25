@@ -1,0 +1,35 @@
+{
+  "model": "minicpmo_4_5",
+  "complete": true,
+  "response_counts": {
+    "who": 2000,
+    "when": 200,
+    "how": 128
+  },
+  "unique_ids": 2328,
+  "generation_errors": 0,
+  "judge_scores": 384,
+  "judge_panel": [
+    "gpt-5.6-sol",
+    "gemini-3.8-flash",
+    "qwen3.8-omni"
+  ],
+  "missing_score_ids": [],
+  "independent_metrics": {
+    "who": 72.8,
+    "when": 38.0,
+    "qgold": 57.8125,
+    "qens": 47.916666666666664,
+    "cov_plus": 6.25,
+    "qens_joint": 2.9947916666666665,
+    "who_macro_f1": 72.52443805382262,
+    "when_macro_f1": 31.868131868131872
+  },
+  "artifacts": {
+    "generation-manifest.json": "28f1093094c62c8cd24f6819b4d848a391f1784e41364bb6a52f522795b522ba",
+    "input.json": "78e7c15f53b237fe944317aae3add5473789052f11063f58c4060973dc115877",
+    "manifest.json": "130c57e361682c5162f5d52657d2944f5a0a4adfcda12583e3002f5e2087f11b",
+    "results.json": "4d34869ee9f62a2d551bee9a25165a481774fb5eba03139eeff4e303b558efe9",
+    "scores.json": "3d1f3e28f213246fb366e5fb2274ed6cb060fda11b6b136bc70b0563dd8e940e"
+  }
+}

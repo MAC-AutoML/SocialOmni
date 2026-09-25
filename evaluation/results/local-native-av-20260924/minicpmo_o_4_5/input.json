@@ -1,0 +1,2093 @@
+{
+  "schema_version": 1,
+  "source": "Supplemental hosted candidate run",
+  "source_sha256": {
+    "candidate_manifest": "28f1093094c62c8cd24f6819b4d848a391f1784e41364bb6a52f522795b522ba",
+    "contexts": "af2722eaa1cd81efe5cdc7095303d8c230ee73bc0d89d033c660b92841b83a51"
+  },
+  "models": [
+    {
+      "model": "minicpmo_4_5",
+      "source": "minicpmo_4_5",
+      "full_gold": true,
+      "who": {
+        "n": 2000,
+        "correct": 1456,
+        "accuracy": 72.8,
+        "macro_f1": 72.52443805382262,
+        "class_counts": {
+          "A": {
+            "tp": 450,
+            "fp": 176,
+            "fn": 119
+          },
+          "B": {
+            "tp": 430,
+            "fp": 174,
+            "fn": 131
+          },
+          "C": {
+            "tp": 300,
+            "fp": 119,
+            "fn": 153
+          },
+          "D": {
+            "tp": 276,
+            "fp": 72,
+            "fn": 141
+          }
+        },
+        "request_failures": 0,
+        "parse_failures": 3
+      },
+      "when_summary": {
+        "n": 200,
+        "correct": 76,
+        "accuracy": 38.0,
+        "macro_f1": 31.868131868131872,
+        "class_counts": {
+          "YES": {
+            "tp": 8,
+            "fp": 4,
+            "fn": 120
+          },
+          "NO": {
+            "tp": 68,
+            "fp": 120,
+            "fn": 4
+          }
+        },
+        "request_failures": 0,
+        "parse_failures": 0
+      },
+      "when": [
+        {
+          "item_id": "video_0001",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0002",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0003",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0004",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0005",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0006",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0007",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0008",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0009",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0010",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0011",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0012",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0013",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0014",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0015",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0016",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0017",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0018",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0019",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0020",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0021",
+          "gold": "YES",
+          "prediction": "YES"
+        },
+        {
+          "item_id": "video_0022",
+          "gold": "NO",
+          "prediction": "YES"
+        },
+        {
+          "item_id": "video_0023",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0024",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0025",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0026",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0027",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0028",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0029",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0030",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0031",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0032",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0033",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0034",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0035",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0036",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0037",
+          "gold": "YES",
+          "prediction": "YES"
+        },
+        {
+          "item_id": "video_0038",
+          "gold": "YES",
+          "prediction": "YES"
+        },
+        {
+          "item_id": "video_0039",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0040",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0041",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0042",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0043",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0044",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0045",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0046",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0047",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0048",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0049",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0050",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0051",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0052",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0053",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0054",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0055",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0056",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0057",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0058",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0059",
+          "gold": "NO",
+          "prediction": "YES"
+        },
+        {
+          "item_id": "video_0060",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0061",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0062",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0063",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0064",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0065",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0066",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0067",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0068",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0069",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0070",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0071",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0072",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0073",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0074",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0075",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0076",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0077",
+          "gold": "YES",
+          "prediction": "YES"
+        },
+        {
+          "item_id": "video_0078",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0079",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0080",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0081",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0082",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0083",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0084",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0085",
+          "gold": "NO",
+          "prediction": "YES"
+        },
+        {
+          "item_id": "video_0086",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0087",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0088",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0089",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0090",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0091",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0092",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0093",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0094",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0095",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0096",
+          "gold": "NO",
+          "prediction": "YES"
+        },
+        {
+          "item_id": "video_0097",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0098",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0099",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0100",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0101",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0102",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0103",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0104",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0105",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0106",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0107",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0108",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0109",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0110",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0111",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0112",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0113",
+          "gold": "YES",
+          "prediction": "YES"
+        },
+        {
+          "item_id": "video_0114",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0115",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0116",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0117",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0118",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0119",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0120",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0121",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0122",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0123",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0124",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0125",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0126",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0127",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0128",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0129",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0130",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0131",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0132",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0133",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0134",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0135",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0136",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0137",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0138",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0139",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0140",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0141",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0142",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0143",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0144",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0145",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0146",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0147",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0148",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0149",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0150",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0151",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0152",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0153",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0154",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0155",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0156",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0157",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0158",
+          "gold": "YES",
+          "prediction": "YES"
+        },
+        {
+          "item_id": "video_0159",
+          "gold": "YES",
+          "prediction": "YES"
+        },
+        {
+          "item_id": "video_0160",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0161",
+          "gold": "YES",
+          "prediction": "YES"
+        },
+        {
+          "item_id": "video_0162",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0163",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0164",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0165",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0166",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0167",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0168",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0169",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0170",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0171",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0172",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0173",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0174",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0175",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0176",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0177",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0178",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0179",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0180",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0181",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0182",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0183",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0184",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0185",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0186",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0187",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0188",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0189",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0190",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0191",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0192",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0193",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0194",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0195",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0196",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0197",
+          "gold": "NO",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0198",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0199",
+          "gold": "YES",
+          "prediction": "NO"
+        },
+        {
+          "item_id": "video_0200",
+          "gold": "YES",
+          "prediction": "NO"
+        }
+      ]
+    }
+  ],
+  "records": [
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0001",
+      "context": "As you know Whitney has been a one woman wrecking ball, strong arming every college student who dares cross her path in adjoining Tinder.Judging by these numbers guys, they're telling their friends, Okay",
+      "target_question": "What should the man with his hand on the woman's shoulder say?",
+      "reference": "so I'd like to officially announce that Whitney is the newest and certainly the most feminine cofounder of Tider.",
+      "candidate": "Judging by these numbers, guys, they're telling their friends, okay?"
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0002",
+      "context": "When we filed the suit.You know, you said we had a strong case and we do you demonstrated a pattern of abuse that is systemic and company wide right and the picture of these text messages paint well, Justin Mat would exactly cut a sympathetic figure for a jury I mean he was suspended which is why we were able to get this settlement figure so high Now",
+      "target_question": "What should the woman sitting in the middle say?",
+      "reference": "the money is nothing.It's not nothing to me, it's a crazy amount to me, but for them it is a slap on the wrist",
+      "candidate": "Which is why we were able to get this settlement figure so high."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0003",
+      "context": "All right, all right, your sandwich for the cheese toasie, the bag of scratchings and a chocolate bar. Come on, I'm robbing myself. I don't want to swap it.  All right, all right, here's what I'll do. The toastie, the scratchings, a choccy bar and...a roast dinner with all the trimmings. How long has that been in there? Come on, I'll throw in the briefeases well. Fine, just take it. Lovely.",
+      "target_question": "What should the woman in green say?",
+      "reference": "Pleasure doing business with you.",
+      "candidate": "Fine, just take it."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0004",
+      "context": "Hi, I've got a form to hand in. Name? Mr. Capp. Your name. Emily. No, if you name's not down, you're not coming in. I don't want to come in. I just want to give this to Mr Capp. Oh yeah that old one. I'll go inside I look for this Mr. Capp. Meanwhile you and all your mates sneak in.",
+      "target_question": "What should the little girl say?",
+      "reference": "What mates? I don't want to come in, I just want to give him this form.",
+      "candidate": "I don't want to come in and I just want to give this to Mr. Cat."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0006",
+      "context": "All right, sir? Have you got a plaster for this? Sure thing, little buddy! Let's take a look at you. Prep the ER! It's just a grace, sir. It's worse than I thought! Get me the crash team! I need five bags of O negative, stat!",
+      "target_question": "What should the little boy say?",
+      "reference": "Sir, just a plaster's fine.",
+      "candidate": "It's just a graze, sir."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0011",
+      "context": "Er, Dave. Sir. Sh. I'm on a stakeout. Right. Sorry. You know that bird you're trying to catch? Bird? Winged demon, more like. But there's no way he's getting away from me this time. Right, well, about that... I'm in a heightened state of alert. I could hear an ant cough a mile away. Doesn't sound like you need my help, then.",
+      "target_question": "What should the man in camouflage say?",
+      "reference": "I got it all under control.",
+      "candidate": "I'm in a heightened state of alert. I can hear an ant cough a mile away."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0012",
+      "context": "Good morning! Good morning. Mrs Collins, Ofsted. Here to see Mr Barker for the inspection. Certainly. One moment. Morning, Mr Barker. I've got a lady here to see you. Mrs Collins, Ofsted. Certainly. I'll let her know. Unfortunately, Mr Barker has been detained at the vets. He sends his apologies and asks if you'd mind showing yourself around? Of course.",
+      "target_question": "What should the woman in yellow say?",
+      "reference": "Here's a map for yourself.",
+      "candidate": "Certainly, I'll let her know."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0014",
+      "context": "These are gonna be some tough times. You can call me anytime， even if it's the middle of the night. Here's the number at my uncle's farm.",
+      "target_question": "What should the woman say?",
+      "reference": "Thanks.",
+      "candidate": "Thank you so much."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0015",
+      "context": "Does the name Harvey Carlson ring a bell? Oh, yes, Harvey Carlson, I remember. He said I should call him. He is the publisher of the Carlson Publishing Company. He said they need a new book of photographs and he really liked my concept. So why don't you call him in the morning? Do you think I have enough to show him? I've been through every section with you, Richard. It's quite complete. And now that you're satisfied with the performing art section, I think you should show it to Mr. Carlson.",
+      "target_question": "What should the man say?",
+      "reference": "You're right, My family album USA feels right. I'll call in the morning and set up an appointment to see him.",
+      "candidate": "Do you think I have enough to show him?"
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0016",
+      "context": "Okay, let's take a look. Good, very good. Family album U.S.A, is an excellent title. If you had to describe the book in one sentence, how would you do it? Well, I describe it as a book, which is a portrait of the United States, the places, the people, mostly the people. The things they do, the ways they live, the places they visit and the landmarks, a photographic journey.",
+      "target_question": "What should the man with gray hair say?",
+      "reference": "These are wonderful.",
+      "candidate": "Very good. If you had to describe the book in one sentence, how would you do it?"
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0017",
+      "context": "I'm glad you like them. I do, but... But? there's something missing. You've got a good eye, Richard, you're a terrific photographer. But before I can publish your work, I need to meet with my marketing department and you've got to do one more thing.",
+      "target_question": "What should the man with black hair say?",
+      "reference": "What's that, Mr. Carlson？",
+      "candidate": "What's that?"
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0018",
+      "context": "In the section on culture, you've included performing art centers but you've left out street performance. The mimes, the musicians, the dancers in the parks and on the streets. Richard, if you go out and photograph street performances in the city, you'll have it. That is a great idea. The performing arts centers and the street performances. I'll do it. If you do it, I'll publish your work. Are you serious?",
+      "target_question": "What should the man with gray hair say?",
+      "reference": "I've never been more serious.",
+      "candidate": "I'm serious."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0019",
+      "context": "When do you think you can return with street performances? A couple of weeks. If they're as good as the rest of these pictures, it's a deal.",
+      "target_question": "What should the man with black hair say?",
+      "reference": "You won't be disappointed, Mr. Carlson. Thanks.",
+      "candidate": "I'll be back in a couple of weeks."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0020",
+      "context": "What a job! Good work, Richard! I'm so glad you like them so much. Like them? They represent your best work. Really?",
+      "target_question": "What should the man with gray hair say?",
+      "reference": "Absolutely.",
+      "candidate": "Really?"
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0021",
+      "context": "But if Boswell wins, he'll be an important decision maker on the school board, and he doesn't know anything about our children's education. Who's running against him? Nobody, that's the problem. Well it sounds to me like Carter Boswell is going to win the seat on the board. Oh, not if I can stop him! And how are you going to stop him?",
+      "target_question": "What should the woman say?",
+      "reference": "I don't know. Maybe I'll run against him.",
+      "candidate": "I'm not sure yet, but I'm going to figure something out."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0024",
+      "context": "A lot of people would like my help. Do you have a story? I'm planning to run for the school board. Against Carter Boswell? Yes. Well, that is news. Will you announce that I'm running? Sure, but I need some information.",
+      "target_question": "What should the woman say?",
+      "reference": "Of course.",
+      "candidate": "What kind of information?"
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0025",
+      "context": "You have to go on television, too. Boswell's a powerful speaker. You can be too, your ideas are good ones.",
+      "target_question": "What should the woman say?",
+      "reference": "I don't know. I'm not sure I'm up to it.",
+      "candidate": "I don't know if I can do that."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0026",
+      "context": "Hello, Mr. Maxwell. How are you? I just called to tell you that you are very impressive, you lost the election, but you won the attention of the residents of Riverdal,e of Boswell, and of me.",
+      "target_question": "What should the woman say?",
+      "reference": "Thank you, Mr. Maxwell, I appreciate your kind words.",
+      "candidate": "Well, thank you."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0028",
+      "context": "Something blue. My wristband. I, I wore it when I married your father. Oh oh mother, I forgot you're still had it. It's just so lovely. I bought it in an antique shop when I was about 18 years old. I saved it for my wedding day. And you saved it for me, didn't you, Mother?",
+      "target_question": "What should the woman in the blue-patterned dress say?",
+      "reference": "Yes, honey, I did.",
+      "candidate": "I wore it when I married your father."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0030",
+      "context": "Where's mom? She went to a school board meeting. I don't know how she does it, she sure keeps busy. It's important to her. There are lots of places to go, lots of things to do. She can't sit around and do nothing, Philip works late.",
+      "target_question": "What should the young man in grey say?",
+      "reference": "I guess you're right.",
+      "candidate": "Philip works late."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0031",
+      "context": "You' been working late almost every night this week, Dad, Aren't you exhausted? I don't have time to be exhausted. You and mom haven't had dinner together with us in almost a full week.",
+      "target_question": "What should the man in the white shirt say?",
+      "reference": "Yeah. I feel bad about us not having dinner with the family, but our schedules are so different.",
+      "candidate": "I'm trying to make up for lost time."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0032",
+      "context": "It's not good to eat before going to bed. A cookie can't hurt, though. Well, I'm heading off for bed, and a good night's sleep.",
+      "target_question": "What should the man in grey say?",
+      "reference": "Well good night.",
+      "candidate": "Good night, Dad."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0034",
+      "context": "Hello there,Robbie. What are you doing up this late? Reading. Reading? At this hour? Come on, Robbie, what are you doing up this late? Things on my mind. Do you care to talk about them?",
+      "target_question": "What should the man say?",
+      "reference": "Sure, if you don't mind listening.",
+      "candidate": "Things on my mind?"
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0035",
+      "context": "If you have something you want to talk about, I'm always prepared to listen. You haven't been around much lately. So that's it. Okay, let's talk. You and dad are like ships that pass the night. Dad works hard and he works late. You work hard on all your committees and you work late. I thought you were proud of the work I do.",
+      "target_question": "What should the man say?",
+      "reference": "I am, mom, real proud. You are one fantastic mom, but, but I've been noticing how little quality time you spend with dad and me and the family.",
+      "candidate": "I am proud of the work I do."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0036",
+      "context": "I think I have an idea. You do? Yep, I think I have an idea that will bring dad and you together in a more scheduled way.",
+      "target_question": "What should the woman say?",
+      "reference": "What is it?",
+      "candidate": "You do?"
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0037",
+      "context": "You're right. We'll do it. I'm going to talk to daddy about it right now. But dad was so exhausted when he came home from work. Why don't you talk to him about it tomorrow?",
+      "target_question": "What should the woman say?",
+      "reference": "You are a very smart young. I think I'll wait until tomorrow.",
+      "candidate": "Tomorrow? No, I'm talking to him right now."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0038",
+      "context": "I've been trying to find a way to encourage reading. Good luck. Oh, I think I may have found a way to do it. Yeah, tell me about it. I work with families every day, Ellen, I see how people spend their leisure time-- young and old. Mostly watching television. Well, that would be okay if and I repeat, if People took the time to read. I couldn't agree with you more. The question is, how do we get them to read more? I think you're going to give me the answer to that question, you... you have that look in your eye.",
+      "target_question": "What should the woman say?",
+      "reference": "I do have an answer, Philip, or at least I think I do.",
+      "candidate": "The question is, how do we get them to read more?"
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0039",
+      "context": "But how do you plan to do that? By arranging with the public schools to schedule one hour a week to start with. During that time, parents are invited to attend and to read along with the children, their children. It can go beyond the schools, Ellem. Really? I guarantee you it would go very well in the hospitals. As my patients, mostly kids would would love to read and be read to. You think so? I know so. Maybe we can experiment with your patients and see how the plan works.",
+      "target_question": "What should the man say?",
+      "reference": "I love the idea.",
+      "candidate": "Maybe we can experiment with your patients and see how the plan works."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0040",
+      "context": "This would be a wonderful way to accomplish that. I have a question. Yes? What do we read? To the patients in the ward? Yes.",
+      "target_question": "What should the woman say?",
+      "reference": "Well let's you and I talk about it.",
+      "candidate": "For the patients in the ward?"
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0046",
+      "context": "You're growing so fast, Michelle. Can I take it off? I'm hot.",
+      "target_question": "What should the woman in blue say?",
+      "reference": "Sure.",
+      "candidate": "Yes, you can take it off."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0047",
+      "context": "Well, are you going to tell me what's on your mind, Harry? I have been offered a job with a major accounting company in Los Angeles. But first, tell me about the job, Harry.If it's a good one, then we'll make it work for us I have a client in the garment business on seventhth Avenue I do his taxes every year.He has a big sales office in Los Angeles, and the company in Los Angeles that does his major accounting work is looking for an executive. And he recommended me.",
+      "target_question": "What should the woman say?",
+      "reference": "That's wonderful, Harry. What about the salary?",
+      "candidate": "But first tell me about the job, Harry. If it's a good one, then we'll make it work for us."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0048",
+      "context": "Oh hello there. Are you ready for lunch with your grandpa? Oh hi, grandpa, it's, of course I am, but my mind isn't.",
+      "target_question": "What should the man say?",
+      "reference": "What's the matter, Susan?",
+      "candidate": "What's the matter with your mind?"
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0049",
+      "context": "A real dilemma. Does it have anything to do with you and Harry? Yes, but I don't know where to start. Maybe I can help.",
+      "target_question": "What should the woman say?",
+      "reference": "Tell me.",
+      "candidate": "Can I tell you what I think?"
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0050",
+      "context": "I think that you're very successful and that you have a fantastic reputation in the toy industry, I think you could talk to Mr. Marra.And I think he could help you find a real good job in Los Angeles. He was very helpful to me. Remember?",
+      "target_question": "What should the woman say?",
+      "reference": "I suppose I could call him.",
+      "candidate": "Mr. Marchetta?"
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0051",
+      "context": "And what about Michelle? What do you think? I think Michelle is better off staying where she is. What does she think? I don't know for sure.",
+      "target_question": "What should the man say?",
+      "reference": "Well, you should have to ask her.",
+      "candidate": "Well, what do you think?"
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0052",
+      "context": "Harry, it's the perfect job for you. You'll love it. It's a big decision for me, Bill, and I have to discuss it with my wife. I don't know if it's right for her.",
+      "target_question": "What should the man without glasses say?",
+      "reference": "She'll love it. It's a once in a lifetime offer, Harry.",
+      "candidate": "It's a big decision for me, Bill, and I have to discuss it with my wife."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0053",
+      "context": "I met with Bill York today. And I talked with Mr. Marchcheta. Did York make the offer? Yep, he asked me if I want the job. That's exciting, Harry, what was it? A vice presidency with the biggest accounting company in the country, craft and craft. Aren't you excited about that.",
+      "target_question": "What should the man say?",
+      "reference": "Sure I am.",
+      "candidate": "I am very excited about that."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0054",
+      "context": "I talked to Mr. Marceta. What did he say? Did you tell him about me? Of course, Harry, I want what's best for you. And I think I can get a good job through Mr. Marcetta in Los Angeles, also. You're kidding.",
+      "target_question": "What should the woman say?",
+      "reference": "No, I'm not kidding.",
+      "candidate": "I'm not kidding."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0055",
+      "context": "And how do you feel about taking the job in Los Angeles? How should I feel. It's the biggest company in the country. Well then you feel good about taking it?",
+      "target_question": "What should the man say?",
+      "reference": "Well, I feel fine about it, why should I?",
+      "candidate": "Well, it's not like I have a choice."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0056",
+      "context": "Come and sit down for a minute, Michelle. I'd like to talk to you about something, something important. What's wrong, Susan? Oh there's nothing wrong, Michelle, but your daddy and I are talking about something that I'd like your opinion about. I know. I heard you talking about it the other night when I was trying on my new clothes. It's about moving to Los Angeles.",
+      "target_question": "What should the woman in blue say?",
+      "reference": "You're right, How do you feel about it?",
+      "candidate": "How did you know?"
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0057",
+      "context": "Well, I really wouldn't want to move, but. But? But if you and daddy wanted to, I guess you know what's best for the family and for me.",
+      "target_question": "What should the woman in blue say?",
+      "reference": "That's very considerate of you, Michelle.",
+      "candidate": "But if you and daddy wanted to, I guess you know what's best for the family and for me."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0063",
+      "context": "I've been thinking a lot about our responsibilities in the past few weeks I never stopped thinking about them. I've been with the question of whether I go back to work or not I see and I'm torn I really want to go back to work, use my talents and pursue my career in fashion design like we always thought I would, but now,I want to be with Max as a full time mother, especially when he's a baby.",
+      "target_question": "What should the man say?",
+      "reference": "I really understand, Marilin.",
+      "candidate": "I see."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0064",
+      "context": "Have you discussed going back to work with your boss? Rita Mae called yesterday. Ah, that's what's got you thinking, isn't it? She wants to know when I think I'll be returning to the boutique.",
+      "target_question": "What should the man say?",
+      "reference": "And you said?",
+      "candidate": "I'm not sure yet."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0065",
+      "context": "I'm sure Rita may will understand and wait until you're ready to go back to work. Well, maybe she will and maybe she won't, who knows? If I don't accept her offer, Maybe she'll find someone else in the meantime and when I'm ready to go back there won't be a job for me.",
+      "target_question": "What should the man say?",
+      "reference": "That's something to consider, you've got yourself to think about too.",
+      "candidate": "I'm sure Rita Mae will understand and wait until you're ready to go back to work."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0066",
+      "context": "There are so many things to consider one thing that makes it easier for you is is that you have us Max will always have a family member to watch over him while you're at work.I didn't have that when Richard and Susan were born, What did you do, I chose to continue with my career as a music teacher who hired a woman to watch Richard and then Susan. And I continued with my career. Do you think you made the right decision?",
+      "target_question": "What should the woman in pink say?",
+      "reference": "I think I did.",
+      "candidate": "I think I did."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0073",
+      "context": "Oh, Marilyn, you sounded like you made a decision when you called me, I'm all ears. I have made a decision, Rita Mae, I've decided to stay at home and be a full time mother.",
+      "target_question": "What should the woman in black say?",
+      "reference": "I'm disappointed, but I respect your decision.",
+      "candidate": "Oh."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0074",
+      "context": "Do you remember our talks about custom design dresses for the boutique? I sure do. Why can't I design dresses for you here at home and make them here. Have the fittings here, too. And I could do the selling and the pricing at the boutique.",
+      "target_question": "What should the woman in white say?",
+      "reference": "Exactly.",
+      "candidate": "And I could do the selling and the pricing at the boutique."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0075",
+      "context": "Oh, what kind of dresses would you design? I've thought about that for some time. Yes? Wedding dress. Wedding dresses. Brilliant idea. There's a big market today in wedding dress.",
+      "target_question": "What should the woman in white say?",
+      "reference": "That's what I thought.",
+      "candidate": "Wedding dresses."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0076",
+      "context": "I like the idea very much and if it's successful, we can expand all kinds of dresses. That's what I thought. As a matter of fact, I have a customer for your first wedding dress, Well my niece is getting married and I've been trying to find just the right thing for her. Marilyn, you're going to design my niece's dress, that'll be our first one and then we'll use it to sell others. Do you really mean it?",
+      "target_question": "What should the woman in black say?",
+      "reference": "I really mean it.",
+      "candidate": "Yes, I really mean it."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0077",
+      "context": "Is something the matter, grandpa? The editorial in this paper that has my friend Nat Baker real upset, he's coming over to talk about",
+      "target_question": "What should the elderly person in red say?",
+      "reference": "It is.",
+      "candidate": "I don't know."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0086",
+      "context": "Well, now that you're here you can help me with dinner. I need those potatoes peeled and sliced. Mom, give me a break. Alexandra's coming over to help me study for my math final. Well, in that case, you can wash the dishes and clean up after dinner. Can I invite Alexandra to stay for dinner? Of course. Thanks, mom. You and Alexandra have become good friends, haven't you?",
+      "target_question": "What should the man say?",
+      "reference": "Yes I like her, she's a terrific person.",
+      "candidate": "You and Alexandra have become good friends, haven't you?"
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0087",
+      "context": "I'm going to miss her when she goes back to Greece. Would you like to give her a little farewell party? Mom, that would be terrific! Maybe we could make it a surprise. Oh I don't know surprise parties don't always work out well. Well, we could tell her it's a graduation party for me. When Alexander arrives, we'll surprise her.",
+      "target_question": "What should the woman say?",
+      "reference": "Well, I suppose that might work.",
+      "candidate": "Oh, I don't know, surprise parties don't always work out."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0088",
+      "context": "I'd like to give her a nice going away present. Fine. There's only one problem. What's that? I'm broke. I should have saved some money. I'm sure Alexandra would be happy with something simple, Robbie. I know, but well, I'd like to give her something nice to remember me by. Maybe I could borrow some money from you and dad. Oh it's all right with me if it's all right with your dad.",
+      "target_question": "What should the man say?",
+      "reference": "Thanks mom, I'll talk to him.",
+      "candidate": "That's all right with me if it's all right with your dad."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0089",
+      "context": "My friend Alexandra is going back to Greece. Nice girl. We'll all miss her. Mom says we can give her a going away surprise party. Good idea. And I'd like to get her a nice gift. What' do you have in mind? Well, a wristwatch, so she'll think of me when she looks at the time, nothing flashy, expensive, something simple, but a good one.",
+      "target_question": "What should the man in light blue say?",
+      "reference": "Sounds fine, Robbie.",
+      "candidate": "Well, a wristwatch. So she'll think of me when she looks at the time."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0090",
+      "context": "Oh, and Robbie. Yes? You probably want a family car so you can drive her home after the party. Could I? If you drive carefully.",
+      "target_question": "What should the man in grey say?",
+      "reference": "I will, thanks dad.",
+      "candidate": "If you drive carefully."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0091",
+      "context": "When is your plane reservation for you flight to Athens? Sunday, why? Would you be able to come over Saturday night? Yes, I should be finished packing by then. My folks are giving me a little graduation party. Terrific! I'll pick you up. That isn't necessary. My dad's letting me borrow the car. Oh well, that would be very nice. About eight o'clock? Eight o'clock is fine.",
+      "target_question": "What should the man say?",
+      "reference": "Great, it's a date.",
+      "candidate": "Eight o'clock is fine."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0092",
+      "context": "Are you excited about graduating from high school? Sure, and a little scared. Scared? Why? Aren't you a little scared? I was when I first came to the United States. I'd never been away from home and I didn't know what it would be like, but then I found out that people are the same everywhere once you get to know them. I'm glad I got to know you.",
+      "target_question": "What should the woman say?",
+      "reference": "Thank you. I'm glad I got to know you.",
+      "candidate": "That means a lot coming from you."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0093",
+      "context": "She's really a good friend, isn't she? Yeah. You are going to miss her. Am I going to miss her?",
+      "target_question": "What should the woman say?",
+      "reference": "That's what I said, you are going to miss her.",
+      "candidate": "Of course you are."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0097",
+      "context": "I would just like to thank all of you, my friends, who have made my stay in the United States so wonderful. And to Robbie and the Stewart family for opening their home to me. We should thank you, you're a real friend. And I also have a little surprise for you, Robbie. A little going away present. Thank you. Open it pleas.e I think you might be amused. OK.",
+      "target_question": "What should the man in the blue T-shirt say?",
+      "reference": "I can't believe it.",
+      "candidate": "Okay."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0098",
+      "context": "I can't believe this is really happening! You've earned it. Years of work went into these pictures. I know, but it's still a dream come true. Well, remember we're not sure what the critics are going to write about your show yet. And you never know what the man from the New York Times is going to say about it. Are you worried?",
+      "target_question": "What should the man with silver hair say?",
+      "reference": "I always worry.",
+      "candidate": "Are you worried?"
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0099",
+      "context": "The reviews of this show are important for the sales of your book. When did we see the reviews soon? One of the critics is coming up this morning for a preview. I hope he's in a good mood.",
+      "target_question": "What should the man with black hair say?",
+      "reference": "So do I.",
+      "candidate": "Soon. One of the critics is coming over this morning for a preview."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0101",
+      "context": "How about guests? How many people will you be bringing? Well, my family, I guess. My wife, Marilyn, my father and mother, my brother Robbie, my sister and her husband and their daughter. And my grandfather. Is that too many? No such thing as too many at an opening. I hope they like it. Your family or the public? Everybody, but especially my family, and they've stood by me through all this.",
+      "target_question": "What should the man in the black suit say?",
+      "reference": "I'm sure they'll like it.",
+      "candidate": "Your family or the public?"
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0105",
+      "context": "You're going to be a great success. Are you ready? As soon as I get these cuff links on. Let me help. Mom and dad are already on their way down to the gallery. There. You look very attractive.",
+      "target_question": "What should the man say?",
+      "reference": "Thank you.",
+      "candidate": "Thank you."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0106",
+      "context": "What is it? There's nobody here. Of course not, Richard. Your show doesn't begin until eight thirty.",
+      "target_question": "What should the man say?",
+      "reference": "Oh, right.",
+      "candidate": "I know, but it's so quiet."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0111",
+      "context": "A cigarette? No, thanks. A lollipop. A lollipop? How old are you? Excuse me? I'm sorry. It's okay, I'm 25 years old. You're 25?",
+      "target_question": "What should the man say?",
+      "reference": "Yes.",
+      "candidate": "Yes, my son."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0112",
+      "context": "How about some coffee? Well, the movers are at my apartment, how about coffee at my place? it's near the studio.",
+      "target_question": "What should the man say?",
+      "reference": "Great, what's your address?",
+      "candidate": "Sure, let's do it at your place."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0113",
+      "context": "Who is it? It's Jake. Jake. Jake Seltzer from the station. Jake. These are for you. Oh flowers.",
+      "target_question": "What should the woman say?",
+      "reference": "They're beautiful Jake, thank you very much.",
+      "candidate": "Thank you."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0115",
+      "context": "Do you see them often? Well, not often enough. But the whole family will be here for Thanksgiving. And they are so eager to meet their Boston cousins. This will be our first Thanksgiving without Dad. It must be so hard for you. Well, we'll do what we can to make it easier.",
+      "target_question": "What should the brunette woman say?",
+      "reference": "Thanks.",
+      "candidate": "We'll do what we can to make it easier."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0116",
+      "context": "Here's to a very special Christmas. To a very special person. To a great singer. Now, to make my day complete,I'm gonna call Alex. Let me wish him a",
+      "target_question": "What should the man say?",
+      "reference": "Merry Christmas.",
+      "candidate": "Hi champ, it's me."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0117",
+      "context": "Would you like to open your present? I'd love to. I have a present for you, too... under the Christmas tree. Well, you open your gifts first. All right. Merry Christmas and a Happy New Year. Your friend, Alex. He made the statue at school. 'Mighty Casey at the Bat'. What a riot! I'll keep it forever. It's so cute. All right,",
+      "target_question": "What should the woman say?",
+      "reference": "Now you open your present.",
+      "candidate": "I'll keep it forever. It's so cute."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0118",
+      "context": "Thanks again for the presents. You're welcome. I'll play your tape on my way home. Well, I'll have a whole new version of it this week, with backup singers and full orchestration and the works. It sounds like your dreams are coming true even before ekeko has his first cigarette. Oh-ah-and let me know how the recording session goes!",
+      "target_question": "What should the woman say?",
+      "reference": "I will.",
+      "candidate": "Sure, I'll let you know."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0119",
+      "context": "Your gift inspired me to write it. Well, I'm glad. Gotta get goin'. See ya. Take care. OK.",
+      "target_question": "What should the woman say?",
+      "reference": "Bye.",
+      "candidate": "Bye."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0121",
+      "context": "Is there a restaurant in this town? There are three restaurants in this town. Where are they? One restaurant is on the corner of Main Street and Park Lane. What kind of restaurant is it? It's a Chinese restaurant. There's also a restaurant on Park Lane behind the bank. Is it a Chinese restaurant, too? No it isn't.",
+      "target_question": "What should the man say?",
+      "reference": "And what kind of restaurant is it?",
+      "candidate": "What kind of restaurant is it?"
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0124",
+      "context": "Wow, I have 16 new emails. Those are from me, I forwarded you some really funny emails. They're all junk mail you know, I don't like it when people forward things to me. But these are really funny. Maybe, but I'll just delete them.",
+      "target_question": "What should the man say?",
+      "reference": "Okay I won't send any more to you.",
+      "candidate": "But these are really funny."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0129",
+      "context": "Honey, where should I put the candy dishes? Here on the table? Sure that's fine. Oh did you ask Greg to bring the ice cream? Oh no I forgot. Oh well, we'll still have enough food. Sorry Mia.",
+      "target_question": "What should the woman say?",
+      "reference": "That's okay.",
+      "candidate": "That's okay."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0132",
+      "context": "Becca, you've swept the floor three times, sit down. I can't, I'm too nervous. The new manager won't be here for another hour. Well, he might be early, I want everything to look perfect. Everything does look perfect, but we don't have any customers.",
+      "target_question": "What should the woman say?",
+      "reference": "You're right. We need some.",
+      "candidate": "That's true, but the new manager will be impressed with how clean and tidy everything is."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0133",
+      "context": "What's wrong, Becca? I met the new manager of the Net cafe. And you don't like him? No, he's going to change a lot of things. He thinks I'm a bad manager. He said that? No, but I know that's what he thought. Well, it doesn't matter. I'll be in Atlanta. And we'll be in Brazil. So you sold the stop in shop? Yes, I haven't met the new owner yet. His name is Tyler Adams. Tyler is the new manager of the Ne Cafe.",
+      "target_question": "What should the woman in purple say?",
+      "reference": "Really? I'm sorry you don't like him",
+      "candidate": "Tyler is the new manager of the Net Cafe?"
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0134",
+      "context": "I don't want him managing my store. It's not your store anymore, Becca. But what about my customers? What if he treats them badly?Maybe Tyler was just having a bad day. Maybe. Don't be sad, worrying won't help.",
+      "target_question": "What should the woman in black say?",
+      "reference": "You're right. My customers will be okay.",
+      "candidate": "Maybe. Don't be sad. Worrying won't help."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0137",
+      "context": "You're not Mr. Barker. Very observant. Mr. Barker will be here at 9 a sharp after his morning walk. I am Mrs. McIntyre. Mr. Potter. Deputy head. That's right. I'm the new deputy head. There must be some mistake, I am the new deputy head.",
+      "target_question": "What should the woman say?",
+      "reference": "Impossible.",
+      "candidate": "That's right. I'm the new deputy head."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0138",
+      "context": "Perhaps you're the deputy deputy head. Perhaps you're the deputy deputy head. I can see we're going to have to find Mr. Barker at once to resolve this matter.",
+      "target_question": "What should the man say?",
+      "reference": "Yes, I was just going to say that.",
+      "candidate": "Perhaps you're the deputy deputy head."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0139",
+      "context": "My yes! A very accomplished piece of work, Emily. It really draws you in, doesn't it? Thanks Miss. But is it finished? Yes miss. Is it? Yes miss. Of course it is. How silly of me. Do you think it could do with maybe justum one more thing?",
+      "target_question": "What should the little girl say?",
+      "reference": "I think it's done.",
+      "candidate": "Yes, miss."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0140",
+      "context": "Well? What does that mean? Oh, don't be coy with your godmother. Are you two an item yet? Well, he asked me to spend New Year's Eve with him. And I'm going. Good.",
+      "target_question": "What should the old woman say?",
+      "reference": "So it looks like it's going to be an interesting new year.",
+      "candidate": "Good"
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0143",
+      "context": "What are you doing Saturday? You mean, New Year's? Nothing, I guess. Why? Well, this could be our last New Year's together, right?",
+      "target_question": "What should the boy with glasses say?",
+      "reference": "Yeah!",
+      "candidate": "Yeah. Next year, I'll be in Taiwan, and you'll be in L.A."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0144",
+      "context": "I just can't imagine what those boys are doing right now. Hey... It's New Year's. They're probably out celebrating. They're only ten... They wouldn't do that. You'd be surprised what kids will do. Do you remember when I ran away from home? I was only seven. Right.You went down two blocks and then chickened out.",
+      "target_question": "What should the man say?",
+      "reference": "Kids'll do crazy things.",
+      "candidate": "That's right."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0145",
+      "context": "Vincent,your father and I have talked. You and",
+      "target_question": "What should the child say?",
+      "reference": "I will.",
+      "candidate": "I'll help, I promise."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0147",
+      "context": "Tell me about your book. Oh, it's not finished yet, but I have some of the pictures. Would you like to see them?",
+      "target_question": "What should the woman say?",
+      "reference": "Yes. I'd like that.",
+      "candidate": "Sure, I'd love to see them."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0148",
+      "context": "I had a really bad day. I left my bag of film on the ferry. I went back for it, but the ferry was gone. I lost a whole day's work. I'll call the Staten Island Ferry lost-and-found office. Alexandra! Hello, Richard. I found your bag!",
+      "target_question": "What should the man say?",
+      "reference": "Oh, thank you!",
+      "candidate": "I found your bag."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0149",
+      "context": "Excuse me. Can you help me? Sure, what do you want? Where is 83 Wooster Street? That's easy. Walk to the corner. Then make a left turn. Then walk two blocks to the traffic light. Make another left to Wooster. Thank you. To the corner and then a left?",
+      "target_question": "What should the man in the blue shirt say?",
+      "reference": "Yeah. A left.",
+      "candidate": "To the corner, and then a left."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0150",
+      "context": "Excuse me, ma'am. I'm looking for 83 Wooster Street. Yes. Wooster Street is two blocks, and 83 is to the right,about two houses.",
+      "target_question": "What should the man say?",
+      "reference": "Thank you, thank you!",
+      "candidate": "Thank you."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0151",
+      "context": "Hello, Harry. It's nice to meet you. Nice to meet you, Susan. Sorry I'm late. The traffic. The parking. I was lost.",
+      "target_question": "What should the woman say?",
+      "reference": "Don't worry about being late. It's fine.",
+      "candidate": "Oh, Harry, you were lost?"
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0152",
+      "context": "Are we too late for our dinner reservation? No, the restaurant will hold our table. I know the owner very well. I eat there a lot. Do you know the phone number of the restaurant? I'd like to call home and leave the number with the baby-sitter.",
+      "target_question": "What should the woman say?",
+      "reference": "Sure.",
+      "candidate": "Sure, let me get it for you."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0155",
+      "context": "Two years ago,my wife died. You miss her. I do... yes, but l have Michelle... and with time... Is there anyone else in your life? No, not yet.What about you?  Oh, I date occasionally, but my work keeps me busy. Harry. Yes? I'd like to meet your daughter someday. Does that mean that I can see you again?",
+      "target_question": "What should the man say?",
+      "reference": "Of course.",
+      "candidate": "Does that mean that I can see you again?"
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0156",
+      "context": "Are you married? My wife died four years ago. She was a wonderful woman. A real friend.",
+      "target_question": "What should the woman say?",
+      "reference": "I'm sorry. Really, I'm sorry.",
+      "candidate": "I'm so sorry for your loss."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0157",
+      "context": "Lots of wonderful memories. We were married almost fifty years. Well,forty-seven, to be exact. John and I celebrate our fortieth anniversary next month.",
+      "target_question": "What should the man say?",
+      "reference": "Oh, congratulations! That's nice.",
+      "candidate": "Yes, we do."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0158",
+      "context": "I am exhausted. My new exercise class is so hard. Your new exercise class? Yeah. My new advanced exercise class. Why advanced? My instructor thought that the beginner's class was too easy for me. In the beginner's class, they give you a chance to rest between exercises. So?",
+      "target_question": "What should the woman say?",
+      "reference": "The advanced class is nonstop.",
+      "candidate": "In the advanced class, you don't get a chance to rest between exercises."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0159",
+      "context": "Doing aerobics for an hour is a lot different than lifting weights. Yeah. Quite a bit different. I think aerobics is easy. I could work out in your class with no problem. You think so? Oh, without a doubt. When's the next class? Tomorrow morning at ten o'clock. Try it.",
+      "target_question": "What should the man say?",
+      "reference": "It's a nap.",
+      "candidate": "Tomorrow morning at ten o'clock. Try it."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0160",
+      "context": "You are not going to be able to move after this and the aerobics class. Are you kidding me? It's going to be a piece of cake. You want to bet?",
+      "target_question": "What should the woman say?",
+      "reference": "Yeah. What's the bet?",
+      "candidate": "I'll take that bet."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0161",
+      "context": "What do you do for a living, Mr.Stewart? I'm a photographer. Interesting. What do you photograph? Everything. The American scene. People, places, events. Did you ever think of photographing an aerobics class? No... I can't remember taking pictures of people exercising. But don't you think it'd be a good subject? Sure. I need some good photos for my advertising, Mr.Stewart. Maybe you can photogragh a class, and I can give you and Mrs.Stewart a month of classes ree. When can I photograph a class? Anytime. How about today?",
+      "target_question": "What should the man in green say?",
+      "reference": "Terrific!",
+      "candidate": "Anytime."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0162",
+      "context": "Well, I didn't really exercise. I knew it! I wanted to,but Jack Davis needed a photographer. I'm sorry, Marilyn. I don't understand. Did you exercise or not?",
+      "target_question": "What should the man say?",
+      "reference": "No.",
+      "candidate": "No, instead of exercising, I photographed the class."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0164",
+      "context": "Do you have any other plans for the day? I'll work on my computer. I have a new math program,and I want to learn how to use it. Maybe you can teach me how to work on a computer someday.",
+      "target_question": "What should the man in green say?",
+      "reference": "Anytime. It's really easy.",
+      "candidate": "Maybe you can teach me how to work on a computer someday."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0165",
+      "context": "Oh, what are you doing tomorrow? Nothing much. Well, maybe your dad and I could take you fishing with us. I'd like that, but... But what? But Dad is always so busy. Well, can you come fishing with me tomorrow?",
+      "target_question": "What should the man in green say?",
+      "reference": "Sure, I can.",
+      "candidate": "I'd like that, but..."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0166",
+      "context": "Robbie says you can't take him to the game today. I really feel bad about it, but they need me at the hospital today, in the children's ward. l understand. Maybe we can spend some time together next weekend.",
+      "target_question": "What should the elderly person say?",
+      "reference": "Definitely. We should.",
+      "candidate": "That sounds like a good idea."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0168",
+      "context": "Is something wrong, Alexandra? No, nothing. Yes, there is. I can tell. What's the matter? Come on, you can tell me. What's up? I don't know. Something's wrong.",
+      "target_question": "What should the man say?",
+      "reference": "OK, let's talk.",
+      "candidate": "What is it?"
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0169",
+      "context": "But when I received the letter with photographs of my family, I cried. I cried because I miss them all. You really miss your family, don't you?",
+      "target_question": "What should the woman say?",
+      "reference": "Yes.",
+      "candidate": "Yes, I really miss them all."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0170",
+      "context": "I know I must seem silly. It's not like I have nobody. I like the Molininas very much, and they're so kind to me.Hey, why don't we go out for a cheeseburger and fch fries, that'll cheer you up and you can use my walkman.",
+      "target_question": "What should the woman say?",
+      "reference": "That's a good idea.",
+      "candidate": "Okay."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0171",
+      "context": "This dog is well trained. And she likes you too. So how are we going to find the owners? With a little help from the ASPCA, the American Society for the Prevention of Cruelty to Animals. They're the ones. We once found a cat. She was caught in the branches of our tree. And dad called the ASPCA. They came and solved the problem.",
+      "target_question": "What should the woman say?",
+      "reference": "Robby, let's call them.",
+      "candidate": "That's a good idea."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0172",
+      "context": "Let's take Gemma by there now. They'll find the owner. I hope so. I'm so sad to see this little dog without her family. I'm sure they'll find the owner. But if they don't, I'll adopt her. She's so cute. Look at those eyes. She's hard to resist, don't you just love her?",
+      "target_question": "What should the woman say?",
+      "reference": "I like to keep her, too.",
+      "candidate": "Yes, she's very cute."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0174",
+      "context": "I need your special talent for handling special matters. Like what special matters? Well, I have a scheduling problem. Yes? I have three tonsillectomies set for Friday with Dr.Earl. Yes? I need to fit a fourth operation into his schedule. And... I know you can do it. Well, I'll try to arrange the scheduled, Dr.Stewart. But it's not going to be easy.",
+      "target_question": "What should the man say?",
+      "reference": "I know you'll be able to take care.",
+      "candidate": "Why is it not going to be easy?"
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0176",
+      "context": "Well, grandpa wanted me to study engineering like him. Well, I wasn't clear about my future, but I knew engineering was not for me. What did you tell grandpa? The truth. Then you're not upset about my not wanting to go into medicine. I'm not upset at all, I'm just happy that we're able to talk about it.",
+      "target_question": "What should the man in blue say?",
+      "reference": "I am too, dad.",
+      "candidate": "I'm just happy that we're able to talk about it."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0177",
+      "context": "Now, what else is on the schedule today? Well at one o'clock you have a lunch appointment with Mr. Levine, the client from the toy town stores. Where? At Rossano's. Anything else? At four o'clock you have a meeting with the production staff in the conference room. Make sure everybody is at that meeting.",
+      "target_question": "What should the man say?",
+      "reference": "Will do.",
+      "candidate": "Anything else?"
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0180",
+      "context": "When did you buy a house? After Richard was born. I was teaching music, and Philip was opening his first medical office. Where was the house? Right here in Riverdale. Of course, it was a small house, but just right for us. It's funny, history repeats itself. Now Richard and I are having a baby, and we probably won't be able to afford a house right away, either. Why don't you look at some houses, Marilyn?",
+      "target_question": "What should the woman in black say?",
+      "reference": "Good idea.",
+      "candidate": "Why don't you look at some houses, Marilyn?"
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0183",
+      "context": "Oh, my! Here's a real buy. It's a bargain. This house just came on the market. It's quite lovely. Is it a two bedroom house? No, it has three bedrooms and three baths. I know the house. It has a brand new kitchen, and a living room with a 12 foot ceiling and there's a two car garage. The why don' we go look at this house, too?",
+      "target_question": "What should the woman in pink say?",
+      "reference": "It's a good investment.",
+      "candidate": "Why don't we go look at this house today?"
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0184",
+      "context": "Thank you, Mrs. Martinelli. Thanks so much. My pleasure. Give my best to your parents. Your father's a wonderful doctor, Richard. He took care of my daughter when she was a child. He's the best pediatrician in Westchester.",
+      "target_question": "What should the man say?",
+      "reference": "Thanks Mrs. Martinelli, I'll give them your regards.",
+      "candidate": "Thank you, Mrs. Martinelli."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0185",
+      "context": "It all sounded so easy until they mentioned needing collateral or a guarantor. We have no collateral. And I don't think it's a good idea to ask dad to sign as a guarantor. I don't feel right about it.",
+      "target_question": "What should the woman say?",
+      "reference": "I understand your feelings about it, Richard.",
+      "candidate": "Well, what are we going to do now?"
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0186",
+      "context": "What about the house in Mount Kisco? Somebody else will buy it by then. Well, then there'll be other house, Marilyn. Oh Richard has a point. You're just beginning to look. We're no great rush. It's true. This has been a great learning experience for us, Marilyn. Talking to the real estate agent. Looking at the houses. Talking to the loan officer at the bank.",
+      "target_question": "What should the woman in white say?",
+      "reference": "It has been a learning experience, that's true.",
+      "candidate": "Oh, Richard has a point. You're just beginning to look."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0187",
+      "context": "Children usually resemble their parents. It's true. Michelle is a lot like Harry in so many ways. And she shy with new people just like he is. You really like Michelle don't you.",
+      "target_question": "What should the woman in blue say?",
+      "reference": "Yes, I'm very fond of her.",
+      "candidate": "I really do."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0188",
+      "context": "You like living in New York, don't you? Oh I love it, it's so convenient. I can take the bus to work...or the subway...or a taxi. And there's so much to do. Lots of movie houses and the theater. I know what you mean. I'd like to live in the city, but living in New Jersey in the suburbs is better for Michel. Trees, grass.",
+      "target_question": "What should the woman say?",
+      "reference": "There's a lot of good things about suburban living.",
+      "candidate": "I see what you mean."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0189",
+      "context": "As a working woman, I think New York has all the conveniences, including the best tomatoes. The truth is, I'd like to live in the city. Michle's the right age. There are lots of things for her here.",
+      "target_question": "What should the woman say?",
+      "reference": "You're right, Harry.",
+      "candidate": "Yes, there are lots of things for her here."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0190",
+      "context": "You ought to think about spending more time with Michelle at all the great places in this city. Well, perhaps you'll help me select some of the great places. And perhaps you'll join us?",
+      "target_question": "What should the woman say?",
+      "reference": "Perhaps, I will.",
+      "candidate": "I'd love to, but I have a lot of work to do."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0191",
+      "context": "Susan, I, I really appreciate you doing this for Michelle and her friends. Oh, please, Harry, it's nothing. I'm not just doing it for Michelle. I'm doing it for you.",
+      "target_question": "What should the man say?",
+      "reference": "Thank you.",
+      "candidate": "Really?"
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0192",
+      "context": "That makes me feel good. What, Harry? What makes you feel good well? That you care about Michelle, that you care about me and that you care about us. Well, Harry, that that's because I do. I do care. They'll be here any minute. Susan, I'd like to...continue this conversation later.",
+      "target_question": "What should the woman say?",
+      "reference": "Of course, Harry.",
+      "candidate": "Sure, later."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0193",
+      "context": "Susan, will you marry me? It's such an important decision. There's so many things to talk about. There are three things that have to be done first, Harry. Three things? First, we have to decide where to live. Well, that's easy we talked about that earlier. We'll live in New York. All right. Second, we have to talk to Michelle together about being married. We'll do that immediately. What's the third thing? You have to ask for my father's permission.",
+      "target_question": "What should the man say?",
+      "reference": "Absolutely.",
+      "candidate": "You have to ask for my father's permission."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0194",
+      "context": "What's this for? Just because. How's the baby? Fast asleep. I'm sorry, I missed him. I had to work late. What are the flowers for, Richard? Five years of happiness, Happy anniversary our anniversary. But our anniversary isn't until Saturday.",
+      "target_question": "What should the man say?",
+      "reference": "I couldn't wait.",
+      "candidate": "I couldn't wait."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0195",
+      "context": "If you had your choice of all the places in the world, where would you choose to spend our anniversary? The Watermile Inn. I loved that place when we went on our honeymoon. Perfect! You picked the right place. I don't understand. you and I, Missus Stuwart, are going to spend a second honeymoon at the Watermile Inn.",
+      "target_question": "What should the woman say?",
+      "reference": "Oh, Richard, that's wonderful.",
+      "candidate": "What are you talking about?"
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0196",
+      "context": "Come on, Mar. It's time you and I had a romantic weekend alone together. We've earned it. What do you say? It does sound tempting. You're right, we burned it.",
+      "target_question": "What should the man say?",
+      "reference": "Great.",
+      "candidate": "What do you say?"
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0198",
+      "context": "Thank you for calling us. I remember you and your wife from the first time you stayed with us. We were very young. And very much in love. We have a baby now.",
+      "target_question": "What should the woman in white say?",
+      "reference": "How wonderful! A boy or a girl?",
+      "candidate": "We have a baby now."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0199",
+      "context": "Let's eat first. I want to call home and check on your mother and the baby. Honey, if there were any problems, she would call us. She doesn't know we've changed hotels.",
+      "target_question": "What should the man say?",
+      "reference": "You're right, of course.",
+      "candidate": "Then let's call home and check on your mother and the baby."
+    },
+    {
+      "model": "minicpmo_4_5",
+      "item_id": "video_0200",
+      "context": "The mailman just drops a mail in our box, Grandpa. Oh probably a lot of advertising and bills. You were right, grandpa. Advertising, bills, bills, advertising.",
+      "target_question": "What should the elderly man say?",
+      "reference": "Yes, just like I said, Robbie. Nothing interesting.",
+      "candidate": "Yeah."
+    }
+  ]
+}
