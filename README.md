@@ -185,6 +185,30 @@ Other model server entrypoints are located under:
 models/model_server/*/*_server.py
 ```
 
+#### Use an SGLang-Omni server
+
+SGLang-Omni can be used as the inference engine while SocialOmni remains the
+single benchmark entrypoint. Start its OpenAI-compatible server (the server
+must expose `/v1/chat/completions`), then run the official client:
+
+```bash
+sgl-omni serve \
+  --model-path Qwen/Qwen3-Omni-30B-A3B-Instruct \
+  --host 127.0.0.1 --port 8000
+
+export SGLANG_OMNI_SERVER_URL=http://127.0.0.1:8000
+export SOCIALOMNI_LEVEL1_OUTPUT_DIR=evaluation/results/<run-name>
+uv run python run_benchmark.py --model sglang_omni --resume
+```
+
+Set `models.sglang_omni.model` in `config/config.yaml` (or
+`SGLANG_OMNI_MODEL`) to the model name served by SGLang-Omni. The client uses
+SGLang-Omni's native `videos`/`audios` fields and `modalities: ["text"]`; set
+`use_audio_in_video` when the video contains the audio track. Each result row
+retains the model response, while request hashes and retry metadata are
+recorded in the client result metadata. Keep each run under
+`evaluation/results/<run-name>/` with its manifest and validation files.
+
 ### 3. Run Task I benchmark
 
 ```bash
@@ -230,6 +254,7 @@ omnivinci
 vita_1_5
 baichuan_omni_1_5
 ming
+sglang_omni
 ```
 
 ## 🧪 Reproducibility Notes

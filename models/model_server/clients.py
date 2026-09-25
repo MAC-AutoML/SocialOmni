@@ -15,6 +15,7 @@ from .omnivinci.client import OmniVinciClient
 from .qwen2_5_omni.client import Qwen25OmniClient
 from .qwen3_omni.client import Qwen3OmniClient
 from .qwen3_omni_thinking.client import Qwen3OmniThinkingClient
+from .sglang_omni.client import SGLangOmniClient
 from .vita.client import Vita15Client
 
 CLIENTS: dict[str, type[ModelClient]] = {
@@ -32,6 +33,7 @@ CLIENTS: dict[str, type[ModelClient]] = {
     "vita_1_5": Vita15Client,
     "baichuan_omni_1_5": BaichuanOmni15Client,
     "ming": MingClient,
+    "sglang_omni": SGLangOmniClient,
 }
 
 

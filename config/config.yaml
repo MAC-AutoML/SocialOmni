@@ -66,6 +66,18 @@ models:
     port: 5091
     server_url: "http://127.0.0.1:5091"
     user_prompt: ""
+  sglang_omni:
+    # SGLang-Omni exposes an OpenAI-compatible /v1/chat/completions endpoint.
+    server_url: "http://127.0.0.1:8000"
+    model: "Qwen3-Omni-30B-A3B-Instruct"
+    max_tokens: 256
+    temperature: 0.3
+    timeout: 300
+    max_retries: 5
+    retry_delay: 3
+    separate_audio: false
+    use_audio_in_video: true
+    user_prompt: ""
   miniomni_2:
     model_path: "/publicssd/xty/models/mini-omni2"
     temperature: 0.3
