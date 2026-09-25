@@ -71,7 +71,7 @@ All scores use a 0–100 scale; higher is better. — indicates an unavailable s
 
 ## Hosted-model evaluation
 
-The [evaluation runner and commands](evaluation/hosted-omni/README.md) support Gemini 3.8 Flash, Qwen3.8-Omni-Flash, Qwen3.5-Omni-Plus and Qwen3.5-Omni-Flash with model-specific audio-video request defaults. New generation and rescoring of existing answers use the same default three-judge configuration, with resumable requests and per-attempt records.
+The [evaluation runner and commands](evaluation/hosted-omni/README.md) support Gemini 3.8 Flash, Qwen3.8-Omni-Flash, Qwen3.5-Omni-Plus, Qwen3.5-Omni-Flash and other OpenAI-compatible model IDs with model-specific audio-video request defaults. New generation and rescoring of existing answers use the same default three-judge configuration, with resumable requests and per-attempt records. Native local MiniCPM-o 4.5 support is available through the optional `minicpmo_4_5` server adapter.
 
 ## ⚙️ Requirements and Installation
 

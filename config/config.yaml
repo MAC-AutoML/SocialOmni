@@ -77,6 +77,16 @@ models:
     port: 5092
     server_url: "http://127.0.0.1:5092"
     user_prompt: ""
+  minicpmo_4_5:
+    # Override this on machines without the Wulanchabu JFS mount.
+    model_path: "/mnt/jfs/models/platform/openbmb/MiniCPM-o-4_5/503e754207c94da6bb26850b4469f367c9ea3582"
+    max_tokens: 256
+    temperature: 0.0
+    gpu_ids: []
+    host: "0.0.0.0"
+    port: 5096
+    server_url: "http://127.0.0.1:5096"
+    user_prompt: ""
   omnivinci:
     model_path: "/publicssd/xty/models/omnivinci"
     max_new_tokens: 4096

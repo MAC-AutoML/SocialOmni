@@ -72,6 +72,18 @@ class JudgeMetricsTests(unittest.TestCase):
             metrics(self.when, self.responses, scores, "gpt56-sol")["complete"]
         )
 
+    def test_minicpmo_run_label_keeps_standard_panel(self):
+        scores = {
+            "0": {
+                "gpt-5.6-sol": 100,
+                "gemini-3.8-flash": 50,
+                "qwen3.8-omni": 75,
+            }
+        }
+        summary = metrics(self.when, self.responses, scores, "minicpmo45-20260925")
+        self.assertTrue(summary["complete"])
+        self.assertEqual(summary["qgold"], 75 / 128)
+
 
 if __name__ == "__main__":
     unittest.main()

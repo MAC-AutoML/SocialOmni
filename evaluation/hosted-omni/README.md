@@ -89,6 +89,12 @@ uv run python rescore.py \
 
 The same rubric and three judges apply to both commands. Original contexts, references, candidate text, item IDs, When decisions and source hashes are preserved. Every non-empty answer requires all three valid scores; an incomplete panel never produces an average. Empty completed answers contribute zero. No same-family judge exclusion is applied.
 
+For a MiniCPM-o 4.5 run, use `judges.minicpmo45.example.json` and pass
+`--panel minicpmo45-20260925`. This is a per-run label for the same standard
+Gemini 3.8 Flash, Qwen3.8-Omni-Flash and GPT-5.6-Sol panel; it does not create a
+new judge cohort or permit a two-judge average. If GPT-5.6-Sol is unavailable,
+leave its scores pending and resume with the identical configuration later.
+
 The archived responses cover gold-positive items where the model predicted YES. They support QEns, Cov+ and QEns_joint. QGold requires forced responses for all 128 gold-positive items, so it remains null for those archives. Who and When measure accuracy against labels and do not use LLM judges.
 
 The rubric implements Appendix A.6. `judge-contexts.json` contains observed contexts for all 128 positive items: 126 from archived primary records and two obtained by removing the unique reference continuation suffix from the released transcript. Judge prompts and configuration are recorded in each run manifest.

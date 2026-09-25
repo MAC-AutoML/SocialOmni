@@ -68,6 +68,7 @@ def _default_config() -> Dict[str, Any]:
                 "system_prompt": "",
                 "user_prompt": "",
                 "judge_model": "gpt4o",
+                "judge_panel": "standard",
                 "max_retries": 5,
                 "retry_delay": 3,
                 "num_workers": 8,

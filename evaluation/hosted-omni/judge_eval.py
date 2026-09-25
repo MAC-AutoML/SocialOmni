@@ -15,6 +15,9 @@ PANELS = {
     "paper-v3": JUDGES,
     "gpt56-sol": {"gpt-5.6-sol", "gemini-2.5-pro", "qwen3-omni"},
     "modern-20260924": {"gpt-5.6-sol", "gemini-3.8-flash", "qwen3.8-omni"},
+    # Per-model run label; membership intentionally stays identical to the
+    # standard panel so MiniCPM-o results remain comparable.
+    "minicpmo45-20260925": {"gpt-5.6-sol", "gemini-3.8-flash", "qwen3.8-omni"},
 }
 SCORES = {"0", "25", "50", "75", "100"}
 RUBRIC = """Score the candidate continuation for contextual grounding, target-role consistency,

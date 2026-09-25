@@ -30,6 +30,7 @@ LOCAL_MODEL_SERVER_SCRIPT = {
     "qwen3_omni_thinking": "models/model_server/qwen3_omni_thinking/qwen3_omni_thinking_server.py",
     "qwen2_5_omni": "models/model_server/qwen2_5_omni/qwen_omni_server.py",
     "miniomni_2": "models/model_server/miniomni_2/miniomni2_server.py",
+    "minicpmo_4_5": "models/model_server/minicpmo_4_5/minicpmo_4_5_server.py",
     "omnivinci": "models/model_server/omnivinci/omnivinci_server.py",
     "vita_1_5": "models/model_server/vita/vita_server.py",
     "baichuan_omni_1_5": "models/model_server/baichuan_omni/baichuan_omni_server.py",
