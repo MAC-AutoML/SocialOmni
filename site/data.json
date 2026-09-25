@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-24",
+  "updated_at": "2026-09-25",
   "links": {
     "paper": "https://arxiv.org/abs/2603.16859v3",
     "code": "https://github.com/MAC-AutoML/SocialOmni",
@@ -695,6 +695,44 @@
           "zh": "回答与评分"
         },
         "url": "https://github.com/MAC-AutoML/SocialOmni/tree/main/evaluation/results/gemini-catalog-av-20260924/gemini37flash"
+      }
+    },
+    {
+      "id": "modern-gemini-3.1-flash-lite",
+      "model": "Gemini 3.1 Flash-Lite",
+      "variant": "Native AV · Default thinking",
+      "status": "published",
+      "metrics": {
+        "who": 73.9,
+        "when": 47.0,
+        "qgold": 83.984375,
+        "qens": 83.80952380952381,
+        "cov_plus": 27.34375,
+        "qens_joint": 22.916666666666668
+      },
+      "classification": {
+        "who_macro_f1": 80.60309864094296,
+        "when_macro_f1": 46.22564935064935
+      },
+      "judge_panel": "modern-20260924",
+      "judges": [
+        "gemini-3.8-flash",
+        "qwen3.8-omni",
+        "gpt-5.6-sol"
+      ],
+      "source": {
+        "label": {
+          "en": "Answers and scores",
+          "zh": "回答与评分"
+        },
+        "url": "https://github.com/MAC-AutoML/SocialOmni/tree/main/evaluation/results/gemini-catalog-av-20260924/gemini31flashlite"
+      },
+      "evaluation": {
+        "model": "gemini-3.1-flash-lite",
+        "who_items": 2000,
+        "when_items": 200,
+        "how_items": 128,
+        "judge_scores": 384
       }
     }
   ],
