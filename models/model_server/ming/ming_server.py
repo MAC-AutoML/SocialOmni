@@ -4,6 +4,7 @@ import argparse
 import json
 import os
 import shutil
+import subprocess
 import sys
 import tempfile
 import traceback
@@ -30,7 +31,7 @@ PHYSICAL_GPUS = configure_cuda_visible_devices(
 )
 
 MODEL_PATH = os.path.expanduser(
-    str(CONFIG.model("ming").get("model_path") or os.getenv("MING_MODEL_PATH") or "/publicssd/xty/models/Ming-flash-omni-2.0")
+    str(os.getenv("MING_MODEL_PATH") or CONFIG.model("ming").get("model_path") or "/publicssd/xty/models/Ming-flash-omni-2.0")
 )
 BUNDLED_CODE_PATH = str((Path(__file__).resolve().parent / "ming_lib").resolve())
 MAX_NEW_TOKENS = int(CONFIG.model("ming").get("max_tokens", 256))
@@ -269,18 +270,30 @@ def analyze_video():
     if not question:
         return jsonify({"error": "Missing question"}), 400
 
+    use_audio = str(request.form.get("use_audio", "true")).strip().lower() != "false"
+    temp_audio_path = None
     temp_video_path = None
     try:
         _load_model()
 
         content: List[Dict[str, str]] = []
-        if use_video:
+        if use_video or use_audio:
             if "video" not in request.files:
                 return jsonify({"error": "Missing video file"}), 400
             with tempfile.NamedTemporaryFile(delete=False, suffix=".mp4") as tmp:
                 request.files["video"].save(tmp.name)
                 temp_video_path = tmp.name
-            content.append({"type": "video", "video": temp_video_path})
+            if use_video:
+                content.append({"type": "video", "video": temp_video_path})
+            if use_audio:
+                with tempfile.NamedTemporaryFile(delete=False, suffix=".wav") as audio:
+                    temp_audio_path = audio.name
+                subprocess.run(
+                    ["ffmpeg", "-nostdin", "-y", "-i", temp_video_path,
+                     "-vn", "-ac", "1", "-ar", "16000", "-c:a", "pcm_s16le", temp_audio_path],
+                    check=True, capture_output=True, timeout=120,
+                )
+                content.append({"type": "audio", "audio": temp_audio_path})
 
         content.append({"type": "text", "text": question})
         messages = [{"role": "HUMAN", "content": content}]
@@ -291,6 +304,8 @@ def analyze_video():
         traceback.print_exc()
         return jsonify({"error": str(exc)}), 500
     finally:
+        if temp_audio_path and os.path.exists(temp_audio_path):
+            os.remove(temp_audio_path)
         if temp_video_path and os.path.exists(temp_video_path):
             os.remove(temp_video_path)
 

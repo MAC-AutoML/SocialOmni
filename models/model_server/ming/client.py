@@ -31,7 +31,7 @@ class MingClient:
             request.question,
             user_prompt=user_prompt,
             use_video=use_video,
-            use_audio=False,
+            use_audio=bool((request.metadata or {}).get("use_audio", True)),
             max_retries=CONFIG.runtime("max_retries", 5),
             retry_delay=CONFIG.runtime("request_delay", 0.0),
         )
