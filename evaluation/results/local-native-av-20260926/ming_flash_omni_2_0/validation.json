@@ -1,0 +1,27 @@
+{
+  "status": "complete",
+  "counts": {
+    "who": 2000,
+    "when": 200,
+    "how": 128
+  },
+  "judge_score_count": 384,
+  "metrics": {
+    "who": 52.3,
+    "when": 49.5,
+    "qgold": 75.78125,
+    "qens": 77.34375000000001,
+    "cov_plus": 25.0,
+    "qens_joint": 19.335937500000004,
+    "who_macro_f1": 50.472745614230405,
+    "when_macro_f1": 47.90457769181173
+  },
+  "sha256": {
+    "scores.json": "c59d508815480020c01f958dc572cad79178f39deeb17cf78fb2cb78d52df3c1",
+    "input.json": "1fd790bfa81ddc22bb711545243d0790e5ef705d5171717428a7f4fea87d2cb1",
+    "results.json": "facee8ea74a17137cc03fc11c03ce68d4c098d65bc5fc4f092a6c01472a03b20",
+    "generation-manifest.json": "cf141ea864403462addc8096824e723e77ca4dad7fa62f1cf59ffc1b1aafd6e6",
+    "README.md": "568562280367b97d954170475a8b86a40b8b4787c11417db01aa130d95d77348",
+    "manifest.json": "e6fc0aa9d985e97594d7696f9cf43fb58c2d07341d9f180136532dea39558a0e"
+  }
+}

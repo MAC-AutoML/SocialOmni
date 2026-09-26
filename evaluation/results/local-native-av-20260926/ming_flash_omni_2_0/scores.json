@@ -1,0 +1,642 @@
+{
+  "video_0001": {
+    "qwen3.8-omni": 50,
+    "gemini-3.8-flash": 50,
+    "gpt-5.6-sol": 50
+  },
+  "video_0002": {
+    "qwen3.8-omni": 25,
+    "gemini-3.8-flash": 50,
+    "gpt-5.6-sol": 50
+  },
+  "video_0004": {
+    "qwen3.8-omni": 75,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 75
+  },
+  "video_0003": {
+    "qwen3.8-omni": 75,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 75
+  },
+  "video_0006": {
+    "qwen3.8-omni": 50,
+    "gemini-3.8-flash": 75,
+    "gpt-5.6-sol": 75
+  },
+  "video_0011": {
+    "qwen3.8-omni": 75,
+    "gemini-3.8-flash": 75,
+    "gpt-5.6-sol": 100
+  },
+  "video_0012": {
+    "qwen3.8-omni": 50,
+    "gemini-3.8-flash": 25,
+    "gpt-5.6-sol": 0
+  },
+  "video_0014": {
+    "qwen3.8-omni": 25,
+    "gemini-3.8-flash": 25,
+    "gpt-5.6-sol": 0
+  },
+  "video_0015": {
+    "qwen3.8-omni": 50,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 75
+  },
+  "video_0016": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 75,
+    "gpt-5.6-sol": 0
+  },
+  "video_0017": {
+    "qwen3.8-omni": 75,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0018": {
+    "qwen3.8-omni": 75,
+    "gemini-3.8-flash": 75,
+    "gpt-5.6-sol": 75
+  },
+  "video_0019": {
+    "qwen3.8-omni": 75,
+    "gemini-3.8-flash": 75,
+    "gpt-5.6-sol": 75
+  },
+  "video_0020": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 75,
+    "gpt-5.6-sol": 100
+  },
+  "video_0021": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0025": {
+    "qwen3.8-omni": 75,
+    "gemini-3.8-flash": 75,
+    "gpt-5.6-sol": 75
+  },
+  "video_0024": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0026": {
+    "qwen3.8-omni": 75,
+    "gemini-3.8-flash": 75,
+    "gpt-5.6-sol": 75
+  },
+  "video_0028": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0030": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 0
+  },
+  "video_0031": {
+    "qwen3.8-omni": 50,
+    "gemini-3.8-flash": 25,
+    "gpt-5.6-sol": 50
+  },
+  "video_0032": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0034": {
+    "qwen3.8-omni": 25,
+    "gemini-3.8-flash": 75,
+    "gpt-5.6-sol": 50
+  },
+  "video_0035": {
+    "qwen3.8-omni": 50,
+    "gemini-3.8-flash": 50,
+    "gpt-5.6-sol": 25
+  },
+  "video_0036": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0037": {
+    "qwen3.8-omni": 75,
+    "gemini-3.8-flash": 75,
+    "gpt-5.6-sol": 75
+  },
+  "video_0038": {
+    "qwen3.8-omni": 50,
+    "gemini-3.8-flash": 50,
+    "gpt-5.6-sol": 75
+  },
+  "video_0039": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0040": {
+    "qwen3.8-omni": 50,
+    "gemini-3.8-flash": 50,
+    "gpt-5.6-sol": 50
+  },
+  "video_0046": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0047": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 75
+  },
+  "video_0048": {
+    "qwen3.8-omni": 50,
+    "gemini-3.8-flash": 50,
+    "gpt-5.6-sol": 50
+  },
+  "video_0049": {
+    "qwen3.8-omni": 50,
+    "gemini-3.8-flash": 25,
+    "gpt-5.6-sol": 25
+  },
+  "video_0050": {
+    "qwen3.8-omni": 75,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 75
+  },
+  "video_0051": {
+    "qwen3.8-omni": 75,
+    "gemini-3.8-flash": 75,
+    "gpt-5.6-sol": 25
+  },
+  "video_0052": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0053": {
+    "qwen3.8-omni": 25,
+    "gemini-3.8-flash": 25,
+    "gpt-5.6-sol": 25
+  },
+  "video_0054": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0055": {
+    "qwen3.8-omni": 75,
+    "gemini-3.8-flash": 75,
+    "gpt-5.6-sol": 75
+  },
+  "video_0056": {
+    "qwen3.8-omni": 75,
+    "gemini-3.8-flash": 75,
+    "gpt-5.6-sol": 75
+  },
+  "video_0057": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0063": {
+    "qwen3.8-omni": 75,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0064": {
+    "qwen3.8-omni": 75,
+    "gemini-3.8-flash": 75,
+    "gpt-5.6-sol": 50
+  },
+  "video_0065": {
+    "qwen3.8-omni": 50,
+    "gemini-3.8-flash": 25,
+    "gpt-5.6-sol": 25
+  },
+  "video_0073": {
+    "qwen3.8-omni": 25,
+    "gemini-3.8-flash": 25,
+    "gpt-5.6-sol": 50
+  },
+  "video_0066": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 75,
+    "gpt-5.6-sol": 100
+  },
+  "video_0074": {
+    "qwen3.8-omni": 75,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 75
+  },
+  "video_0075": {
+    "qwen3.8-omni": 75,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0077": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0076": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 0,
+    "gpt-5.6-sol": 50
+  },
+  "video_0086": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0087": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0088": {
+    "qwen3.8-omni": 75,
+    "gemini-3.8-flash": 75,
+    "gpt-5.6-sol": 100
+  },
+  "video_0089": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0090": {
+    "qwen3.8-omni": 75,
+    "gemini-3.8-flash": 75,
+    "gpt-5.6-sol": 75
+  },
+  "video_0091": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0092": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0093": {
+    "qwen3.8-omni": 75,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 25
+  },
+  "video_0098": {
+    "qwen3.8-omni": 50,
+    "gemini-3.8-flash": 75,
+    "gpt-5.6-sol": 0
+  },
+  "video_0097": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0099": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0101": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0105": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0106": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0111": {
+    "qwen3.8-omni": 25,
+    "gemini-3.8-flash": 25,
+    "gpt-5.6-sol": 25
+  },
+  "video_0112": {
+    "qwen3.8-omni": 75,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 75
+  },
+  "video_0113": {
+    "qwen3.8-omni": 75,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 75
+  },
+  "video_0115": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0116": {
+    "qwen3.8-omni": 50,
+    "gemini-3.8-flash": 25,
+    "gpt-5.6-sol": 50
+  },
+  "video_0117": {
+    "qwen3.8-omni": 75,
+    "gemini-3.8-flash": 50,
+    "gpt-5.6-sol": 50
+  },
+  "video_0118": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0119": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0121": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0124": {
+    "qwen3.8-omni": 50,
+    "gemini-3.8-flash": 75,
+    "gpt-5.6-sol": 50
+  },
+  "video_0129": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0132": {
+    "qwen3.8-omni": 75,
+    "gemini-3.8-flash": 75,
+    "gpt-5.6-sol": 75
+  },
+  "video_0133": {
+    "qwen3.8-omni": 75,
+    "gemini-3.8-flash": 75,
+    "gpt-5.6-sol": 75
+  },
+  "video_0134": {
+    "qwen3.8-omni": 75,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 0
+  },
+  "video_0137": {
+    "qwen3.8-omni": 50,
+    "gemini-3.8-flash": 75,
+    "gpt-5.6-sol": 75
+  },
+  "video_0138": {
+    "qwen3.8-omni": 25,
+    "gemini-3.8-flash": 25,
+    "gpt-5.6-sol": 25
+  },
+  "video_0139": {
+    "qwen3.8-omni": 75,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 50
+  },
+  "video_0140": {
+    "qwen3.8-omni": 75,
+    "gemini-3.8-flash": 50,
+    "gpt-5.6-sol": 50
+  },
+  "video_0143": {
+    "qwen3.8-omni": 0,
+    "gemini-3.8-flash": 0,
+    "gpt-5.6-sol": 0
+  },
+  "video_0144": {
+    "qwen3.8-omni": 75,
+    "gemini-3.8-flash": 75,
+    "gpt-5.6-sol": 75
+  },
+  "video_0145": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0147": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0148": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0149": {
+    "qwen3.8-omni": 50,
+    "gemini-3.8-flash": 50,
+    "gpt-5.6-sol": 25
+  },
+  "video_0150": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0151": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0152": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0155": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0156": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0157": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0158": {
+    "qwen3.8-omni": 75,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 75
+  },
+  "video_0159": {
+    "qwen3.8-omni": 75,
+    "gemini-3.8-flash": 75,
+    "gpt-5.6-sol": 75
+  },
+  "video_0160": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0161": {
+    "qwen3.8-omni": 50,
+    "gemini-3.8-flash": 50,
+    "gpt-5.6-sol": 50
+  },
+  "video_0162": {
+    "qwen3.8-omni": 75,
+    "gemini-3.8-flash": 25,
+    "gpt-5.6-sol": 50
+  },
+  "video_0164": {
+    "qwen3.8-omni": 75,
+    "gemini-3.8-flash": 50,
+    "gpt-5.6-sol": 25
+  },
+  "video_0165": {
+    "qwen3.8-omni": 75,
+    "gemini-3.8-flash": 25,
+    "gpt-5.6-sol": 50
+  },
+  "video_0168": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0166": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0169": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0170": {
+    "qwen3.8-omni": 50,
+    "gemini-3.8-flash": 75,
+    "gpt-5.6-sol": 50
+  },
+  "video_0171": {
+    "qwen3.8-omni": 50,
+    "gemini-3.8-flash": 75,
+    "gpt-5.6-sol": 25
+  },
+  "video_0172": {
+    "qwen3.8-omni": 75,
+    "gemini-3.8-flash": 75,
+    "gpt-5.6-sol": 75
+  },
+  "video_0176": {
+    "qwen3.8-omni": 75,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0174": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0177": {
+    "qwen3.8-omni": 75,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 0
+  },
+  "video_0180": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 75
+  },
+  "video_0183": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0184": {
+    "qwen3.8-omni": 75,
+    "gemini-3.8-flash": 75,
+    "gpt-5.6-sol": 75
+  },
+  "video_0185": {
+    "qwen3.8-omni": 50,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0186": {
+    "qwen3.8-omni": 75,
+    "gemini-3.8-flash": 75,
+    "gpt-5.6-sol": 100
+  },
+  "video_0187": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0188": {
+    "qwen3.8-omni": 75,
+    "gemini-3.8-flash": 50,
+    "gpt-5.6-sol": 75
+  },
+  "video_0189": {
+    "qwen3.8-omni": 50,
+    "gemini-3.8-flash": 75,
+    "gpt-5.6-sol": 25
+  },
+  "video_0190": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0192": {
+    "qwen3.8-omni": 75,
+    "gemini-3.8-flash": 75,
+    "gpt-5.6-sol": 75
+  },
+  "video_0191": {
+    "qwen3.8-omni": 75,
+    "gemini-3.8-flash": 50,
+    "gpt-5.6-sol": 75
+  },
+  "video_0193": {
+    "qwen3.8-omni": 25,
+    "gemini-3.8-flash": 50,
+    "gpt-5.6-sol": 25
+  },
+  "video_0194": {
+    "qwen3.8-omni": 75,
+    "gemini-3.8-flash": 25,
+    "gpt-5.6-sol": 25
+  },
+  "video_0195": {
+    "qwen3.8-omni": 75,
+    "gemini-3.8-flash": 75,
+    "gpt-5.6-sol": 100
+  },
+  "video_0196": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 100,
+    "gpt-5.6-sol": 100
+  },
+  "video_0198": {
+    "qwen3.8-omni": 75,
+    "gemini-3.8-flash": 75,
+    "gpt-5.6-sol": 75
+  },
+  "video_0199": {
+    "qwen3.8-omni": 100,
+    "gemini-3.8-flash": 50,
+    "gpt-5.6-sol": 100
+  },
+  "video_0200": {
+    "qwen3.8-omni": 75,
+    "gemini-3.8-flash": 25,
+    "gpt-5.6-sol": 50
+  }
+}

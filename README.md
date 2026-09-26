@@ -60,6 +60,7 @@ The [bilingual leaderboard](https://mac-automl.github.io/SocialOmni/) lists all 
 | Qwen3-Omni-Thinking | 75.65 | 50.50 | 63.15 | 78.85 | 30.47 | 24.02 |
 | GPT-4o | 35.05 | 50.50 | 77.15 | 76.50 | 30.47 | 23.31 |
 | VITA-1.5 | 34.65 | 56.00 | 50.20 | 49.44 | 46.09 | 22.79 |
+| Ming-Omni 2.0 | 52.30 | 49.50 | 75.78 | 77.34 | 25.00 | 19.34 |
 | Qwen3.8-Omni-Flash | 89.45 | 44.00 | 77.02 | 69.93 | 17.97 | 12.57 |
 | Gemini 3 Pro | 45.40 | 52.00 | 21.55 | 25.00 | 32.03 | 8.01 |
 | Gemini 3.5 Flash-Lite | 78.45 | 38.50 | 74.61 | 65.28 | 4.69 | 3.06 |
@@ -67,6 +68,8 @@ The [bilingual leaderboard](https://mac-automl.github.io/SocialOmni/) lists all 
 | Baichuan-Omni-1.5 | 8.40 | 16.00 | 44.27 | 40.63 | 6.25 | 2.54 |
 
 Classification metrics for MiniCPM-o 4.5: Who macro-F1 **72.52**; When macro-F1 **31.87**.
+
+Ming-Omni 2.0 classification metrics: Who macro-F1 **50.47**; When macro-F1 **47.90**.
 
 All scores use a 0–100 scale; higher is better. — indicates an unavailable score.
 

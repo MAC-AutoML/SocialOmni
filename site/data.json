@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-25",
+  "updated_at": "2026-09-27",
   "links": {
     "paper": "https://arxiv.org/abs/2603.16859v3",
     "code": "https://github.com/MAC-AutoML/SocialOmni",
@@ -767,6 +767,44 @@
       },
       "evaluation": {
         "model": "openbmb/MiniCPM-o-4_5",
+        "who_items": 2000,
+        "when_items": 200,
+        "how_items": 128,
+        "judge_scores": 384
+      }
+    },
+    {
+      "id": "modern-ming-omni-2-0",
+      "model": "Ming-Omni 2.0",
+      "variant": "Native AV",
+      "status": "published",
+      "metrics": {
+        "who": 52.3,
+        "when": 49.5,
+        "qgold": 75.78125,
+        "qens": 77.34375000000001,
+        "cov_plus": 25.0,
+        "qens_joint": 19.3359375
+      },
+      "classification": {
+        "who_macro_f1": 50.472745614230405,
+        "when_macro_f1": 47.90457769181173
+      },
+      "judge_panel": "standard",
+      "judges": [
+        "gemini-3.8-flash",
+        "qwen3.8-omni",
+        "gpt-5.6-sol"
+      ],
+      "source": {
+        "label": {
+          "en": "Answers and scores",
+          "zh": "回答与评分"
+        },
+        "url": "https://github.com/MAC-AutoML/SocialOmni/tree/main/evaluation/results/local-native-av-20260926/ming_flash_omni_2_0"
+      },
+      "evaluation": {
+        "model": "ming-flash-omni-2.0",
         "who_items": 2000,
         "when_items": 200,
         "how_items": 128,

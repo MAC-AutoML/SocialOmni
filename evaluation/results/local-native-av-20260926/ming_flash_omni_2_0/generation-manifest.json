@@ -1,0 +1,25 @@
+{
+  "completed_at": "2026-09-26T15:10:56Z",
+  "enable_thinking": false,
+  "harness_sha256": "b1686371d63308f2ba6d2681a34a4765b71c4c3be6c34f620a40eaa83c5ac798",
+  "include_modalities": [
+    "video",
+    "audio"
+  ],
+  "max_tokens": 256,
+  "media_input_type": "multipart video + extracted 16kHz mono audio",
+  "model": "ming-flash-omni-2.0",
+  "prefix_encoding": "trim-video-and-audio-before-encode-v1",
+  "prompts": {
+    "how": "manifest prompt",
+    "when": "manifest prompt",
+    "who": "manifest prompt"
+  },
+  "protocol": "SocialOmni arXiv v3 hosted candidate protocol with native Ming audio",
+  "schema_version": 1,
+  "source_manifest": "/mnt/cluster/workspaces/xietianyu/archive/socialomni-20260926/socialomni-qgold-20260924/local/full-prefixes.json",
+  "source_sha256": "181a8c8bdcfc4cb0663c77772d51630e1881c558d8a2e1507becae3e60f65907",
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "who_cutoff_rule": "marked interval end or stated query point"
+}
