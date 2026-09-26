@@ -24,6 +24,7 @@ def test_build_payload_contains_video_and_audio(tmp_path: Path) -> None:
     assert payload["videos"] == [str(video)]
     assert payload["audios"] == [str(audio)]
     assert payload["modalities"] == ["text"]
+    assert payload["video_max_frames"] == 8
 
 
 def test_predict_parses_openai_response(monkeypatch, tmp_path: Path) -> None:

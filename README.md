@@ -204,7 +204,9 @@ uv run python run_benchmark.py --model sglang_omni --resume
 Set `models.sglang_omni.model` in `config/config.yaml` (or
 `SGLANG_OMNI_MODEL`) to the model name served by SGLang-Omni. The client uses
 SGLang-Omni's native `videos`/`audios` fields and `modalities: ["text"]`; set
-`use_audio_in_video` when the video contains the audio track. Each result row
+`use_audio_in_video` when the video contains the audio track. The default
+`video_max_frames: 8` keeps the request within the model context window and can
+be overridden per request or in `config/config.yaml`. Each result row
 retains the model response, while request hashes and retry metadata are
 recorded in the client result metadata. Keep each run under
 `evaluation/results/<run-name>/` with its manifest and validation files.

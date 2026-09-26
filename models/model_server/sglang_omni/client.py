@@ -88,6 +88,10 @@ class SGLangOmniClient:
         payload.update(media)
         if use_video and use_audio and not media.get("audios"):
             payload["use_audio_in_video"] = bool(config.get("use_audio_in_video", True))
+        for key in ("video_fps", "video_max_frames", "video_min_pixels", "video_max_pixels", "video_total_pixels"):
+            value = metadata.get(key, config.get(key))
+            if value is not None:
+                payload[key] = value
         if temporary_audio:
             payload["_temporary_audio"] = temporary_audio
         return payload
