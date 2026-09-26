@@ -269,7 +269,7 @@ def _extract_audio_to_wav(video_path: str, audio_path: str) -> None:
         container.close()
 
 
-def _generate(messages: List[Dict[str, Any]]) -> str:
+def _generate(messages: List[Dict[str, Any]], max_new_tokens: int | None = None) -> str:
     import torch
 
     assert model is not None and processor is not None
@@ -291,15 +291,22 @@ def _generate(messages: List[Dict[str, Any]]) -> str:
         if key in {"pixel_values", "pixel_values_videos", "audio_feats"}:
             inputs[key] = inputs[key].to(dtype=torch.bfloat16)
 
-    with torch.no_grad():
-        generated_ids = model.generate(
-            **inputs,
-            max_new_tokens=MAX_NEW_TOKENS,
-            use_cache=False,
-            do_sample=False,
-            eos_token_id=processor.gen_terminator,
-            num_logits_to_keep=1,
-        )
+    # Long prefixes can leave large temporary attention buffers behind on H20.
+    # Clear the allocator before and after each independent request so a later
+    # prefix does not fail because of reserved-but-unused blocks.
+    torch.cuda.empty_cache()
+    try:
+        with torch.no_grad():
+            generated_ids = model.generate(
+                **inputs,
+                max_new_tokens=max_new_tokens or MAX_NEW_TOKENS,
+                use_cache=False,
+                do_sample=False,
+                eos_token_id=processor.gen_terminator,
+                num_logits_to_keep=1,
+            )
+    finally:
+        torch.cuda.empty_cache()
 
     generated_ids_trimmed = [
         out_ids[len(in_ids):] for in_ids, out_ids in zip(inputs.input_ids, generated_ids)
@@ -349,7 +356,11 @@ def analyze_video():
         content.append({"type": "text", "text": question})
         messages = [{"role": "HUMAN", "content": content}]
 
-        answer = _generate(messages)
+        task_tokens = request.form.get("max_new_tokens")
+        max_new_tokens = int(task_tokens) if task_tokens else None
+        if max_new_tokens is not None and not 1 <= max_new_tokens <= 512:
+            return jsonify({"error": "max_new_tokens must be between 1 and 512"}), 400
+        answer = _generate(messages, max_new_tokens=max_new_tokens)
         return jsonify({"answer": answer})
     except Exception as exc:  # noqa: BLE001
         traceback.print_exc()
