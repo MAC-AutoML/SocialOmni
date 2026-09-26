@@ -9,6 +9,7 @@ import sys
 import tempfile
 import traceback
 import warnings
+import wave
 from pathlib import Path
 from typing import Any, Dict, List
 from bisect import bisect_left
@@ -73,10 +74,17 @@ def _build_split_device_map() -> Dict[str, int]:
     return device_map
 
 
-def _sync_runtime_artifacts() -> None:
+def _sync_runtime_artifacts() -> str:
     """Sync bundled ming_lib runtime dependencies to model directory."""
     bundled_root = Path(BUNDLED_CODE_PATH)
-    model_root = Path(MODEL_PATH)
+    # Keep immutable JFS weights read-only; build a local processor overlay.
+    model_root = Path(tempfile.mkdtemp(prefix="ming-processor-"))
+    for source in Path(MODEL_PATH).iterdir():
+        target = model_root / source.name
+        if source.is_dir():
+            target.symlink_to(source.resolve(), target_is_directory=True)
+        elif source.is_file():
+            target.symlink_to(source.resolve())
     required_relpaths = [
         "preprocessor_config.json",
         "tokenizer.json",
@@ -105,6 +113,8 @@ def _sync_runtime_artifacts() -> None:
         dst.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(str(src), str(dst))
 
+    return str(model_root)
+
 
 def _load_model() -> None:
     global model, processor, model_loaded
@@ -116,7 +126,8 @@ def _load_model() -> None:
         sys.path.insert(0, BUNDLED_CODE_PATH)
     os.environ.setdefault("HF_ENABLE_PARALLEL_LOADING", "true")
     os.environ.setdefault("HF_PARALLEL_LOADING_WORKERS", "8")
-    print("[ming] attn_implementation=flash_attention_2", flush=True)
+    attn_implementation = os.getenv("MING_ATTN_IMPLEMENTATION", "eager")
+    print(f"[ming] attn_implementation={attn_implementation}", flush=True)
     print(f"[ming] HF_ENABLE_PARALLEL_LOADING={os.getenv('HF_ENABLE_PARALLEL_LOADING')}", flush=True)
     print(f"[ming] HF_PARALLEL_LOADING_WORKERS={os.getenv('HF_PARALLEL_LOADING_WORKERS')}", flush=True)
 
@@ -126,13 +137,16 @@ def _load_model() -> None:
     from accelerate import dispatch_model as acc_dispatch_model
     from accelerate import utils as acc_utils
     from accelerate.utils import modeling as acc_utils_modeling
+    from transformers import AutoFeatureExtractor, AutoImageProcessor, AutoTokenizer
     from modeling_bailingmm2 import BailingMM2NativeForConditionalGeneration
     from processing_bailingmm2 import BailingMM2Processor
 
     # Compatibility for transformers 5.x requiring accelerate>=1.1.0:
     # Follow official integrations/accelerate.py import paths and patch missing symbols into matching modules.
     # This only affects Ming local service without changing global dependency versions.
-    tf_import_utils.is_accelerate_available.cache_clear()
+    cache_clear = getattr(tf_import_utils.is_accelerate_available, "cache_clear", None)
+    if cache_clear is not None:
+        cache_clear()
 
     def _accelerate_runtime_available(_min_version: str = tf_import_utils.ACCELERATE_MIN_VERSION) -> bool:
         ok, _ver = tf_import_utils._is_package_available("accelerate", return_version=True)
@@ -179,18 +193,36 @@ def _load_model() -> None:
     model = BailingMM2NativeForConditionalGeneration.from_pretrained(
         MODEL_PATH,
         dtype=torch.bfloat16,
-        attn_implementation="flash_attention_2",
+        attn_implementation=attn_implementation,
         device_map=_build_split_device_map(),
         load_image_gen=False,
     ).to(dtype=torch.bfloat16)
 
-    _sync_runtime_artifacts()
-
-    processor = BailingMM2Processor.from_pretrained(
-        MODEL_PATH,
-        trust_remote_code=True,
-        use_fast=False,
-    )
+    processor_path = _sync_runtime_artifacts()
+    try:
+        image_processor = AutoImageProcessor.from_pretrained(
+            processor_path, trust_remote_code=True, local_files_only=True,
+        )
+        audio_processor = AutoFeatureExtractor.from_pretrained(
+            processor_path, trust_remote_code=True, local_files_only=True,
+        )
+        tokenizer = AutoTokenizer.from_pretrained(
+            processor_path, trust_remote_code=True, use_fast=False, local_files_only=True,
+        )
+        processor = BailingMM2Processor(
+            image_processor=image_processor,
+            audio_processor=audio_processor,
+            tokenizer=tokenizer,
+        )
+    finally:
+        shutil.rmtree(processor_path, ignore_errors=True)
+    # The bundled Qwen vision attention defaults to FlashAttention independently
+    # of the top-level config; keep it consistent on hosts without flash_attn.
+    if hasattr(model, "vision") and model.vision is not None:
+        for module in model.vision.modules():
+            module_config = getattr(module, "config", None)
+            if module_config is not None and hasattr(module_config, "_attn_implementation"):
+                module_config._attn_implementation = attn_implementation
     model.eval()
     print(f"[ming] CUDA_VISIBLE_DEVICES={os.getenv('CUDA_VISIBLE_DEVICES', '')}", flush=True)
     print(f"[ming] hf_device_map={getattr(model, 'hf_device_map', None)}", flush=True)
@@ -212,6 +244,29 @@ def _resolve_input_device() -> str:
         return str(next(model.parameters()).device)
     except Exception:  # noqa: BLE001
         return "cuda:0"
+
+
+def _extract_audio_to_wav(video_path: str, audio_path: str) -> None:
+    """Extract a mono 16 kHz PCM track without requiring a system ffmpeg binary."""
+    import av
+
+    container = av.open(video_path)
+    try:
+        if not container.streams.audio:
+            raise RuntimeError("Input video has no audio stream")
+        stream = container.streams.audio[0]
+        resampler = av.audio.resampler.AudioResampler(format="s16", layout="mono", rate=16000)
+        with wave.open(audio_path, "wb") as output:
+            output.setnchannels(1)
+            output.setsampwidth(2)
+            output.setframerate(16000)
+            for frame in container.decode(stream):
+                for converted in resampler.resample(frame):
+                    output.writeframes(converted.to_ndarray().tobytes())
+            for converted in resampler.resample(None):
+                output.writeframes(converted.to_ndarray().tobytes())
+    finally:
+        container.close()
 
 
 def _generate(messages: List[Dict[str, Any]]) -> str:
@@ -288,11 +343,7 @@ def analyze_video():
             if use_audio:
                 with tempfile.NamedTemporaryFile(delete=False, suffix=".wav") as audio:
                     temp_audio_path = audio.name
-                subprocess.run(
-                    ["ffmpeg", "-nostdin", "-y", "-i", temp_video_path,
-                     "-vn", "-ac", "1", "-ar", "16000", "-c:a", "pcm_s16le", temp_audio_path],
-                    check=True, capture_output=True, timeout=120,
-                )
+                _extract_audio_to_wav(temp_video_path, temp_audio_path)
                 content.append({"type": "audio", "audio": temp_audio_path})
 
         content.append({"type": "text", "text": question})

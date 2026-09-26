@@ -70,6 +70,13 @@ class BailingMM2NativeForConditionalGeneration(PreTrainedModel):
             logger.warning("WhisperAudioEncoder 不可用，自动关闭 Ming 音频编码分支。")
             self.config.audio_config = None
 
+        # Propagate the top-level attention backend to Ming's nested language model.
+        # Transformers otherwise keeps the checkpoint's flash-attn setting and
+        # fails on hosts without flash_attn installed.
+        attn_impl = getattr(self.config, "_attn_implementation_internal", None)
+        if attn_impl:
+            self.config.llm_config._attn_implementation = attn_impl
+            self.config.llm_config._attn_implementation_internal = attn_impl
         self.model = BailingMoeV2ForCausalLM(self.config.llm_config)
 
         mlp_modules_img = [nn.Linear(self.vision.image_emb_dim, self.model.config.hidden_size)]
