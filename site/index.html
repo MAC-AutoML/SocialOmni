@@ -6,15 +6,15 @@
   <meta name="description" content="SocialOmni benchmark results: who is speaking, when to respond, and how well to respond in social interaction. Bilingual leaderboard with traceable evaluation sources.">
   <link rel="canonical" href="https://mac-automl.github.io/SocialOmni/">
   <title>SocialOmni · Leaderboard</title>
-  <link rel="stylesheet" href="styles.css?v=841142801023">
-  <script src="leaderboard.js?v=a208bc586e9b" defer></script>
+  <link rel="stylesheet" href="styles.css?v=fc968f716e44">
+  <script src="leaderboard.js?v=ac9d8f82ecc4" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#results" data-i18n="skip">Skip to results</a>
   <header class="masthead">
     <div class="nav-inner shell">
     <a class="home" href="#title">SocialOmni</a>
-    <nav class="site-nav" aria-label="Sections"><a href="#introduction" data-i18n="navIntro">Introduction</a><a href="#results" data-i18n="navResults">Leaderboard</a><a href="#how-examples" data-i18n="navExamples">Examples</a></nav>
+    <nav class="site-nav" aria-label="Sections"><a href="#introduction" data-i18n="navIntro">Introduction</a><a href="#pipeline" data-i18n="navPipeline">Evaluation pipeline</a><a href="#results" data-i18n="navResults">Leaderboard</a><a href="#how-examples" data-i18n="navExamples">Examples</a></nav>
     <div class="languages" role="group" aria-label="Language / 语言">
       <button type="button" data-lang="en" aria-pressed="true">English</button>
       <button type="button" data-lang="zh" aria-pressed="false" lang="zh-CN">中文</button>
@@ -45,6 +45,20 @@
         <article><span class="level-label">LEVEL 2</span><h3 data-i18n="level2Title">When and how to respond?</h3><p data-i18n="level2Text">Decide whether to speak at a given moment, then produce a context-appropriate response.</p></article>
       </div>
       <figure class="intro-film"><video controls playsinline preload="none" poster="media/introduction-poster.jpg" aria-label="SocialOmni introduction"><source src="media/socialomni-introduction.mp4" type="video/mp4"></video><figcaption data-i18n="filmCaption">SocialOmni · Project introduction</figcaption></figure>
+    </section>
+    <section id="pipeline" class="project-section pipeline-section" aria-labelledby="pipeline-title">
+      <div class="section-heading"><h2 id="pipeline-title" data-i18n="pipelineTitle">How an evaluation becomes a score</h2></div>
+      <p class="section-lede" data-i18n="pipelineIntro">Every model sees the same audio-visual prefix and the same task cards. We keep the timing decision separate from the response quality score, then report their joint coverage.</p>
+      <div class="pipeline-steps" aria-label="Evaluation pipeline">
+        <article class="pipeline-step"><span class="pipeline-number">01</span><h3 data-i18n="pipelineStep1Title">Freeze the prefix</h3><p data-i18n="pipelineStep1Text">Trim the video and its audio at the annotated query time. The model receives only what was available before that moment.</p><span class="pipeline-code">video + audio → prefix</span></article>
+        <article class="pipeline-step"><span class="pipeline-number">02</span><h3 data-i18n="pipelineStep2Title">Measure Who and When</h3><p data-i18n="pipelineStep2Text">Who asks who is speaking. When asks whether the target participant should enter now, with a YES or NO answer.</p><span class="pipeline-code">Who: A/B/C/D · When: YES/NO</span></article>
+        <article class="pipeline-step"><span class="pipeline-number">03</span><h3 data-i18n="pipelineStep3Title">Generate How</h3><p data-i18n="pipelineStep3Text">For each gold-positive interaction, we retain the model’s continuation. QGold forces a continuation; QEns uses non-empty answers after a true YES decision.</p><span class="pipeline-code">context → next utterance</span></article>
+        <article class="pipeline-step"><span class="pipeline-number">04</span><h3 data-i18n="pipelineStep4Title">Score and aggregate</h3><p data-i18n="pipelineStep4Text">Gemini 3.8 Flash, Qwen3.8-Omni-Flash and GPT-5.6-Sol independently score each eligible continuation from 0 to 100. We then compute QGold, QEns, Cov+ and QEns_joint.</p><span class="pipeline-code">3 judges → six metrics</span></article>
+      </div>
+      <article class="pipeline-case">
+        <div class="pipeline-case-media"><span class="level-label" data-i18n="pipelineCaseLabel">Concrete case · video_0003</span><video controls playsinline preload="none" src="media/cases/l2-3.mp4" poster="media/cases/l2-3.jpg" aria-label="Evaluation pipeline example"></video></div>
+        <div class="pipeline-case-copy"><h3 data-i18n="pipelineCaseTitle">The same prefix produces separate decisions</h3><p data-i18n="pipelineCaseText">At 27 seconds, the target is the woman in green. The annotated decision is YES, so the continuation is eligible for the quality metrics.</p><dl class="pipeline-case-facts"><dt data-i18n="pipelineCaseWhenLabel">When</dt><dd><strong>YES</strong> <span data-i18n="pipelineCaseWhenText">the target should speak</span></dd><dt data-i18n="pipelineCaseReferenceLabel">Reference</dt><dd>“Pleasure doing business with you.”</dd><dt data-i18n="pipelineCaseMingLabel">Ming-Omni 2.0</dt><dd>“Oh thank you very much”</dd><dt data-i18n="pipelineCaseJudgesLabel">Judge scores</dt><dd><strong>100 / 75 / 75</strong> <span data-i18n="pipelineCaseJudgesText">from Gemini, Qwen and GPT</span></dd></dl><p class="pipeline-case-note" data-i18n="pipelineCaseNote">This single case contributes to When accuracy, and its three scores contribute to How quality. Across the full split, the same records produce the leaderboard metrics.</p></div>
+      </article>
     </section>
     <section id="results" aria-labelledby="results-title">
       <div class="section-heading"><h2 id="results-title" data-i18n="results">Results</h2><p id="updated"></p></div>
